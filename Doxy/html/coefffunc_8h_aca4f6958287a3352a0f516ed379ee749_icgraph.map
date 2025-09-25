@@ -1,0 +1,12 @@
+<map id="c2q_1_0_plus" name="c2q_1_0_plus">
+<area shape="rect" id="Node000001" title="from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2" alt="" coords="455,31,564,56"/>
+<area shape="rect" id="Node000002" href="$structfunc_8h.html#aa4dc5cbd2ddc07970850d275ce8b8a44" title="Computes all contributions to F2 that need to be integrated over, i.e. all contributions from coeffic..." alt="" coords="307,31,407,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="441,46,407,46,407,41,441,41"/>
+<area shape="rect" id="Node000003" href="$structfunc_8h.html#a72b9ad89e5a9cd71c67bbf6b73cfb3d6" title=" " alt="" coords="92,5,259,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,37,258,32,259,27,294,32"/>
+<area shape="rect" id="Node000005" href="$structfunc_8h.html#a4c319327b228b6185e2cd88bf2c4b4f2" title=" " alt="" coords="92,55,259,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="294,54,259,59,258,54,293,49"/>
+<area shape="rect" id="Node000004" href="$structfunc_8h.html#acf0236700b00bcb374259219e1fedc05" title=" " alt="" coords="5,31,44,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="86,36,44,43,44,38,86,30"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="82,55,44,49,45,44,83,50"/>
+</map>

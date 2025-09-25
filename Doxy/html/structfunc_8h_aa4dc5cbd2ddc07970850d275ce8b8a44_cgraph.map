@@ -1,0 +1,24 @@
+<map id="F2integrand" name="F2integrand">
+<area shape="rect" id="Node000001" title="Computes all contributions to F2 that need to be integrated over, i.e. all contributions from coeffic..." alt="" coords="5,80,105,105"/>
+<area shape="rect" id="Node000002" href="$coefffunc_8h.html#aca4f6958287a3352a0f516ed379ee749" title="from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2" alt="" coords="153,5,263,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,78,152,40,164,34,166,39,155,44,81,82"/>
+<area shape="rect" id="Node000003" href="$coefffunc_8h.html#ae4256e1ef32ca3e99ee5ce8a18f407b1" title="The naming of the coefficient functions follows the scheme cnf_j_k_desc with c &#45; &quot;coefficient functio..." alt="" coords="157,55,259,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,82,142,75,143,81,106,87"/>
+<area shape="rect" id="Node000004" href="$classPdf.html#a80fb579ab586ba61596bb084330d0ac6" title=" " alt="" coords="311,68,381,93"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="105,91,180,92,262,89,297,85,297,91,263,94,180,97,105,97"/>
+<area shape="rect" id="Node000005" href="$pdf_8h.html#a9baddbed7ad5f04071a998eb417a5b31" title="Computes $\sum_i Q_i^2 x f(x,Q^2)$." alt="" coords="164,192,252,217"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="75,103,180,182,177,186,72,108"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="219,190,258,150,309,103,313,99,316,103,312,107,262,153,223,194"/>
+<area shape="rect" id="Node000006" href="$pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e" title="&lt; gluon" alt="" coords="327,117,365,143"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="232,189,313,144,316,149,234,194"/>
+<area shape="rect" id="Node000007" href="$pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857" title="&lt; down" alt="" coords="325,167,367,192"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="252,194,311,183,312,188,253,199"/>
+<area shape="rect" id="Node000008" href="$pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996" title="&lt; anti up" alt="" coords="327,216,365,241"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="253,210,314,220,313,226,252,215"/>
+<area shape="rect" id="Node000009" href="$pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149" title="&lt; strange" alt="" coords="327,265,365,291"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="234,215,316,259,313,264,232,220"/>
+<area shape="rect" id="Node000010" href="$pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac" title="&lt; anti down" alt="" coords="327,315,365,340"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="224,216,312,300,318,304,314,308,309,304,220,220"/>
+<area shape="rect" id="Node000011" href="$pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8" title="&lt; up" alt="" coords="325,364,367,389"/>
+<area shape="poly" id="edge11_Node000005_Node000011" title=" " alt="" coords="218,216,255,278,282,315,313,351,316,354,313,358,309,355,278,319,251,280,214,219"/>
+</map>

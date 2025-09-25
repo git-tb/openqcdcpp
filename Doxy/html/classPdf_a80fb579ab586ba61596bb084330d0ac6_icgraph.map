@@ -1,0 +1,17 @@
+<map id="Pdf::get" name="Pdf::get">
+<area shape="rect" id="Node000001" title=" " alt="" coords="591,47,661,72"/>
+<area shape="rect" id="Node000002" href="$structfunc_8h.html#acf0236700b00bcb374259219e1fedc05" title=" " alt="" coords="5,72,44,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="577,48,485,28,363,11,296,8,227,10,159,19,93,36,63,53,39,74,36,70,60,49,91,31,158,14,226,5,296,3,363,6,486,23,578,43"/>
+<area shape="rect" id="Node000003" href="$structfunc_8h.html#aa4dc5cbd2ddc07970850d275ce8b8a44" title="Computes all contributions to F2 that need to be integrated over, i.e. all contributions from coeffic..." alt="" coords="307,71,407,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="577,66,407,81,407,76,577,61"/>
+<area shape="rect" id="Node000006" href="$pdf_8h.html#a9baddbed7ad5f04071a998eb417a5b31" title="Computes $\sum_i Q_i^2 x f(x,Q^2)$." alt="" coords="455,97,543,123"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="582,80,532,100,530,95,580,75"/>
+<area shape="rect" id="Node000004" href="$structfunc_8h.html#a72b9ad89e5a9cd71c67bbf6b73cfb3d6" title=" " alt="" coords="92,47,259,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="293,78,258,73,259,68,294,72"/>
+<area shape="rect" id="Node000005" href="$structfunc_8h.html#a4c319327b228b6185e2cd88bf2c4b4f2" title=" " alt="" coords="92,96,259,121"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="294,95,259,100,258,94,293,89"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="86,77,44,84,44,79,86,72"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="82,96,44,90,45,85,83,91"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="442,129,370,144,282,155,186,155,138,148,91,136,60,120,36,100,40,96,63,115,93,131,139,143,186,150,281,150,370,139,441,123"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="440,102,406,95,407,90,441,96"/>
+</map>

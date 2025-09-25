@@ -1,0 +1,17 @@
+<map id="include/savedata.h" name="include/savedata.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="261,5,406,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,33,99,80,98,74,286,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="110,79,183,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="304,33,191,76,189,71,302,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="207,79,270,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="320,33,267,72,264,68,317,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="294,79,373,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="336,31,336,65,331,65,331,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="397,79,456,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="350,29,402,68,399,72,347,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="481,79,567,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="365,28,481,71,479,76,363,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="591,79,683,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="383,28,579,74,577,79,382,33"/>
+</map>

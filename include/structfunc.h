@@ -19,10 +19,19 @@ double F2(double x, double Q2)	{
 	if(QCDORDER::F2ORDER >= 1)	{
 		// result += integrate(
 		// 	[x,Q2](double z){return F2integrand(z,Q2,x);},
-		// 	x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);		
-		result += integrate(
-			[x,Q2](double t){return F2integrand_logtrafo(t,Q2,x);},
-			x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);	
+		// x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);	
+		if(x > PRECISION::XTHRESH)	{
+			result += integrate(
+				[x,Q2](double t){return F2integrand_logtrafo1(t,Q2,x);},
+				std::log(PRECISION::DELTA), std::log(1-x), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+		} else {
+			result += integrate(
+				[x,Q2](double t){return F2integrand_logtrafo0(t,Q2,x);},
+				std::log(x), std::log(PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+			result += integrate(
+				[x,Q2](double t){return F2integrand_logtrafo1(t,Q2,x);},
+				std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+		}
 	}
 
 	/// higher orders, local parts
@@ -53,7 +62,12 @@ double F2integrand(double z, double Q2, double x)	{
 	}
 }
 
-double F2integrand_logtrafo(double t, double Q2, double x)	{
+double F2integrand_logtrafo0(double t, double Q2, double x)	{
+	double z = std::exp(t);
+	return F2integrand(z,Q2,x)*z;
+}
+
+double F2integrand_logtrafo1(double t, double Q2, double x)	{
 	double z = 1.-std::exp(t);
 	return F2integrand(z,Q2,x)*(1-z);
 }

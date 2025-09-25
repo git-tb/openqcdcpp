@@ -33,10 +33,28 @@ namespace QCD	{
 	}
 }
 
-namespace PRECISION	{
-	ProtectedObject<double>	EPSABS{1e-10},
-							EPSREL{1e-5};
-	ProtectedObject<int>	ITER{1e5};
+namespace PRECISION {
+
+    /// Absolute integration error goal
+    ProtectedObject<double> EPSABS{1e-10};
+
+    /// Relative integration error goal
+    ProtectedObject<double> EPSREL{1e-5};
+
+    /// For x < XTHRESH, z-integrals over partonic structure functions
+    /// are transformed logarithmically to sample more points at the
+    /// boundaries at very large (z->1) and very small (z->x->0) values of z.
+    /// For x > XTHRESH only the upper limit (z->1) is transformed and sampled
+    /// in more detail.
+    ProtectedObject<double> XTHRESH{0.1};
+
+    /// z-integration is performed over (x,1-DELTA), as needed for the
+    /// logarithmic variable transformation
+    ProtectedObject<double> DELTA{1e-8};
+
+    /// Maximum number of subdivisions
+    ProtectedObject<int> ITER{100000};
+
 }
 
 #endif
