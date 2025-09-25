@@ -29,8 +29,7 @@ double integrate(const std::function<double(double)>& func, double a, double b, 
 
     gsl_set_error_handler_off();
     gsl_integration_workspace *WORKSPACE = gsl_integration_workspace_alloc(ITER); 
-    gsl_function F;  
-    double EPSABS(1e-5), EPSREL(0.0);  
+    gsl_function F;
     double RESULT, ERR;
 
 	///	pack test function into GSL object
