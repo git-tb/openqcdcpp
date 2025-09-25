@@ -1,0 +1,61 @@
+#ifndef STRUCTFUNC_H
+#define STRUCTFUNC_H
+
+#include "pdf.h"
+#include "constants.h"
+#include "integrate.h"
+#include "coefffunc.h"
+
+double F2(double x, double Q2)	{
+	double result(0.);
+
+	/// lo
+	result += xfiQi2sum(x, Q2);
+
+	/// @todo running coupling
+	double a4pi = Pdf::get()->alphasQ2(Q2)/(4*M_PI);
+
+	/// higher orders, non-local parts
+	if(QCDORDER::F2ORDER >= 1)	{
+		// result += integrate(
+		// 	[x,Q2](double z){return F2integrand(z,Q2,x);},
+		// 	x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);		
+		result += integrate(
+			[x,Q2](double t){return F2integrand_logtrafo(t,Q2,x);},
+			x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);	
+	}
+
+	/// higher orders, local parts
+	if(QCDORDER::F2ORDER >= 1)	{
+		result += a4pi * c2q_1_0_local() * xfiQi2sum(x, Q2);
+		result += a4pi * c2q_1_0_localplus(x) * xfiQi2sum(x, Q2);
+	}
+
+	return result;
+};
+
+
+/// @brief Computes all contributions to F2 that need to be integrated over, i.e.
+///	all contributions from coefficient functions that are not proportional to delta(1-z).
+/// @param z partonic scaling variable
+/// @param Q2 minus photon momentum squared
+/// @param x hadronic/Bjorken scaling variable
+double F2integrand(double z, double Q2, double x)	{
+	double result(0.);
+	
+	/// @todo running coupling
+	double a4pi = Pdf::get()->alphasQ2(Q2)/(4*M_PI);
+	
+	/// nlo
+	if(QCDORDER::F2ORDER >= 1)	{
+		result += a4pi * c2q_1_0_reg(z) * xfiQi2sum(x/z, Q2);
+		result += a4pi * c2q_1_0_plus(z) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) );
+	}
+}
+
+double F2integrand_logtrafo(double t, double Q2, double x)	{
+	double z = 1.-std::exp(t);
+	return F2integrand(z,Q2,x)*(1-z);
+}
+
+#endif
