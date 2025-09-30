@@ -16,12 +16,24 @@
 struct intargs {
     const std::function<double(double)>& func;
 
-	intargs() = delete; /// no accidental
+	intargs() = delete; /// no accidental initialization
     intargs(const std::function<double(double)>& func_) :
                 func(func_) {}
 };
 
-
+/**
+ * @brief light weight interface to gsl_integration that integrates a function func from a to b.
+ * 
+ * @param func monovariate function
+ * @param a lower integration limit
+ * @param b upper integration limit
+ * @param ITER number of subdivisions
+ * @param EPSABS absolute precision goal
+ * @param EPSREL relative precision goal
+ * 
+ * @todo reduce overhead from copying the function object -> switch to function pointer?
+ * @todo reduce overhead from recreating the gsl_integration_workspace every time integrate() is called
+ */
 double integrate(const std::function<double(double)>& func, double a, double b, int ITER, double EPSABS, double EPSREL)	{
 	/// GSL boilerplate
     int STATUS;

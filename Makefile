@@ -6,6 +6,8 @@ CXX_FLAGS += -g
 # CXX_FLAGS += -fopenmp
 CXX_FLAGS += -Wall
 CXX_FLAGS += -Wno-sign-compare
+CXX_FLAGS += -Wpedantic
+CXX_FLAGS += -Wconversion		# int a = 0.1 <<< WARNING 
 
 EXE 	:= NO_EXECUTBALE_SPECIFIED
 BIN     := bin

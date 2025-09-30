@@ -6,7 +6,7 @@
 #include "integrate.h"
 #include "coefffunc.h"
 
-#include <cmath>
+#include <cmath>		// use math functions from std::
 
 double F2(double x, double Q2);
 double F2integrand(double z, double Q2, double x);
@@ -22,8 +22,22 @@ double F2(double x, double Q2)	{
 	/// lo
 	result += xfiQi2sum(x, Q2);
 
-	/// @todo running coupling
-	double a4pi = Pdf::get()->alphasQ2(Q2)/(4*M_PI);
+	/// @todo running coupling, DONE
+	const double muR2 = Q2;
+	double a4pi = Pdf::get()->alphasQ2(muR2)/(4.*M_PI);	///< alphas/4Pi at some reference scale muR
+	double runcorr(1.0);
+	if(QCDORDER::F2ORDER >= 1)	{
+		double logQ2muR2 = std::log(Q2/muR2);
+		double b0 = QCD::beta0(), b1 = QCD::beta1();
+		runcorr += - a4pi * b0 * logQ2muR2;
+
+		if(QCDORDER::F2ORDER >= 2)	{
+			runcorr += a4pi * a4pi * (
+				+	b1 * logQ2muR2
+				-	std::pow(b0 * logQ2muR2,2)
+			);
+		}
+	}
 
 	/// higher orders, non-local parts
 	if(QCDORDER::F2ORDER >= 1)	{
@@ -48,8 +62,8 @@ double F2(double x, double Q2)	{
 
 	/// higher orders, local parts
 	if(QCDORDER::F2ORDER >= 1)	{
-		result += a4pi * c2q_1_0_local() * xfiQi2sum(x, Q2);
-		result += a4pi * c2q_1_0_localplus(x) * xfiQi2sum(x, Q2);
+		result += a4pi * runcorr * c2q_ns_1_0_local() * xfiQi2sum(x, Q2);
+		result += a4pi * runcorr * c2q_ns_1_0_localplus(x) * xfiQi2sum(x, Q2);
 	}
 
 	return result;
@@ -64,13 +78,31 @@ double F2(double x, double Q2)	{
 double F2integrand(double z, double Q2, double x)	{
 	double result(0.);
 	
-	/// @todo running coupling
-	double a4pi = Pdf::get()->alphasQ2(Q2)/(4*M_PI);
+	/// @todo running coupling, DONE
+	///	@todo make the running coupling a parameter of this function such that we do not
+	///	recalculate logarithms of the renormalization scale
+	const double muR2 = Q2;
+	double a4pi = Pdf::get()->alphasQ2(muR2)/(4.*M_PI);	///< alphas/4Pi at some reference scale muR
+	double runcorr(1.0);
+	if(QCDORDER::F2ORDER >= 1)	{
+		double logQ2muR2 = std::log(Q2/muR2);
+		double b0 = QCD::beta0(), b1 = QCD::beta1();
+		runcorr += - a4pi * b0 * logQ2muR2;
+
+		if(QCDORDER::F2ORDER >= 2)	{
+			runcorr += a4pi * a4pi * (
+				+	b1 * logQ2muR2
+				-	std::pow(b0 * logQ2muR2,2)
+			);
+		}
+	}
+
 	
 	/// nlo
 	if(QCDORDER::F2ORDER >= 1)	{
-		result += a4pi * c2q_1_0_reg(z) * xfiQi2sum(x/z, Q2);
-		result += a4pi * c2q_1_0_plus(z) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) );
+		result += a4pi * runcorr * c2q_ns_1_0_reg(z) * xfiQi2sum(x/z, Q2);
+		result += a4pi * runcorr * c2q_ns_1_0_plus(z) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) );
+		result += a4pi * runcorr * c2g_1_0(z) * QCD::sumQi2() * Pdf::get()->xfxQ2(G, x/z, Q2);
 	}
 
 	return result;

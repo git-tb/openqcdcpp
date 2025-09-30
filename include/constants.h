@@ -10,13 +10,13 @@ namespace QCDORDER	{
 };
 
 namespace QCD	{
-	const double 	CF	= 4.0/3.0,
-					CG	= 3.0,
-					TR	= 0.5;
+	const double 	CF	= 4.0/3.0;
+	const double	CA	= 3.0;
+	const double	TR	= 0.5;
 	ProtectedObject<int>	NF{3};
 
-	/// @brief Computes the sum $\sum_{q_i,\bar q_i}Q_i^2$ of squared fractional quark charges.
-	double sumQquark()	{
+	/// @brief computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF
+	inline double sumQi2()	{
 		assert(3 <= QCD::NF);
 		assert(QCD::NF <= 5);
 
@@ -31,6 +31,24 @@ namespace QCD	{
 		
 		return result;
 	}
+
+	/// @brief computes beta0 depending on the value of QCD::NF
+	/// taken from (Schwartz QFT, eq. 26.97)
+	inline double beta0()	{
+		assert(3 <= QCD::NF);
+		assert(QCD::NF <= 5);
+		
+		return 11./3. * QCD::CA - 4./3. * QCD::TR * QCD::NF;
+	}
+
+	/// @brief computes beta1 depending on the value of QCD::NF
+	/// taken from (Schwartz QFT, eq. 26.98)
+	inline double beta1()	{
+		assert(3 <= QCD::NF);
+		assert(QCD::NF <= 5);
+		
+		return 34./3. * QCD::CA * QCD::CA - 20./3. * QCD::CA * QCD::TR * QCD::NF - 4. * QCD::CF * QCD::TR * QCD::NF;
+	}
 }
 
 namespace PRECISION {
@@ -39,7 +57,7 @@ namespace PRECISION {
     ProtectedObject<double> EPSABS{1e-10};
 
     /// Relative integration error goal
-    ProtectedObject<double> EPSREL{1e-5};
+    ProtectedObject<double> EPSREL{1e-10};
 
     /// For x < XTHRESH, z-integrals over partonic structure functions
     /// are transformed logarithmically to sample more points at the
@@ -53,7 +71,7 @@ namespace PRECISION {
     ProtectedObject<double> DELTA{1e-8};
 
     /// Maximum number of subdivisions
-    ProtectedObject<int> ITER{100000};
+    ProtectedObject<int> ITER{1000000};
 
 }
 

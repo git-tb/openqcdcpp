@@ -4,18 +4,29 @@
 #include <iostream>
 #include "LHAPDF/LHAPDF.h"
 
-/// @brief PDGID codes for enhanced redability
-const int 	G(1),		/// < gluon
-			D(1),		/// < down
-			DB(-1),		/// < anti down
-			U(2),		/// < up
-			UB(-2),		/// < anti up
-			S(3),		/// < strange
-			SB(-3),		/// < anti strange
-			C(4),		/// < charm
-			CB(-4),		/// < anti charm
-			B(5),		/// < bottom
-			BB(-5);		/// < anti bottom
+/// PDGID codes for enhanced redability
+/// gluon
+const int 	G(1);	
+/// down
+const int	D(1);	
+/// anti down
+const int	DB(-1);	
+/// up
+const int	U(2);	
+/// anti up
+const int	UB(-2);	
+/// strange
+const int	S(3);	
+/// anti strange
+const int	SB(-3);	
+/// charm
+const int	C(4);	
+/// anti charm
+const int	CB(-4);	
+/// bottom
+const int	B(5);	
+/// anti bottom
+const int	BB(-5);	
 
 
 /**
@@ -55,12 +66,7 @@ class Pdf {
 			
 			if(lhapdfobject)	{
 				std::cout << "@@@ currently loaded PDFset:\n" << pdfname << " (mem: " << pdfmem << ")" << std::endl;
-				// for(const auto key: lhapdfobject->info().keys()) std::cout << "@@@\t" << key << "\t\t" << lhapdfobject->info().get_entry(key) << std::endl;
-
-				// std::cout << "@@@ available flavors in current pdf: ";
-				// for(int pid : lhapdfobject->flavors())	
-				// 	std::cout << pid << "(" << LHAPDF::to_str(pid) << "), ";
-				// std::cout << std::endl;
+				for(const auto &key: lhapdfobject->info().keys()) std::cout << "@@@\t" << key << "\t\t" << lhapdfobject->info().get_entry(key) << std::endl;
 			} else	{
 				std::cout << "@@@ currently no PDFset is loaded!" << std::endl;
 			}
@@ -81,19 +87,37 @@ class Pdf {
 };
 
 /**
- * @brief Computes $\sum_i Q_i^2 x f(x,Q^2)$
+ * @brief $\sum_i Q_i^2 x f(x,Q^2)$
  * 
  * @param x 
  * @param Q2 
  * @return double 
  * 
- * @todo Check whether a requested flavor pid is actually available in the pdf set
+ * @todo check whether a requested flavor pid is actually available in the pdf set
+ * @todo variable flavor number
  */
 double xfiQi2sum(double x, double Q2)	{
 	double result(0.0);
 	result += 	4.0/9.0 * ( Pdf::get()->xfxQ2(U, x, Q2) + Pdf::get()->xfxQ2(UB, x, Q2) ) + \
 			+	1.0/9.0 * ( Pdf::get()->xfxQ2(D, x, Q2) + Pdf::get()->xfxQ2(DB, x, Q2) ) + \
 			+	1.0/9.0 * ( Pdf::get()->xfxQ2(S, x, Q2) + Pdf::get()->xfxQ2(SB, x, Q2) );
+	return result;
+}
+
+/**
+ * @brief x times singlet combination of quark PDFs
+ * 
+ * @param x 
+ * @param Q2 
+ * @return double 
+ * 
+ * @todo variable flavor number
+ */
+double xfiSingletSum(double x, double Q2)	{
+	double result(0.0);
+	result +=	( Pdf::get()->xfxQ2(U, x, Q2) + Pdf::get()->xfxQ2(UB, x, Q2) ) + \
+			+	( Pdf::get()->xfxQ2(D, x, Q2) + Pdf::get()->xfxQ2(DB, x, Q2) ) + \
+			+	( Pdf::get()->xfxQ2(S, x, Q2) + Pdf::get()->xfxQ2(SB, x, Q2) );
 	return result;
 }
 
