@@ -6,7 +6,7 @@
 
 /// PDGID codes for enhanced redability
 /// gluon
-const int 	G(1);	
+const int 	G(21);	
 /// down
 const int	D(1);	
 /// anti down

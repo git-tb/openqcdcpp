@@ -22,7 +22,7 @@
 double c2q_ns_1_0_reg(double z)	{
 	double result(0.);
 	result += 	QCD::CF * (								
-					- 2. * (1.-z) * std::log(1.-z)			
+					- 2. * (1.+z) * std::log(1.-z)			
 					- 2. * (1.+z*z)/(1.-z) * std::log(z)	
 					+ 6. + 4.*z ); 
 	return result;

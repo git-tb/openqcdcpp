@@ -76,7 +76,10 @@ double F2(double x, double Q2)	{
 /// @param Q2 minus photon momentum squared
 /// @param x hadronic/Bjorken scaling variable
 double F2integrand(double z, double Q2, double x)	{
-	double result(0.);
+	double result_ns_reg(0.);
+	double result_ns_plus(0.);
+	double result_ps(0.);
+	double result_g(0.);
 	
 	/// @todo running coupling, DONE
 	///	@todo make the running coupling a parameter of this function such that we do not
@@ -100,12 +103,12 @@ double F2integrand(double z, double Q2, double x)	{
 	
 	/// nlo
 	if(QCDORDER::F2ORDER >= 1)	{
-		result += a4pi * runcorr * c2q_ns_1_0_reg(z) * xfiQi2sum(x/z, Q2);
-		result += a4pi * runcorr * c2q_ns_1_0_plus(z) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) );
-		result += a4pi * runcorr * c2g_1_0(z) * QCD::sumQi2() * Pdf::get()->xfxQ2(G, x/z, Q2);
+		result_ns_reg += a4pi * runcorr * c2q_ns_1_0_reg(z) * xfiQi2sum(x/z, Q2);
+		result_ns_plus += a4pi * runcorr * c2q_ns_1_0_plus(z) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) );
+		result_g += a4pi * runcorr * c2g_1_0(z) * QCD::sumQi2() * Pdf::get()->xfxQ2(G, x/z, Q2);
 	}
 
-	return result;
+	return result_ns_reg + result_ns_plus + result_ps + result_g;
 }
 
 /// @brief transformation of F2integrand that samples closer to small z
