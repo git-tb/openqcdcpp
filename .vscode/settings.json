@@ -3,6 +3,7 @@
 		"/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/",
 		"/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/",
 	],
+	"editor.wordWrap": "off",
 	"files.associations": {
 		"algorithm": "cpp",
 		"cmath": "cpp",
@@ -32,6 +33,7 @@
 		"set": "cpp",
 		"string": "cpp",
 		"unordered_map": "cpp",
+		"unordered_set": "cpp",
 		"vector": "cpp",
 		"exception": "cpp",
 		"functional": "cpp",
@@ -69,6 +71,10 @@
 		"cinttypes": "cpp",
 		"typeindex": "cpp",
 		"typeinfo": "cpp",
-		"variant": "cpp"
+		"variant": "cpp",
+		"charconv": "cpp",
+		"chrono": "cpp",
+		"format": "cpp",
+		"span": "cpp"
 	}
 }

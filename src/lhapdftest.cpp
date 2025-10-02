@@ -46,7 +46,11 @@ int main(int argc, char** argv) {
 
 	/// actual pdf interfacing
 	const LHAPDF::PDF* currentpdf = LHAPDF::mkPDF(pdfset, pdfmem);
-	std::vector<int> pIDs = currentpdf->flavors();			/// < available parton IDs for this pdf set
+	std::vector<int> pIDs = currentpdf->flavors();			///< available parton IDs for this pdf set
+	std::sort(pIDs.begin(), pIDs.end(),[](int a, int b){	///< sort pIDs in ascending order by absolute value, particles before anti particles
+		if(a == -b) return a > b;
+		return std::abs(a) < std::abs(b);
+	});
 
 	const double LOG10XMIN	= -5;
 	const double LOG10XMAX	= -0.05;
