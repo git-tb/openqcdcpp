@@ -35,4 +35,13 @@ struct intargs {
  * @todo reduce overhead from recreating the gsl_integration_workspace every time integrate() is called
  */
 double integrate(const std::function<double(double)>& func, double a, double b, int ITER, double EPSABS, double EPSREL);
+
+
+inline gsl_integration_workspace *STATICWORKSPACE = NULL;
+/**
+ * @brief Same integration routine, but this time with a workspace that is only recreated
+ * if its too small
+ */
+double integrate_STATICWORKSPACE(const std::function<double(double)>& func, double a, double b, int ITER, double EPSABS, double EPSREL);
+
 #endif

@@ -1,0 +1,2 @@
+buildtest:
+	g++ -std=c++2b ./test.cpp -I/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/ -L/home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib -lmyqcdlib -L/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/ -lLHAPDF -lgfortran -o test
