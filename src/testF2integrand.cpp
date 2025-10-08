@@ -28,7 +28,11 @@ int main()	{
 		double logQ2	= LOGQ2MIN + iq2 * DLOGQ2;
 		double Q2 		= std::pow(10,logQ2);
 		std::cout	<< "Q2=" << Q2 << std::endl;
-		std::cout	<< std::setw(WIDTH) << "x" << std::setw(WIDTH) << "z" << std::setw(WIDTH) << "F2integrand" << std::endl;
+		std::cout	<< std::setw(WIDTH) << "x" 
+					<< std::setw(WIDTH) << "z"
+					<< std::setw(WIDTH) << "F2integrand@nlo"
+					<< std::setw(WIDTH) << "F2integrand@nnlo"
+					<< std::endl;
 		for(int ix = 0; ix < NX; ix++)	{
 			double logx	= LOGXMIN + ix * DLOGX;
 			double x 	= std::pow(10,logx);
@@ -39,10 +43,15 @@ int main()	{
 				double logz	= LOGZMIN + iz * DLOGZ;
 				double z = std::pow(10, logz);
 
+				QCDORDER::F2ORDER.set(1);
+				double F2integrand_nlo	= F2integrand(z, Q2, x);
+				QCDORDER::F2ORDER.set(2);
+				double F2integrand_nnlo	= F2integrand(z, Q2, x);
+
 				std::cout	<< std::setw(WIDTH) << x
 							<< std::setw(WIDTH) << z
-							<< std::setw(WIDTH) << F2integrand(z, Q2, x)
-							<< std::setw(WIDTH) << xfiQi2sum(x,Q2)
+							<< std::setw(WIDTH) << F2integrand_nlo
+							<< std::setw(WIDTH) << F2integrand_nnlo
 							<< std::endl;
 			}
 			std::cout << std::endl;

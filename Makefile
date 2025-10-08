@@ -12,6 +12,8 @@ CXX_FLAGS += -Wconversion		# int a = 0.1 <<< WARNING
 EXE 	:= NO_EXECUTBALE_SPECIFIED
 BIN     := bin
 SRC     := src
+LIBSRC	:= libsrc
+
 
 ARGS	:=
 
@@ -24,15 +26,18 @@ INCLUDE += -Iinclude
 INCLUDE += -I/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include
 
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
+DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib
 
 LIBRARIES += -lgsl
 LIBRARIES += -lLHAPDF
 LIBRARIES += -lboost_program_options
+LIBRARIES += -lmyqcdlib
+LIBRARIES += -lgfortran
 
 # DYNLINK += -Wl,-rpath=/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
 
-build:
-	$(CXX) $(CXX_FLAGS) $(INCLUDE) -o $(BIN)/$(EXE) $(SRC)/$(EXE).cpp $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK)
+build: $(wildcard ./$(LIBSRC)/*.cpp)
+	$(CXX) $(CXX_FLAGS) $(INCLUDE) $(SRC)/$(EXE).cpp $^ $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o $(BIN)/$(EXE)
 
 checklibs:
 	ldd ./bin/$(EXE)

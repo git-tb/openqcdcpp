@@ -38,15 +38,15 @@ double integrate_STATICWORKSPACE(const std::function<double(double)>& func, doub
     double RESULT, ERR;
 	
 	///	pack test function into GSL object
-	gsl_function* F;
+	gsl_function F;
 	intargs myintargs(func);
-	F->params = &myintargs;
-	F->function = [](double x, void* params){
+	F.params = &myintargs;
+	F.function = [](double x, void* params){
 		intargs* args = (struct intargs *)params;
 		return args->func(x);
 	};
 
-    STATUS = gsl_integration_qag(F, a, b, EPSABS, EPSREL, ITER, KEY, STATICWORKSPACE, &RESULT, &ERR);
+    STATUS = gsl_integration_qag(&F, a, b, EPSABS, EPSREL, ITER, KEY, STATICWORKSPACE, &RESULT, &ERR);
     if (STATUS)	std::cerr << gsl_strerror(STATUS) << std::endl;
 	
 	return RESULT;

@@ -4,6 +4,18 @@
 #include <iostream>
 #include "LHAPDF/LHAPDF.h"
 
+/// add here the PDF sampling functionality from openQCDrad such that we can compare predicitions
+/// and make sure errors do not arise from different PDF sampling routines / interpolation accuracies
+extern "C"	{
+	void initgridconst_();
+	void mypdffillgrid_witharg_(const char* arg, int arg_len);
+	double xqg_(int* iq, double* xx, double* q2, int* kp);
+}
+
+double xqg_(int iq, double xx, double q2, int kp)	{
+	return xqg_(&iq, &xx, &q2, &kp);
+}
+
 /// PDGID codes for enhanced redability
 /// gluon
 const int 	G(21);	
@@ -43,15 +55,42 @@ class Pdf {
 			lhapdfobject = LHAPDF::mkPDF(pdfname, pdfmem);
 			Pdf::pdfname = pdfname;
 			Pdf::pdfmem = pdfmem;
+
+			/// ...in case openQCDrad code should be used...
+			initgridconst_();
+			mypdffillgrid_witharg_(pdfname.c_str(), pdfname.length());
 		}
 
-		inline static LHAPDF::PDF* get() {
+		static LHAPDF::PDF* get() {
+			if(not lhapdfobject) {
+				std::cout << "Initialize PDF object before using it!" << std::endl;
+				abort();
+			}
+			return lhapdfobject;
+		}
+
+		static double alphas(double Q2)	{
 			if(not lhapdfobject) {
 				std::cout << "Initialize PDF object before using it!" << std::endl;
 				abort();
 			}
 
-			return lhapdfobject;
+			// return lhapdfobject->alphasQ2(muR2);	/// COMMENT THIS LINE OUT TO USE OPENQCDRADs ALPHAS SAMPLING INSTEAD
+
+			return xqg_(0, 0.1, Q2, pdfmem);
+		}
+
+		static double xf(int pID, double x, double Q2)	{
+			if(not lhapdfobject) {
+				std::cout << "Initialize PDF object before using it!" << std::endl;
+				abort();
+			}
+
+			// return lhapdfobject->xfxQ2(pID, x, Q2);	/// COMMENT THIS LINE OUT TO USE OPENQCDRADs PDF SAMPLING INSTEAD
+			
+			if(pID == G) return xqg_(1,x,Q2,pdfmem);
+			int idx = 2 * std::abs(pID) + (pID < 0 ? 1 : 0);
+			return xqg_(idx, x, Q2, pdfmem);
 		}
 
 		static void printLHAPDFinfo()	{
@@ -98,9 +137,9 @@ class Pdf {
  */
 double xfiQi2sum(double x, double Q2)	{
 	double result(0.0);
-	result += 	4.0/9.0 * ( Pdf::get()->xfxQ2(U, x, Q2) + Pdf::get()->xfxQ2(UB, x, Q2) ) + \
-			+	1.0/9.0 * ( Pdf::get()->xfxQ2(D, x, Q2) + Pdf::get()->xfxQ2(DB, x, Q2) ) + \
-			+	1.0/9.0 * ( Pdf::get()->xfxQ2(S, x, Q2) + Pdf::get()->xfxQ2(SB, x, Q2) );
+	result += 	4.0/9.0 * ( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
+			+	1.0/9.0 * ( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
+			+	1.0/9.0 * ( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
 	return result;
 }
 
@@ -115,9 +154,9 @@ double xfiQi2sum(double x, double Q2)	{
  */
 double xfiSingletSum(double x, double Q2)	{
 	double result(0.0);
-	result +=	( Pdf::get()->xfxQ2(U, x, Q2) + Pdf::get()->xfxQ2(UB, x, Q2) ) + \
-			+	( Pdf::get()->xfxQ2(D, x, Q2) + Pdf::get()->xfxQ2(DB, x, Q2) ) + \
-			+	( Pdf::get()->xfxQ2(S, x, Q2) + Pdf::get()->xfxQ2(SB, x, Q2) );
+	result +=	( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
+			+	( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
+			+	( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
 	return result;
 }
 
