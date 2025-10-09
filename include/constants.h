@@ -9,6 +9,12 @@ namespace QCDORDER	{
 	#define kordf2 QCDORDER::F2ORDER
 };
 
+namespace MATH	{
+	const double ZETA2	=	0.0;
+	const double ZETA3	=	0.0;
+	const double ZETA4	=	0.0;
+}
+
 namespace QCD	{
 	const double 	CF	= 4.0/3.0;
 	const double	CA	= 3.0;

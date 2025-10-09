@@ -85,9 +85,37 @@ double c2q_ns_2_0_local_approx()	{
 	return -338.046;
 }
 
+/// @brief from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2
+/// and [Zijlstra, van Neerven; Nucl. Phys. B. 272 (1), 127, 1991] eq. 9,10
+double c2q_ns_2_0_local()	{
+	double result(0.0);
+	result	+=	QCD::CF * QCD::CF * ( 
+				6. * std::pow(MATH::ZETA2,2)
+				- 78. * MATH::ZETA3
+				+ 69. * MATH::ZETA2
+				+ 331./8. );
+	result	+=	QCD::CA * QCD::CF * (
+				71./5. * std::pow(MATH::ZETA2,2)
+				+ 140./3. * MATH::ZETA3
+				- 251./3. * MATH::ZETA2
+				- 5465./72. );	
+	return result;
+}
+
 /// @brief from [van Neerven, Vogt; Nucl. Phys. B. 568 (1-2), 263, 2000] eq. 3.2
 double c2q_ns_2_1_local_approx()	{	
 	return 46.8405;
+}
+
+/// @brief from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2
+/// and [Zijlstra, van Neerven; Nucl. Phys. B. 272 (1), 127, 1991] eq. 9,10
+double c2q_ns_2_1_local()	{
+	double result(0.0);
+	result	+=	QCD::CF *	(
+				4./3. * MATH::ZETA3
+				+ 38./3. * MATH::ZETA2
+				+ 457./36. );
+	return result;
 }
 
 /// @brief from [van Neerven, Vogt; Nucl. Phys. B. 568 (1-2), 263, 2000] eq. 3.2
@@ -115,8 +143,7 @@ double c2q_ns_2_1_localplus_approx(double z)	{
 double c2q_ns_2_0_plus_approx(double z)	{
 	double result(0.0);
 	double L1 = std::log(1-z);
-	result +=	(
-				14.2222 * std::pow(L1,3)
+	result +=	( 14.2222 * std::pow(L1,3)
 				- 61.3333 * std::pow(L1,2)
 				- 31.105 * L1
 				+ 188.64 ) / (1.0 - z);
