@@ -5,16 +5,9 @@
 #include "LHAPDF/LHAPDF.h"
 
 /// add here the PDF sampling functionality from openQCDrad such that we can compare predicitions
-/// and make sure errors do not arise from different PDF sampling routines / interpolation accuracies
-extern "C"	{
-	void initgridconst_();
-	void mypdffillgrid_witharg_(const char* arg, int arg_len);
-	double xqg_(int* iq, double* xx, double* q2, int* kp);
-}
+#include "fortransymbols.h"
 
-double xqg_(int iq, double xx, double q2, int kp)	{
-	return xqg_(&iq, &xx, &q2, &kp);
-}
+double xqg(int iq, double xx, double q2, int kp);
 
 /// PDGID codes for enhanced redability
 /// gluon
@@ -40,6 +33,11 @@ const int	B(5);
 /// anti bottom
 const int	BB(-5);	
 
+/// @brief determine how PDFs are sampled
+enum SAMPLINGMETHOD {
+	fromLHAPDF,			///< use LHAPDFs sampling method xfxQ2
+	fromOPENQCDRAD		///< use openQCDrads sampling method xqg
+};
 
 /**
  * @brief The idea of this class is to create a singleton, i.e. a class that can
@@ -50,66 +48,19 @@ const int	BB(-5);
  */
 class Pdf {
     public:
-		static void initialize(const std::string pdfname, const int pdfmem)	{
-			delete lhapdfobject;
-			lhapdfobject = LHAPDF::mkPDF(pdfname, pdfmem);
-			Pdf::pdfname = pdfname;
-			Pdf::pdfmem = pdfmem;
+		static void initialize(const std::string pdfname, const int pdfmem);
 
-			/// ...in case openQCDrad code should be used...
-			initgridconst_();
-			mypdffillgrid_witharg_(pdfname.c_str(), pdfname.length());
-		}
+		static void destroy();
 
-		static LHAPDF::PDF* get() {
-			if(not lhapdfobject) {
-				std::cout << "Initialize PDF object before using it!" << std::endl;
-				abort();
-			}
-			return lhapdfobject;
-		}
+		static LHAPDF::PDF* get();
 
-		static double alphas(double Q2)	{
-			if(not lhapdfobject) {
-				std::cout << "Initialize PDF object before using it!" << std::endl;
-				abort();
-			}
+		static double alphas(double Q2);
 
-			// return lhapdfobject->alphasQ2(muR2);	/// COMMENT THIS LINE OUT TO USE OPENQCDRADs ALPHAS SAMPLING INSTEAD
+		static double xf(int pID, double x, double Q2);
 
-			return xqg_(0, 0.1, Q2, pdfmem);
-		}
+		static void printLHAPDFinfo();
 
-		static double xf(int pID, double x, double Q2)	{
-			if(not lhapdfobject) {
-				std::cout << "Initialize PDF object before using it!" << std::endl;
-				abort();
-			}
-
-			// return lhapdfobject->xfxQ2(pID, x, Q2);	/// COMMENT THIS LINE OUT TO USE OPENQCDRADs PDF SAMPLING INSTEAD
-			
-			if(pID == G) return xqg_(1,x,Q2,pdfmem);
-			int idx = 2 * std::abs(pID) + (pID < 0 ? 1 : 0);
-			return xqg_(idx, x, Q2, pdfmem);
-		}
-
-		static void printLHAPDFinfo()	{
-			std::cout << "@@@ LHAPDF paths: ";
-			for (const std::string& p : LHAPDF::paths())
-				std::cout << p << ", ";
-			std::cout << std::endl;
-			std::cout << "@@@ available PDFs: ";
-			for (const std::string& s : LHAPDF::availablePDFSets())
-				std::cout << s << ", ";
-			std::cout << std::endl;
-			
-			if(lhapdfobject)	{
-				std::cout << "@@@ currently loaded PDFset:\n" << pdfname << " (mem: " << pdfmem << ")" << std::endl;
-				for(const auto &key: lhapdfobject->info().keys()) std::cout << "@@@\t" << key << "\t\t" << lhapdfobject->info().get_entry(key) << std::endl;
-			} else	{
-				std::cout << "@@@ currently no PDFset is loaded!" << std::endl;
-			}
-		}
+		static void setSampling(SAMPLINGMETHOD method);
         
     private:
 		/// Delete the copy constructor and assignment operator
@@ -123,6 +74,7 @@ class Pdf {
 		inline static LHAPDF::PDF* lhapdfobject{nullptr};
 		inline static std::string pdfname;
 		inline static int pdfmem;
+		inline static SAMPLINGMETHOD samplingmethod{fromLHAPDF};
 };
 
 /**
@@ -135,13 +87,7 @@ class Pdf {
  * @todo check whether a requested flavor pid is actually available in the pdf set
  * @todo variable flavor number
  */
-double xfiQi2sum(double x, double Q2)	{
-	double result(0.0);
-	result += 	4.0/9.0 * ( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
-			+	1.0/9.0 * ( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
-			+	1.0/9.0 * ( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
-	return result;
-}
+double xfiQi2sum(double x, double Q2);
 
 /**
  * @brief x times singlet combination of quark PDFs
@@ -152,13 +98,7 @@ double xfiQi2sum(double x, double Q2)	{
  * 
  * @todo variable flavor number
  */
-double xfiSingletSum(double x, double Q2)	{
-	double result(0.0);
-	result +=	( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
-			+	( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
-			+	( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
-	return result;
-}
+double xfiSingletSum(double x, double Q2);
 
 
 #endif

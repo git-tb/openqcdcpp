@@ -21,6 +21,8 @@ double integrate(const std::function<double(double)>& func, double a, double b, 
     STATUS = gsl_integration_qag(&F, a, b, EPSABS, EPSREL, ITER, KEY, WORKSPACE, &RESULT, &ERR);
     if (STATUS)	std::cerr << gsl_strerror(STATUS) << std::endl;
 	
+	gsl_integration_workspace_free(WORKSPACE);
+
 	return RESULT;
 }
 

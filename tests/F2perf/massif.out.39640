@@ -1,0 +1,669 @@
+desc: (none)
+cmd: ./test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=222898058
+mem_heap_B=1219815
+mem_heap_extra_B=3305
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2289510233
+mem_heap_B=1221640
+mem_heap_extra_B=3384
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2292293192
+mem_heap_B=49223884
+mem_heap_extra_B=24700
+mem_stacks_B=0
+heap_tree=peak
+n8: 49223884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8000000 0x1CF99D46: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n1: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n1: 8000000 0x10FC9C: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BCD5: main (test.cpp:71)
+ n1: 8000000 0x1CF99D5E: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n1: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n1: 8000000 0x10FC9C: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BCD5: main (test.cpp:71)
+ n1: 8000000 0x1CF99D76: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n1: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n1: 8000000 0x10FC9C: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BCD5: main (test.cpp:71)
+ n1: 8000000 0x1CF99D8F: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n1: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n1: 8000000 0x10FC9C: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BCD5: main (test.cpp:71)
+ n1: 8000000 0x1CF99DA8: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n1: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n1: 8000000 0x10FC9C: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BCD5: main (test.cpp:71)
+ n1: 8000000 0x1CF99DC1: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n1: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n1: 8000000 0x10FC9C: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BCD5: main (test.cpp:71)
+ n2: 1101744 0x1D1FA3DA: std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [clone .isra.0] (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+  n1: 878080 0x1D1FB826: LHAPDF::GridPDF::_computePolynomialCoefficients(bool) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+   n1: 878080 0x1D1FBC38: LHAPDF::GridPDF::_loadInterpolator() (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+    n1: 878080 0x1D211791: LHAPDF::mkPDF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+     n0: 878080 in 2 places, all below massif's threshold (1.00%)
+  n0: 223664 in 3 places, all below massif's threshold (1.00%)
+ n0: 122140 in 111 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=2503026666
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2762261049
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2937256861
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=3126834310
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=3289766270
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=detailed
+n7: 41223884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8000000 0x1CF99D46: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BD54: main (test.cpp:75)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D5E: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BD54: main (test.cpp:75)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D76: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BD54: main (test.cpp:75)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D8F: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BD54: main (test.cpp:75)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99DA8: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10BD54: main (test.cpp:75)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 1101744 0x1D1FA3DA: std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [clone .isra.0] (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+  n1: 878080 0x1D1FB826: LHAPDF::GridPDF::_computePolynomialCoefficients(bool) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+   n1: 878080 0x1D1FBC38: LHAPDF::GridPDF::_loadInterpolator() (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+    n2: 878080 0x1D211791: LHAPDF::mkPDF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+     n1: 439040 0x10E49B: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+      n0: 439040 0x10B7E1: main (test.cpp:18)
+     n1: 439040 0x1D272FFD: (anonymous namespace)::PDFSetHandler::loadMember(int) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+      n1: 439040 0x1D2738CA: (anonymous namespace)::PDFSetHandler::PDFSetHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+       n1: 439040 0x1D27C399: initpdfsetbynamem_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+        n1: 439040 0x1D27C681: initpdfsetbyname_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+         n1: 439040 0x120F02: mypdffillgrid_witharg_ (mygrid.F:175)
+          n1: 439040 0x10E4EA: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+           n0: 439040 0x10B7E1: main (test.cpp:18)
+  n0: 223664 in 3 places, all below massif's threshold (1.00%)
+ n0: 122140 in 112 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=3495272905
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3776008894
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=4051567745
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4281551337
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4492389199
+mem_heap_B=1223884
+mem_heap_extra_B=3532
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1223884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 1101744 0x1D1FA3DA: std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [clone .isra.0] (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+  n1: 878080 0x1D1FB826: LHAPDF::GridPDF::_computePolynomialCoefficients(bool) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+   n1: 878080 0x1D1FBC38: LHAPDF::GridPDF::_loadInterpolator() (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+    n2: 878080 0x1D211791: LHAPDF::mkPDF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+     n1: 439040 0x10E49B: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+      n0: 439040 0x10B7E1: main (test.cpp:18)
+     n1: 439040 0x1D272FFD: (anonymous namespace)::PDFSetHandler::loadMember(int) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+      n1: 439040 0x1D2738CA: (anonymous namespace)::PDFSetHandler::PDFSetHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+       n1: 439040 0x1D27C399: initpdfsetbynamem_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+        n1: 439040 0x1D27C681: initpdfsetbyname_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+         n1: 439040 0x120F02: mypdffillgrid_witharg_ (mygrid.F:175)
+          n1: 439040 0x10E4EA: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+           n0: 439040 0x10B7E1: main (test.cpp:18)
+  n1: 221760 0x1D1FC9F6: LHAPDF::GridPDF::_loadData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+   n2: 221760 0x1D211767: LHAPDF::mkPDF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+    n1: 110880 0x10E49B: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+     n0: 110880 0x10B7E1: main (test.cpp:18)
+    n1: 110880 0x1D272FFD: (anonymous namespace)::PDFSetHandler::loadMember(int) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+     n1: 110880 0x1D2738CA: (anonymous namespace)::PDFSetHandler::PDFSetHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+      n1: 110880 0x1D27C399: initpdfsetbynamem_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+       n1: 110880 0x1D27C681: initpdfsetbyname_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+        n1: 110880 0x120F02: mypdffillgrid_witharg_ (mygrid.F:175)
+         n1: 110880 0x10E4EA: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+          n0: 110880 0x10B7E1: main (test.cpp:18)
+  n0: 1904 in 2 places, all below massif's threshold (1.00%)
+ n1: 73728 0x1D67A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x1C68371E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x1C683823: call_init (dl-init.c:120)
+    n1: 73728 0x1C683823: _dl_init (dl-init.c:121)
+     n0: 73728 0x1C69D59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 48412 in 116 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=4637542685
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=4847185696
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5027247971
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=5348368044
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=5550294749
+mem_heap_B=1223884
+mem_heap_extra_B=3532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=5825187302
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=6094496905
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=6321739305
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=6525882808
+mem_heap_B=1223884
+mem_heap_extra_B=3532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=6864532040
+mem_heap_B=1223884
+mem_heap_extra_B=3532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=7005408772
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=7247101047
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=7413769852
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=7640160244
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=7787836072
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=8073673296
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=8291408190
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=8438723419
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=8651565705
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=8861843569
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=8997944127
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=9320872710
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=9534345216
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=9761618363
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=9963466287
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=detailed
+n7: 41223884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8000000 0x1CF99D46: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D5E: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D76: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D8F: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99DA8: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 1101744 0x1D1FA3DA: std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [clone .isra.0] (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+  n1: 878080 0x1D1FB826: LHAPDF::GridPDF::_computePolynomialCoefficients(bool) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+   n1: 878080 0x1D1FBC38: LHAPDF::GridPDF::_loadInterpolator() (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+    n2: 878080 0x1D211791: LHAPDF::mkPDF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+     n1: 439040 0x10E49B: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+      n0: 439040 0x10B7E1: main (test.cpp:18)
+     n1: 439040 0x1D272FFD: (anonymous namespace)::PDFSetHandler::loadMember(int) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+      n1: 439040 0x1D2738CA: (anonymous namespace)::PDFSetHandler::PDFSetHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+       n1: 439040 0x1D27C399: initpdfsetbynamem_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+        n1: 439040 0x1D27C681: initpdfsetbyname_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+         n1: 439040 0x120F02: mypdffillgrid_witharg_ (mygrid.F:175)
+          n1: 439040 0x10E4EA: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+           n0: 439040 0x10B7E1: main (test.cpp:18)
+  n0: 223664 in 3 places, all below massif's threshold (1.00%)
+ n0: 122140 in 112 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=10200361548
+mem_heap_B=1223884
+mem_heap_extra_B=3532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=10381142435
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=10716396152
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=10887929839
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=11197989025
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=11523731477
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=11864470394
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=12189784630
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=12512369721
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=12839063145
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=13171110424
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=13179432574
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=13189309294
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=13199177631
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=detailed
+n7: 41223884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8000000 0x1CF99D46: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D5E: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D76: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99D8F: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 8000000 0x1CF99DA8: gsl_integration_workspace_alloc (in /usr/lib/x86_64-linux-gnu/libgsl.so.27.0.0)
+  n2: 8000000 0x11273F: integrate(std::function<double (double)> const&, double, double, int, double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+   n2: 8000000 0x10FBB4: F2(double, double) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+    n0: 8000000 0x10C65B: main (test.cpp:166)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 1101744 0x1D1FA3DA: std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [clone .isra.0] (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+  n1: 878080 0x1D1FB826: LHAPDF::GridPDF::_computePolynomialCoefficients(bool) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+   n1: 878080 0x1D1FBC38: LHAPDF::GridPDF::_loadInterpolator() (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+    n2: 878080 0x1D211791: LHAPDF::mkPDF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+     n1: 439040 0x10E49B: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+      n0: 439040 0x10B7E1: main (test.cpp:18)
+     n1: 439040 0x1D272FFD: (anonymous namespace)::PDFSetHandler::loadMember(int) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+      n1: 439040 0x1D2738CA: (anonymous namespace)::PDFSetHandler::PDFSetHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+       n1: 439040 0x1D27C399: initpdfsetbynamem_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+        n1: 439040 0x1D27C681: initpdfsetbyname_ (in /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so)
+         n1: 439040 0x120F02: mypdffillgrid_witharg_ (mygrid.F:175)
+          n1: 439040 0x10E4EA: Pdf::initialize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int) (in /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/test)
+           n0: 439040 0x10B7E1: main (test.cpp:18)
+  n0: 223664 in 3 places, all below massif's threshold (1.00%)
+ n0: 122140 in 112 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=13204302323
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=13214050816
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=13217569374
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=13225848885
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=13232534308
+mem_heap_B=41223884
+mem_heap_extra_B=21172
+mem_stacks_B=0
+heap_tree=empty

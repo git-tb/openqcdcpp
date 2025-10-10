@@ -13,7 +13,8 @@ EXE 	:= NO_EXECUTBALE_SPECIFIED
 BIN     := bin
 SRC     := src
 LIBSRC	:= libsrc
-
+OBJDIR 	:= obj
+LIB		:= lib/libmycpplib.a
 
 ARGS	:=
 
@@ -34,12 +35,24 @@ LIBRARIES += -lboost_program_options
 LIBRARIES += -lmyqcdlib
 LIBRARIES += -lgfortran
 
-# DYNLINK += -Wl,-rpath=/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
+OBJS = $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(wildcard $(LIBSRC)/*.cpp)))
 
-build: $(wildcard ./$(LIBSRC)/*.cpp)
-	$(CXX) $(CXX_FLAGS) $(INCLUDE) $(SRC)/$(EXE).cpp $^ $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o $(BIN)/$(EXE)
+all: $(LIB) main
 
-checklibs:
-	ldd ./bin/$(EXE)
+$(OBJDIR)/%.o: $(LIBSRC)/%.cpp
+	mkdir -p $(OBJDIR)
+	g++ -c $< $(INCLUDE) -o $@
+
+$(LIB): $(OBJS)
+	ar rcs $@ $^
+
+main: $(SRC)/$(EXE).cpp $(LIB)
+	g++ $(SRC)/$(EXE).cpp $(INCLUDE) -Llib -lmycpplib $(DIRLIBRARIES) $(LIBRARIES) -o $(BIN)/$(EXE)
+
+# build: $(wildcard ./$(LIBSRC)/*.cpp)
+# 	$(CXX) $(CXX_FLAGS) $(INCLUDE) $(SRC)/$(EXE).cpp $^ $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o $(BIN)/$(EXE)
+
+# checklibs:
+# 	ldd ./bin/$(EXE)
 
 
