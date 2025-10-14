@@ -1,6 +1,7 @@
 #include "constants.h"
 #include <assert.h>
 #include "protectedobject.h"
+#include <cmath>
 
 namespace QCDORDER	{
 	ProtectedObject<int>	NFLOOPS{2};
@@ -9,9 +10,10 @@ namespace QCDORDER	{
 };
 
 namespace MATH	{
-	const double ZETA2	=	0.0;
-	const double ZETA3	=	0.0;
-	const double ZETA4	=	0.0;
+	const double ZETA2	=	M_PI*M_PI/6.;
+	const double ZETA3	=	1.2020569031595942853997381615114499907649862923405;
+	const double ZETA4	=	std::pow(M_PI,4)/90.;
+	const double LOG2	=	0.69314718055994530941723212145817656807550013436026;
 }
 
 namespace QCD	{

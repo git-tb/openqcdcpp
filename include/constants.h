@@ -13,6 +13,7 @@ namespace MATH	{
 	extern const double ZETA2;
 	extern const double ZETA3;
 	extern const double ZETA4;
+	extern const double LOG2;
 }
 
 namespace QCD	{

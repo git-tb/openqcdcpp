@@ -75,6 +75,11 @@
 		"charconv": "cpp",
 		"chrono": "cpp",
 		"format": "cpp",
-		"span": "cpp"
+		"span": "cpp",
+		"csignal": "cpp",
+		"cfenv": "cpp",
+		"list": "cpp",
+		"shared_mutex": "cpp",
+		"stdfloat": "cpp"
 	}
 }

@@ -28,11 +28,13 @@ INCLUDE += -I/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include
 
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib
+DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib
 
 LIBRARIES += -lgsl
 LIBRARIES += -lLHAPDF
 LIBRARIES += -lboost_program_options
 LIBRARIES += -lmyqcdlib
+LIBRARIES += -lchaplin
 LIBRARIES += -lgfortran
 
 OBJS = $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(wildcard $(LIBSRC)/*.cpp)))

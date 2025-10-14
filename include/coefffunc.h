@@ -33,17 +33,23 @@ double c2g_1_0(double z);
 /// O(alphas^2)
 
 double c2q_ns_2_0_local_approx();
-double c2q_ns_2_0_local();
 double c2q_ns_2_1_local_approx();
-double c2q_ns_2_1_local();
+double c2q_ns_2_01_local_exact(double z);
+
 double c2q_ns_2_0_localplus_approx(double z);
 double c2q_ns_2_1_localplus_approx(double z);
+
 double c2q_ns_2_0_plus_approx(double z);
 double c2q_ns_2_1_plus_approx(double z);
+double c2q_ns_2_01_plus_exact(double z);
+
 double c2q_ns_2_0_reg_approx(double z);
 double c2q_ns_2_1_reg_approx(double z);
+double c2q_ns_2_01_reg_exact(double z);
+
 double c2g_2_0_reg_approx(double z);
 double c2g_2_0_local_approx();
+
 double c2q_ps_2_0_reg_approx(double z);
 
 #endif

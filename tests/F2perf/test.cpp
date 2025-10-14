@@ -22,9 +22,9 @@ int main()	{
 
 	PRECISION::EPSABS.set(1e-5);
 	PRECISION::EPSREL.set(1e-5);
-	PRECISION::ITER.set(50);
-	forpreccontrol_.nf2qcd1	= 2;
-	forpreccontrol_.nf2qcd2	= 2;
+	PRECISION::ITER.set(1000);
+	forpreccontrol_.nf2qcd1	= 50;
+	forpreccontrol_.nf2qcd2	= 50;
 	
 	QCDORDER::F2ORDER.set(1);
 	foralpsrenorm_.kordf2_ 	= 1;
