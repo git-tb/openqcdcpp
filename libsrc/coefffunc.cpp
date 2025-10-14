@@ -214,82 +214,82 @@ double c2q_ns_2_01_local_exact(double z)	{
 }
 
 double c2q_ns_2_01_plus_exact(double z)	{
-	double HPL0z	=	HPL1(0,z);
-	double HPL1z	=	HPL1(1,z);
+	// double HPL0z	=	HPL1(0,z);
+	// double HPL1z	=	HPL1(1,z);
 	// double HPLm1z	=	HPL1(-1,z);
 	// double HPLm10z	=	HPL2(-1,0,z);
-	double HPL00z	=	HPL2(0,0,z);
-	double HPL01z	=	HPL2(0,1,z);
-	double HPL11z	=	HPL2(1,1,z);
-	double HPL10z	=	HPL2(1,0,z);
+	// double HPL00z	=	HPL2(0,0,z);
+	// double HPL01z	=	HPL2(0,1,z);
+	// double HPL11z	=	HPL2(1,1,z);
+	// double HPL10z	=	HPL2(1,0,z);
 	// double HPLm1m10z	=	HPL3(-1,-1,0,z);
 	// double HPLm100z	=	HPL3(-1,0,0,z);
-	double HPL0m10z	=	HPL3(0,-1,0,z);
+	// double HPL0m10z	=	HPL3(0,-1,0,z);
 	// double HPLm101z	=	HPL3(-1,0,1,z);
-	double HPL000z	=	HPL3(0,0,0,z);
-	double HPL001z	=	HPL3(0,0,1,z);
-	double HPL010z	=	HPL3(0,1,0,z);
-	double HPL011z	=	HPL3(0,1,1,z);
-	double HPL100z	=	HPL3(1,0,0,z);
-	double HPL101z	=	HPL3(1,0,1,z);
-	double HPL110z	=	HPL3(1,1,0,z);
-	double HPL111z	=	HPL3(1,1,1,z);
+	// double HPL000z	=	HPL3(0,0,0,z);
+	// double HPL001z	=	HPL3(0,0,1,z);
+	// double HPL010z	=	HPL3(0,1,0,z);
+	// double HPL011z	=	HPL3(0,1,1,z);
+	// double HPL100z	=	HPL3(1,0,0,z);
+	// double HPL101z	=	HPL3(1,0,1,z);
+	// double HPL110z	=	HPL3(1,1,0,z);
+	// double HPL111z	=	HPL3(1,1,1,z);
 	double result(0.0);
-	result += ((QCD::CF*QCD::NF*(247 - 144*MATH::ZETA2 + 342*HPL0z + 174*HPL1z + 180*HPL00z + 144*HPL01z + 72*HPL10z + 72*HPL11z))/27. + 
-      (QCD::CA*QCD::CF*(-3155 + 1584*MATH::ZETA2 + 216*MATH::ZETA3 - 4302*HPL0z + 432*MATH::ZETA2*HPL0z - 2202*HPL1z + 1296*MATH::ZETA2*HPL1z - 1980*HPL00z - 1584*HPL01z - 
-           792*HPL10z - 792*HPL11z - 1296*HPL0m10z - 648*HPL000z - 432*HPL001z - 864*HPL100z - 432*HPL101z + 432*HPL110z))/
-       54. + (std::pow(QCD::CF,2)*(51 + 48*MATH::ZETA2 + 128*MATH::ZETA3 + 122*HPL0z + 96*MATH::ZETA2*HPL0z + 54*HPL1z + 32*MATH::ZETA2*HPL1z - 12*HPL00z - 48*HPL01z - 
-           72*HPL10z - 72*HPL11z + 96*HPL0m10z - 32*HPL000z - 96*HPL001z - 96*HPL010z - 112*HPL011z - 48*HPL100z - 
-           96*HPL101z - 128*HPL110z - 96*HPL111z))/2.)/(1 - z);
+	result += ((QCD::CF*QCD::NF*(247 - 144*MATH::ZETA2 + 342*HPL1(0,z) + 174*HPL1(1,z) + 180*HPL2(0,0,z) + 144*HPL2(0,1,z) + 72*HPL2(1,0,z) + 72*HPL2(1,1,z)))/27. + 
+      (QCD::CA*QCD::CF*(-3155 + 1584*MATH::ZETA2 + 216*MATH::ZETA3 - 4302*HPL1(0,z) + 432*MATH::ZETA2*HPL1(0,z) - 2202*HPL1(1,z) + 1296*MATH::ZETA2*HPL1(1,z) - 1980*HPL2(0,0,z) - 1584*HPL2(0,1,z) - 
+           792*HPL2(1,0,z) - 792*HPL2(1,1,z) - 1296*HPL3(0,-1,0,z) - 648*HPL3(0,0,0,z) - 432*HPL3(0,0,1,z) - 864*HPL3(1,0,0,z) - 432*HPL3(1,0,1,z) + 432*HPL3(1,1,0,z)))/
+       54. + (std::pow(QCD::CF,2)*(51 + 48*MATH::ZETA2 + 128*MATH::ZETA3 + 122*HPL1(0,z) + 96*MATH::ZETA2*HPL1(0,z) + 54*HPL1(1,z) + 32*MATH::ZETA2*HPL1(1,z) - 12*HPL2(0,0,z) - 48*HPL2(0,1,z) - 
+           72*HPL2(1,0,z) - 72*HPL2(1,1,z) + 96*HPL3(0,-1,0,z) - 32*HPL3(0,0,0,z) - 96*HPL3(0,0,1,z) - 96*HPL3(0,1,0,z) - 112*HPL3(0,1,1,z) - 48*HPL3(1,0,0,z) - 
+           96*HPL3(1,0,1,z) - 128*HPL3(1,1,0,z) - 96*HPL3(1,1,1,z)))/2.)/(1 - z);
 	return result;
 }
 
 double c2q_ns_2_01_reg_exact(double z)	{
-	double HPL0z		=	HPL1(0,z);
-	double HPL1z		=	HPL1(1,z);
-	double HPLm1z		=	HPL1(-1,z);
-	double HPLm10z		=	HPL2(-1,0,z);
-	double HPL00z		=	HPL2(0,0,z);
-	double HPL01z		=	HPL2(0,1,z);
-	double HPL11z		=	HPL2(1,1,z);
-	double HPL10z		=	HPL2(1,0,z);
-	double HPLm1m10z	=	HPL3(-1,-1,0,z);
-	double HPLm100z		=	HPL3(-1,0,0,z);
-	double HPL0m10z		=	HPL3(0,-1,0,z);
-	double HPLm101z		=	HPL3(-1,0,1,z);
-	double HPL000z		=	HPL3(0,0,0,z);
-	double HPL001z		=	HPL3(0,0,1,z);
-	double HPL010z		=	HPL3(0,1,0,z);
-	double HPL011z		=	HPL3(0,1,1,z);
-	double HPL100z		=	HPL3(1,0,0,z);
-	double HPL101z		=	HPL3(1,0,1,z);
-	double HPL110z		=	HPL3(1,1,0,z);
-	double HPL111z		=	HPL3(1,1,1,z);
+	// double HPL0z	=	HPL1(0,z);
+	// double HPL1z	=	HPL1(1,z);
+	// double HPLm1z	=	HPL1(-1,z);
+	// double HPLm10z	=	HPL2(-1,0,z);
+	// double HPL00z	=	HPL2(0,0,z);
+	// double HPL01z	=	HPL2(0,1,z);
+	// double HPL11z	=	HPL2(1,1,z);
+	// double HPL10z	=	HPL2(1,0,z);
+	// double HPLm1m10z	=	HPL3(-1,-1,0,z);
+	// double HPLm100z	=	HPL3(-1,0,0,z);
+	// double HPL0m10z	=	HPL3(0,-1,0,z);
+	// double HPLm101z	=	HPL3(-1,0,1,z);
+	// double HPL000z	=	HPL3(0,0,0,z);
+	// double HPL001z	=	HPL3(0,0,1,z);
+	// double HPL010z	=	HPL3(0,1,0,z);
+	// double HPL011z	=	HPL3(0,1,1,z);
+	// double HPL100z	=	HPL3(1,0,0,z);
+	// double HPL101z	=	HPL3(1,0,1,z);
+	// double HPL110z	=	HPL3(1,1,0,z);
+	// double HPL111z	=	HPL3(1,1,1,z);
 	double result(0.0);
 	result += (std::pow(QCD::CF,2)*(-93 - 209*z))/4. + (QCD::CA*QCD::CF*(139 + 3159*z))/36. - (4*std::pow(QCD::CF,2)*(7 + 13*z)*MATH::ZETA2)/5. - 4*std::pow(QCD::CF,2)*(1 - 19*z)*MATH::ZETA3 + 
-   (8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(-1 + 2*z)*(1 - HPL0z))/(5.*(-2 + z)) - 
-   (std::pow(QCD::CF,2)*(43 + 63*z)*HPL0z)/2. + (QCD::CA*QCD::CF*(71 + 323*z)*HPL0z)/6. + (std::pow(QCD::CF,2)*(59 - 109*z)*HPL1z)/2. - (17*QCD::CA*QCD::CF*(5 - 19*z)*HPL1z)/6. + 
-   (296*QCD::CF*(-0.5*QCD::CA + QCD::CF)*HPLm10z)/5. + (8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - 1/z)*(-1 - 2*z)*HPLm10z)/(5.*(-2 - z)) + (136*QCD::CF*(-0.5*QCD::CA + QCD::CF)*z*HPLm10z)/5. + 
-   (72*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - z)*(1 + 2*z + 2*std::pow(z,2))*HPLm10z)/5. - 
-   (72*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - 2*z + 2*std::pow(z,2))*(-1 - HPL0z + (1 + z)*(MATH::ZETA2 - HPL00z)))/5. - (4*QCD::CA*QCD::CF*(9 + 16*z)*(MATH::ZETA2 - HPL00z))/5. + 
-   (std::pow(QCD::CF,2)*(33 + 37*z)*HPL00z)/5. + 2*std::pow(QCD::CF,2)*(5 + 9*z)*(2*HPL01z + HPL11z) + 
-   QCD::NF*((QCD::CF*(-23 - 243*z))/18. - (QCD::CF*(7 + 19*z)*HPL0z)/3. - (QCD::CF*(1 + 13*z)*HPL1z)/3. + 
-      (QCD::CF*(-247 + 144*MATH::ZETA2 - 342*HPL0z - 174*HPL1z - 180*HPL00z - 144*HPL01z - 72*HPL10z - 72*HPL11z))/54. - 
-      (QCD::CF*z*(247 - 144*MATH::ZETA2 + 342*HPL0z + 174*HPL1z + 180*HPL00z + 144*HPL01z + 72*HPL10z + 72*HPL11z))/54.) - 
-   8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 + 5*z)*(MATH::ZETA2*HPLm1z + 2*HPLm1m10z - HPLm100z) + 16*std::pow(QCD::CF,2)*HPL0m10z - 8*QCD::CA*QCD::CF*(5*z*MATH::ZETA3 + HPL0m10z) + 
-   4*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(-1 + z + 2/(1 + z))*(7*MATH::ZETA3 - 8*MATH::ZETA2*HPLm1z - 2*HPL0z + 2*MATH::ZETA2*HPL0z - 8*HPLm1m10z + 10*HPLm100z + 4*HPLm101z + 
-      6*HPL0m10z - 3*HPL000z - 2*HPL000z) + 2*std::pow(QCD::CF,2)*(1 + z)*
-    (-4*MATH::ZETA2*HPL0z + 7*HPL10z + 5*HPL000z + 4*HPL000z + 2*HPL010z + 2*HPL011z) + 
-   8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - 5*z)*(-(MATH::ZETA2*HPL1z) + HPL100z) + 
-   (QCD::CA*QCD::CF*(3155 - 1584*MATH::ZETA2 - 216*MATH::ZETA3 + 4302*HPL0z - 432*MATH::ZETA2*HPL0z + 2202*HPL1z - 1296*MATH::ZETA2*HPL1z + 1980*HPL00z + 1584*HPL01z + 
-        792*HPL10z + 792*HPL11z + 1296*HPL0m10z + 648*HPL000z + 432*HPL000z + 864*HPL100z + 432*HPL101z - 432*HPL110z))/108.\
-    - (QCD::CA*QCD::CF*z*(-3155 + 1584*MATH::ZETA2 + 216*MATH::ZETA3 - 4302*HPL0z + 432*MATH::ZETA2*HPL0z - 2202*HPL1z + 1296*MATH::ZETA2*HPL1z - 1980*HPL00z - 1584*HPL01z - 
-        792*HPL10z - 792*HPL11z - 1296*HPL0m10z - 648*HPL000z - 432*HPL000z - 864*HPL100z - 432*HPL101z + 432*HPL110z))/108.\
-    - (std::pow(QCD::CF,2)*z*(51 + 48*MATH::ZETA2 + 128*MATH::ZETA3 + 122*HPL0z + 96*MATH::ZETA2*HPL0z + 54*HPL1z + 32*MATH::ZETA2*HPL1z - 12*HPL00z - 48*HPL01z - 72*HPL10z - 
-        72*HPL11z + 96*HPL0m10z - 32*HPL000z - 96*HPL000z - 96*HPL010z - 112*HPL011z - 48*HPL100z - 96*HPL101z - 
-        128*HPL110z - 96*HPL111z))/4. + (std::pow(QCD::CF,2)*(-51 - 48*MATH::ZETA2 - 128*MATH::ZETA3 - 122*HPL0z - 96*MATH::ZETA2*HPL0z - 54*HPL1z - 32*MATH::ZETA2*HPL1z + 
-        12*HPL00z + 48*HPL01z + 72*HPL10z + 72*HPL11z - 96*HPL0m10z + 32*HPL000z + 96*HPL000z + 96*HPL010z + 
-        112*HPL011z + 48*HPL100z + 96*HPL101z + 128*HPL110z + 96*HPL111z))/4.;
+   (8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(-1 + 2*z)*(1 - HPL1(0,z)))/(5.*(-2 + z)) - 
+   (std::pow(QCD::CF,2)*(43 + 63*z)*HPL1(0,z))/2. + (QCD::CA*QCD::CF*(71 + 323*z)*HPL1(0,z))/6. + (std::pow(QCD::CF,2)*(59 - 109*z)*HPL1(1,z))/2. - (17*QCD::CA*QCD::CF*(5 - 19*z)*HPL1(1,z))/6. + 
+   (296*QCD::CF*(-0.5*QCD::CA + QCD::CF)*HPL2(-1,0,z))/5. + (8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - 1/z)*(-1 - 2*z)*HPL2(-1,0,z))/(5.*(-2 - z)) + (136*QCD::CF*(-0.5*QCD::CA + QCD::CF)*z*HPL2(-1,0,z))/5. + 
+   (72*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - z)*(1 + 2*z + 2*std::pow(z,2))*HPL2(-1,0,z))/5. - 
+   (72*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - 2*z + 2*std::pow(z,2))*(-1 - HPL1(0,z) + (1 + z)*(MATH::ZETA2 - HPL2(0,0,z))))/5. - (4*QCD::CA*QCD::CF*(9 + 16*z)*(MATH::ZETA2 - HPL2(0,0,z)))/5. + 
+   (std::pow(QCD::CF,2)*(33 + 37*z)*HPL2(0,0,z))/5. + 2*std::pow(QCD::CF,2)*(5 + 9*z)*(2*HPL2(0,1,z) + HPL2(1,1,z)) + 
+   QCD::NF*((QCD::CF*(-23 - 243*z))/18. - (QCD::CF*(7 + 19*z)*HPL1(0,z))/3. - (QCD::CF*(1 + 13*z)*HPL1(1,z))/3. + 
+      (QCD::CF*(-247 + 144*MATH::ZETA2 - 342*HPL1(0,z) - 174*HPL1(1,z) - 180*HPL2(0,0,z) - 144*HPL2(0,1,z) - 72*HPL2(1,0,z) - 72*HPL2(1,1,z)))/54. - 
+      (QCD::CF*z*(247 - 144*MATH::ZETA2 + 342*HPL1(0,z) + 174*HPL1(1,z) + 180*HPL2(0,0,z) + 144*HPL2(0,1,z) + 72*HPL2(1,0,z) + 72*HPL2(1,1,z)))/54.) - 
+   8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 + 5*z)*(MATH::ZETA2*HPL1(-1,z) + 2*HPL3(-1,-1,0,z) - HPL3(-1,0,0,z)) + 16*std::pow(QCD::CF,2)*HPL3(0,-1,0,z) - 8*QCD::CA*QCD::CF*(5*z*MATH::ZETA3 + HPL3(0,-1,0,z)) + 
+   4*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(-1 + z + 2/(1 + z))*(7*MATH::ZETA3 - 8*MATH::ZETA2*HPL1(-1,z) - 2*HPL1(0,z) + 2*MATH::ZETA2*HPL1(0,z) - 8*HPL3(-1,-1,0,z) + 10*HPL3(-1,0,0,z) + 4*HPL3(-1,0,1,z) + 
+      6*HPL3(0,-1,0,z) - 3*HPL3(0,0,0,z) - 2*HPL3(0,0,1,z)) + 2*std::pow(QCD::CF,2)*(1 + z)*
+    (-4*MATH::ZETA2*HPL1(0,z) + 7*HPL2(1,0,z) + 5*HPL3(0,0,0,z) + 4*HPL3(0,0,1,z) + 2*HPL3(0,1,0,z) + 2*HPL3(0,1,1,z)) + 
+   8*QCD::CF*(-0.5*QCD::CA + QCD::CF)*(1 - 5*z)*(-(MATH::ZETA2*HPL1(1,z)) + HPL3(1,0,0,z)) + 
+   (QCD::CA*QCD::CF*(3155 - 1584*MATH::ZETA2 - 216*MATH::ZETA3 + 4302*HPL1(0,z) - 432*MATH::ZETA2*HPL1(0,z) + 2202*HPL1(1,z) - 1296*MATH::ZETA2*HPL1(1,z) + 1980*HPL2(0,0,z) + 1584*HPL2(0,1,z) + 
+        792*HPL2(1,0,z) + 792*HPL2(1,1,z) + 1296*HPL3(0,-1,0,z) + 648*HPL3(0,0,0,z) + 432*HPL3(0,0,1,z) + 864*HPL3(1,0,0,z) + 432*HPL3(1,0,1,z) - 432*HPL3(1,1,0,z)))/108.\
+    - (QCD::CA*QCD::CF*z*(-3155 + 1584*MATH::ZETA2 + 216*MATH::ZETA3 - 4302*HPL1(0,z) + 432*MATH::ZETA2*HPL1(0,z) - 2202*HPL1(1,z) + 1296*MATH::ZETA2*HPL1(1,z) - 1980*HPL2(0,0,z) - 1584*HPL2(0,1,z) - 
+        792*HPL2(1,0,z) - 792*HPL2(1,1,z) - 1296*HPL3(0,-1,0,z) - 648*HPL3(0,0,0,z) - 432*HPL3(0,0,1,z) - 864*HPL3(1,0,0,z) - 432*HPL3(1,0,1,z) + 432*HPL3(1,1,0,z)))/108.\
+    - (std::pow(QCD::CF,2)*z*(51 + 48*MATH::ZETA2 + 128*MATH::ZETA3 + 122*HPL1(0,z) + 96*MATH::ZETA2*HPL1(0,z) + 54*HPL1(1,z) + 32*MATH::ZETA2*HPL1(1,z) - 12*HPL2(0,0,z) - 48*HPL2(0,1,z) - 72*HPL2(1,0,z) - 
+        72*HPL2(1,1,z) + 96*HPL3(0,-1,0,z) - 32*HPL3(0,0,0,z) - 96*HPL3(0,0,1,z) - 96*HPL3(0,1,0,z) - 112*HPL3(0,1,1,z) - 48*HPL3(1,0,0,z) - 96*HPL3(1,0,1,z) - 
+        128*HPL3(1,1,0,z) - 96*HPL3(1,1,1,z)))/4. + (std::pow(QCD::CF,2)*(-51 - 48*MATH::ZETA2 - 128*MATH::ZETA3 - 122*HPL1(0,z) - 96*MATH::ZETA2*HPL1(0,z) - 54*HPL1(1,z) - 32*MATH::ZETA2*HPL1(1,z) + 
+        12*HPL2(0,0,z) + 48*HPL2(0,1,z) + 72*HPL2(1,0,z) + 72*HPL2(1,1,z) - 96*HPL3(0,-1,0,z) + 32*HPL3(0,0,0,z) + 96*HPL3(0,0,1,z) + 96*HPL3(0,1,0,z) + 
+        112*HPL3(0,1,1,z) + 48*HPL3(1,0,0,z) + 96*HPL3(1,0,1,z) + 128*HPL3(1,1,0,z) + 96*HPL3(1,1,1,z)))/4.;
 	return result;
 }
 
