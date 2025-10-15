@@ -35,8 +35,5 @@ LIBRARIES += -lgfortran
 
 DYNLINK += -Wl,-rpath=/home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib
 
-# buildtest: $(wildcard $(LIBSRC)/*.cpp)
-# 	$(CXX) $(CXX_FLAGS) $(INCLUDE) test.cpp $^ $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o test
-
 buildtest:
 	$(CXX) $(CXX_FLAGS) $(INCLUDE) test.cpp $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o test

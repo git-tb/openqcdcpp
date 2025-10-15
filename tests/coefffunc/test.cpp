@@ -21,8 +21,8 @@ int main()	{
 
 	std::cout	<< std::scientific << std::setprecision(PREC);
 	std::cout	<< std::setw(WIDTH) << "x"
-				<< std::setw(WIDTH) << "c2ns2nonlocal(approx)"
-				<< std::setw(WIDTH) << "c2ns2nonlocal(param)"
+				<< std::setw(WIDTH) << "c2ns2(apr/apr2/ext)"
+				<< std::setw(WIDTH) << "c2g2(apr/apr2/ext)"
 				<< std::endl;
 
 	QCD::NF.set(3);
@@ -31,7 +31,16 @@ int main()	{
 		double x = xmin + (double)i/(double)(NX-1)*(xmax-xmin);
 		std::cout	<< std::setw(WIDTH) << x
 					<< std::setw(WIDTH) << c2q_ns_2_0_plus_approx(x) + QCD::NF * c2q_ns_2_1_plus_approx(x) + c2q_ns_2_0_reg_approx(x) + QCD::NF * c2q_ns_2_1_reg_approx(x)
+					<< std::setw(WIDTH) << c2g_2_0_reg_approx(x)
+					<< std::endl
+					<< std::setw(WIDTH) << " "
+					<< std::setw(WIDTH) << c2q_ns_2_0_plus_approx2(x) + QCD::NF * c2q_ns_2_1_plus_approx2(x) + c2q_ns_2_0_reg_approx2(x) + QCD::NF * c2q_ns_2_1_reg_approx2(x)
+					<< std::setw(WIDTH) << c2g_2_0_reg_approx2(x)
+					<< std::endl
+					<< std::setw(WIDTH) << " "
 					<< std::setw(WIDTH) << c2q_ns_2_01_plus_exact(x) + c2q_ns_2_01_reg_exact(x)
+					<< std::setw(WIDTH) << c2g_2_0_reg_exact(x) 
+					<< std::endl
 					<< std::endl;
 	}
 

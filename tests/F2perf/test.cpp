@@ -23,8 +23,8 @@ int main()	{
 	PRECISION::EPSABS.set(1e-5);
 	PRECISION::EPSREL.set(1e-5);
 	PRECISION::ITER.set(1000);
-	forpreccontrol_.nf2qcd1	= 50;
-	forpreccontrol_.nf2qcd2	= 50;
+	forpreccontrol_.nf2qcd1	= 10;
+	forpreccontrol_.nf2qcd2	= 10;
 	
 	QCDORDER::F2ORDER.set(1);
 	foralpsrenorm_.kordf2_ 	= 1;
@@ -74,6 +74,7 @@ int main()	{
 			foralpsrenorm_.kordf2_ 	= 2;
 			double F2_fortran_nnlo	= f2qcd_(3,1,22,x,Q2);
 			double F2_cpp_nnlo		= F2(x,Q2);
+			double F2_cpp_nnlo_ex	= F2(x,Q2, FLAGS::EXACT);
 
 			std::cout	<< std::setw(WIDTH) << Q2
 						<< std::setw(WIDTH) << x
@@ -84,6 +85,11 @@ int main()	{
 						<< std::setw(WIDTH)	<< " "
 						<< std::setw(WIDTH) << F2_cpp_nlo
 						<< std::setw(WIDTH) << F2_cpp_nnlo
+						<< std::endl
+						<< std::setw(WIDTH)	<< " "
+						<< std::setw(WIDTH)	<< " "
+						<< std::setw(WIDTH) << " "
+						<< std::setw(WIDTH) << F2_cpp_nnlo_ex
 						<< std::endl << std::endl;
 		}
 		std::cout << std::endl;

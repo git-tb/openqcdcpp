@@ -30,6 +30,8 @@ DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib
 
+DYNLINK += -Wl,-rpath=/home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib
+
 LIBRARIES += -lgsl
 LIBRARIES += -lLHAPDF
 LIBRARIES += -lboost_program_options
@@ -39,17 +41,20 @@ LIBRARIES += -lgfortran
 
 OBJS = $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(wildcard $(LIBSRC)/*.cpp)))
 
+FORCE:
+.PHONY: FORCE
+
 all: $(LIB) main
 
-$(OBJDIR)/%.o: $(LIBSRC)/%.cpp
+$(OBJDIR)/%.o: $(LIBSRC)/%.cpp FORCE
 	mkdir -p $(OBJDIR)
-	g++ -c $< $(INCLUDE) -o $@
+	g++ $(CXX_FLAGS) -c $< $(INCLUDE) -o $@
 
 $(LIB): $(OBJS)
 	ar rcs $@ $^
 
 main: $(SRC)/$(EXE).cpp $(LIB)
-	g++ $(SRC)/$(EXE).cpp $(INCLUDE) -Llib -lmycpplib $(DIRLIBRARIES) $(LIBRARIES) -o $(BIN)/$(EXE)
+	g++ $(CXX_FLAGS) $(SRC)/$(EXE).cpp $(INCLUDE) -Llib -lmycpplib $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o $(BIN)/$(EXE)
 
 # build: $(wildcard ./$(LIBSRC)/*.cpp)
 # 	$(CXX) $(CXX_FLAGS) $(INCLUDE) $(SRC)/$(EXE).cpp $^ $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o $(BIN)/$(EXE)

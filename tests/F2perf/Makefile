@@ -23,18 +23,17 @@ INCLUDE += -I/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/lib
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
 DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib
+DIRLIBRARIES += -L/home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib
 
 # LIBRARIES += -lboost_program_options
 LIBRARIES += -lmycpplib
 LIBRARIES += -lgsl
 LIBRARIES += -lLHAPDF
 LIBRARIES += -lmyqcdlib
+LIBRARIES += -lchaplin
 LIBRARIES += -lgfortran
 
-# DYNLINK += -Wl,-rpath=/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib
-
-# buildtest: $(wildcard $(LIBSRC)/*.cpp)
-# 	$(CXX) $(CXX_FLAGS) $(INCLUDE) test.cpp $^ $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o test
+DYNLINK += -Wl,-rpath=/home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib
 
 buildtest:
 	$(CXX) $(CXX_FLAGS) $(INCLUDE) test.cpp $(DIRLIBRARIES) $(LIBRARIES) $(DYNLINK) -o test

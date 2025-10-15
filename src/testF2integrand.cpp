@@ -6,6 +6,7 @@
 
 int main()	{
 	Pdf::initialize("ABMP16_3_nnlo", 0);
+	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 	Pdf::printLHAPDFinfo();
 
 	int NX = 5;
