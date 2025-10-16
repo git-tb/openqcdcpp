@@ -58,4 +58,16 @@ namespace PRECISION {
 
 }
 
+namespace APPROX	{
+	enum APPROXTYPE	{
+		APPR1	=	1,
+		APPR2	=	2,
+		EXACT	=	3,
+	};
+
+	extern ProtectedObject<APPROX::APPROXTYPE> LEVEL;
+}
+
+
+
 #endif

@@ -1,0 +1,482 @@
+"HPL1(-1,x)"->"HPL1_m1",
+"HPL1(0,x)"->"HPL1_0",
+"HPL1(1,x)"->"HPL1_1",
+"HPL2(-1,-1,x)"->"HPL2_m1m1",
+"HPL2(-1,0,x)"->"HPL2_m10",
+"HPL2(-1,1,x)"->"HPL2_m11",
+"HPL2(0,-1,x)"->"HPL2_0m1",
+"HPL2(0,0,x)"->"HPL2_00",
+"HPL2(0,1,x)"->"HPL2_01",
+"HPL2(1,-1,x)"->"HPL2_1m1",
+"HPL2(1,0,x)"->"HPL2_10",
+"HPL2(1,1,x)"->"HPL2_11",
+"HPL3(-1,-1,-1,x)"->"HPL3_m1m1m1",
+"HPL3(-1,-1,0,x)"->"HPL3_m1m10",
+"HPL3(-1,-1,1,x)"->"HPL3_m1m11",
+"HPL3(-1,0,-1,x)"->"HPL3_m10m1",
+"HPL3(-1,0,0,x)"->"HPL3_m100",
+"HPL3(-1,0,1,x)"->"HPL3_m101",
+"HPL3(-1,1,-1,x)"->"HPL3_m11m1",
+"HPL3(-1,1,0,x)"->"HPL3_m110",
+"HPL3(-1,1,1,x)"->"HPL3_m111",
+"HPL3(0,-1,-1,x)"->"HPL3_0m1m1",
+"HPL3(0,-1,0,x)"->"HPL3_0m10",
+"HPL3(0,-1,1,x)"->"HPL3_0m11",
+"HPL3(0,0,-1,x)"->"HPL3_00m1",
+"HPL3(0,0,0,x)"->"HPL3_000",
+"HPL3(0,0,1,x)"->"HPL3_001",
+"HPL3(0,1,-1,x)"->"HPL3_01m1",
+"HPL3(0,1,0,x)"->"HPL3_010",
+"HPL3(0,1,1,x)"->"HPL3_011",
+"HPL3(1,-1,-1,x)"->"HPL3_1m1m1",
+"HPL3(1,-1,0,x)"->"HPL3_1m10",
+"HPL3(1,-1,1,x)"->"HPL3_1m11",
+"HPL3(1,0,-1,x)"->"HPL3_10m1",
+"HPL3(1,0,0,x)"->"HPL3_100",
+"HPL3(1,0,1,x)"->"HPL3_101",
+"HPL3(1,1,-1,x)"->"HPL3_11m1",
+"HPL3(1,1,0,x)"->"HPL3_110",
+"HPL3(1,1,1,x)"->"HPL3_111",
+"HPL4(-1,-1,-1,-1,x)"->"HPL4_m1m1m1m1",
+"HPL4(-1,-1,-1,0,x)"->"HPL4_m1m1m10",
+"HPL4(-1,-1,-1,1,x)"->"HPL4_m1m1m11",
+"HPL4(-1,-1,0,-1,x)"->"HPL4_m1m10m1",
+"HPL4(-1,-1,0,0,x)"->"HPL4_m1m100",
+"HPL4(-1,-1,0,1,x)"->"HPL4_m1m101",
+"HPL4(-1,-1,1,-1,x)"->"HPL4_m1m11m1",
+"HPL4(-1,-1,1,0,x)"->"HPL4_m1m110",
+"HPL4(-1,-1,1,1,x)"->"HPL4_m1m111",
+"HPL4(-1,0,-1,-1,x)"->"HPL4_m10m1m1",
+"HPL4(-1,0,-1,0,x)"->"HPL4_m10m10",
+"HPL4(-1,0,-1,1,x)"->"HPL4_m10m11",
+"HPL4(-1,0,0,-1,x)"->"HPL4_m100m1",
+"HPL4(-1,0,0,0,x)"->"HPL4_m1000",
+"HPL4(-1,0,0,1,x)"->"HPL4_m1001",
+"HPL4(-1,0,1,-1,x)"->"HPL4_m101m1",
+"HPL4(-1,0,1,0,x)"->"HPL4_m1010",
+"HPL4(-1,0,1,1,x)"->"HPL4_m1011",
+"HPL4(-1,1,-1,-1,x)"->"HPL4_m11m1m1",
+"HPL4(-1,1,-1,0,x)"->"HPL4_m11m10",
+"HPL4(-1,1,-1,1,x)"->"HPL4_m11m11",
+"HPL4(-1,1,0,-1,x)"->"HPL4_m110m1",
+"HPL4(-1,1,0,0,x)"->"HPL4_m1100",
+"HPL4(-1,1,0,1,x)"->"HPL4_m1101",
+"HPL4(-1,1,1,-1,x)"->"HPL4_m111m1",
+"HPL4(-1,1,1,0,x)"->"HPL4_m1110",
+"HPL4(-1,1,1,1,x)"->"HPL4_m1111",
+"HPL4(0,-1,-1,-1,x)"->"HPL4_0m1m1m1",
+"HPL4(0,-1,-1,0,x)"->"HPL4_0m1m10",
+"HPL4(0,-1,-1,1,x)"->"HPL4_0m1m11",
+"HPL4(0,-1,0,-1,x)"->"HPL4_0m10m1",
+"HPL4(0,-1,0,0,x)"->"HPL4_0m100",
+"HPL4(0,-1,0,1,x)"->"HPL4_0m101",
+"HPL4(0,-1,1,-1,x)"->"HPL4_0m11m1",
+"HPL4(0,-1,1,0,x)"->"HPL4_0m110",
+"HPL4(0,-1,1,1,x)"->"HPL4_0m111",
+"HPL4(0,0,-1,-1,x)"->"HPL4_00m1m1",
+"HPL4(0,0,-1,0,x)"->"HPL4_00m10",
+"HPL4(0,0,-1,1,x)"->"HPL4_00m11",
+"HPL4(0,0,0,-1,x)"->"HPL4_000m1",
+"HPL4(0,0,0,0,x)"->"HPL4_0000",
+"HPL4(0,0,0,1,x)"->"HPL4_0001",
+"HPL4(0,0,1,-1,x)"->"HPL4_001m1",
+"HPL4(0,0,1,0,x)"->"HPL4_0010",
+"HPL4(0,0,1,1,x)"->"HPL4_0011",
+"HPL4(0,1,-1,-1,x)"->"HPL4_01m1m1",
+"HPL4(0,1,-1,0,x)"->"HPL4_01m10",
+"HPL4(0,1,-1,1,x)"->"HPL4_01m11",
+"HPL4(0,1,0,-1,x)"->"HPL4_010m1",
+"HPL4(0,1,0,0,x)"->"HPL4_0100",
+"HPL4(0,1,0,1,x)"->"HPL4_0101",
+"HPL4(0,1,1,-1,x)"->"HPL4_011m1",
+"HPL4(0,1,1,0,x)"->"HPL4_0110",
+"HPL4(0,1,1,1,x)"->"HPL4_0111",
+"HPL4(1,-1,-1,-1,x)"->"HPL4_1m1m1m1",
+"HPL4(1,-1,-1,0,x)"->"HPL4_1m1m10",
+"HPL4(1,-1,-1,1,x)"->"HPL4_1m1m11",
+"HPL4(1,-1,0,-1,x)"->"HPL4_1m10m1",
+"HPL4(1,-1,0,0,x)"->"HPL4_1m100",
+"HPL4(1,-1,0,1,x)"->"HPL4_1m101",
+"HPL4(1,-1,1,-1,x)"->"HPL4_1m11m1",
+"HPL4(1,-1,1,0,x)"->"HPL4_1m110",
+"HPL4(1,-1,1,1,x)"->"HPL4_1m111",
+"HPL4(1,0,-1,-1,x)"->"HPL4_10m1m1",
+"HPL4(1,0,-1,0,x)"->"HPL4_10m10",
+"HPL4(1,0,-1,1,x)"->"HPL4_10m11",
+"HPL4(1,0,0,-1,x)"->"HPL4_100m1",
+"HPL4(1,0,0,0,x)"->"HPL4_1000",
+"HPL4(1,0,0,1,x)"->"HPL4_1001",
+"HPL4(1,0,1,-1,x)"->"HPL4_101m1",
+"HPL4(1,0,1,0,x)"->"HPL4_1010",
+"HPL4(1,0,1,1,x)"->"HPL4_1011",
+"HPL4(1,1,-1,-1,x)"->"HPL4_11m1m1",
+"HPL4(1,1,-1,0,x)"->"HPL4_11m10",
+"HPL4(1,1,-1,1,x)"->"HPL4_11m11",
+"HPL4(1,1,0,-1,x)"->"HPL4_110m1",
+"HPL4(1,1,0,0,x)"->"HPL4_1100",
+"HPL4(1,1,0,1,x)"->"HPL4_1101",
+"HPL4(1,1,1,-1,x)"->"HPL4_111m1",
+"HPL4(1,1,1,0,x)"->"HPL4_1110",
+"HPL4(1,1,1,1,x)"->"HPL4_1111",
+double HPL1_m1 = HPL1(-1,x)
+double HPL1_0 = HPL1(0,x)
+double HPL1_1 = HPL1(1,x)
+double HPL2_m1m1 = HPL2(-1,-1,x)
+double HPL2_m10 = HPL2(-1,0,x)
+double HPL2_m11 = HPL2(-1,1,x)
+double HPL2_0m1 = HPL2(0,-1,x)
+double HPL2_00 = HPL2(0,0,x)
+double HPL2_01 = HPL2(0,1,x)
+double HPL2_1m1 = HPL2(1,-1,x)
+double HPL2_10 = HPL2(1,0,x)
+double HPL2_11 = HPL2(1,1,x)
+double HPL3_m1m1m1 = HPL3(-1,-1,-1,x)
+double HPL3_m1m10 = HPL3(-1,-1,0,x)
+double HPL3_m1m11 = HPL3(-1,-1,1,x)
+double HPL3_m10m1 = HPL3(-1,0,-1,x)
+double HPL3_m100 = HPL3(-1,0,0,x)
+double HPL3_m101 = HPL3(-1,0,1,x)
+double HPL3_m11m1 = HPL3(-1,1,-1,x)
+double HPL3_m110 = HPL3(-1,1,0,x)
+double HPL3_m111 = HPL3(-1,1,1,x)
+double HPL3_0m1m1 = HPL3(0,-1,-1,x)
+double HPL3_0m10 = HPL3(0,-1,0,x)
+double HPL3_0m11 = HPL3(0,-1,1,x)
+double HPL3_00m1 = HPL3(0,0,-1,x)
+double HPL3_000 = HPL3(0,0,0,x)
+double HPL3_001 = HPL3(0,0,1,x)
+double HPL3_01m1 = HPL3(0,1,-1,x)
+double HPL3_010 = HPL3(0,1,0,x)
+double HPL3_011 = HPL3(0,1,1,x)
+double HPL3_1m1m1 = HPL3(1,-1,-1,x)
+double HPL3_1m10 = HPL3(1,-1,0,x)
+double HPL3_1m11 = HPL3(1,-1,1,x)
+double HPL3_10m1 = HPL3(1,0,-1,x)
+double HPL3_100 = HPL3(1,0,0,x)
+double HPL3_101 = HPL3(1,0,1,x)
+double HPL3_11m1 = HPL3(1,1,-1,x)
+double HPL3_110 = HPL3(1,1,0,x)
+double HPL3_111 = HPL3(1,1,1,x)
+double HPL4_m1m1m1m1 = HPL4(-1,-1,-1,-1,x)
+double HPL4_m1m1m10 = HPL4(-1,-1,-1,0,x)
+double HPL4_m1m1m11 = HPL4(-1,-1,-1,1,x)
+double HPL4_m1m10m1 = HPL4(-1,-1,0,-1,x)
+double HPL4_m1m100 = HPL4(-1,-1,0,0,x)
+double HPL4_m1m101 = HPL4(-1,-1,0,1,x)
+double HPL4_m1m11m1 = HPL4(-1,-1,1,-1,x)
+double HPL4_m1m110 = HPL4(-1,-1,1,0,x)
+double HPL4_m1m111 = HPL4(-1,-1,1,1,x)
+double HPL4_m10m1m1 = HPL4(-1,0,-1,-1,x)
+double HPL4_m10m10 = HPL4(-1,0,-1,0,x)
+double HPL4_m10m11 = HPL4(-1,0,-1,1,x)
+double HPL4_m100m1 = HPL4(-1,0,0,-1,x)
+double HPL4_m1000 = HPL4(-1,0,0,0,x)
+double HPL4_m1001 = HPL4(-1,0,0,1,x)
+double HPL4_m101m1 = HPL4(-1,0,1,-1,x)
+double HPL4_m1010 = HPL4(-1,0,1,0,x)
+double HPL4_m1011 = HPL4(-1,0,1,1,x)
+double HPL4_m11m1m1 = HPL4(-1,1,-1,-1,x)
+double HPL4_m11m10 = HPL4(-1,1,-1,0,x)
+double HPL4_m11m11 = HPL4(-1,1,-1,1,x)
+double HPL4_m110m1 = HPL4(-1,1,0,-1,x)
+double HPL4_m1100 = HPL4(-1,1,0,0,x)
+double HPL4_m1101 = HPL4(-1,1,0,1,x)
+double HPL4_m111m1 = HPL4(-1,1,1,-1,x)
+double HPL4_m1110 = HPL4(-1,1,1,0,x)
+double HPL4_m1111 = HPL4(-1,1,1,1,x)
+double HPL4_0m1m1m1 = HPL4(0,-1,-1,-1,x)
+double HPL4_0m1m10 = HPL4(0,-1,-1,0,x)
+double HPL4_0m1m11 = HPL4(0,-1,-1,1,x)
+double HPL4_0m10m1 = HPL4(0,-1,0,-1,x)
+double HPL4_0m100 = HPL4(0,-1,0,0,x)
+double HPL4_0m101 = HPL4(0,-1,0,1,x)
+double HPL4_0m11m1 = HPL4(0,-1,1,-1,x)
+double HPL4_0m110 = HPL4(0,-1,1,0,x)
+double HPL4_0m111 = HPL4(0,-1,1,1,x)
+double HPL4_00m1m1 = HPL4(0,0,-1,-1,x)
+double HPL4_00m10 = HPL4(0,0,-1,0,x)
+double HPL4_00m11 = HPL4(0,0,-1,1,x)
+double HPL4_000m1 = HPL4(0,0,0,-1,x)
+double HPL4_0000 = HPL4(0,0,0,0,x)
+double HPL4_0001 = HPL4(0,0,0,1,x)
+double HPL4_001m1 = HPL4(0,0,1,-1,x)
+double HPL4_0010 = HPL4(0,0,1,0,x)
+double HPL4_0011 = HPL4(0,0,1,1,x)
+double HPL4_01m1m1 = HPL4(0,1,-1,-1,x)
+double HPL4_01m10 = HPL4(0,1,-1,0,x)
+double HPL4_01m11 = HPL4(0,1,-1,1,x)
+double HPL4_010m1 = HPL4(0,1,0,-1,x)
+double HPL4_0100 = HPL4(0,1,0,0,x)
+double HPL4_0101 = HPL4(0,1,0,1,x)
+double HPL4_011m1 = HPL4(0,1,1,-1,x)
+double HPL4_0110 = HPL4(0,1,1,0,x)
+double HPL4_0111 = HPL4(0,1,1,1,x)
+double HPL4_1m1m1m1 = HPL4(1,-1,-1,-1,x)
+double HPL4_1m1m10 = HPL4(1,-1,-1,0,x)
+double HPL4_1m1m11 = HPL4(1,-1,-1,1,x)
+double HPL4_1m10m1 = HPL4(1,-1,0,-1,x)
+double HPL4_1m100 = HPL4(1,-1,0,0,x)
+double HPL4_1m101 = HPL4(1,-1,0,1,x)
+double HPL4_1m11m1 = HPL4(1,-1,1,-1,x)
+double HPL4_1m110 = HPL4(1,-1,1,0,x)
+double HPL4_1m111 = HPL4(1,-1,1,1,x)
+double HPL4_10m1m1 = HPL4(1,0,-1,-1,x)
+double HPL4_10m10 = HPL4(1,0,-1,0,x)
+double HPL4_10m11 = HPL4(1,0,-1,1,x)
+double HPL4_100m1 = HPL4(1,0,0,-1,x)
+double HPL4_1000 = HPL4(1,0,0,0,x)
+double HPL4_1001 = HPL4(1,0,0,1,x)
+double HPL4_101m1 = HPL4(1,0,1,-1,x)
+double HPL4_1010 = HPL4(1,0,1,0,x)
+double HPL4_1011 = HPL4(1,0,1,1,x)
+double HPL4_11m1m1 = HPL4(1,1,-1,-1,x)
+double HPL4_11m10 = HPL4(1,1,-1,0,x)
+double HPL4_11m11 = HPL4(1,1,-1,1,x)
+double HPL4_110m1 = HPL4(1,1,0,-1,x)
+double HPL4_1100 = HPL4(1,1,0,0,x)
+double HPL4_1101 = HPL4(1,1,0,1,x)
+double HPL4_111m1 = HPL4(1,1,1,-1,x)
+double HPL4_1110 = HPL4(1,1,1,0,x)
+double HPL4_1111 = HPL4(1,1,1,1,x)
+
+
+"HPL1(-1,z)"->"HPL1_m1",
+"HPL1(0,z)"->"HPL1_0",
+"HPL1(1,z)"->"HPL1_1",
+"HPL2(-1,-1,z)"->"HPL2_m1m1",
+"HPL2(-1,0,z)"->"HPL2_m10",
+"HPL2(-1,1,z)"->"HPL2_m11",
+"HPL2(0,-1,z)"->"HPL2_0m1",
+"HPL2(0,0,z)"->"HPL2_00",
+"HPL2(0,1,z)"->"HPL2_01",
+"HPL2(1,-1,z)"->"HPL2_1m1",
+"HPL2(1,0,z)"->"HPL2_10",
+"HPL2(1,1,z)"->"HPL2_11",
+"HPL3(-1,-1,-1,z)"->"HPL3_m1m1m1",
+"HPL3(-1,-1,0,z)"->"HPL3_m1m10",
+"HPL3(-1,-1,1,z)"->"HPL3_m1m11",
+"HPL3(-1,0,-1,z)"->"HPL3_m10m1",
+"HPL3(-1,0,0,z)"->"HPL3_m100",
+"HPL3(-1,0,1,z)"->"HPL3_m101",
+"HPL3(-1,1,-1,z)"->"HPL3_m11m1",
+"HPL3(-1,1,0,z)"->"HPL3_m110",
+"HPL3(-1,1,1,z)"->"HPL3_m111",
+"HPL3(0,-1,-1,z)"->"HPL3_0m1m1",
+"HPL3(0,-1,0,z)"->"HPL3_0m10",
+"HPL3(0,-1,1,z)"->"HPL3_0m11",
+"HPL3(0,0,-1,z)"->"HPL3_00m1",
+"HPL3(0,0,0,z)"->"HPL3_000",
+"HPL3(0,0,1,z)"->"HPL3_001",
+"HPL3(0,1,-1,z)"->"HPL3_01m1",
+"HPL3(0,1,0,z)"->"HPL3_010",
+"HPL3(0,1,1,z)"->"HPL3_011",
+"HPL3(1,-1,-1,z)"->"HPL3_1m1m1",
+"HPL3(1,-1,0,z)"->"HPL3_1m10",
+"HPL3(1,-1,1,z)"->"HPL3_1m11",
+"HPL3(1,0,-1,z)"->"HPL3_10m1",
+"HPL3(1,0,0,z)"->"HPL3_100",
+"HPL3(1,0,1,z)"->"HPL3_101",
+"HPL3(1,1,-1,z)"->"HPL3_11m1",
+"HPL3(1,1,0,z)"->"HPL3_110",
+"HPL3(1,1,1,z)"->"HPL3_111",
+"HPL4(-1,-1,-1,-1,z)"->"HPL4_m1m1m1m1",
+"HPL4(-1,-1,-1,0,z)"->"HPL4_m1m1m10",
+"HPL4(-1,-1,-1,1,z)"->"HPL4_m1m1m11",
+"HPL4(-1,-1,0,-1,z)"->"HPL4_m1m10m1",
+"HPL4(-1,-1,0,0,z)"->"HPL4_m1m100",
+"HPL4(-1,-1,0,1,z)"->"HPL4_m1m101",
+"HPL4(-1,-1,1,-1,z)"->"HPL4_m1m11m1",
+"HPL4(-1,-1,1,0,z)"->"HPL4_m1m110",
+"HPL4(-1,-1,1,1,z)"->"HPL4_m1m111",
+"HPL4(-1,0,-1,-1,z)"->"HPL4_m10m1m1",
+"HPL4(-1,0,-1,0,z)"->"HPL4_m10m10",
+"HPL4(-1,0,-1,1,z)"->"HPL4_m10m11",
+"HPL4(-1,0,0,-1,z)"->"HPL4_m100m1",
+"HPL4(-1,0,0,0,z)"->"HPL4_m1000",
+"HPL4(-1,0,0,1,z)"->"HPL4_m1001",
+"HPL4(-1,0,1,-1,z)"->"HPL4_m101m1",
+"HPL4(-1,0,1,0,z)"->"HPL4_m1010",
+"HPL4(-1,0,1,1,z)"->"HPL4_m1011",
+"HPL4(-1,1,-1,-1,z)"->"HPL4_m11m1m1",
+"HPL4(-1,1,-1,0,z)"->"HPL4_m11m10",
+"HPL4(-1,1,-1,1,z)"->"HPL4_m11m11",
+"HPL4(-1,1,0,-1,z)"->"HPL4_m110m1",
+"HPL4(-1,1,0,0,z)"->"HPL4_m1100",
+"HPL4(-1,1,0,1,z)"->"HPL4_m1101",
+"HPL4(-1,1,1,-1,z)"->"HPL4_m111m1",
+"HPL4(-1,1,1,0,z)"->"HPL4_m1110",
+"HPL4(-1,1,1,1,z)"->"HPL4_m1111",
+"HPL4(0,-1,-1,-1,z)"->"HPL4_0m1m1m1",
+"HPL4(0,-1,-1,0,z)"->"HPL4_0m1m10",
+"HPL4(0,-1,-1,1,z)"->"HPL4_0m1m11",
+"HPL4(0,-1,0,-1,z)"->"HPL4_0m10m1",
+"HPL4(0,-1,0,0,z)"->"HPL4_0m100",
+"HPL4(0,-1,0,1,z)"->"HPL4_0m101",
+"HPL4(0,-1,1,-1,z)"->"HPL4_0m11m1",
+"HPL4(0,-1,1,0,z)"->"HPL4_0m110",
+"HPL4(0,-1,1,1,z)"->"HPL4_0m111",
+"HPL4(0,0,-1,-1,z)"->"HPL4_00m1m1",
+"HPL4(0,0,-1,0,z)"->"HPL4_00m10",
+"HPL4(0,0,-1,1,z)"->"HPL4_00m11",
+"HPL4(0,0,0,-1,z)"->"HPL4_000m1",
+"HPL4(0,0,0,0,z)"->"HPL4_0000",
+"HPL4(0,0,0,1,z)"->"HPL4_0001",
+"HPL4(0,0,1,-1,z)"->"HPL4_001m1",
+"HPL4(0,0,1,0,z)"->"HPL4_0010",
+"HPL4(0,0,1,1,z)"->"HPL4_0011",
+"HPL4(0,1,-1,-1,z)"->"HPL4_01m1m1",
+"HPL4(0,1,-1,0,z)"->"HPL4_01m10",
+"HPL4(0,1,-1,1,z)"->"HPL4_01m11",
+"HPL4(0,1,0,-1,z)"->"HPL4_010m1",
+"HPL4(0,1,0,0,z)"->"HPL4_0100",
+"HPL4(0,1,0,1,z)"->"HPL4_0101",
+"HPL4(0,1,1,-1,z)"->"HPL4_011m1",
+"HPL4(0,1,1,0,z)"->"HPL4_0110",
+"HPL4(0,1,1,1,z)"->"HPL4_0111",
+"HPL4(1,-1,-1,-1,z)"->"HPL4_1m1m1m1",
+"HPL4(1,-1,-1,0,z)"->"HPL4_1m1m10",
+"HPL4(1,-1,-1,1,z)"->"HPL4_1m1m11",
+"HPL4(1,-1,0,-1,z)"->"HPL4_1m10m1",
+"HPL4(1,-1,0,0,z)"->"HPL4_1m100",
+"HPL4(1,-1,0,1,z)"->"HPL4_1m101",
+"HPL4(1,-1,1,-1,z)"->"HPL4_1m11m1",
+"HPL4(1,-1,1,0,z)"->"HPL4_1m110",
+"HPL4(1,-1,1,1,z)"->"HPL4_1m111",
+"HPL4(1,0,-1,-1,z)"->"HPL4_10m1m1",
+"HPL4(1,0,-1,0,z)"->"HPL4_10m10",
+"HPL4(1,0,-1,1,z)"->"HPL4_10m11",
+"HPL4(1,0,0,-1,z)"->"HPL4_100m1",
+"HPL4(1,0,0,0,z)"->"HPL4_1000",
+"HPL4(1,0,0,1,z)"->"HPL4_1001",
+"HPL4(1,0,1,-1,z)"->"HPL4_101m1",
+"HPL4(1,0,1,0,z)"->"HPL4_1010",
+"HPL4(1,0,1,1,z)"->"HPL4_1011",
+"HPL4(1,1,-1,-1,z)"->"HPL4_11m1m1",
+"HPL4(1,1,-1,0,z)"->"HPL4_11m10",
+"HPL4(1,1,-1,1,z)"->"HPL4_11m11",
+"HPL4(1,1,0,-1,z)"->"HPL4_110m1",
+"HPL4(1,1,0,0,z)"->"HPL4_1100",
+"HPL4(1,1,0,1,z)"->"HPL4_1101",
+"HPL4(1,1,1,-1,z)"->"HPL4_111m1",
+"HPL4(1,1,1,0,z)"->"HPL4_1110",
+"HPL4(1,1,1,1,z)"->"HPL4_1111",
+double HPL1_m1 = HPL1(-1,z)
+double HPL1_0 = HPL1(0,z)
+double HPL1_1 = HPL1(1,z)
+double HPL2_m1m1 = HPL2(-1,-1,z)
+double HPL2_m10 = HPL2(-1,0,z)
+double HPL2_m11 = HPL2(-1,1,z)
+double HPL2_0m1 = HPL2(0,-1,z)
+double HPL2_00 = HPL2(0,0,z)
+double HPL2_01 = HPL2(0,1,z)
+double HPL2_1m1 = HPL2(1,-1,z)
+double HPL2_10 = HPL2(1,0,z)
+double HPL2_11 = HPL2(1,1,z)
+double HPL3_m1m1m1 = HPL3(-1,-1,-1,z)
+double HPL3_m1m10 = HPL3(-1,-1,0,z)
+double HPL3_m1m11 = HPL3(-1,-1,1,z)
+double HPL3_m10m1 = HPL3(-1,0,-1,z)
+double HPL3_m100 = HPL3(-1,0,0,z)
+double HPL3_m101 = HPL3(-1,0,1,z)
+double HPL3_m11m1 = HPL3(-1,1,-1,z)
+double HPL3_m110 = HPL3(-1,1,0,z)
+double HPL3_m111 = HPL3(-1,1,1,z)
+double HPL3_0m1m1 = HPL3(0,-1,-1,z)
+double HPL3_0m10 = HPL3(0,-1,0,z)
+double HPL3_0m11 = HPL3(0,-1,1,z)
+double HPL3_00m1 = HPL3(0,0,-1,z)
+double HPL3_000 = HPL3(0,0,0,z)
+double HPL3_001 = HPL3(0,0,1,z)
+double HPL3_01m1 = HPL3(0,1,-1,z)
+double HPL3_010 = HPL3(0,1,0,z)
+double HPL3_011 = HPL3(0,1,1,z)
+double HPL3_1m1m1 = HPL3(1,-1,-1,z)
+double HPL3_1m10 = HPL3(1,-1,0,z)
+double HPL3_1m11 = HPL3(1,-1,1,z)
+double HPL3_10m1 = HPL3(1,0,-1,z)
+double HPL3_100 = HPL3(1,0,0,z)
+double HPL3_101 = HPL3(1,0,1,z)
+double HPL3_11m1 = HPL3(1,1,-1,z)
+double HPL3_110 = HPL3(1,1,0,z)
+double HPL3_111 = HPL3(1,1,1,z)
+double HPL4_m1m1m1m1 = HPL4(-1,-1,-1,-1,z)
+double HPL4_m1m1m10 = HPL4(-1,-1,-1,0,z)
+double HPL4_m1m1m11 = HPL4(-1,-1,-1,1,z)
+double HPL4_m1m10m1 = HPL4(-1,-1,0,-1,z)
+double HPL4_m1m100 = HPL4(-1,-1,0,0,z)
+double HPL4_m1m101 = HPL4(-1,-1,0,1,z)
+double HPL4_m1m11m1 = HPL4(-1,-1,1,-1,z)
+double HPL4_m1m110 = HPL4(-1,-1,1,0,z)
+double HPL4_m1m111 = HPL4(-1,-1,1,1,z)
+double HPL4_m10m1m1 = HPL4(-1,0,-1,-1,z)
+double HPL4_m10m10 = HPL4(-1,0,-1,0,z)
+double HPL4_m10m11 = HPL4(-1,0,-1,1,z)
+double HPL4_m100m1 = HPL4(-1,0,0,-1,z)
+double HPL4_m1000 = HPL4(-1,0,0,0,z)
+double HPL4_m1001 = HPL4(-1,0,0,1,z)
+double HPL4_m101m1 = HPL4(-1,0,1,-1,z)
+double HPL4_m1010 = HPL4(-1,0,1,0,z)
+double HPL4_m1011 = HPL4(-1,0,1,1,z)
+double HPL4_m11m1m1 = HPL4(-1,1,-1,-1,z)
+double HPL4_m11m10 = HPL4(-1,1,-1,0,z)
+double HPL4_m11m11 = HPL4(-1,1,-1,1,z)
+double HPL4_m110m1 = HPL4(-1,1,0,-1,z)
+double HPL4_m1100 = HPL4(-1,1,0,0,z)
+double HPL4_m1101 = HPL4(-1,1,0,1,z)
+double HPL4_m111m1 = HPL4(-1,1,1,-1,z)
+double HPL4_m1110 = HPL4(-1,1,1,0,z)
+double HPL4_m1111 = HPL4(-1,1,1,1,z)
+double HPL4_0m1m1m1 = HPL4(0,-1,-1,-1,z)
+double HPL4_0m1m10 = HPL4(0,-1,-1,0,z)
+double HPL4_0m1m11 = HPL4(0,-1,-1,1,z)
+double HPL4_0m10m1 = HPL4(0,-1,0,-1,z)
+double HPL4_0m100 = HPL4(0,-1,0,0,z)
+double HPL4_0m101 = HPL4(0,-1,0,1,z)
+double HPL4_0m11m1 = HPL4(0,-1,1,-1,z)
+double HPL4_0m110 = HPL4(0,-1,1,0,z)
+double HPL4_0m111 = HPL4(0,-1,1,1,z)
+double HPL4_00m1m1 = HPL4(0,0,-1,-1,z)
+double HPL4_00m10 = HPL4(0,0,-1,0,z)
+double HPL4_00m11 = HPL4(0,0,-1,1,z)
+double HPL4_000m1 = HPL4(0,0,0,-1,z)
+double HPL4_0000 = HPL4(0,0,0,0,z)
+double HPL4_0001 = HPL4(0,0,0,1,z)
+double HPL4_001m1 = HPL4(0,0,1,-1,z)
+double HPL4_0010 = HPL4(0,0,1,0,z)
+double HPL4_0011 = HPL4(0,0,1,1,z)
+double HPL4_01m1m1 = HPL4(0,1,-1,-1,z)
+double HPL4_01m10 = HPL4(0,1,-1,0,z)
+double HPL4_01m11 = HPL4(0,1,-1,1,z)
+double HPL4_010m1 = HPL4(0,1,0,-1,z)
+double HPL4_0100 = HPL4(0,1,0,0,z)
+double HPL4_0101 = HPL4(0,1,0,1,z)
+double HPL4_011m1 = HPL4(0,1,1,-1,z)
+double HPL4_0110 = HPL4(0,1,1,0,z)
+double HPL4_0111 = HPL4(0,1,1,1,z)
+double HPL4_1m1m1m1 = HPL4(1,-1,-1,-1,z)
+double HPL4_1m1m10 = HPL4(1,-1,-1,0,z)
+double HPL4_1m1m11 = HPL4(1,-1,-1,1,z)
+double HPL4_1m10m1 = HPL4(1,-1,0,-1,z)
+double HPL4_1m100 = HPL4(1,-1,0,0,z)
+double HPL4_1m101 = HPL4(1,-1,0,1,z)
+double HPL4_1m11m1 = HPL4(1,-1,1,-1,z)
+double HPL4_1m110 = HPL4(1,-1,1,0,z)
+double HPL4_1m111 = HPL4(1,-1,1,1,z)
+double HPL4_10m1m1 = HPL4(1,0,-1,-1,z)
+double HPL4_10m10 = HPL4(1,0,-1,0,z)
+double HPL4_10m11 = HPL4(1,0,-1,1,z)
+double HPL4_100m1 = HPL4(1,0,0,-1,z)
+double HPL4_1000 = HPL4(1,0,0,0,z)
+double HPL4_1001 = HPL4(1,0,0,1,z)
+double HPL4_101m1 = HPL4(1,0,1,-1,z)
+double HPL4_1010 = HPL4(1,0,1,0,z)
+double HPL4_1011 = HPL4(1,0,1,1,z)
+double HPL4_11m1m1 = HPL4(1,1,-1,-1,z)
+double HPL4_11m10 = HPL4(1,1,-1,0,z)
+double HPL4_11m11 = HPL4(1,1,-1,1,z)
+double HPL4_110m1 = HPL4(1,1,0,-1,z)
+double HPL4_1100 = HPL4(1,1,0,0,z)
+double HPL4_1101 = HPL4(1,1,0,1,z)
+double HPL4_111m1 = HPL4(1,1,1,-1,z)
+double HPL4_1110 = HPL4(1,1,1,0,z)
+double HPL4_1111 = HPL4(1,1,1,1,z)

@@ -41,7 +41,6 @@ LIBRARIES += -lgfortran
 
 OBJS = $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(wildcard $(LIBSRC)/*.cpp)))
 
-FORCE:
 .PHONY: FORCE
 
 all: $(LIB) main

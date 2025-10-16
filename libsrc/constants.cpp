@@ -77,3 +77,7 @@ namespace PRECISION {
     ProtectedObject<int> ITER{1000000};
 
 }
+
+namespace APPROX	{
+	ProtectedObject<APPROX::APPROXTYPE> LEVEL{APPROX::APPR1};
+}

@@ -9,7 +9,7 @@
 /// @brief electromagnetic structure function F2 from photon interaction
 /// @param x hadronic scaling variable x=Q2/(2*P*q) with proton momentum P
 /// @param Q2 minus photon momentum squared
-double F2(double x, double Q2, FLAG flags)	{
+double F2(double x, double Q2)	{
 	double result(0.);
 
 	/// lo
@@ -77,11 +77,9 @@ double F2(double x, double Q2, FLAG flags)	{
 		result += a4pi * runcorr_ci_1 * c2q_ns_1_0_local() * xfiQi2sum(x, Q2);
 		result += a4pi * runcorr_ci_1 * c2q_ns_1_0_localplus(x) * xfiQi2sum(x, Q2);
 		if(QCDORDER::F2ORDER >= 2)	{
-			if(flags & FLAGS::EXACT)	{
-				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_local_exact() * xfiQi2sum(x, Q2);
-				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_localplus_exact(x) * xfiQi2sum(x, Q2);
-				// result += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_exact() * QCD::sumQi2() * Pdf::xf(G, x, Q2); ///< this term is 0 in the exact version of the formula
-			} else	{
+			switch (APPROX::LEVEL)
+			{
+			case APPROX::APPR1:
 				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx() * xfiQi2sum(x, Q2);
 				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx() * xfiQi2sum(x, Q2) *  QCD::NF;
 
@@ -89,6 +87,24 @@ double F2(double x, double Q2, FLAG flags)	{
 				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx(x) * xfiQi2sum(x, Q2) *  QCD::NF;
 
 				result += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
+				break;
+			case APPROX::APPR2:
+				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx2() * xfiQi2sum(x, Q2);
+				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx2() * xfiQi2sum(x, Q2) *  QCD::NF;
+
+				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx2(x) * xfiQi2sum(x, Q2);
+				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx2(x) * xfiQi2sum(x, Q2) *  QCD::NF;
+
+				result += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx2() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
+				break;
+			case APPROX::EXACT:
+				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_local_exact() * xfiQi2sum(x, Q2);
+				result += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_localplus_exact(x) * xfiQi2sum(x, Q2);
+				break;
+			default:
+				std::cout << "ERROR in determining approximation level of coefficient functions" << std::endl;
+				abort();
+				break;
 			}
 		}
 	}
@@ -102,7 +118,7 @@ double F2(double x, double Q2, FLAG flags)	{
 /// @param z partonic scaling variable
 /// @param Q2 minus photon momentum squared
 /// @param x hadronic/Bjorken scaling variable
-double F2integrand(double z, double Q2, double x, FLAG flags)	{
+double F2integrand(double z, double Q2, double x)	{
 	double result_ns_reg(0.0);
 	double result_ns_plus(0.0);
 	double result_ps(0.0);
@@ -139,22 +155,30 @@ double F2integrand(double z, double Q2, double x, FLAG flags)	{
 		result_g 		+= a4pi * runcorr_ci_1 * c2g_1_0(z) * QCD::sumQi2() * Pdf::xf(G, x/z, Q2);
 		/// nnlo
 		if(QCDORDER::F2ORDER >= 2)	{
-			if(flags & FLAGS::EXACT)	{
+			switch (APPROX::LEVEL)
+			{
+			case APPROX::APPR1:
+				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_reg_approx(z) + QCD::NF * c2q_ns_2_1_reg_approx(z) )* xfiQi2sum(x/z, Q2);
+				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_plus_approx(z) + QCD::NF * c2q_ns_2_1_plus_approx(z) ) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) ) ;
+				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx(z) * QCD::sumQi2() * Pdf::xf(G, x/z, Q2);
+				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx(z) * QCD::sumQi2() * xfiSingletSum(x/z, Q2);
+				break;
+			case APPROX::APPR2:
+				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_reg_approx2(z) + QCD::NF * c2q_ns_2_1_reg_approx2(z) )* xfiQi2sum(x/z, Q2);
+				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_plus_approx2(z) + QCD::NF * c2q_ns_2_1_plus_approx2(z) ) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) ) ;
+				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx2(z) * QCD::sumQi2() * Pdf::xf(G, x/z, Q2);
+				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx2(z) * QCD::sumQi2() * xfiSingletSum(x/z, Q2);
+				break;
+			case APPROX::EXACT:
 				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_reg_exact(z) * xfiQi2sum(x/z, Q2);
 				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_plus_exact(z) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) ) ;
 				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_exact(z) * QCD::sumQi2() * Pdf::xf(G, x/z, Q2);
 				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_exact(z) * QCD::sumQi2() * xfiSingletSum(x/z, Q2);
-			} else {
-				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * (
-									c2q_ns_2_0_reg_approx(z) 
-									+ QCD::NF * c2q_ns_2_1_reg_approx(z)
-								)* xfiQi2sum(x/z, Q2);
-				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * (
-									c2q_ns_2_0_plus_approx(z) 
-									+ QCD::NF * c2q_ns_2_1_plus_approx(z)
-								) * ( xfiQi2sum(x/z, Q2) - xfiQi2sum(x, Q2) ) ;
-				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx(z) * QCD::sumQi2() * Pdf::xf(G, x/z, Q2);
-				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx(z) * QCD::sumQi2() * xfiSingletSum(x/z, Q2);
+				break;
+			default:
+				std::cout << "ERROR in determining approximation level of coefficient functions" << std::endl;
+				abort();
+				break;
 			}
 		}
 	}
@@ -163,13 +187,13 @@ double F2integrand(double z, double Q2, double x, FLAG flags)	{
 }
 
 /// @brief transformation of F2integrand that samples closer to small z
-double F2integrand_logtrafo1(double t, double Q2, double x, FLAG flags)	{
+double F2integrand_logtrafo1(double t, double Q2, double x)	{
 	double z = std::exp(t);
-	return F2integrand(z,Q2,x,flags)*z;
+	return F2integrand(z,Q2,x)*z;
 }
 
 /// @brief transformation of F2integrand that samples closer to large z
-double F2integrand_logtrafo2(double t, double Q2, double x, FLAG flags)	{
+double F2integrand_logtrafo2(double t, double Q2, double x)	{
 	double z = 1.-std::exp(t);
-	return F2integrand(z,Q2,x,flags)*(1-z);
+	return F2integrand(z,Q2,x)*(1-z);
 }

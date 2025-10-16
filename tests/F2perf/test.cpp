@@ -73,8 +73,12 @@ int main()	{
 			QCDORDER::F2ORDER.set(2);
 			foralpsrenorm_.kordf2_ 	= 2;
 			double F2_fortran_nnlo	= f2qcd_(3,1,22,x,Q2);
-			double F2_cpp_nnlo		= F2(x,Q2);
-			double F2_cpp_nnlo_ex	= F2(x,Q2, FLAGS::EXACT);
+			APPROX::LEVEL.set(APPROX::APPR1);
+			double F2_cpp_nnlo_apr1	= F2(x,Q2);
+			APPROX::LEVEL.set(APPROX::APPR2);
+			double F2_cpp_nnlo_apr2	= F2(x,Q2);
+			APPROX::LEVEL.set(APPROX::EXACT);
+			double F2_cpp_nnlo_ex	= F2(x,Q2);
 
 			std::cout	<< std::setw(WIDTH) << Q2
 						<< std::setw(WIDTH) << x
@@ -84,7 +88,12 @@ int main()	{
 						<< std::setw(WIDTH)	<< " "
 						<< std::setw(WIDTH)	<< " "
 						<< std::setw(WIDTH) << F2_cpp_nlo
-						<< std::setw(WIDTH) << F2_cpp_nnlo
+						<< std::setw(WIDTH) << F2_cpp_nnlo_apr1
+						<< std::endl
+						<< std::setw(WIDTH)	<< " "
+						<< std::setw(WIDTH)	<< " "
+						<< std::setw(WIDTH) << " "
+						<< std::setw(WIDTH) << F2_cpp_nnlo_apr2
 						<< std::endl
 						<< std::setw(WIDTH)	<< " "
 						<< std::setw(WIDTH)	<< " "
