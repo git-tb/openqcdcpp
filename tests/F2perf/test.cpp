@@ -23,8 +23,8 @@ int main()	{
 	PRECISION::EPSABS.set(1e-5);
 	PRECISION::EPSREL.set(1e-5);
 	PRECISION::ITER.set(1000);
-	forpreccontrol_.nf2qcd1	= 10;
-	forpreccontrol_.nf2qcd2	= 10;
+	forpreccontrol_.nf2qcd1	= 3;
+	forpreccontrol_.nf2qcd2	= 3;
 	
 	QCDORDER::F2ORDER.set(1);
 	foralpsrenorm_.kordf2_ 	= 1;
@@ -54,8 +54,28 @@ int main()	{
 	std::cout	<< std::scientific << std::setprecision(PREC);
 	std::cout	<< std::setw(WIDTH) << "Q2"
 				<< std::setw(WIDTH) << "x"
-				<< std::setw(WIDTH) << "F2@nlo(fortran/cpp)"
-				<< std::setw(WIDTH) << "F2@nnlo(fortran/cpp)"
+				<< std::setw(WIDTH) << "F2@nlo"
+				<< std::setw(WIDTH) << "F2@nnlo"
+				<< std::endl
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << "fortran"
+				<< std::setw(WIDTH) << "fortran"
+				<< std::endl
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << "cpp"
+				<< std::setw(WIDTH) << "cpp (apr1)"
+				<< std::endl
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << "cpp (apr2)"
+				<< std::endl
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << " "
+				<< std::setw(WIDTH) << "cpp (exct)"
 				<< std::endl;
 
 	for(int i = 0; i < 9; i++)	{
@@ -109,7 +129,9 @@ int main()	{
 	std::srand(std::time(NULL));
 	const int NRUN 		= 1e3;
 	double	time_for	= 0.0, ///< fortran timing
-	time_cpp	= 0.0; ///< C++ timing
+			time_cppa1	= 0.0, ///< C++ timing, approximation 1
+			time_cppa2	= 0.0, ///< C++ timing, approximation 2
+			time_cppex	= 0.0; ///< C++ timing, exact
 	auto start 			= std::chrono::high_resolution_clock::now();
 	auto stop 			= std::chrono::high_resolution_clock::now();
 	auto duration 		= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
@@ -140,27 +162,33 @@ int main()	{
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_for 	+= (double)duration.count()/(double)NRUN;
 
+		APPROX::LEVEL.set(APPROX::EXACT);
 		start 		= std::chrono::high_resolution_clock::now();
 		F2(x,q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-		time_cpp 	+= (double)duration.count()/(double)NRUN;
+		time_cppex 	+= (double)duration.count()/(double)NRUN;
 	}
 
 	std::cout	<< std::endl
 				<< std::setw(26) << "Fortran runtime avg (ns):"
-				<< std::setw(8) << time_for
+				<< std::setw(15) << time_for
 				<< std::endl
 				<< std::setw(26) << "C++ runtime avg (ns):"
-				<< std::setw(8) << time_cpp
+				<< std::setw(15) << time_cppex
 				<< std::endl
 				<< std::endl;
 
 	
 	///
 	std::cout << "Performance test@NNLO" << std::endl;
+	APPROX::LEVEL.set(APPROX::APPR1);
 	QCDORDER::F2ORDER.set(2);
 	foralpsrenorm_.kordf2_ 	= 2;
+	time_for	= 0.0, ///< fortran timing
+	time_cppa1	= 0.0, ///< C++ timing, approximation 1
+	time_cppa2	= 0.0, ///< C++ timing, approximation 2
+	time_cppex	= 0.0; ///< C++ timing, exact
 	for(int i = 0; i < NRUN; i++)	{
 		{
 			std::cout << "\33[2K\r" << std::flush;
@@ -178,19 +206,43 @@ int main()	{
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_for 	+= (double)duration.count()/(double)NRUN;
 
+		APPROX::LEVEL.set(APPROX::APPR1);
 		start 		= std::chrono::high_resolution_clock::now();
 		F2(x,q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-		time_cpp 	+= (double)duration.count()/(double)NRUN;
+		time_cppa1 	+= (double)duration.count()/(double)NRUN;
+
+		APPROX::LEVEL.set(APPROX::APPR2);
+		start 		= std::chrono::high_resolution_clock::now();
+		F2(x,q2);
+		stop 		= std::chrono::high_resolution_clock::now();
+		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+		time_cppa2 	+= (double)duration.count()/(double)NRUN;
+
+		APPROX::LEVEL.set(APPROX::EXACT);
+		start 		= std::chrono::high_resolution_clock::now();
+		F2(x,q2);
+		stop 		= std::chrono::high_resolution_clock::now();
+		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+		time_cppex 	+= (double)duration.count()/(double)NRUN;
 	}
 
 	std::cout	<< std::endl
 				<< std::setw(26) << "Fortran runtime avg (ns):"
-				<< std::setw(8) << time_for
+				<< std::setw(15) << time_for
 				<< std::endl
 				<< std::setw(26) << "C++ runtime avg (ns):"
-				<< std::setw(8) << time_cpp
+				<< std::setw(15) << time_cppa1
+				<< std::setw(15) << "(appr1)"
+				<< std::endl
+				<< std::setw(26) << " "
+				<< std::setw(15) << time_cppa2
+				<< std::setw(15) << "(appr2)"
+				<< std::endl
+				<< std::setw(26) << " "
+				<< std::setw(15) << time_cppex
+				<< std::setw(15) << "(exct)"
 				<< std::endl
 				<< std::endl;
 

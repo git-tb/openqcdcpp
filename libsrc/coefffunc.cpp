@@ -137,37 +137,17 @@ double c2q_ns_2_1_localplus_approx2(double z)	{
 /// This expression was obtained after some rewriting and reordering with Mathematica.
 double c2q_ns_2_01_localplus_exact(double x)	{
 	double result(0.0);
-	double HPL1_1 	= HPL1(1,x);
-	double HPL2_10 	= HPL2(1,0,x);
-	double HPL2_11 	= HPL2(1,1,x);
-	double HPL3_100 	= HPL3(1,0,0,x);
-	double HPL3_101 	= HPL3(1,0,1,x);
-	double HPL3_110 	= HPL3(1,1,0,x);
-	double HPL3_111 	= HPL3(1,1,1,x);
-	double HPL4_10m10 	= HPL4(1,0,-1,0,x);
-	double HPL4_1000 	= HPL4(1,0,0,0,x);
-	double HPL4_1001 	= HPL4(1,0,0,1,x);
-	double HPL4_1010 	= HPL4(1,0,1,0,x);
-	double HPL4_1011 	= HPL4(1,0,1,1,x);
-	double HPL4_1100 	= HPL4(1,1,0,0,x);
-	double HPL4_1101 	= HPL4(1,1,0,1,x);
-	double HPL4_1110 	= HPL4(1,1,1,0,x);
-	double HPL4_1111 	= HPL4(1,1,1,1,x);
-	result += QCD::CF*
-QCD::NF*(-247./27.*HPL1_1 + 16./3.*MATH::ZETA2*HPL1_1 + \
--38./3.*HPL2_10 + -58./9.*HPL2_11 + -20./3.*HPL3_100 + \
--16./3.*HPL3_101 + -8./3.*HPL3_110 + -8./3.*HPL3_111) + 
-QCD::CA*
-QCD::CF*(3155./54.*HPL1_1 - 4*MATH::ZETA3*HPL1_1 + 239./3.*HPL2_10 + \
-MATH::ZETA2*(-88./3.*HPL1_1 - 8*HPL2_10 - 24*HPL2_11) + \
-367./9.*HPL2_11 + 110./3.*HPL3_100 + 88./3.*HPL3_101 + \
-44./3.*HPL3_110 + 44./3.*HPL3_111 + 24*HPL4_10m10 + 12*HPL4_1000 + \
-8*HPL4_1001 + 16*HPL4_1100 + 8*HPL4_1101 - 8*HPL4_1110) + std::pow(
-QCD::CF,2)*(-51./2.*HPL1_1 - 64*MATH::ZETA3*HPL1_1 - 61*HPL2_10 + \
-MATH::ZETA2*(-24*HPL1_1 - 48*HPL2_10 - 16*HPL2_11) - 27*HPL2_11 + \
-6*HPL3_100 + 24*HPL3_101 + 36*HPL3_110 + 36*HPL3_111 - 48*HPL4_10m10 + \
-16*HPL4_1000 + 48*HPL4_1001 + 48*HPL4_1010 + 56*HPL4_1011 + \
-24*HPL4_1100 + 48*HPL4_1101 + 64*HPL4_1110 + 48*HPL4_1111);
+	double L1x	=	std::log(1-x);
+	result 		+= 	QCD::CA*
+QCD::CF*((-3155./54. + 44./3.*MATH::ZETA2 + 40*MATH::ZETA3)*L1x + \
+(367./18. - 4*MATH::ZETA2)*std::pow(L1x,2) + -22./9.*std::pow(L1x,3)) \
++ 
+QCD::CF*
+QCD::NF*((247./27. + -8./3.*MATH::ZETA2)*L1x + -29./9.*std::pow(L1x,2) \
++ 4./9.*std::pow(L1x,3)) + std::pow(
+QCD::CF,2)*((51./2. + 36*MATH::ZETA2 - 8*MATH::ZETA3)*L1x + (-27./2. - \
+16*MATH::ZETA2)*std::pow(L1x,2) - 6*std::pow(L1x,3) + \
+2*std::pow(L1x,4));
 	return result;
 }
 
@@ -218,37 +198,17 @@ double c2q_ns_2_1_plus_approx2(double z)	{
 /// This expression was obtained after some rewriting and reordering with Mathematica.
 double c2q_ns_2_01_plus_exact(double z)	{
 	double result(0.0);
-	double HPL1_0	= HPL1(0,z);
-	double HPL1_1	= HPL1(1,z);
-	double HPL2_00	= HPL2(0,0,z);
-	double HPL2_01	= HPL2(0,1,z);
-	double HPL2_10	= HPL2(1,0,z);
-	double HPL2_11	= HPL2(1,1,z);
-	double HPL3_0m10	= HPL3(0,-1,0,z);
-	double HPL3_000	= HPL3(0,0,0,z);
-	double HPL3_001	= HPL3(0,0,1,z);
-	double HPL3_010	= HPL3(0,1,0,z);
-	double HPL3_011	= HPL3(0,1,1,z);
-	double HPL3_100	= HPL3(1,0,0,z);
-	double HPL3_101	= HPL3(1,0,1,z);
-	double HPL3_110	= HPL3(1,1,0,z);
-	double HPL3_111	= HPL3(1,1,1,z);
+	double L1z	= std::log(1-z);
 	result += (
-QCD::CF*
-QCD::NF*(247./27. + -16./3.*MATH::ZETA2 + 38./3.*HPL1_0 + \
-58./9.*HPL1_1 + 20./3.*HPL2_00 + 16./3.*HPL2_01 + 8./3.*HPL2_10 + \
-8./3.*HPL2_11) + 
 QCD::CA*
-QCD::CF*(-3155./54. + 4*MATH::ZETA3 + -239./3.*HPL1_0 + \
--367./9.*HPL1_1 + MATH::ZETA2*(88./3. + 8*HPL1_0 + 24*HPL1_1) + \
--110./3.*HPL2_00 + -88./3.*HPL2_01 + -44./3.*HPL2_10 + \
--44./3.*HPL2_11 - 24*HPL3_0m10 - 12*HPL3_000 - 8*HPL3_001 - \
-16*HPL3_100 - 8*HPL3_101 + 8*HPL3_110) + std::pow(
-QCD::CF,2)*(51./2. + 64*MATH::ZETA3 + 61*HPL1_0 + 27*HPL1_1 + \
-MATH::ZETA2*(24 + 48*HPL1_0 + 16*HPL1_1) - 6*HPL2_00 - 24*HPL2_01 - \
-36*HPL2_10 - 36*HPL2_11 + 48*HPL3_0m10 - 16*HPL3_000 - 48*HPL3_001 - \
-48*HPL3_010 - 56*HPL3_011 - 24*HPL3_100 - 48*HPL3_101 - 64*HPL3_110 - \
-48*HPL3_111))/(1 - z);
+QCD::CF*(3155./54. + -44./3.*MATH::ZETA2 - 40*MATH::ZETA3 + (-367./9. \
++ 8*MATH::ZETA2)*L1z + 22./3.*std::pow(L1z,2)) + 
+QCD::CF*
+QCD::NF*(-247./27. + 8./3.*MATH::ZETA2 + 58./9.*L1z + \
+-4./3.*std::pow(L1z,2)) + std::pow(
+QCD::CF,2)*(-51./2. - 36*MATH::ZETA2 + 8*MATH::ZETA3 + (27 + \
+32*MATH::ZETA2)*L1z + 18*std::pow(L1z,2) - 8*std::pow(L1z,3)))/(-1 + \
+z);
 	return result;
 }
 
@@ -323,70 +283,95 @@ double c2q_ns_2_1_reg_approx2(double z)	{
 /// This expression was obtained after some rewriting and reordering with Mathematica.
 double c2q_ns_2_01_reg_exact(double z)	{
 	double result(0.0);
-	double HPL1_m1	= HPL1(-1,z);
-	double HPL1_0	= HPL1(0,z);
-	double HPL1_1	= HPL1(1,z);
-	double HPL2_m10	= HPL2(-1,0,z);
-	double HPL2_00	= HPL2(0,0,z);
-	double HPL2_01	= HPL2(0,1,z);
-	double HPL2_10	= HPL2(1,0,z);
-	double HPL2_11	= HPL2(1,1,z);
-	double HPL3_m1m10	= HPL3(-1,-1,0,z);
-	double HPL3_m100	= HPL3(-1,0,0,z);
-	double HPL3_m101	= HPL3(-1,0,1,z);
-	double HPL3_0m10	= HPL3(0,-1,0,z);
-	double HPL3_000	= HPL3(0,0,0,z);
-	double HPL3_001	= HPL3(0,0,1,z);
-	double HPL3_010	= HPL3(0,1,0,z);
-	double HPL3_011	= HPL3(0,1,1,z);
-	double HPL3_100	= HPL3(1,0,0,z);
-	double HPL3_101	= HPL3(1,0,1,z);
-	double HPL3_110	= HPL3(1,1,0,z);
-	double HPL3_111	= HPL3(1,1,1,z);
-	result += QCD::CF*
-QCD::NF*(-158./27. + -488./27.*z + (8./3. + 8./3.*z)*MATH::ZETA2 + \
--26./3.*HPL1_0 + -38./3.*z*HPL1_0 + -32./9.*HPL1_1 + -68./9.*z*HPL1_1 \
-+ -10./3.*HPL2_00 + -10./3.*z*HPL2_00 + -8./3.*HPL2_01 + \
--8./3.*z*HPL2_01 + -4./3.*HPL2_10 + -4./3.*z*HPL2_10 + -4./3.*HPL2_11 \
-+ -4./3.*z*HPL2_11) + 
-QCD::CA*
+	double L1z		= std::log(1-z);
+	double HPL1_m1z	= HPL1(-1,z);
+	double HPL1_0z	= HPL1(0,z);
+	double HPL1_1z	= HPL1(1,z);
+	double HPL2_m10z	= HPL2(-1,0,z);
+	double HPL2_00z	= HPL2(0,0,z);
+	double HPL2_01z	= HPL2(0,1,z);
+	double HPL2_10z	= HPL2(1,0,z);
+	double HPL2_11z	= HPL2(1,1,z);
+	double HPL3_m1m10z	= HPL3(-1,-1,0,z);
+	double HPL3_m100z	= HPL3(-1,0,0,z);
+	double HPL3_m101z	= HPL3(-1,0,1,z);
+	double HPL3_0m10z	= HPL3(0,-1,0,z);
+	double HPL3_000z	= HPL3(0,0,0,z);
+	double HPL3_001z	= HPL3(0,0,1,z);
+	double HPL3_010z	= HPL3(0,1,0,z);
+	double HPL3_011z	= HPL3(0,1,1,z);
+	double HPL3_100z	= HPL3(1,0,0,z);
+	double HPL3_101z	= HPL3(1,0,1,z);
+	double HPL3_110z	= HPL3(1,1,0,z);
+	double HPL3_111z	= HPL3(1,1,1,z);
+	result += QCD::CA*
 QCD::CF*(3709./135. + -8./5./z + 17626./135.*z + -72./5.*std::pow(z,2) \
-+ (12 - 56*z - 28/(1 + z))*MATH::ZETA3 + 583./15.*HPL1_0 + \
-(8./5.*HPL1_0)/z + 1693./15.*z*HPL1_0 + -72./5.*std::pow(z,2)*HPL1_0 + \
-(8*HPL1_0)/(1 + z) + 56./9.*HPL1_1 + 668./9.*z*HPL1_1 + \
-MATH::ZETA2*(-44./3. + -104./3.*z + 72./5.*std::pow(z,3) - 12*HPL1_m1 \
-+ 36*z*HPL1_m1 + (32*HPL1_m1)/(1 + z) - 8*z*HPL1_0 - (8*HPL1_0)/(1 + \
-z) - 8*HPL1_1 - 32*z*HPL1_1) - 36*HPL2_m10 + \
-(-8./5.*HPL2_m10)/std::pow(z,2) - 20*z*HPL2_m10 + \
-72./5.*std::pow(z,3)*HPL2_m10 + 55./3.*HPL2_00 + 115./3.*z*HPL2_00 + \
--72./5.*std::pow(z,3)*HPL2_00 + 44./3.*HPL2_01 + 44./3.*z*HPL2_01 + \
-22./3.*HPL2_10 + 22./3.*z*HPL2_10 + 22./3.*HPL2_11 + 22./3.*z*HPL2_11 \
-- 8*HPL3_m1m10 + 56*z*HPL3_m1m10 + (32*HPL3_m1m10)/(1 + z) + \
-16*HPL3_m100 - 40*z*HPL3_m100 - (40*HPL3_m100)/(1 + z) + 8*HPL3_m101 - \
-8*z*HPL3_m101 - (16*HPL3_m101)/(1 + z) + 16*HPL3_0m10 - \
-(24*HPL3_0m10)/(1 + z) + 12*z*HPL3_000 + (12*HPL3_000)/(1 + z) + \
-8*z*HPL3_001 + (8*HPL3_001)/(1 + z) + 4*HPL3_100 + 28*z*HPL3_100 + \
-4*HPL3_101 + 4*z*HPL3_101 - 4*HPL3_110 - 4*z*HPL3_110) + std::pow(
++ (12 - 56*z)*MATH::ZETA3 + (164./5.*HPL1_0z)/(-1 + std::pow(z,2)) + \
+(-8./5.*HPL1_0z)/(z*(-1 + std::pow(z,2))) + (-118./5.*z*HPL1_0z)/(-1 + \
+std::pow(z,2)) + (799./15.*std::pow(z,2)*HPL1_0z)/(-1 + std::pow(z,2)) \
++ (1693./15.*std::pow(z,3)*HPL1_0z)/(-1 + std::pow(z,2)) + \
+(-72./5.*std::pow(z,4)*HPL1_0z)/(-1 + std::pow(z,2)) + 56./9.*HPL1_1z \
++ 668./9.*z*HPL1_1z + MATH::ZETA2*(-44./3. + -104./3.*z + \
+72./5.*std::pow(z,3) - (8*z*HPL1_0z)/(-1 + std::pow(z,2)) - \
+(8*std::pow(z,3)*HPL1_0z)/(-1 + std::pow(z,2)) - 8*HPL1_1z - \
+32*z*HPL1_1z) - 36*HPL2_m10z + (-8./5.*HPL2_m10z)/std::pow(z,2) - \
+20*z*HPL2_m10z + 72./5.*std::pow(z,3)*HPL2_m10z + 55./3.*HPL2_00z + \
+115./3.*z*HPL2_00z + -72./5.*std::pow(z,3)*HPL2_00z + 44./3.*HPL2_01z \
++ 44./3.*z*HPL2_01z + 22./3.*HPL2_10z + 22./3.*z*HPL2_10z + \
+22./3.*HPL2_11z + 22./3.*z*HPL2_11z - 8*HPL3_m1m10z + \
+56*z*HPL3_m1m10z + 16*HPL3_m100z - 40*z*HPL3_m100z + 8*HPL3_m101z - \
+8*z*HPL3_m101z + 16*HPL3_0m10z + 12*z*HPL3_000z + 8*z*HPL3_001z + \
+(-28*MATH::ZETA3 + MATH::ZETA2*(20*HPL1_m1z + 24*z*HPL1_m1z + \
+36*std::pow(z,2)*HPL1_m1z) + 32*HPL3_m1m10z - 40*HPL3_m100z - \
+16*HPL3_m101z - 24*HPL3_0m10z + 12*HPL3_000z + 8*HPL3_001z)/(1 + z) + \
+4*HPL3_100z + 28*z*HPL3_100z + 4*HPL3_101z + 4*z*HPL3_101z - \
+4*HPL3_110z - 4*z*HPL3_110z + (36*MATH::ZETA3 + 367./9.*HPL1_1z + \
+110./3.*HPL2_00z + 88./3.*HPL2_01z + 44./3.*HPL2_10z + \
+44./3.*HPL2_11z + 24*HPL3_0m10z + 12*HPL3_000z + 8*HPL3_001z + \
+16*HPL3_100z + 8*HPL3_101z - 8*HPL3_110z + MATH::ZETA2*(-44./3. - \
+24*HPL1_1z - 8*L1z) + 367./9.*L1z + -22./3.*std::pow(L1z,2))/(-1 + z)) \
++ 
+QCD::CF*
+QCD::NF*(-158./27. + -488./27.*z + (8./3. + 8./3.*z)*MATH::ZETA2 - \
+(4*HPL1_0z)/(-1 + std::pow(z,2)) + \
+(-26./3.*std::pow(z,2)*HPL1_0z)/(-1 + std::pow(z,2)) + \
+(-38./3.*std::pow(z,3)*HPL1_0z)/(-1 + std::pow(z,2)) + \
+-32./9.*HPL1_1z + -68./9.*z*HPL1_1z + -10./3.*HPL2_00z + \
+-10./3.*z*HPL2_00z + -8./3.*HPL2_01z + -8./3.*z*HPL2_01z + \
+-4./3.*HPL2_10z + -4./3.*z*HPL2_10z + -4./3.*HPL2_11z + \
+-4./3.*z*HPL2_11z + (8./3.*MATH::ZETA2 + -58./9.*HPL1_1z + \
+-20./3.*HPL2_00z + -16./3.*HPL2_01z + -8./3.*HPL2_10z + \
+-8./3.*HPL2_11z + -58./9.*L1z + 4./3.*std::pow(L1z,2))/(-1 + z)) + \
+std::pow(
 QCD::CF,2)*(-124./5. + 16./5./z + -461./5.*z + 144./5.*std::pow(z,2) + \
-(-64 + 72*z + 56/(1 + z))*MATH::ZETA3 + -132./5.*HPL1_0 + \
-(-16./5.*HPL1_0)/z + -502./5.*z*HPL1_0 + 144./5.*std::pow(z,2)*HPL1_0 \
-- (16*HPL1_0)/(1 + z) + 16*HPL1_1 - 68*z*HPL1_1 + MATH::ZETA2*(-32 - \
-8*z + -144./5.*std::pow(z,3) + 24*HPL1_m1 - 72*z*HPL1_m1 - \
-(64*HPL1_m1)/(1 + z) - 40*HPL1_0 - 24*z*HPL1_0 + (16*HPL1_0)/(1 + z) - \
-16*HPL1_1 + 32*z*HPL1_1) + 72*HPL2_m10 + \
-(16./5.*HPL2_m10)/std::pow(z,2) + 40*z*HPL2_m10 + \
--144./5.*std::pow(z,3)*HPL2_m10 + 24*HPL2_00 - 4*z*HPL2_00 + \
-144./5.*std::pow(z,3)*HPL2_00 + 32*HPL2_01 + 48*z*HPL2_01 + \
-32*HPL2_10 + 32*z*HPL2_10 + 28*HPL2_11 + 36*z*HPL2_11 + 16*HPL3_m1m10 \
-- 112*z*HPL3_m1m10 - (64*HPL3_m1m10)/(1 + z) - 32*HPL3_m100 + \
-80*z*HPL3_m100 + (80*HPL3_m100)/(1 + z) - 16*HPL3_m101 + \
-16*z*HPL3_m101 + (32*HPL3_m101)/(1 + z) - 32*HPL3_0m10 + \
-(48*HPL3_0m10)/(1 + z) + 30*HPL3_000 + 6*z*HPL3_000 - \
-(24*HPL3_000)/(1 + z) + 40*HPL3_001 + 24*z*HPL3_001 - \
-(16*HPL3_001)/(1 + z) + 28*HPL3_010 + 28*z*HPL3_010 + 32*HPL3_011 + \
-32*z*HPL3_011 + 20*HPL3_100 - 28*z*HPL3_100 + 24*HPL3_101 + \
-24*z*HPL3_101 + 32*HPL3_110 + 32*z*HPL3_110 + 24*HPL3_111 + \
-24*z*HPL3_111);
+(-64 + 72*z)*MATH::ZETA3 + (-93./5.*HPL1_0z)/(-1 + std::pow(z,2)) + \
+(16./5.*HPL1_0z)/(z*(-1 + std::pow(z,2))) + (101./5.*z*HPL1_0z)/(-1 + \
+std::pow(z,2)) + (-276./5.*std::pow(z,2)*HPL1_0z)/(-1 + std::pow(z,2)) \
++ (-502./5.*std::pow(z,3)*HPL1_0z)/(-1 + std::pow(z,2)) + \
+(144./5.*std::pow(z,4)*HPL1_0z)/(-1 + std::pow(z,2)) + 16*HPL1_1z - \
+68*z*HPL1_1z + MATH::ZETA2*(-32 - 8*z + -144./5.*std::pow(z,3) - \
+(24*HPL1_0z)/(-1 + std::pow(z,2)) - (8*z*HPL1_0z)/(-1 + std::pow(z,2)) \
+- (40*std::pow(z,2)*HPL1_0z)/(-1 + std::pow(z,2)) - \
+(24*std::pow(z,3)*HPL1_0z)/(-1 + std::pow(z,2)) - 16*HPL1_1z + \
+32*z*HPL1_1z) + 72*HPL2_m10z + (16./5.*HPL2_m10z)/std::pow(z,2) + \
+40*z*HPL2_m10z + -144./5.*std::pow(z,3)*HPL2_m10z + 24*HPL2_00z - \
+4*z*HPL2_00z + 144./5.*std::pow(z,3)*HPL2_00z + 32*HPL2_01z + \
+48*z*HPL2_01z + 32*HPL2_10z + 32*z*HPL2_10z + 28*HPL2_11z + \
+36*z*HPL2_11z + 16*HPL3_m1m10z - 112*z*HPL3_m1m10z - 32*HPL3_m100z + \
+80*z*HPL3_m100z - 16*HPL3_m101z + 16*z*HPL3_m101z - 32*HPL3_0m10z + \
+30*HPL3_000z + 6*z*HPL3_000z + (56*MATH::ZETA3 + \
+MATH::ZETA2*(-40*HPL1_m1z - 48*z*HPL1_m1z - 72*std::pow(z,2)*HPL1_m1z) \
+- 64*HPL3_m1m10z + 80*HPL3_m100z + 32*HPL3_m101z + 48*HPL3_0m10z - \
+24*HPL3_000z - 16*HPL3_001z)/(1 + z) + 40*HPL3_001z + 24*z*HPL3_001z + \
+28*HPL3_010z + 28*z*HPL3_010z + 32*HPL3_011z + 32*z*HPL3_011z + \
+20*HPL3_100z - 28*z*HPL3_100z + 24*HPL3_101z + 24*z*HPL3_101z + \
+32*HPL3_110z + 32*z*HPL3_110z + 24*HPL3_111z + 24*z*HPL3_111z + \
+(-72*MATH::ZETA3 - 27*HPL1_1z + 6*HPL2_00z + 24*HPL2_01z + \
+36*HPL2_10z + 36*HPL2_11z - 48*HPL3_0m10z + 16*HPL3_000z + \
+48*HPL3_001z + 48*HPL3_010z + 56*HPL3_011z + 24*HPL3_100z + \
+48*HPL3_101z + 64*HPL3_110z + 48*HPL3_111z + MATH::ZETA2*(12 - \
+16*HPL1_1z - 32*L1z) - 27*L1z - 18*std::pow(L1z,2) + \
+8*std::pow(L1z,3))/(-1 + z));
 	return result;
 }
 
@@ -430,75 +415,77 @@ double c2g_2_0_reg_approx2(double z)	{
 /// This expression was obtained after some rewriting and reordering with Mathematica.
 double c2g_2_0_reg_exact(double z)	{
 	double result(0.0);
-	double HPL1_m1	= HPL1(-1,z);
-	double HPL1_0	= HPL1(0,z);
-	double HPL1_1	= HPL1(1,z);
-	double HPL2_m10	= HPL2(-1,0,z);
-	double HPL2_00	= HPL2(0,0,z);
-	double HPL2_01	= HPL2(0,1,z);
-	double HPL2_10	= HPL2(1,0,z);
-	double HPL2_11	= HPL2(1,1,z);
-	double HPL3_m1m10	= HPL3(-1,-1,0,z);
-	double HPL3_m100	= HPL3(-1,0,0,z);
-	double HPL3_m101	= HPL3(-1,0,1,z);
-	double HPL3_0m10	= HPL3(0,-1,0,z);
-	double HPL3_000	= HPL3(0,0,0,z);
-	double HPL3_001	= HPL3(0,0,1,z);
-	double HPL3_010	= HPL3(0,1,0,z);
-	double HPL3_011	= HPL3(0,1,1,z);
-	double HPL3_100	= HPL3(1,0,0,z);
-	double HPL3_101	= HPL3(1,0,1,z);
-	double HPL3_110	= HPL3(1,1,0,z);
-	double HPL3_111	= HPL3(1,1,1,z);
+	double HPL1_m1z	= HPL1(-1,z);
+	double HPL1_0z	= HPL1(0,z);
+	double HPL1_1z	= HPL1(1,z);
+	double HPL2_m10z	= HPL2(-1,0,z);
+	double HPL2_00z	= HPL2(0,0,z);
+	double HPL2_01z	= HPL2(0,1,z);
+	double HPL2_10z	= HPL2(1,0,z);
+	double HPL2_11z	= HPL2(1,1,z);
+	double HPL3_m1m10z	= HPL3(-1,-1,0,z);
+	double HPL3_m100z	= HPL3(-1,0,0,z);
+	double HPL3_m101z	= HPL3(-1,0,1,z);
+	double HPL3_0m10z	= HPL3(0,-1,0,z);
+	double HPL3_000z	= HPL3(0,0,0,z);
+	double HPL3_001z	= HPL3(0,0,1,z);
+	double HPL3_010z	= HPL3(0,1,0,z);
+	double HPL3_011z	= HPL3(0,1,1,z);
+	double HPL3_100z	= HPL3(1,0,0,z);
+	double HPL3_101z	= HPL3(1,0,1,z);
+	double HPL3_110z	= HPL3(1,1,0,z);
+	double HPL3_111z	= HPL3(1,1,1,z);
 	result += QCD::CF*(-647./15. + 8./15./z + 239./5.*z + -36./5.*std::pow(z,2) + \
-(32 + 72*std::pow(z,2))*MATH::ZETA3 + -236./15.*HPL1_0 + \
-(-8./15.*HPL1_0)/z + 113./5.*z*HPL1_0 + -216./5.*std::pow(z,2)*HPL1_0 \
-- 14*HPL1_1 + 40*z*HPL1_1 - 24*std::pow(z,2)*HPL1_1 + MATH::ZETA2*(16 \
-+ -104./3.*z + 72*std::pow(z,2) + 96./5.*std::pow(z,3) - 16*HPL1_m1 - \
-32*z*HPL1_m1 - 16*std::pow(z,2)*HPL1_m1 + 16*HPL1_0 - 32*z*HPL1_0 + \
-48*std::pow(z,2)*HPL1_0 + 8*HPL1_1 - 16*z*HPL1_1 + \
-32*std::pow(z,2)*HPL1_1) + 48*HPL2_m10 + \
-(8./15.*HPL2_m10)/std::pow(z,2) + 64./3.*z*HPL2_m10 + \
-96./5.*std::pow(z,3)*HPL2_m10 - 3*HPL2_00 + 44./3.*z*HPL2_00 - \
-72*std::pow(z,2)*HPL2_00 + -96./5.*std::pow(z,3)*HPL2_00 - 16*HPL2_01 \
-+ 56*z*HPL2_01 - 72*std::pow(z,2)*HPL2_01 - 26*HPL2_10 + 80*z*HPL2_10 \
-- 72*std::pow(z,2)*HPL2_10 - 26*HPL2_11 + 80*z*HPL2_11 - \
-72*std::pow(z,2)*HPL2_11 - 32*HPL3_m1m10 - 64*z*HPL3_m1m10 - \
-32*std::pow(z,2)*HPL3_m1m10 + 16*HPL3_m100 + 32*z*HPL3_m100 + \
-16*std::pow(z,2)*HPL3_m100 + 32*HPL3_0m10 + \
-32*std::pow(z,2)*HPL3_0m10 - 10*HPL3_000 + 20*z*HPL3_000 - \
-40*std::pow(z,2)*HPL3_000 - 16*HPL3_001 + 32*z*HPL3_001 - \
-48*std::pow(z,2)*HPL3_001 - 12*HPL3_010 + 24*z*HPL3_010 - \
-32*std::pow(z,2)*HPL3_010 - 16*HPL3_011 + 32*z*HPL3_011 - \
-40*std::pow(z,2)*HPL3_011 - 4*HPL3_100 + 8*z*HPL3_100 - \
-24*std::pow(z,2)*HPL3_100 - 24*HPL3_101 + 48*z*HPL3_101 - \
-48*std::pow(z,2)*HPL3_101 - 16*HPL3_110 + 32*z*HPL3_110 - \
-32*std::pow(z,2)*HPL3_110 - 20*HPL3_111 + 40*z*HPL3_111 - \
-40*std::pow(z,2)*HPL3_111) + 
+(32 + 72*std::pow(z,2))*MATH::ZETA3 + -236./15.*HPL1_0z + \
+(-8./15.*HPL1_0z)/z + 113./5.*z*HPL1_0z + \
+-216./5.*std::pow(z,2)*HPL1_0z - 14*HPL1_1z + 40*z*HPL1_1z - \
+24*std::pow(z,2)*HPL1_1z + MATH::ZETA2*(16 + -104./3.*z + \
+72*std::pow(z,2) + 96./5.*std::pow(z,3) - 16*HPL1_m1z - 32*z*HPL1_m1z \
+- 16*std::pow(z,2)*HPL1_m1z + 16*HPL1_0z - 32*z*HPL1_0z + \
+48*std::pow(z,2)*HPL1_0z + 8*HPL1_1z - 16*z*HPL1_1z + \
+32*std::pow(z,2)*HPL1_1z) + 48*HPL2_m10z + \
+(8./15.*HPL2_m10z)/std::pow(z,2) + 64./3.*z*HPL2_m10z + \
+96./5.*std::pow(z,3)*HPL2_m10z - 3*HPL2_00z + 44./3.*z*HPL2_00z - \
+72*std::pow(z,2)*HPL2_00z + -96./5.*std::pow(z,3)*HPL2_00z - \
+16*HPL2_01z + 56*z*HPL2_01z - 72*std::pow(z,2)*HPL2_01z - 26*HPL2_10z \
++ 80*z*HPL2_10z - 72*std::pow(z,2)*HPL2_10z - 26*HPL2_11z + \
+80*z*HPL2_11z - 72*std::pow(z,2)*HPL2_11z - 32*HPL3_m1m10z - \
+64*z*HPL3_m1m10z - 32*std::pow(z,2)*HPL3_m1m10z + 16*HPL3_m100z + \
+32*z*HPL3_m100z + 16*std::pow(z,2)*HPL3_m100z + 32*HPL3_0m10z + \
+32*std::pow(z,2)*HPL3_0m10z - 10*HPL3_000z + 20*z*HPL3_000z - \
+40*std::pow(z,2)*HPL3_000z - 16*HPL3_001z + 32*z*HPL3_001z - \
+48*std::pow(z,2)*HPL3_001z - 12*HPL3_010z + 24*z*HPL3_010z - \
+32*std::pow(z,2)*HPL3_010z - 16*HPL3_011z + 32*z*HPL3_011z - \
+40*std::pow(z,2)*HPL3_011z - 4*HPL3_100z + 8*z*HPL3_100z - \
+24*std::pow(z,2)*HPL3_100z - 24*HPL3_101z + 48*z*HPL3_101z - \
+48*std::pow(z,2)*HPL3_101z - 16*HPL3_110z + 32*z*HPL3_110z - \
+32*std::pow(z,2)*HPL3_110z - 20*HPL3_111z + 40*z*HPL3_111z - \
+40*std::pow(z,2)*HPL3_111z) + 
 QCD::CA*(239./9. + 344./27./z + 1072./9.*z + -4493./27.*std::pow(z,2) \
-+ (4 - 48*z + 24*std::pow(z,2))*MATH::ZETA3 + 58*HPL1_0 + \
-584./3.*z*HPL1_0 + -2090./9.*std::pow(z,2)*HPL1_0 + 62./3.*HPL1_1 + \
-(-104./9.*HPL1_1)/z + 454./3.*z*HPL1_1 + \
--1570./9.*std::pow(z,2)*HPL1_1 + MATH::ZETA2*(8 + -16./3./z - 144*z + \
-148*std::pow(z,2) - 4*HPL1_m1 - 8*z*HPL1_m1 - \
-16*std::pow(z,2)*HPL1_m1 - 8*HPL1_0 - 64*z*HPL1_0 + \
-16*std::pow(z,2)*HPL1_0 + 8*HPL1_1 - 16*z*HPL1_1 + \
-8*std::pow(z,2)*HPL1_1) - 24*HPL2_m10 + (-16./3.*HPL2_m10)/z + \
-80./3.*std::pow(z,2)*HPL2_m10 - 2*HPL2_00 + 176*z*HPL2_00 + \
--388./3.*std::pow(z,2)*HPL2_00 - 8*HPL2_01 + 144*z*HPL2_01 - \
-148*std::pow(z,2)*HPL2_01 - 4*HPL2_10 + (16./3.*HPL2_10)/z + \
-80*z*HPL2_10 + -268./3.*std::pow(z,2)*HPL2_10 - 4*HPL2_11 + \
-(16./3.*HPL2_11)/z + 72*z*HPL2_11 + -244./3.*std::pow(z,2)*HPL2_11 + \
-8*HPL3_m1m10 + 16*z*HPL3_m1m10 + 8*HPL3_m100 + 16*z*HPL3_m100 + \
-24*std::pow(z,2)*HPL3_m100 + 8*HPL3_m101 + 16*z*HPL3_m101 + \
-16*std::pow(z,2)*HPL3_m101 + 16*std::pow(z,2)*HPL3_0m10 + 20*HPL3_000 \
-+ 56*z*HPL3_000 + 8*HPL3_001 + 64*z*HPL3_001 - \
-16*std::pow(z,2)*HPL3_001 + 48*z*HPL3_010 - 16*std::pow(z,2)*HPL3_010 \
-+ 48*z*HPL3_011 - 16*std::pow(z,2)*HPL3_011 - 12*HPL3_100 + \
-24*z*HPL3_100 - 16*std::pow(z,2)*HPL3_100 - 4*HPL3_101 + 8*z*HPL3_101 \
-- 8*std::pow(z,2)*HPL3_101 - 12*HPL3_110 + 24*z*HPL3_110 - \
-24*std::pow(z,2)*HPL3_110 - 4*HPL3_111 + 8*z*HPL3_111 - \
-8*std::pow(z,2)*HPL3_111);
++ (4 - 48*z + 24*std::pow(z,2))*MATH::ZETA3 + 58*HPL1_0z + \
+584./3.*z*HPL1_0z + -2090./9.*std::pow(z,2)*HPL1_0z + 62./3.*HPL1_1z + \
+(-104./9.*HPL1_1z)/z + 454./3.*z*HPL1_1z + \
+-1570./9.*std::pow(z,2)*HPL1_1z + MATH::ZETA2*(8 + -16./3./z - 144*z + \
+148*std::pow(z,2) - 4*HPL1_m1z - 8*z*HPL1_m1z - \
+16*std::pow(z,2)*HPL1_m1z - 8*HPL1_0z - 64*z*HPL1_0z + \
+16*std::pow(z,2)*HPL1_0z + 8*HPL1_1z - 16*z*HPL1_1z + \
+8*std::pow(z,2)*HPL1_1z) - 24*HPL2_m10z + (-16./3.*HPL2_m10z)/z + \
+80./3.*std::pow(z,2)*HPL2_m10z - 2*HPL2_00z + 176*z*HPL2_00z + \
+-388./3.*std::pow(z,2)*HPL2_00z - 8*HPL2_01z + 144*z*HPL2_01z - \
+148*std::pow(z,2)*HPL2_01z - 4*HPL2_10z + (16./3.*HPL2_10z)/z + \
+80*z*HPL2_10z + -268./3.*std::pow(z,2)*HPL2_10z - 4*HPL2_11z + \
+(16./3.*HPL2_11z)/z + 72*z*HPL2_11z + -244./3.*std::pow(z,2)*HPL2_11z \
++ 8*HPL3_m1m10z + 16*z*HPL3_m1m10z + 8*HPL3_m100z + 16*z*HPL3_m100z + \
+24*std::pow(z,2)*HPL3_m100z + 8*HPL3_m101z + 16*z*HPL3_m101z + \
+16*std::pow(z,2)*HPL3_m101z + 16*std::pow(z,2)*HPL3_0m10z + \
+20*HPL3_000z + 56*z*HPL3_000z + 8*HPL3_001z + 64*z*HPL3_001z - \
+16*std::pow(z,2)*HPL3_001z + 48*z*HPL3_010z - \
+16*std::pow(z,2)*HPL3_010z + 48*z*HPL3_011z - \
+16*std::pow(z,2)*HPL3_011z - 12*HPL3_100z + 24*z*HPL3_100z - \
+16*std::pow(z,2)*HPL3_100z - 4*HPL3_101z + 8*z*HPL3_101z - \
+8*std::pow(z,2)*HPL3_101z - 12*HPL3_110z + 24*z*HPL3_110z - \
+24*std::pow(z,2)*HPL3_110z - 4*HPL3_111z + 8*z*HPL3_111z - \
+8*std::pow(z,2)*HPL3_111z);
 	return result;
 }
 
@@ -553,29 +540,29 @@ double c2q_ps_2_0_reg_approx2(double z)	{
 /// This expression was obtained after some rewriting and reordering with Mathematica.
 double c2q_ps_2_0_reg_exact(double z)	{
 	double result(0.0);
-	double HPL1_0	= HPL1(0,z);
-	double HPL1_1	= HPL1(1,z);
-	double HPL2_m10	= HPL2(-1,0,z);
-	double HPL2_00	= HPL2(0,0,z);
-	double HPL2_01	= HPL2(0,1,z);
-	double HPL2_10	= HPL2(1,0,z);
-	double HPL2_11	= HPL2(1,1,z);
-	double HPL3_000	= HPL3(0,0,0,z);
-	double HPL3_001	= HPL3(0,0,1,z);
-	double HPL3_010	= HPL3(0,1,0,z);
-	double HPL3_011	= HPL3(0,1,1,z);
+	double HPL1_0z	= HPL1(0,z);
+	double HPL1_1z	= HPL1(1,z);
+	double HPL2_m10z	= HPL2(-1,0,z);
+	double HPL2_00z	= HPL2(0,0,z);
+	double HPL2_01z	= HPL2(0,1,z);
+	double HPL2_10z	= HPL2(1,0,z);
+	double HPL2_11z	= HPL2(1,1,z);
+	double HPL3_000z	= HPL3(0,0,0,z);
+	double HPL3_001z	= HPL3(0,0,1,z);
+	double HPL3_010z	= HPL3(0,1,0,z);
+	double HPL3_011z	= HPL3(0,1,1,z);
 	result += QCD::CF*(158./9. + 344./27./z + -422./9.*z + 448./27.*std::pow(z,2) + \
-(-8 - 8*z)*MATH::ZETA3 + 56*HPL1_0 + -88./3.*z*HPL1_0 + \
--128./9.*std::pow(z,2)*HPL1_0 + MATH::ZETA2*(-16./3./z - 16*z + \
-16*std::pow(z,2) - 16*HPL1_0 - 16*z*HPL1_0) + 104./3.*HPL1_1 + \
-(-104./9.*HPL1_1)/z + -80./3.*z*HPL1_1 + 32./9.*std::pow(z,2)*HPL1_1 - \
-16*HPL2_m10 + (-16./3.*HPL2_m10)/z - 16*z*HPL2_m10 + \
--16./3.*std::pow(z,2)*HPL2_m10 - 2*HPL2_00 + 30*z*HPL2_00 + \
--64./3.*std::pow(z,2)*HPL2_00 - 16*std::pow(z,2)*HPL2_01 + 4*HPL2_10 + \
-(16./3.*HPL2_10)/z - 4*z*HPL2_10 + -16./3.*std::pow(z,2)*HPL2_10 + \
-4*HPL2_11 + (16./3.*HPL2_11)/z - 4*z*HPL2_11 + \
--16./3.*std::pow(z,2)*HPL2_11 + 20*HPL3_000 + 20*z*HPL3_000 + \
-16*HPL3_001 + 16*z*HPL3_001 + 8*HPL3_010 + 8*z*HPL3_010 + 8*HPL3_011 + \
-8*z*HPL3_011);
+(-8 - 8*z)*MATH::ZETA3 + 56*HPL1_0z + -88./3.*z*HPL1_0z + \
+-128./9.*std::pow(z,2)*HPL1_0z + MATH::ZETA2*(-16./3./z - 16*z + \
+16*std::pow(z,2) - 16*HPL1_0z - 16*z*HPL1_0z) + 104./3.*HPL1_1z + \
+(-104./9.*HPL1_1z)/z + -80./3.*z*HPL1_1z + \
+32./9.*std::pow(z,2)*HPL1_1z - 16*HPL2_m10z + (-16./3.*HPL2_m10z)/z - \
+16*z*HPL2_m10z + -16./3.*std::pow(z,2)*HPL2_m10z - 2*HPL2_00z + \
+30*z*HPL2_00z + -64./3.*std::pow(z,2)*HPL2_00z - \
+16*std::pow(z,2)*HPL2_01z + 4*HPL2_10z + (16./3.*HPL2_10z)/z - \
+4*z*HPL2_10z + -16./3.*std::pow(z,2)*HPL2_10z + 4*HPL2_11z + \
+(16./3.*HPL2_11z)/z - 4*z*HPL2_11z + -16./3.*std::pow(z,2)*HPL2_11z + \
+20*HPL3_000z + 20*z*HPL3_000z + 16*HPL3_001z + 16*z*HPL3_001z + \
+8*HPL3_010z + 8*z*HPL3_010z + 8*HPL3_011z + 8*z*HPL3_011z);
 	return result;
 }
