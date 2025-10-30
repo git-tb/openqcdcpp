@@ -7,7 +7,7 @@ CXX_FLAGS += -g
 CXX_FLAGS += -Wall
 CXX_FLAGS += -Wno-sign-compare
 CXX_FLAGS += -Wpedantic
-CXX_FLAGS += -Wconversion		# int a = 0.1 <<< WARNING 
+CXX_FLAGS += -Wconversion
 
 SRC     := /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/src
 LIBSRC	:= /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc

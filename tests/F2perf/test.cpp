@@ -4,6 +4,7 @@
 #include <chrono>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 
 #include "LHAPDF/LHAPDF.h"
 #include "structfunc.h"
@@ -11,12 +12,11 @@
 
 /// @brief quick redifiniton such that we can pass literal constants (e.g. 1.234) ass parameters
 double f2qcd_(int nb, int nt, int ni, double xb, double q2) 	{
-	return f2qcd_(&nb, &nt, &ni, &xb, &q2);
+	return f2qcd_(&nb, &nt, &ni, &xb, &q2); ///< as defined in fortransymbols.h
 }
 
 int main()	{
 	Pdf::initialize("ABMP16_3_nnlo", 0);
-	// Pdf::setSampling(SAMPLINGMETHOD::fromLHAPDF);
 	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 	Pdf::printLHAPDFinfo();
 
@@ -37,19 +37,30 @@ int main()	{
 	qcdpar_.qsum[4]			= 12./9.;
 	qcdpar_.qsum[5]			= 16./9.;
 
-	double Q2_arr[9] = {
-		3e2, 5e2, 1e3, 1.5e3, 2e3, 3e3, 5e3, 8e3, 1.5e4
-	};
-	double XMIN_arr[9] = {
-		8e-3, 1.3e-2, 1.3e-2, 3.2e-2, 3.2e-2, 8e-2, 8e-2, 0.13e0, 0.32e0
-	};
-	double XMAX_arr[9] = {
-		8e-2, 0.13e0, 0.25e0, 0.25e0, 0.25e0, 0.4e0, 0.4e0, 0.4e0, 0.4e0
-	};
+	double	Q2min	= 2,
+			Q2max	= 1e6,
+			xmin	= 1e-5,
+			xmax	= 0.999;
+
+	int	NQ2full	=	50,	///< for file output
+		NQ2red	=	10,		///< fir console output
+		Nxfull	=	50,	///< for file output
+		Nxred	=	10;		///< fir console output
+
+	double	logQ2min	= std::log(Q2min),
+			logQ2max	= std::log(Q2max),
+			logxmin		= std::log(xmin),
+			logxmax		= std::log(xmax);
+
 
 	/// output formatting
 	const int PREC = 7;
 	const int WIDTH = 23;
+
+	std::ofstream fileout("output.dat");
+	fileout << std::scientific << std::setprecision(PREC);
+	fileout << "Q2;x;F2@nlo(fortran);F2@nlo(cpp);F2@nnlo(fortran);F2@nnlo(cpp,apr1);F2@nnlo(cpp,apr2);F2@nnlo(cpp,ex)"
+			<< std::endl;
 
 	std::cout	<< std::scientific << std::setprecision(PREC);
 	std::cout	<< std::setw(WIDTH) << "Q2"
@@ -78,13 +89,12 @@ int main()	{
 				<< std::setw(WIDTH) << "cpp (exct)"
 				<< std::endl;
 
-	for(int i = 0; i < 9; i++)	{
-		double Q2 = Q2_arr[i];
-
-		int NX = 10;
-		double DLNX = (std::log(XMAX_arr[i])-std::log(XMIN_arr[i]))/(NX-1);
-		for(int j = 0; j < NX; j++)	{
-			double x = XMIN_arr[i] * std::exp(DLNX * j);
+	for(int iQ2 = 0; iQ2 < NQ2full; iQ2++)	{
+		double logQ2	= logQ2min + (double)iQ2/(double)NQ2full * (logQ2max - logQ2min);
+		double Q2		= std::exp(logQ2);
+		for(int ix = 0; ix < Nxfull; ix++)	{
+			double logx	= logxmin + (double)ix/(double)Nxfull * (logxmax - logxmin);
+			double x	= std::exp(logx);
 
 			QCDORDER::F2ORDER.set(1);
 			foralpsrenorm_.kordf2_ 	= 1;
@@ -100,6 +110,17 @@ int main()	{
 			APPROX::LEVEL.set(APPROX::EXACT);
 			double F2_cpp_nnlo_ex	= F2(x,Q2);
 
+			fileout		<< Q2				<< ";"
+						<< x				<< ";"
+						<< F2_fortran_nlo	<< ";"
+						<< F2_cpp_nlo		<< ";"
+						<< F2_fortran_nnlo	<< ";"
+						<< F2_cpp_nnlo_apr1	<< ";"
+						<< F2_cpp_nnlo_apr2	<< ";"
+						<< F2_cpp_nnlo_ex	<< std::endl;
+
+			if(	iQ2%(int)std::ceil((double)NQ2full/(double)NQ2red) == 0
+				&& ix%(int)std::ceil((double)Nxfull/(double)Nxred) == 0)	{
 			std::cout	<< std::setw(WIDTH) << Q2
 						<< std::setw(WIDTH) << x
 						<< std::setw(WIDTH) << F2_fortran_nlo
@@ -120,9 +141,11 @@ int main()	{
 						<< std::setw(WIDTH) << " "
 						<< std::setw(WIDTH) << F2_cpp_nnlo_ex
 						<< std::endl << std::endl;
+			}
 		}
-		std::cout << std::endl;
+		if(	iQ2%(int)std::ceil((double)NQ2full/(double)NQ2red) == 0 ) std::cout << std::endl;
 	}
+	fileout.close();
 
 	///
 	/// Performance
@@ -135,11 +158,6 @@ int main()	{
 	auto start 			= std::chrono::high_resolution_clock::now();
 	auto stop 			= std::chrono::high_resolution_clock::now();
 	auto duration 		= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-	
-	double 	xmin	= 5e-6,
-			xmax	= 0.999,
-			q2min	= 1,
-			q2max	= 1e6;
 
 	///
 	std::cout << "Performance test@NLO" << std::endl;
@@ -154,17 +172,17 @@ int main()	{
 		double	r1	= (double)std::rand()/(double)RAND_MAX,
 				r2	= (double)std::rand()/(double)RAND_MAX;
 		double	x	= xmin + r1*(xmax-xmin),
-				q2	= q2min + r2*(q2max-q2min);
+				Q2	= Q2min + r2*(Q2max-Q2min);
 
 		start 		= std::chrono::high_resolution_clock::now();
-		f2qcd_(3,1,22,x,q2);
+		f2qcd_(3,1,22,x,Q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_for 	+= (double)duration.count()/(double)NRUN;
 
 		APPROX::LEVEL.set(APPROX::EXACT);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,q2);
+		F2(x,Q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppex 	+= (double)duration.count()/(double)NRUN;
@@ -198,31 +216,31 @@ int main()	{
 		double	r1	= (double)std::rand()/(double)RAND_MAX,
 				r2	= (double)std::rand()/(double)RAND_MAX;
 		double	x	= xmin + r1*(xmax-xmin),
-				q2	= q2min + r2*(q2max-q2min);
+				Q2	= Q2min + r2*(Q2max-Q2min);
 
 		start 		= std::chrono::high_resolution_clock::now();
-		f2qcd_(3,1,22,x,q2);
+		f2qcd_(3,1,22,x,Q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_for 	+= (double)duration.count()/(double)NRUN;
 
 		APPROX::LEVEL.set(APPROX::APPR1);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,q2);
+		F2(x,Q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppa1 	+= (double)duration.count()/(double)NRUN;
 
 		APPROX::LEVEL.set(APPROX::APPR2);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,q2);
+		F2(x,Q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppa2 	+= (double)duration.count()/(double)NRUN;
 
 		APPROX::LEVEL.set(APPROX::EXACT);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,q2);
+		F2(x,Q2);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppex 	+= (double)duration.count()/(double)NRUN;
