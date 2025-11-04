@@ -17,7 +17,7 @@ double f2qcd_(int nb, int nt, int ni, double xb, double q2) 	{
 
 int main()	{
 	Pdf::initialize("ABMP16_3_nnlo", 0);
-	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
+	Pdf::setSampling(SAMPLINGMETHOD::fromLHAPDF);
 	Pdf::printLHAPDFinfo();
 
 	PRECISION::EPSABS.set(1e-5);
@@ -43,9 +43,9 @@ int main()	{
 			xmax	= 0.999;
 
 	int	NQ2full	=	50,	///< for file output
-		NQ2red	=	10,		///< fir console output
+		NQ2red	=	10,	///< fir console output
 		Nxfull	=	50,	///< for file output
-		Nxred	=	10;		///< fir console output
+		Nxred	=	10;	///< fir console output
 
 	double	logQ2min	= std::log(Q2min),
 			logQ2max	= std::log(Q2max),

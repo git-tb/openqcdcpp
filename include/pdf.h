@@ -32,6 +32,10 @@ const int	CB(-4);
 const int	B(5);	
 /// anti bottom
 const int	BB(-5);	
+/// bottom
+const int	T(6);	
+/// anti bottom
+const int	TB(-6);	
 
 /// @brief determine how PDFs are sampled
 enum SAMPLINGMETHOD {

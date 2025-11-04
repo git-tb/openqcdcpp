@@ -8,7 +8,7 @@
 #define NFLIM 11
 
 extern "C"	{
-	struct commonblock1 {
+	struct FORALPSRENORM_COMMON {
 		double	q20,
 				q2rep,
 				q2s,
@@ -33,9 +33,9 @@ extern "C"	{
 				kordf3;
 		double	almszl;	
 	};
-	extern commonblock1 foralpsrenorm_;
+	extern FORALPSRENORM_COMMON foralpsrenorm_;
 
-	struct commonblock2	{
+	struct QCDPAR_COMMON	{
 		double	cf,
 				cg,
 				tr,
@@ -61,9 +61,9 @@ extern "C"	{
 				nfe,
 				nfc;
 	};
-	extern commonblock2 qcdpar_;
+	extern QCDPAR_COMMON qcdpar_;
 
-	struct commonblock3 {
+	struct FORPRECCONTROL_COMMON {
 		double	delder,
 				alphastol;
 		int		nmthq,
@@ -77,7 +77,30 @@ extern "C"	{
 		double	omeint;
 		int		lpcdint;
 	};
-	extern commonblock3 forpreccontrol_;
+	extern FORPRECCONTROL_COMMON forpreccontrol_;
+
+	struct GRIDSET_COMMON {
+		double	delx1,
+				delx2,
+				delxp,
+				dels1[8],
+				dels2[8],
+				xlog1,
+				xlog2,
+				x1,
+				q2ini[8],
+				q2min,
+				q2max,
+				xbmin,
+				xbmax;
+		int 	nxmgrid,
+				nxpgrid,
+				nspgrid,
+				nsmgrid,
+				khalf;
+	};
+	extern GRIDSET_COMMON gridset_;
+	
 
 	void initgridconst_();
 	void mypdffillgrid_witharg_(const char* arg, int arg_len);
