@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.23)
 project(F2bench)
 
+add_compile_options("-g;-Wall;-Wno-sign-compare;-Wpedantic;-Wconversion")
+
 include(FetchContent)
 FetchContent_Declare(
     openQCDpplib
@@ -18,6 +20,7 @@ add_executable(test)
 set_target_properties(test PROPERTIES
 	RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
 
 target_sources(test
 	PRIVATE

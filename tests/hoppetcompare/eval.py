@@ -54,7 +54,7 @@ df = pd.read_csv(files[-1],sep=";",comment="#")
 for col0 in [2,5,8,11,14,17,20,23,26,29,32,35,38]:
 	df_new = df[["x","Q2"]].copy()
 	for col in df.columns[col0:col0+3]:
-		df_new[f'{col}-{df.columns[col0+2]}'] = df[col]-df[df.columns[col0+2]]
+		df_new[f'({col}-{df.columns[col0+2]})/{df.columns[col0+2]}'] = (df[col]-df[df.columns[col0+2]])/df[df.columns[col0+2]]
 	df_melted = df_new.melt(id_vars=["x", "Q2"], var_name="function", value_name="value")
 	sizes = [8,6,4]
 	sizemap = dict(zip(df_melted["function"].unique(), sizes))
@@ -62,19 +62,19 @@ for col0 in [2,5,8,11,14,17,20,23,26,29,32,35,38]:
 
 	fig = px.line(
 		df_melted,
-		# x="x",
-		x="Q2",
+		x="x",
+		# x="Q2",
 		y="value",
 		color="function",
-		# animation_frame="Q2",
-		animation_frame="x",
+		animation_frame="Q2",
+		# animation_frame="x",
 		log_x=True,
 		markers=True
 	)
 
 	fig.update_layout(
-		# xaxis_title="x",
-		xaxis_title="Q2",
+		xaxis_title="x",
+		# xaxis_title="Q2",
 		legend_title="Function"
 	)
 

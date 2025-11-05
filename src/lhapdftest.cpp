@@ -5,6 +5,7 @@
 #include <fstream>
 
 #include "LHAPDF/LHAPDF.h"
+#include "LHAPDF/GridPDF.h"
 
 int main(int argc, char** argv) {
 	///
@@ -108,11 +109,19 @@ int main(int argc, char** argv) {
 		std::cout << std::endl;
 	}
 
+	const LHAPDF::GridPDF& gridpdf = * dynamic_cast<const LHAPDF::GridPDF*>(currentpdf);
+
 	// for(double log10q2 = LOG10Q2MIN; log10q2 <= LOG10Q2MAX; log10q2 += 0.2)	{
 	// 	const double q2 = std::pow(10, log10q2);
 	// 	std::cout << "alpha_s(" << std::setprecision(1) << std::fixed << std::sqrt(q2) << " GeV) = " << std::setprecision(5) << currentpdf->alphasQ2(q2) << std::endl;
 	// }
 
+	
+	for(auto& x: gridpdf.xKnots()) std::cout << x << std::endl;
+	std::cout << std::endl;
+	for(auto& q2: gridpdf.q2Knots()) std::cout << q2 << std::endl;
+	std::cout << std::endl;
+	
 	/// delete all pointers
 	delete currentpdf;
 

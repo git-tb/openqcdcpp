@@ -739,4 +739,7 @@ CMakeFiles/lhapdftest.dir/src/lhapdftest.cpp.o: \
  /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/KnotArray.h \
  /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/Config.h \
  /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/PDFSet.h \
- /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/LHAGlue.h
+ /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/LHAGlue.h \
+ /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/GridPDF.h \
+ /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/Interpolator.h \
+ /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include/LHAPDF/Extrapolator.h

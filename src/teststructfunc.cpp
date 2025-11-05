@@ -5,11 +5,12 @@
 
 int main()	{
 	Pdf::initialize("ABMP16_3_nnlo", 0);
-	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
+	Pdf::setSampling(SAMPLINGMETHOD::fromLHAPDF);
 	Pdf::printLHAPDFinfo();
 
-	PRECISION::EPSABS.set(10e-6);
-	PRECISION::EPSREL.set(10e-6);
+	PRECISION::EPSABS.set(1e-5);
+	PRECISION::EPSREL.set(1e-5);
+	PRECISION::ITER.set(1000);
 	QCDORDER::F2ORDER.set(1);
 
 	double Q2_arr[9] = {
@@ -32,6 +33,9 @@ int main()	{
 				<< std::setw(WIDTH) << "F2@nlo"
 				<< std::setw(WIDTH) << "F2@nnlo"
 				<< std::endl;
+
+	QCDORDER::F2ORDER.set(1);
+	double nothing = F2(0.99,2.0);
 
 	for(int i = 0; i < 9; i++)	{
 		double Q2 = Q2_arr[i];

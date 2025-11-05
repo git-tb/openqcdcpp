@@ -23,8 +23,8 @@ int main()	{
 	PRECISION::EPSABS.set(1e-5);
 	PRECISION::EPSREL.set(1e-5);
 	PRECISION::ITER.set(1000);
-	forpreccontrol_.nf2qcd1	= 3;
-	forpreccontrol_.nf2qcd2	= 3;
+	forpreccontrol_.nf2qcd1	= 5;
+	forpreccontrol_.nf2qcd2	= 5;
 	
 	QCDORDER::F2ORDER.set(1);
 	foralpsrenorm_.kordf2_ 	= 1;
@@ -40,12 +40,10 @@ int main()	{
 	double	Q2min	= 2,
 			Q2max	= 1e6,
 			xmin	= 1e-5,
-			xmax	= 0.999;
+			xmax	= 0.99;
 
-	int	NQ2full	=	10,	///< for file output
-		NQ2red	=	10,	///< fir console output
-		Nxfull	=	10,	///< for file output
-		Nxred	=	10;	///< fir console output
+	int	NQ2	=	10,
+		Nx	=	10;
 
 	double	logQ2min	= std::log(Q2min),
 			logQ2max	= std::log(Q2max),
@@ -62,89 +60,51 @@ int main()	{
 	fileout << "Q2;x;F2@nlo(fortran);F2@nlo(cpp);F2@nnlo(fortran);F2@nnlo(cpp,apr1);F2@nnlo(cpp,apr2);F2@nnlo(cpp,ex)"
 			<< std::endl;
 
-	std::cout	<< std::scientific << std::setprecision(PREC);
-	std::cout	<< std::setw(WIDTH) << "Q2"
-				<< std::setw(WIDTH) << "x"
-				<< std::setw(WIDTH) << "F2@nlo"
-				<< std::setw(WIDTH) << "F2@nnlo"
-				<< std::endl
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << "fortran"
-				<< std::setw(WIDTH) << "fortran"
-				<< std::endl
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << "cpp"
-				<< std::setw(WIDTH) << "cpp (apr1)"
-				<< std::endl
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << "cpp (apr2)"
-				<< std::endl
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << " "
-				<< std::setw(WIDTH) << "cpp (exct)"
-				<< std::endl;
-
-	for(int iQ2 = 0; iQ2 < NQ2full; iQ2++)	{
-		double logQ2	= logQ2min + (double)iQ2/(double)NQ2full * (logQ2max - logQ2min);
-		double Q2		= std::exp(logQ2);
-		for(int ix = 0; ix < Nxfull; ix++)	{
-			double logx	= logxmin + (double)ix/(double)Nxfull * (logxmax - logxmin);
-			double x	= std::exp(logx);
-
-			QCDORDER::F2ORDER.set(1);
-			foralpsrenorm_.kordf2_ 	= 1;
-			double F2_fortran_nlo	= f2qcd_(3,1,22,x,Q2);
-			double F2_cpp_nlo		= F2(x,Q2);
-			QCDORDER::F2ORDER.set(2);
-			foralpsrenorm_.kordf2_ 	= 2;
-			double F2_fortran_nnlo	= f2qcd_(3,1,22,x,Q2);
-			APPROX::LEVEL.set(APPROX::APPR1);
-			double F2_cpp_nnlo_apr1	= F2(x,Q2);
-			APPROX::LEVEL.set(APPROX::APPR2);
-			double F2_cpp_nnlo_apr2	= F2(x,Q2);
-			APPROX::LEVEL.set(APPROX::EXACT);
-			double F2_cpp_nnlo_ex	= F2(x,Q2);
-
-			fileout		<< Q2				<< ";"
-						<< x				<< ";"
-						<< F2_fortran_nlo	<< ";"
-						<< F2_cpp_nlo		<< ";"
-						<< F2_fortran_nnlo	<< ";"
-						<< F2_cpp_nnlo_apr1	<< ";"
-						<< F2_cpp_nnlo_apr2	<< ";"
-						<< F2_cpp_nnlo_ex	<< std::endl;
-
-			if(	iQ2%(int)std::ceil((double)NQ2full/(double)NQ2red) == 0
-				&& ix%(int)std::ceil((double)Nxfull/(double)Nxred) == 0)	{
-			std::cout	<< std::setw(WIDTH) << Q2
-						<< std::setw(WIDTH) << x
-						<< std::setw(WIDTH) << F2_fortran_nlo
-						<< std::setw(WIDTH) << F2_fortran_nnlo
-						<< std::endl
-						<< std::setw(WIDTH)	<< " "
-						<< std::setw(WIDTH)	<< " "
-						<< std::setw(WIDTH) << F2_cpp_nlo
-						<< std::setw(WIDTH) << F2_cpp_nnlo_apr1
-						<< std::endl
-						<< std::setw(WIDTH)	<< " "
-						<< std::setw(WIDTH)	<< " "
-						<< std::setw(WIDTH) << " "
-						<< std::setw(WIDTH) << F2_cpp_nnlo_apr2
-						<< std::endl
-						<< std::setw(WIDTH)	<< " "
-						<< std::setw(WIDTH)	<< " "
-						<< std::setw(WIDTH) << " "
-						<< std::setw(WIDTH) << F2_cpp_nnlo_ex
-						<< std::endl << std::endl;
+	for(int i = 0; i < Nx * NQ2; i++)	{
+		int ix	= i%Nx;
+		int iQ2	= i/Nx;
+		{
+			std::cout << "\33[2K\r" << std::flush;
+			std::cout << "[\33[32m";
+			for(int j = 0; j < 100; j++)	{
+				if((int)(100*(double)(i+1)/(double)(Nx*NQ2)) >= j)	{
+					std::cout << "\u2589";
+				} else	{
+					std::cout << "\u2591";
+				}
 			}
+			std::cout << "\33[0m]" << std::flush;
 		}
-		if(	iQ2%(int)std::ceil((double)NQ2full/(double)NQ2red) == 0 ) std::cout << std::endl;
+
+		double logQ2	= logQ2min + (double)iQ2/(double)(NQ2-1) * (logQ2max - logQ2min);
+		double Q2		= std::exp(logQ2);
+		double logx	= logxmin + (double)ix/(double)(Nx-1) * (logxmax - logxmin);
+		double x	= std::exp(logx);
+
+		QCDORDER::F2ORDER.set(1);
+		foralpsrenorm_.kordf2_ 	= 1;
+		double F2_fortran_nlo	= f2qcd_(3,1,22,x,Q2);
+		double F2_cpp_nlo		= F2(x,Q2);
+		QCDORDER::F2ORDER.set(2);
+		foralpsrenorm_.kordf2_ 	= 2;
+		double F2_fortran_nnlo	= f2qcd_(3,1,22,x,Q2);
+		APPROX::LEVEL.set(APPROX::APPR1);
+		double F2_cpp_nnlo_apr1	= F2(x,Q2);
+		APPROX::LEVEL.set(APPROX::APPR2);
+		double F2_cpp_nnlo_apr2	= F2(x,Q2);
+		APPROX::LEVEL.set(APPROX::EXACT);
+		double F2_cpp_nnlo_ex	= F2(x,Q2);
+
+		fileout		<< Q2				<< ";"
+					<< x				<< ";"
+					<< F2_fortran_nlo	<< ";"
+					<< F2_cpp_nlo		<< ";"
+					<< F2_fortran_nnlo	<< ";"
+					<< F2_cpp_nnlo_apr1	<< ";"
+					<< F2_cpp_nnlo_apr2	<< ";"
+					<< F2_cpp_nnlo_ex	<< std::endl;
 	}
+	std::cout << std::endl;
 	fileout.close();
 
 	///

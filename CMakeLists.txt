@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.23)
 
 project(openQCDpp)
 
+add_compile_options("-g;-Wall;-Wno-sign-compare;-Wpedantic;-Wconversion")
+
 include_directories(
 	include	
 	/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include

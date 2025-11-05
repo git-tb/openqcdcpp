@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include -I/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include -I/home/tobiasb/OneDrive/projects/PDFcode/hoppet/share/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -g -Wall -Wno-sign-compare -Wpedantic -Wconversion
 

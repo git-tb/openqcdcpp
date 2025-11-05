@@ -9,30 +9,12 @@
 #include "structfunc.h"
 #include "fortransymbols.h"
 
-
-///	@brief Helper function that compares 2 strings (representing double type numbers)
-///	and modifies the second string for console output such that characters are colored
-///	based on the agreement between both strings. The strings should contain a double
-///	type number each, represented in scientific notation
-/// @param s1 
-/// @param s2 
-std::string colorStringForConsoleOutput(const std::string& s1, const std::string& s2)	{
-	std::string s2new("");
-	for(int i = 0; i < s2.length(); i++)	{
-		bool equal = ( i < s1.size() ? (s1[i] == s2[i] ? true : false) : false);
-		s2new.append(equal ? "\033[32m" : "\033[31m");
-		s2new.append(s2.substr(i,1));
-		s2new.append("\033[0m");
-	}
-	return s2new;
-}
-
-/// @brief quick redifiniton such that we can pass literal constants (e.g. 1.234) ass parameters
+/// @brief quick redifiniton such that we can pass literal constants (e.g. 1.234) as parameters
 double f2qcd_(int nb, int nt, int ni, double xb, double q2) 	{
 	return f2qcd_(&nb, &nt, &ni, &xb, &q2); ///< as defined in fortransymbols.h
 }
 
-// Global PDF pointer
+/// some LHAPDF code needed by hoppet
 LHAPDF::PDF *pdf = nullptr;
  
 void lhapdf_interface(const double & x, const double & Q, double * res)  {
@@ -121,7 +103,6 @@ int main () {
 	
 	/// set up openQCD++
 	Pdf::initialize(pdfname, imem);
-	Pdf::setSampling(SAMPLINGMETHOD::fromLHAPDF);
 	PRECISION::EPSABS.set(1e-5);
 	PRECISION::EPSREL.set(1e-5);
 	PRECISION::ITER.set(1000);
@@ -154,27 +135,6 @@ int main () {
 	double lnxmax	= std::log(xmax);
 	double lnQ2min	= std::log(Q2min);
 	double lnQ2max	= std::log(Q2max);
-	
-	/// ...then some formatting for console output...
-	// int WIDTH	= 20;
-	// int PREC	= 10;
-	// std::cout << std::setprecision(PREC) << std::scientific;
-	// std::cout 	<< "<<< F2em >>>" << std::endl;
-	// std::cout	<< "# H = Hoppet" << std::endl
-	// 			<< "# C = my C++ program" << std::endl
-	// 			<< "# O = openQCDrad" << std::endl;
-	// std::cout 	<< std::setw(WIDTH) << "Q2"
-	// 			<< std::setw(WIDTH) << "x"
-	// 			<< std::setw(WIDTH) << "F2H@lo"
-	// 			<< std::setw(WIDTH) << "F2C@lo"
-	// 			<< std::setw(WIDTH) << "F2O@lo"
-	// 			<< std::setw(WIDTH) << "F2H@nlo"
-	// 			<< std::setw(WIDTH) << "F2C@nlo"
-	// 			<< std::setw(WIDTH) << "F2O@nlo"
-	// 			<< std::setw(WIDTH) << "F2H@nnlo"
-	// 			<< std::setw(WIDTH) << "F2C@nnlo"
-	// 			<< std::setw(WIDTH) << "F2O@nnlo"
-	// 			<< std::endl;
 
 	/// ...and some preparation of output to disk.
     std::time_t t = std::time(nullptr);
@@ -249,8 +209,8 @@ int main () {
 			std::cout << "\33[0m]" << std::flush;
 		}
 
-		double lnx	= lnxmin + (double)ix/(double)Nx * (lnxmax - lnxmin);
-		double lnQ2	= lnQ2min + (double)iQ2/(double)NQ2 * (lnQ2max - lnQ2min);
+		double lnx	= lnxmin + (double)ix/(double)(Nx-1) * (lnxmax - lnxmin);
+		double lnQ2	= lnQ2min + (double)iQ2/(double)(NQ2-1) * (lnQ2max - lnQ2min);
 		double x	= std::exp(lnx);
 		double Q2	= std::exp(lnQ2);
 		double Q	= std::sqrt(Q2);
@@ -271,7 +231,7 @@ int main () {
 		f2H_nlo = StrFct_nlo[hoppet::iF2EM] + f2H_lo;
 		f2H_nnlo = StrFct_nnlo[hoppet::iF2EM] + f2H_nlo;
 		/// C
-		Pdf::setSampling(SAMPLINGMETHOD::fromLHAPDF);
+		Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 		QCDORDER::F2ORDER.set(0);
 		f2C_lo = F2(x,Q2);
 		QCDORDER::F2ORDER.set(1);
@@ -285,20 +245,6 @@ int main () {
 		f2O_nlo = f2qcd_(3,1,22,x,Q2);
 		foralpsrenorm_.kordf2_ = 2;
 		f2O_nnlo = f2qcd_(3,1,22,x,Q2);
-
-		/// output
-		// std::cout 	<< std::setw(WIDTH) << Q2
-		// 			<< std::setw(WIDTH) << x		
-		// 			<< std::setw(WIDTH) << f2H_lo
-		// 			<< std::setw(WIDTH) << f2C_lo
-		// 			<< std::setw(WIDTH) << f2O_lo
-		// 			<< std::setw(WIDTH) << f2H_nlo
-		// 			<< std::setw(WIDTH) << f2C_nlo
-		// 			<< std::setw(WIDTH) << f2O_nlo
-		// 			<< std::setw(WIDTH) << f2H_nnlo
-		// 			<< std::setw(WIDTH) << f2C_nnlo
-		// 			<< std::setw(WIDTH) << f2O_nnlo
-		// 			<< std::endl;
 
 		fileout_f2 	<< Q2 << ";"
 					<< x << ";"
@@ -367,7 +313,8 @@ int main () {
 						<< std::endl;		
 
 	}
-	// std::cout << "\033[32mcoincide\033[31m disagree\033[0m" << std::endl;
+	std::cout << std::endl;
+
 	fileout_f2.close();
 	fileout_pdf.close();
 	fileout_alphas.close();
