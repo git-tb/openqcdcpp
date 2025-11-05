@@ -18,7 +18,7 @@ void Pdf::initialize(const std::string pdfname, const int pdfmem)	{
 	/// I think there is some funny business going on in openQCDrads "initgridconst"
 	/// function and that the sampling is strongly affected by some artificial
 	/// threshold in the q2 grid. Let's check this
-	for(auto& v: gridset_.q2ini) v=12;
+	// for(auto& v: gridset_.q2ini) v=;
 	mypdffillgrid_witharg_(pdfname.c_str(), pdfname.length());
 }
 

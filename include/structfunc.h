@@ -21,10 +21,13 @@ double F2(double x, double Q2);
 /// @param x hadronic/Bjorken scaling variable
 double F2integrand(double z, double Q2, double x);
 
+struct par_Q2x {double Q2, x;};
 /// @brief transformation of F2integrand that samples closer to small z
 double F2integrand_logtrafo1(double t, double Q2, double x);
+double F2integrand_logtrafo1_par(double t, void* par);
 
 /// @brief transformation of F2integrand that samples closer to large z
 double F2integrand_logtrafo2(double t, double Q2, double x);
+double F2integrand_logtrafo2_par(double t, void* par);
 
 #endif

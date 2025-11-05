@@ -42,9 +42,9 @@ int main()	{
 			xmin	= 1e-5,
 			xmax	= 0.999;
 
-	int	NQ2full	=	50,	///< for file output
+	int	NQ2full	=	10,	///< for file output
 		NQ2red	=	10,	///< fir console output
-		Nxfull	=	50,	///< for file output
+		Nxfull	=	10,	///< for file output
 		Nxred	=	10;	///< fir console output
 
 	double	logQ2min	= std::log(Q2min),
@@ -150,7 +150,7 @@ int main()	{
 	///
 	/// Performance
 	std::srand(std::time(NULL));
-	const int NRUN 		= 1e3;
+	const int NRUN 		= 1e4;
 	double	time_for	= 0.0, ///< fortran timing
 			time_cppa1	= 0.0, ///< C++ timing, approximation 1
 			time_cppa2	= 0.0, ///< C++ timing, approximation 2

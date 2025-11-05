@@ -32,11 +32,13 @@ fig.show()
 # %%
 
 df_nnlo = df[["x","Q2"]].copy()
+df_nnlo = df_nnlo.assign(newcol0 = df["F2@nnlo(fortran)"]/df["F2@nnlo(cpp,ex)"])
 df_nnlo = df_nnlo.assign(newcol1 = df["F2@nnlo(cpp,apr1)"]/df["F2@nnlo(cpp,ex)"])
 df_nnlo = df_nnlo.assign(newcol2 = df["F2@nnlo(cpp,apr2)"]/df["F2@nnlo(cpp,ex)"])
 df_nnlo = df_nnlo.assign(newcol3 = df["F2@nnlo(cpp,ex)"]/df["F2@nnlo(cpp,ex)"])
 
 df_nnlo = df_nnlo.rename(columns={
+		"newcol0":"F2@nnlo(fortran)/F2@nnlo(ex)",
 		"newcol1":"F2@nnlo(apr1)/F2@nnlo(ex)",
 		"newcol2":"F2@nnlo(apr2)/F2@nnlo(ex)",
 		"newcol3":"F2@nnlo(ex)/F2@nnlo(ex)",

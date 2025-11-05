@@ -59,6 +59,8 @@ double F2(double x, double Q2)	{
 		// 	[x,Q2](double z){return F2integrand(z,Q2,x);},
 		// x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 
+
+		// also works, but creates some std::function objects
 		if(x >= PRECISION::XTHRESH)	{
 			result_int += integrate(
 				[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
@@ -71,6 +73,50 @@ double F2(double x, double Q2)	{
 				[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
 				std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 		}
+
+
+		//// I think this should be fastest.
+		//// Somehow it doesnt make a difference.
+		// int KEY	= 1;
+		// gsl_set_error_handler_off();
+		// gsl_integration_workspace *WORKSPACE = gsl_integration_workspace_alloc(PRECISION::ITER); 
+		// gsl_function F;
+		// double RESULT, ERR;
+
+		// F.params = new par_Q2x({Q2,x});
+		// if(x >= PRECISION::XTHRESH)	{
+		// 	F.function = F2integrand_logtrafo2_par;
+		// 	gsl_integration_qag(
+		// 		&F,
+		// 		std::log(PRECISION::DELTA), std::log(1-x),
+		// 		PRECISION::EPSABS, PRECISION::EPSREL, PRECISION::ITER,
+		// 		KEY, WORKSPACE,
+		// 		&RESULT, &ERR
+		// 	);
+		// 	result_int += RESULT;
+		// } else {
+		// 	F.function = F2integrand_logtrafo1_par;
+		// 	gsl_integration_qag(
+		// 		&F,
+		// 		std::log(x), std::log(PRECISION::XTHRESH),
+		// 		PRECISION::EPSABS, PRECISION::EPSREL, PRECISION::ITER,
+		// 		KEY, WORKSPACE,
+		// 		&RESULT, &ERR
+		// 	);
+		// 	result_int += RESULT;
+
+		// 	F.function = F2integrand_logtrafo2_par;
+		// 	gsl_integration_qag(
+		// 		&F,
+		// 		std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH),
+		// 		PRECISION::EPSABS, PRECISION::EPSREL, PRECISION::ITER,
+		// 		KEY, WORKSPACE,
+		// 		&RESULT, &ERR
+		// 	);
+		// 	result_int += RESULT;
+		// }
+
+		// gsl_integration_workspace_free(WORKSPACE);
 	}
 
 	/// higher orders, local parts
@@ -200,9 +246,19 @@ double F2integrand_logtrafo1(double t, double Q2, double x)	{
 	double z = std::exp(t);
 	return F2integrand(z,Q2,x)*z;
 }
+double F2integrand_logtrafo1_par(double t, void* par)	{
+	par_Q2x* p = (struct par_Q2x *)par;
+	double z = std::exp(t);
+	return F2integrand(z,p->Q2,p->x)*z;
+}
 
 /// @brief transformation of F2integrand that samples closer to large z
 double F2integrand_logtrafo2(double t, double Q2, double x)	{
 	double z = 1.-std::exp(t);
 	return F2integrand(z,Q2,x)*(1-z);
+}
+double F2integrand_logtrafo2_par(double t, void* par)	{
+	double z = 1.-std::exp(t);
+	par_Q2x* p = (struct par_Q2x *)par;
+	return F2integrand(z,p->Q2,p->x)*(1-z);
 }

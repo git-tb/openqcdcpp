@@ -10,6 +10,33 @@ import numpy as np
 
 #%%
 
+df = pd.read_csv("testdata.dat",sep=";")
+fig = px.scatter(
+	df,
+	x="err",
+	y="runtime",
+	color="algorithm",
+)
+
+fig.update_layout(
+    xaxis=dict(
+        type="log",
+        # tickformat=".0e",
+		exponentformat="power",
+        title="integration error"
+    ),
+    yaxis=dict(
+        type="log",
+        # tickformat=".0e",
+		exponentformat="power",
+        title="runtime(ns)"
+    )
+)
+
+fig.show()
+
+#%%
+
 exact_result = 2
 
 df1 = pd.read_csv("integrate_gauss1.dat",sep=";",skiprows=1,names=["runtime(ns)","result"])

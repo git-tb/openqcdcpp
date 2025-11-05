@@ -62,19 +62,19 @@ for col0 in [2,5,8,11,14,17,20,23,26,29,32,35,38]:
 
 	fig = px.line(
 		df_melted,
-		x="x",
-		# x="Q2",
+		# x="x",
+		x="Q2",
 		y="value",
 		color="function",
-		animation_frame="Q2",
-		# animation_frame="x",
+		# animation_frame="Q2",
+		animation_frame="x",
 		log_x=True,
 		markers=True
 	)
 
 	fig.update_layout(
-		xaxis_title="x",
-		# xaxis_title="Q2",
+		# xaxis_title="x",
+		xaxis_title="Q2",
 		legend_title="Function"
 	)
 
