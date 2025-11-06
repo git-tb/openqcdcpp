@@ -3,6 +3,7 @@
 #include "constants.h"
 #include "integrate.h"
 #include "coefffunc.h"
+#include "hqcoeff.h"
 
 #include <cmath>		// use math functions from std::
 
@@ -55,24 +56,24 @@ double F2(double x, double Q2)	{
 	/// higher orders, non-local parts
 	if(QCDORDER::F2ORDER >= 1)	{
 		//// naive way, samples uniformly across integration domain
-		// result += integrate(
-		// 	[x,Q2](double z){return F2integrand(z,Q2,x);},
-		// x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+		result_int += integrate(
+			[x,Q2](double z){return F2integrand(z,Q2,x);},
+			x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 
 
 		// also works, but creates some std::function objects
-		if(x >= PRECISION::XTHRESH)	{
-			result_int += integrate(
-				[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
-				std::log(PRECISION::DELTA), std::log(1-x), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
-		} else {
-			result_int += integrate(
-				[x,Q2](double t){return F2integrand_logtrafo1(t,Q2,x);},
-				std::log(x), std::log(PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
-			result_int += integrate(
-				[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
-				std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
-		}
+		// if(x >= PRECISION::XTHRESH)	{
+		// 	result_int += integrate(
+		// 		[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
+		// 		std::log(PRECISION::DELTA), std::log(1-x), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+		// } else {
+		// 	result_int += integrate(
+		// 		[x,Q2](double t){return F2integrand_logtrafo1(t,Q2,x);},
+		// 		std::log(x), std::log(PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+		// 	result_int += integrate(
+		// 		[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
+		// 		std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
+		// }
 
 
 		//// I think this should be fastest.
@@ -261,4 +262,67 @@ double F2integrand_logtrafo2_par(double t, void* par)	{
 	double z = 1.-std::exp(t);
 	par_Q2x* p = (struct par_Q2x *)par;
 	return F2integrand(z,p->Q2,p->x)*(1-z);
+}
+
+
+
+
+double F2heavy(double x, double Q2, int nlight)	{
+	double result(0.0);
+	double a = 1/(1+4*std::pow(QCD::QMASSES[nlight],2)/Q2);
+
+	result += integrate([x,Q2,nlight](double t){ return F2heavyintegrand_logtrafo(t, Q2, x, nlight);},
+		std::log(x), std::log(a), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL
+	);
+
+	return result;
+}
+
+double F2heavyintegrand_logtrafo(double t, double Q2, double x, int nlight)	{
+	double z = std::exp(t);
+	return F2heavyintegrand(z, Q2, x, nlight);
+}
+
+double F2heavyintegrand(double z, double Q2, double x, int nlight)	{
+	double result(0.0);
+
+	///	@todo make the running coupling a parameter of this function such that we do not
+	///	recalculate logarithms of the renormalization scale
+	const double muR2 = Q2;
+	double alps = Pdf::alphas(muR2);
+	double runcorr_ci_1(1.0);							///< correction to powers of alphasR(mu) associated to O(alphas) coefficient function ci_1(...)
+	double runcorr_ci_2(1.0);							///< correction to powers of alphasR(mu) associated to O(alphas^2) coefficient function ci_2(...)
+	if(QCDORDER::F2ORDER >= 2)	{
+		double	logQ2muR2 	= 	std::log(Q2/muR2);
+		double 	b0 			= 	QCD::beta0();
+		
+		runcorr_ci_1 		+= 	- alps / (4.0*M_PI) * b0 * logQ2muR2;
+
+		if(QCDORDER::F2ORDER >= 3)	{
+			double b1 		= 	QCD::beta1();
+
+			runcorr_ci_2 	+=	- 2.0*alps/(4.0*M_PI) * b0 * logQ2muR2;;
+			runcorr_ci_1 	+=	alps/(4.0*M_PI) * alps/(4.0*M_PI) * (
+								- b1 * logQ2muR2
+								+ std::pow(b0 * logQ2muR2,2)
+			);
+		}
+	}
+
+	double s	= Q2*(1.0/z-1.0);
+	double eta	= s/(4.0*std::pow(QCD::QMASSES[nlight],2)-1);
+	double chi	= Q2/std::pow(QCD::QMASSES[nlight],2);
+
+	/// LO is O(alphas)	
+	// if(QCDORDER::F2ORDER >= 1)	{
+	// 	result += Q2 * alps * runcorr_ci_1 / (4 * M_PI*M_PI * std::pow(QCD::QMASSES[nlight],2) ) * (
+	// 		Pdf::xf(G,x/z,muR2) * ch2g_1_0(eta,chi)
+	// 	);
+
+	// 	if(QCDORDER::F2ORDER >= 2)	{
+	// 		std::cerr << "WARNING: Heavy Quark Coefficient Functions implemented to LO~O(alphas) only!!!" << std::endl;
+	// 	}
+	// }
+
+	return result;
 }

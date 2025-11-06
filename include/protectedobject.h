@@ -1,6 +1,9 @@
 #ifndef PROTECTEDOBJECT_H
 #define PROTECTEDOBJECT_H
 
+#include <cstdlib>		/// std::size_t
+#include <algorithm>	/// std::copy
+
 /**
  * @brief ProtectedObjects are those that should not be changed everywhere in the code.
  * On one hand, we could just declare constant global variables at the beginning of
@@ -24,6 +27,24 @@ public:
 
     /// implicit conversion for reading
     operator T() const { return value; }
+};
+
+template <typename T, std::size_t N>
+class ProtectedObject<T[N]> {
+private:
+    T value[N];
+
+public:
+    ProtectedObject() = delete;
+    explicit ProtectedObject(const T (&v)[N]) {
+        std::copy(v, v + N, value);
+    }
+
+    void set(const T (&v)[N]) {
+        std::copy(v, v + N, value);
+    }
+
+    operator const T*() const { return value; }
 };
 
 #endif

@@ -7,13 +7,13 @@
 
 /**
  * @brief The naming of the coefficient functions follows the scheme
- * 		cnf_ps/ns_j_k_desc
+ * 		ckf_ps/ns_j_n_desc
  * with	c - "coefficient function"
- * 		n - for structure function fn
+ * 		k - for structure function Fk
  * 		f - quark (q) or gluon (g)
  * 		ps/ns - pure singlet (ps) or non-singlet (ns) in case of f=q
  * 		j - associated QCD order (alpha_s/(4*Pi))^j
- * 		k - associated power of Nf
+ * 		n - associated power of Nf
  * 		desc - further description (i.e. regular, plus distribution, ...)
  */
 

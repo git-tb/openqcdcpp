@@ -85,7 +85,7 @@ void load_lhapdf_assign_hoppet(const std::string & pdfname, int imem=0) {
 
 //----------------------------------------------------------------------
 int main () {
-	std::string pdfname = "ABMP16_3_nnlo";
+	std::string pdfname = "MSHT20nnlo_nf3";
 	int imem = 0;
 
 	/// set up HOPPET
@@ -124,12 +124,12 @@ int main () {
 
 	/// comparison of outputs
 	/// first, x and Q range to loop over
-	double xmin		= 1e-5;
-	double xmax		= 0.999;
+	double xmin		= 0.95;
+	double xmax		= 1;
 	double Q2min	= 2;
 	double Q2max	= 1e6;
-	int Nx			= 20;
-	int NQ2			= 500;
+	int Nx			= 1000;
+	int NQ2			= 2;
 	
 	double lnxmin	= std::log(xmin);
 	double lnxmax	= std::log(xmax);
@@ -222,6 +222,8 @@ int main () {
 				f2C_lo, f2C_nlo, f2C_nnlo,	///< my C++ results
 				f2O_lo, f2O_nlo, f2O_nnlo;	///< openQCDrad results
 
+		fileout_f2 			<< Q2 << ";";
+		fileout_f2			<< x << ";";
 		/// H
 		double StrFct_lo[14], StrFct_nlo[14], StrFct_nnlo[14];
 		hoppetStrFctLO(x,Q,Q,Q,StrFct_lo);
@@ -231,7 +233,7 @@ int main () {
 		f2H_nlo = StrFct_nlo[hoppet::iF2EM] + f2H_lo;
 		f2H_nnlo = StrFct_nnlo[hoppet::iF2EM] + f2H_nlo;
 		/// C
-		Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
+		Pdf::setSampling(SAMPLINGMETHOD::fromLHAPDF);
 		QCDORDER::F2ORDER.set(0);
 		f2C_lo = F2(x,Q2);
 		QCDORDER::F2ORDER.set(1);
@@ -245,19 +247,17 @@ int main () {
 		f2O_nlo = f2qcd_(3,1,22,x,Q2);
 		foralpsrenorm_.kordf2_ = 2;
 		f2O_nnlo = f2qcd_(3,1,22,x,Q2);
-
-		fileout_f2 	<< Q2 << ";"
-					<< x << ";"
-					<< f2H_lo << ";"
-					<< f2C_lo << ";"
-					<< f2O_lo << ";"
-					<< f2H_nlo << ";"
-					<< f2C_nlo << ";"
-					<< f2O_nlo << ";"
-					<< f2H_nnlo << ";"
-					<< f2C_nnlo << ";"
-					<< f2O_nnlo << ";"
-					<< std::endl;
+		
+		fileout_f2			<< f2H_lo << ";" << std::flush;
+		fileout_f2			<< f2C_lo << ";" << std::flush;
+		fileout_f2			<< f2O_lo << ";" << std::flush;
+		fileout_f2			<< f2H_nlo << ";" << std::flush;
+		fileout_f2			<< f2C_nlo << ";" << std::flush;
+		fileout_f2			<< f2O_nlo << ";" << std::flush;
+		fileout_f2			<< f2H_nnlo << ";" << std::flush;
+		fileout_f2			<< f2C_nnlo << ";" << std::flush;
+		fileout_f2			<< f2O_nnlo << ";" << std::flush;
+		fileout_f2			<< std::endl;
 
 		///
 		/// pdfs

@@ -1,6 +1,7 @@
 #include "constants.h"
-#include <assert.h>
 #include "protectedobject.h"
+
+#include <assert.h>
 #include <cmath>
 
 namespace QCDORDER	{
@@ -21,6 +22,7 @@ namespace QCD	{
 	const double	CA	= 3.0;
 	const double	TR	= 0.5;
 	ProtectedObject<int>	NF{3};
+	ProtectedObject<double[6]>	QMASSES{{1,2,3,4,5,6}};
 
 	/// @brief computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF
 	double sumQi2()	{

@@ -101,7 +101,7 @@ void load_lhapdf_assign_hoppet(const string & pdfname, int imem=0) {
 
 //----------------------------------------------------------------------
 int main (int argc, char *argv[]) {
-  string pdfname = "ABMP16_3_nnlo";
+  string pdfname = "CT18NNLO";
   if (argc > 1) {
     pdfname = argv[1];
   }
@@ -125,7 +125,7 @@ int main (int argc, char *argv[]) {
   		double hoppetpdf[13];
   		hoppetEval(x, std::sqrt(Q2), hoppetpdf);
 
-		std::cout 	<< std::setw(15) << Q2
+		std::cout 	<< std::setw(15) << std::sqrt(Q2)
 					<< std::setw(15) << x
 					<< std::setw(15) << (lhapdf[6+2] - hoppetpdf[6+2])/lhapdf[6+2];
 		std::cout	<< std::endl;

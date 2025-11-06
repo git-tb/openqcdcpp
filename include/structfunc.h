@@ -9,6 +9,7 @@
 
 #include <cmath>		// use math functions from std::
 
+
 /// @brief electromagnetic structure function F2 from photon interaction
 /// @param x hadronic scaling variable x=Q2/(2*P*q) with proton momentum P
 /// @param Q2 minus photon momentum squared
@@ -29,5 +30,13 @@ double F2integrand_logtrafo1_par(double t, void* par);
 /// @brief transformation of F2integrand that samples closer to large z
 double F2integrand_logtrafo2(double t, double Q2, double x);
 double F2integrand_logtrafo2_par(double t, void* par);
+
+
+/// @brief structure function F2 for heavy quark production
+/// for nlight light quark flavors + 1 heavy quark flavor
+double F2heavy(double x, double Q2, int nlight);
+
+double F2heavyintegrand(double z, double Q2, double x, int nlight);
+double F2heavyintegrand_logtrafo(double t, double Q2, double x, int nlight);
 
 #endif

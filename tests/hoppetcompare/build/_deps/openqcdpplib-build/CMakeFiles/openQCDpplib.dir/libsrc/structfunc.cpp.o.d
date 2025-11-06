@@ -263,4 +263,5 @@ _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o: \
  /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/pdf.h \
  /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/constants.h \
  /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/integrate.h \
- /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/coefffunc.h
+ /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/coefffunc.h \
+ /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include/hqcoeff.h

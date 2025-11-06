@@ -54,7 +54,9 @@ df = pd.read_csv(files[-1],sep=";",comment="#")
 for col0 in [2,5,8,11,14,17,20,23,26,29,32,35,38]:
 	df_new = df[["x","Q2"]].copy()
 	for col in df.columns[col0:col0+3]:
-		df_new[f'({col}-{df.columns[col0+2]})/{df.columns[col0+2]}'] = (df[col]-df[df.columns[col0+2]])/df[df.columns[col0+2]]
+		df_new[f'({col}-{df.columns[col0]})/{df.columns[col0
+													]}'] = (df[col]-df[df.columns[col0]])/df[df.columns[col0]]
+		# df_new[f'{col}'] = df[col]
 	df_melted = df_new.melt(id_vars=["x", "Q2"], var_name="function", value_name="value")
 	sizes = [8,6,4]
 	sizemap = dict(zip(df_melted["function"].unique(), sizes))
