@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o.d"
   "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o.d"
   "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o.d"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o.d"
   "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o.d"
   "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o.d"
   "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp" "CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o" "gcc" "CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o.d"

@@ -17,8 +17,10 @@ void Pdf::initialize(const std::string pdfname, const int pdfmem)	{
 	initgridconst_();
 	/// I think there is some funny business going on in openQCDrads "initgridconst"
 	/// function and that the sampling is strongly affected by some artificial
-	/// threshold in the q2 grid. Let's check this
-	// for(auto& v: gridset_.q2ini) v=;
+	/// threshold in the q2 grid. Let's check this: In openQCDrad this threshold is
+	///	at Q2=9. Change it so some other value and see if the benchmarks become worse
+	/// at this value.
+	for(auto& v: gridset_.q2ini) v=12;
 	mypdffillgrid_witharg_(pdfname.c_str(), pdfname.length());
 }
 
@@ -45,7 +47,8 @@ double Pdf::alphas(double Q2)	{
 	if(samplingmethod == fromLHAPDF)	{
 		return lhapdfobject->alphasQ2(Q2);
 	} else if(samplingmethod == fromOPENQCDRAD) {
-		return xqg(0, 0.1, Q2, pdfmem);
+		/// @todo This always samples the three flavor Pdf from openQCDrad
+		return xqg(0, 0.1, Q2, /*kschemepdf=*/0);
 	}
 
 	std::cout << "WARNING: alphas sampling method is undefined!" << std::endl;
@@ -63,7 +66,8 @@ double Pdf::xf(int pID, double x, double Q2)	{
 	} else if(samplingmethod == fromOPENQCDRAD) {
 		if(pID == G || pID == 0) return xqg(1,x,Q2,pdfmem);
 		int idx = 2 * std::abs(pID) + (pID < 0 ? 1 : 0);
-		return xqg(idx, x, Q2, pdfmem);
+		/// @todo This always samples the three flavor Pdf from openQCDrad
+		return xqg(idx, x, Q2, /*kschemepdf=*/0);
 	}
 
 	std::cout << "WARNING: pdf sampling method is undefined!" << std::endl;
@@ -91,8 +95,6 @@ void Pdf::printLHAPDFinfo()	{
 void Pdf::setSampling(SAMPLINGMETHOD method)	{
 	samplingmethod = method;
 }
-
-
 
 
 double xfiQi2sum(double x, double Q2)	{

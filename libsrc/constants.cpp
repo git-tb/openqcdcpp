@@ -21,10 +21,29 @@ namespace QCD	{
 	const double 	CF	= 4.0/3.0;
 	const double	CA	= 3.0;
 	const double	TR	= 0.5;
+
+	/// @todo Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call!
 	ProtectedObject<int>	NF{3};
-	ProtectedObject<double[6]>	QMASSES{{1,2,3,4,5,6}};
+	ProtectedObject<double[6]>	QMASSES{{
+		0,
+		0,
+		0,
+		1.5,
+		4.5,
+		172
+	}};
+
+	ProtectedObject<double[6]>	QCHARGES{{
+		-1./3.,
+		 2./3.,
+		-1./3.,
+		 2./3.,
+		-1./3.,
+		 2./3.
+	}};
 
 	/// @brief computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF
+	/// @todo formulate this in terms of QCHARGES
 	double sumQi2()	{
 		assert(3 <= QCD::NF);
 		assert(QCD::NF <= 5);

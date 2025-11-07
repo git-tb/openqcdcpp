@@ -44,6 +44,11 @@ public:
         std::copy(v, v + N, value);
     }
 
+	void set(std::size_t i, T v) {
+        assert(i<N);
+		value[i] = v;
+    }
+
     operator const T*() const { return value; }
 };
 

@@ -2,6 +2,9 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
+#include <chrono>
+#include <fstream>
+#include <cmath>
 
 int getIntervalIdx(double& x, std::vector<double> xsamples)	{
 	auto it		= std::find_if(xsamples.begin(), xsamples.end(), [x](double x_){return x<x_;});
@@ -31,158 +34,87 @@ int getIntervalIdxSmart(double& x, const std::vector<double> &xsamples, uint low
 		}
 	} else	{
 		int mididx = (upperidx+loweridx)/2;
-		if(x > xsamples[mididx]) return getIntervalIdxSmart(x, xsamples, mididxcd ..)
+		if(x >= xsamples[mididx]) 	return getIntervalIdxSmart(x, xsamples, mididx, upperidx);
+		else						return getIntervalIdxSmart(x, xsamples, loweridx, mididx);
 	}
 }
 
-class MyInterval	{
-	public:
-		MyInterval(double lowerbound_, double upperbound_)	:
-			lowerbound(lowerbound_), upperbound(upperbound_)	{};
-	
-		bool contains(double x)	{
-			return (x >= lowerbound) && (x < upperbound);
-		}
-	protected:
-		double lowerbound, upperbound;
-};
-
-class MyIntervalTree : MyInterval	{
-	public:
-		MyIntervalTree(double lowerbound_, double upperbound_) :
-			MyInterval(lowerbound_, upperbound_) {};
-		
-		void getAddress(double x, std::vector<int> &address)	{
-			if(not contains(x))	{
-				std::cerr << "ERROR: cannot find address of point outside my interval!" << std::endl;
-				abort();
-			} else if(children.empty())	{
-				return;
-			} else if(children.size() != 2)	{
-				std::cerr << "ERROR: each MyIntervalTree must contain either 0 or 2 children!" << std::endl;
-				abort();
-			} else if(children[0].contains(x))	{
-				address.push_back(0);
-				children[0].getAddress(x, address);
-			} else if (children[1].contains(x))	{
-				address.push_back(1);
-				children[1].getAddress(x,address);
-			} else {
-				std::cerr << "ERROR: If MyIntervalTree contains x, then exactly 1 of its children must also contain x!" << std::endl;
-				abort();
-			}
-		}
-
-		void addGridPoint(double x)	{
-			if(not contains(x))	{
-				std::cerr << "ERROR: cannot add point outside my interval!" << std::endl;
-				abort();
-			} else if ((x == lowerbound) or (x == upperbound)) {
-				return;
-			} else if(children.empty())	{
-				children.push_back(MyIntervalTree(lowerbound, x));
-				children.push_back(MyIntervalTree(x, upperbound));
-			} else if(children.size() != 2)	{
-				std::cerr << "ERROR: each MyIntervalTree must contain either 0 or 2 children!" << std::endl;
-				abort();
-			} else if(children[0].contains(x))	{
-				children[0].addGridPoint(x);
-			} else if (children[1].contains(x))	{
-				children[1].addGridPoint(x);
-			} else {
-				std::cerr << "ERROR: If MyIntervalTree contains x, then exactly 1 of its children must also contain x!" << std::endl;
-				abort();
-			}
-		}
-
-		void print(uint indentationlevel, uint WIDTH = 10)	{
-			for(uint i = 0; i < indentationlevel; i++) std::cout << "\t";
-			std::cout 	<< std::setw(WIDTH) << lowerbound  
-						<< " --- "
-						<< std::setw(WIDTH) << upperbound
-						<< std::endl;
-			if(children.empty())	{
-				return;
-			} else if(children.size() != 2)	{
-				std::cerr << "ERROR: each MyIntervalTree must contain either 0 or 2 children!" << std::endl;
-				abort();
-			} else {
-				children[0].print(indentationlevel+1, WIDTH);
-				children[1].print(indentationlevel+1, WIDTH);
-			}
-		}
-
-		uint addressToIdx(std::vector<int> address, int level)	{
-			if(level > address.size()-1)	{
-				return 0;
-			} else if(address[level] == 0)	{
-				if(children.empty())	{
-					return 0;
-				} else {
-					return children[0].addressToIdx(address, level+1);
-				}
-			} else {
-				if (children.empty())	{
-					return 1;
-				} else {
-					return children[0].totalSubintervals() + children[1].addressToIdx(address,level+1);
-				}
-			}			
-		}
-
-		uint totalSubintervals()	{
-			if(children.empty())	{
-				return 1;
-			} else	{
-				return children[0].totalSubintervals() + children[1].totalSubintervals();
-			}
-		}
-
-	private:
-		std::vector<MyIntervalTree> children;
-};
-
 int main()	{
-	uint Nsize	= (uint)1e2;
-	std::vector<double> xsamples(Nsize);
+
 	double 	xmin	= 0.0,
-			xmax	= 10.0;
+			xmax 	= 10.0;
 
-	MyIntervalTree mytree(xmin, xmax);
-	for(uint i = 0; i < Nsize; i++)	{
-		xsamples[i]	= xmin + (xmax-xmin)*(double)i/(double)(Nsize-1);
-		if((i != 0) and (i != Nsize-1)) mytree.addGridPoint(xsamples[i]);
+	std::ofstream fileout("test.dat");
+	fileout << "listlen;time algo1;time algo2" << std::endl;
+
+	uint Nsizes		= 50;
+	uint SizeMin	= 10;
+	uint SizeMax	= 1000;
+
+	double logsizemin = std::log((double)SizeMin);
+	double logsizemax = std::log((double)SizeMax);
+
+	std::vector<double> sizes(Nsizes);
+	for(uint i = 0; i < Nsizes; i++)	{
+		double logsize	= logsizemin + (logsizemax-logsizemin)*(double)i/(double)(Nsizes-1);
+		uint size 		= (uint)std::ceil(std::exp(logsize));
+		sizes[i]		= size;
 	}
 
-	mytree.print(0);
+	for(uint k = 0; k < sizes.size(); k++)	{
+		{
+			std::cout << "\33[2K\r" << std::flush;
+			std::cout << "[\33[32m";
+			for(int j = 0; j < 100; j++)	{
+				if((int)(100*(double)(k)/(double)(sizes.size()-1)) >= j)	{
+					std::cout << "\u2589";
+				} else	{
+					std::cout << "\u2591";
+				}
+			}
+			std::cout << "\33[0m]" << std::flush;
+		}
 
-	uint Ntest = 20;
-	for(uint i = 0; i < Ntest; i++)	{
-		double r	= (double)std::rand()/(double)RAND_MAX;
-		double x	= xmin + r*(xmax-xmin);
 
-		std::vector<int> address;
-		mytree.getAddress(x, address);
+		uint Ntest = sizes[k];
+		std::vector<double> xsamples(Ntest);
+		for(uint i = 0; i < Ntest; i++)	{
+			xsamples[i] = xmin + (xmax - xmin)*(double)i/(double)(Ntest-1);
+		}
 
-		std::cout 	<< std::setw(10) << x
-					<< std::setw(4) << mytree.addressToIdx(address, 0)
-					<< std::setw(4) << getIntervalIdx(x, xsamples)
-					<< std::setw(10) << (bool)(mytree.addressToIdx(address, 0) == getIntervalIdx(x, xsamples))
-					<< std::endl;
+		double	total1	= 0.0,
+				total2	= 0.0;
+		for(uint i = 0; i < Ntest-1; i++)	{ 								///< run over the whole list of samples to get the average runtime			
+			double x = xsamples[i] + 0.5 * (xsamples[i+1]-xsamples[i]); 	///< test the midpoints of each interval
+
+			uint Nstat = 1000; ///< number of runs to average out fluctuations
+			for(uint j = 0; j < Nstat; j++)	{
+				uint idx1, idx2;
+				{
+					auto start		= std::chrono::high_resolution_clock::now();
+					idx1 = getIntervalIdx(x, xsamples);
+					auto end		= std::chrono::high_resolution_clock::now();
+					auto duration	= std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+					total1			+= (double)duration.count()/(double)(Nstat*Ntest);
+				}				
+				{
+					auto start		= std::chrono::high_resolution_clock::now();
+					idx2 = getIntervalIdxSmart(x, xsamples,0,xsamples.size()-1);
+					auto end		= std::chrono::high_resolution_clock::now();
+					auto duration	= std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+					total2			+= (double)duration.count()/(double)(Nstat*Ntest);
+				}	
+				if(idx1 != idx2)	{
+					std::cerr << "ERROR: algorithms get different results!" << std::endl;
+					abort();
+				}	
+			}
+		}
+
+		fileout << Ntest << ";" << total1 << ";" << total2 << std::endl;
 	}
-
-	std::vector<int> address;
-	mytree.getAddress(xmax,address);
-
-	// uint Nrun	= (uint)1e5;
-	// for(uint i = 0; i < Nrun; i++)	{
-	// 	double r	= (double)std::rand()/(double)RAND_MAX;
-	// 	double x	= xmin + r*(xmax-xmin);
-
-	// 	auto it		= std::find_if(xsamples.begin(), xsamples.end(), [x](double x_){return x>x_;});
-	// 	uint idx	= std::distance(xsamples.begin(), it);
-	// }
-
+	std::cout << std::endl;
+	fileout.close();
 
 	return 0;
 }

@@ -22,6 +22,7 @@ namespace QCD	{
 	extern const double		TR;
 	extern ProtectedObject<int>	NF;
 	extern ProtectedObject<double[6]> QMASSES;
+	extern ProtectedObject<double[6]> QCHARGES;
 
 	/// @brief computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF
 	double sumQi2();

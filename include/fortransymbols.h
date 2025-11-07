@@ -1,6 +1,22 @@
 #ifndef FORTRANSYMBOLS_H
 #define FORTRANSYMBOLS_H
 
+/**
+ * @brief Here we import some symbols from the old fortran code
+ * in order to use and modify them in our code. COMMON blocks from
+ * Fortran can be imported by mapping them to structs with the same
+ * order of member variables as defined in the Fortran code.
+ * 
+ * Depending on the compiler the symbol names from the Fortran source
+ * code are changed slightly in the corresponding object files that
+ * we link to the C++ program, hence the trailing underscore "name_"
+ * at the end of each variable name.
+ * 
+ * Check for the precise symbols names with
+ * >>	nm libMyLib.so | grep symbolname
+ *  
+ */
+
 #define NXPLIM 201
 #define NXMLIM 201
 #define NSPLIM 241
@@ -28,7 +44,7 @@ extern "C"	{
 				kordalps,
 				kfeff,
 				kordhq,
-				kordf2_,
+				kordf2,
 				kordfl,
 				kordf3;
 		double	almszl;	
@@ -100,12 +116,29 @@ extern "C"	{
 				khalf;
 	};
 	extern GRIDSET_COMMON gridset_;
+
+	struct FORF2CHARM_COMMON	{
+		double	xb0,
+				q2ss,
+				rm2,
+				qqs,
+				rmu2,
+				an,
+				rq;
+		int		nb0,
+				nt0,
+				ni0,
+				nq0;
+	};
+	extern FORF2CHARM_COMMON forf2charm_;
 	
 
 	void initgridconst_();
 	void mypdffillgrid_witharg_(const char* arg, int arg_len);
 	double xqg_(int* iq, double* xx, double* q2, int* kp);
 	double f2qcd_(int* nb, int* nt, int* ni, double* xb, double* q2);
+	double f2charm_ffn_(double* xb, double* q2, int* nq);
+	double f2charmi_(double* t);
 }
 
 #endif

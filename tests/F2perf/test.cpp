@@ -10,7 +10,7 @@
 #include "structfunc.h"
 #include "fortransymbols.h"
 
-/// @brief quick redifiniton such that we can pass literal constants (e.g. 1.234) ass parameters
+/// @brief quick redifiniton such that we can pass literal constants (e.g. 1.234) as parameters
 double f2qcd_(int nb, int nt, int ni, double xb, double q2) 	{
 	return f2qcd_(&nb, &nt, &ni, &xb, &q2); ///< as defined in fortransymbols.h
 }

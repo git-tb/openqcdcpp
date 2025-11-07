@@ -87,12 +87,12 @@ clean: CMakeFiles/teststructfunc.dir/clean
 CMakeFiles/openQCDpplib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/openQCDpplib.dir/build.make CMakeFiles/openQCDpplib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/openQCDpplib.dir/build.make CMakeFiles/openQCDpplib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12 "Built target openQCDpplib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13 "Built target openQCDpplib"
 .PHONY : CMakeFiles/openQCDpplib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/openQCDpplib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/openQCDpplib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 0
 .PHONY : CMakeFiles/openQCDpplib.dir/rule
@@ -165,12 +165,12 @@ CMakeFiles/hoppettest.dir/clean:
 CMakeFiles/teststructfunc.dir/all: CMakeFiles/openQCDpplib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teststructfunc.dir/build.make CMakeFiles/teststructfunc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teststructfunc.dir/build.make CMakeFiles/teststructfunc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=13,14 "Built target teststructfunc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=14,15 "Built target teststructfunc"
 .PHONY : CMakeFiles/teststructfunc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/teststructfunc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/teststructfunc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 0
 .PHONY : CMakeFiles/teststructfunc.dir/rule

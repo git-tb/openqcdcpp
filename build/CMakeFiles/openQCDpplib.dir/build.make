@@ -167,6 +167,20 @@ CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s
 
+CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o: CMakeFiles/openQCDpplib.dir/flags.make
+CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp
+CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o: CMakeFiles/openQCDpplib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp
+
+CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp > CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i
+
+CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s
+
 # Object files for target openQCDpplib
 openQCDpplib_OBJECTS = \
 "CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o" \
@@ -175,7 +189,8 @@ openQCDpplib_OBJECTS = \
 "CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o" \
 "CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o" \
 "CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o" \
-"CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o"
+"CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o" \
+"CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o"
 
 # External object files for target openQCDpplib
 openQCDpplib_EXTERNAL_OBJECTS =
@@ -187,9 +202,10 @@ libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o
 libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o
 libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o
 libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o
+libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o
 libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/build.make
 libopenQCDpplib.a: CMakeFiles/openQCDpplib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libopenQCDpplib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libopenQCDpplib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/openQCDpplib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/openQCDpplib.dir/link.txt --verbose=$(VERBOSE)
 

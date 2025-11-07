@@ -37,6 +37,7 @@ double F2integrand_logtrafo2_par(double t, void* par);
 double F2heavy(double x, double Q2, int nlight);
 
 double F2heavyintegrand(double z, double Q2, double x, int nlight);
+double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2);
 double F2heavyintegrand_logtrafo(double t, double Q2, double x, int nlight);
 
 #endif

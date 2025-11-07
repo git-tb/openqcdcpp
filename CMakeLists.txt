@@ -32,6 +32,8 @@ target_sources(openQCDpplib
 		libsrc/logger.cpp
 		libsrc/pdf.cpp
 		libsrc/structfunc.cpp
+		libsrc/structfunc.cpp
+		libsrc/hqcoeff.cpp
 
 	PUBLIC
 		FILE_SET HEADERS
@@ -45,6 +47,7 @@ target_sources(openQCDpplib
 			include/logger.h
 			include/pdf.h
 			include/structfunc.h
+			include/hqcoeff.h
 )
 
 if (CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
