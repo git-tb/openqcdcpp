@@ -50,7 +50,12 @@ target_sources(openQCDpplib
 			include/hqcoeff.h
 )
 
+
+
+
+########################################################################################################################
 if (CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
+
 
 ########################################################################################################################
 ########################################################################################################################
@@ -101,4 +106,22 @@ target_link_libraries(teststructfunc
 		/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so
 )
 
+########################################################################################################################
+########################################################################################################################
+
+add_executable(testF2heavyintegrand)
+
+target_sources(testF2heavyintegrand
+	PRIVATE
+		src/testF2heavyintegrand.cpp
+)
+
+target_link_libraries(testF2heavyintegrand
+	PRIVATE
+		openQCDpplib
+		/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so
+)
+
+
 endif()
+########################################################################################################################

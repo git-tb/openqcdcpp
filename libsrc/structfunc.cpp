@@ -290,6 +290,8 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight)	{
 double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	{
 	double result(0.0);
 
+	/// @todo move multiplicative prefactors out of this function
+	/// @todo call PDFs only once
 	///	@todo make the running coupling a parameter of this function such that we do not
 	///	recalculate logarithms of the renormalization scale
 	double alps = Pdf::alphas(muR2);
@@ -313,17 +315,25 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 	}
 
 	double s	= Q2*(1.0/z-1.0);
-	double eta	= s/(4.0*std::pow(QCD::QMASSES[nlight],2)-1);
+	double eta	= s/(4.0*std::pow(QCD::QMASSES[nlight],2))-1.0;
 	double chi	= Q2/std::pow(QCD::QMASSES[nlight],2);
 
 	// LO is O(alphas)	
 	if(QCDORDER::F2ORDER >= 1)	{
-		result += Q2 * alps * runcorr_ci_1 / (4 * M_PI*M_PI * std::pow(QCD::QMASSES[nlight],2) ) * (
+		result += Q2 * alps * runcorr_ci_1 / (4 * M_PI*M_PI) * std::pow(QCD::QCHARGES[nlight]/QCD::QMASSES[nlight],2) * (
 			Pdf::xf(G,x/z,muR2) * ch2g_1_0(eta,chi)
 		);
 
 		if(QCDORDER::F2ORDER >= 2)	{
-			std::cerr << "WARNING: Heavy Quark Coefficient Functions implemented to LO~O(alphas) only!" << std::endl;
+			double L	= std::log(muR2/std::pow(QCD::QMASSES[nlight],2));
+
+			result	+=  Q2 * std::pow(alps,2) / (M_PI * std::pow(QCD::QMASSES[nlight], 2)) * (
+				std::pow(QCD::QCHARGES[nlight],2) * Pdf::xf(G,x/z,muR2) * (
+					ch2g_2_0(eta,chi) + L * ch2g_2_0(eta,chi)
+				)
+			);
+
+			/// @todo finish this
 		}
 	}
 

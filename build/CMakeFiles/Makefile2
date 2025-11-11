@@ -67,6 +67,7 @@ all: CMakeFiles/openQCDpplib.dir/all
 all: CMakeFiles/lhapdftest.dir/all
 all: CMakeFiles/hoppettest.dir/all
 all: CMakeFiles/teststructfunc.dir/all
+all: CMakeFiles/testF2heavyintegrand.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -78,6 +79,7 @@ clean: CMakeFiles/openQCDpplib.dir/clean
 clean: CMakeFiles/lhapdftest.dir/clean
 clean: CMakeFiles/hoppettest.dir/clean
 clean: CMakeFiles/teststructfunc.dir/clean
+clean: CMakeFiles/testF2heavyintegrand.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -165,7 +167,7 @@ CMakeFiles/hoppettest.dir/clean:
 CMakeFiles/teststructfunc.dir/all: CMakeFiles/openQCDpplib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teststructfunc.dir/build.make CMakeFiles/teststructfunc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teststructfunc.dir/build.make CMakeFiles/teststructfunc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=14,15 "Built target teststructfunc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=16,17 "Built target teststructfunc"
 .PHONY : CMakeFiles/teststructfunc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -183,6 +185,32 @@ teststructfunc: CMakeFiles/teststructfunc.dir/rule
 CMakeFiles/teststructfunc.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teststructfunc.dir/build.make CMakeFiles/teststructfunc.dir/clean
 .PHONY : CMakeFiles/teststructfunc.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testF2heavyintegrand.dir
+
+# All Build rule for target.
+CMakeFiles/testF2heavyintegrand.dir/all: CMakeFiles/openQCDpplib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles --progress-num=14,15 "Built target testF2heavyintegrand"
+.PHONY : CMakeFiles/testF2heavyintegrand.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testF2heavyintegrand.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testF2heavyintegrand.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/build/CMakeFiles 0
+.PHONY : CMakeFiles/testF2heavyintegrand.dir/rule
+
+# Convenience name for target.
+testF2heavyintegrand: CMakeFiles/testF2heavyintegrand.dir/rule
+.PHONY : testF2heavyintegrand
+
+# clean rule for target.
+CMakeFiles/testF2heavyintegrand.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/clean
+.PHONY : CMakeFiles/testF2heavyintegrand.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

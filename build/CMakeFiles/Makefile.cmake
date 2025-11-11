@@ -48,4 +48,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lhapdftest.dir/DependInfo.cmake"
   "CMakeFiles/hoppettest.dir/DependInfo.cmake"
   "CMakeFiles/teststructfunc.dir/DependInfo.cmake"
+  "CMakeFiles/testF2heavyintegrand.dir/DependInfo.cmake"
   )

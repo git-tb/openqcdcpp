@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+/// @todo Decide on how to handle complex numbers
 // Fortran's COMPLEX*16 layout:
 struct mycomplex {
     double re;

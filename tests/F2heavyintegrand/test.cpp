@@ -94,7 +94,7 @@ int main()	{
 		forf2charm_.xb0		= x;
 		forf2charm_.q2ss	= Q2;
 		forf2charm_.rm2		= std::pow(QCD::QMASSES[nlight],2);
-		forf2charm_.qqs		= std::pow(QCD::QCHARGES[nlight],2);
+		forf2charm_.qqs		= QCD::QCHARGES[nlight];
 		forf2charm_.rmu2	= Q2*foralpsrenorm_.hqscale1 + 4.0*forf2charm_.rm2/Q2 * foralpsrenorm_.hqscale2;
 		forf2charm_.an		= Pdf::alphas(forf2charm_.rmu2);
 
@@ -109,12 +109,12 @@ int main()	{
 			double z	= std::exp(logz);
 			
 			QCDORDER::F2ORDER.set(1);
-			foralpsrenorm_.kordhq 	= 1;
-			double F2i_fortran_nlo	= f2charmi(logx);
+			foralpsrenorm_.kordhq 	= 0;
+			double F2i_fortran_nlo	= f2charmi(logz);
 			double F2i_cpp_nlo		= F2heavyintegrand(z,Q2,x,nlight, forf2charm_.rmu2);
-			QCDORDER::F2ORDER.set(2);
-			foralpsrenorm_.kordhq	= 2;
-			double F2i_fortran_nnlo	= f2charmi(logx);
+			QCDORDER::F2ORDER.set(1);
+			foralpsrenorm_.kordhq	= 1;
+			double F2i_fortran_nnlo	= f2charmi(logz);
 			double F2i_cpp_nnlo		= F2heavyintegrand(z,Q2,x,nlight, forf2charm_.rmu2);
 			
 			fileout		<< Q2				<< ";"

@@ -20,7 +20,7 @@ void Pdf::initialize(const std::string pdfname, const int pdfmem)	{
 	/// threshold in the q2 grid. Let's check this: In openQCDrad this threshold is
 	///	at Q2=9. Change it so some other value and see if the benchmarks become worse
 	/// at this value.
-	for(auto& v: gridset_.q2ini) v=12;
+	// for(auto& v: gridset_.q2ini) v=12;
 	mypdffillgrid_witharg_(pdfname.c_str(), pdfname.length());
 }
 

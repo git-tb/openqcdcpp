@@ -168,6 +168,19 @@ teststructfunc/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teststructfunc.dir/build.make CMakeFiles/teststructfunc.dir/build
 .PHONY : teststructfunc/fast
 
+#=============================================================================
+# Target rules for targets named testF2heavyintegrand
+
+# Build rule for target.
+testF2heavyintegrand: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testF2heavyintegrand
+.PHONY : testF2heavyintegrand
+
+# fast build rule for target.
+testF2heavyintegrand/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/build
+.PHONY : testF2heavyintegrand/fast
+
 libsrc/coefffunc.o: libsrc/coefffunc.cpp.o
 .PHONY : libsrc/coefffunc.o
 
@@ -408,6 +421,30 @@ src/lhapdftest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lhapdftest.dir/build.make CMakeFiles/lhapdftest.dir/src/lhapdftest.cpp.s
 .PHONY : src/lhapdftest.cpp.s
 
+src/testF2heavyintegrand.o: src/testF2heavyintegrand.cpp.o
+.PHONY : src/testF2heavyintegrand.o
+
+# target to build an object file
+src/testF2heavyintegrand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/src/testF2heavyintegrand.cpp.o
+.PHONY : src/testF2heavyintegrand.cpp.o
+
+src/testF2heavyintegrand.i: src/testF2heavyintegrand.cpp.i
+.PHONY : src/testF2heavyintegrand.i
+
+# target to preprocess a source file
+src/testF2heavyintegrand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/src/testF2heavyintegrand.cpp.i
+.PHONY : src/testF2heavyintegrand.cpp.i
+
+src/testF2heavyintegrand.s: src/testF2heavyintegrand.cpp.s
+.PHONY : src/testF2heavyintegrand.s
+
+# target to generate assembly for a file
+src/testF2heavyintegrand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/testF2heavyintegrand.dir/build.make CMakeFiles/testF2heavyintegrand.dir/src/testF2heavyintegrand.cpp.s
+.PHONY : src/testF2heavyintegrand.cpp.s
+
 src/teststructfunc.o: src/teststructfunc.cpp.o
 .PHONY : src/teststructfunc.o
 
@@ -443,6 +480,7 @@ help:
 	@echo "... hoppettest"
 	@echo "... lhapdftest"
 	@echo "... openQCDpplib"
+	@echo "... testF2heavyintegrand"
 	@echo "... teststructfunc"
 	@echo "... libsrc/coefffunc.o"
 	@echo "... libsrc/coefffunc.i"
@@ -474,6 +512,9 @@ help:
 	@echo "... src/lhapdftest.o"
 	@echo "... src/lhapdftest.i"
 	@echo "... src/lhapdftest.s"
+	@echo "... src/testF2heavyintegrand.o"
+	@echo "... src/testF2heavyintegrand.i"
+	@echo "... src/testF2heavyintegrand.s"
 	@echo "... src/teststructfunc.o"
 	@echo "... src/teststructfunc.i"
 	@echo "... src/teststructfunc.s"
