@@ -8,6 +8,7 @@ include_directories(
 	include	
 	/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include
 	/home/tobiasb/OneDrive/projects/PDFcode/hoppet/share/include
+	/usr/include/eigen3
 )
 
 ########################################################################################################################

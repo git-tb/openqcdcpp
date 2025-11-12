@@ -139,6 +139,26 @@ extern "C"	{
 	double f2qcd_(int* nb, int* nt, int* ni, double* xb, double* q2);
 	double f2charm_ffn_(double* xb, double* q2, int* nq);
 	double f2charmi_(double* t);
+	double clnlog_(double* eta, double* xi);
+	double ctnlog_(double* eta, double* xi);
+	double clnlobarg_(double* eta, double* xi);
+	double ctnlobarg_(double* eta, double* xi);
+	void sclca_(double* eta, double* xi, double* xsclca);
+	void sctca_(double* eta, double* xi, double* xsclca);
+	void sclcf_(double* eta, double* xi, double* xsclcf);
+	void sctcf_(double* eta, double* xi, double* xsclcf);
+	void sctbar_(double* eta, double* xi, double* xsclcbar);
+	void sctbar_(double* eta, double* xi, double* xsclcbar);
+	double asymp_l_(double* xi);
+	double asymp_t_(double* xi);
+	double asympbar_l_(double* xi);
+	double asympbar_t_(double* xi);
+	double thresha_l_(double* eta, double* xi);
+	double thresha_t_(double* eta, double* xi);
+	double threshf_l_(double* eta, double* xi);
+	double threshf_t_(double* eta, double* xi);
+	double threshbar_l_(double* eta, double* xi);
+	double threshbar_t_(double* eta, double* xi);
 }
 
 #endif

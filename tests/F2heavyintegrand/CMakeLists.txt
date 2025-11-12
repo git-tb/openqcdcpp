@@ -11,6 +11,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(openQCDpplib)
 
 include_directories(
+	/usr/include/eigen3
 	/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include
 	/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include
 )

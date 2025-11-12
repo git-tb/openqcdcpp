@@ -47,8 +47,8 @@ int main()	{
 			xmin	= 1e-5,
 			xmax	= 0.99;
 
-	int	NQ2	=	10,
-		Nx	=	10;
+	int	NQ2	=	3,
+		Nx	=	100;
 
 	double	logQ2min	= std::log(Q2min),
 			logQ2max	= std::log(Q2max),

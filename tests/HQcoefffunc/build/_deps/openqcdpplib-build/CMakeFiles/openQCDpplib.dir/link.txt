@@ -1,0 +1,2 @@
+/usr/bin/ar qc libopenQCDpplib.a CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o
+/usr/bin/ranlib libopenQCDpplib.a

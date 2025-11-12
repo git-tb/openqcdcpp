@@ -329,7 +329,7 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 
 			result	+=  Q2 * std::pow(alps,2) / (M_PI * std::pow(QCD::QMASSES[nlight], 2)) * (
 				std::pow(QCD::QCHARGES[nlight],2) * Pdf::xf(G,x/z,muR2) * (
-					ch2g_2_0(eta,chi) + L * ch2g_2_0(eta,chi)
+					ch2_g_2_0(eta,chi) + L * ch2_g_2_1(eta,chi)
 				)
 			);
 

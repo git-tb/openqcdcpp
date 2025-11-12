@@ -5,6 +5,7 @@
 #include "constants.h"
 #include "integrate.h"
 #include "coefffunc.h"
+#include "hqcoeff.h"
 #include "flags.h"
 
 #include <cmath>		// use math functions from std::
