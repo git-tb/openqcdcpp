@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION 3.5)
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/../..")
-  file(MAKE_DIRECTORY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/../..")
+if(NOT EXISTS "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/../..")
+  file(MAKE_DIRECTORY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/../..")
 endif()
 file(MAKE_DIRECTORY
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build"
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix"
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/tmp"
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp"
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src"
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/tmp"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-subbuild/openqcdpplib-populate-prefix/src/openqcdpplib-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest
+# Install script for directory: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build/cmake_install.cmake")
+  include("/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -62,6 +62,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

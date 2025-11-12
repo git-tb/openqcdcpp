@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/../..
+source_dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/../..
 work_dir=
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest
+CMAKE_SOURCE_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build
+CMAKE_BINARY_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build//CMakeFiles/progress.marks
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles 0
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build//CMakeFiles/progress.marks
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/clean
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/preinstall
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/preinstall
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/rule:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/rule
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/rule
 .PHONY : _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ openQCDpplib: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/rule
 
 # fast build rule for target.
 openQCDpplib/fast:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build
 .PHONY : openQCDpplib/fast
 
 libsrc/coefffunc.o: libsrc/coefffunc.cpp.o
@@ -135,7 +135,7 @@ libsrc/coefffunc.o: libsrc/coefffunc.cpp.o
 
 # target to build an object file
 libsrc/coefffunc.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o
 .PHONY : libsrc/coefffunc.cpp.o
 
 libsrc/coefffunc.i: libsrc/coefffunc.cpp.i
@@ -143,7 +143,7 @@ libsrc/coefffunc.i: libsrc/coefffunc.cpp.i
 
 # target to preprocess a source file
 libsrc/coefffunc.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.i
 .PHONY : libsrc/coefffunc.cpp.i
 
 libsrc/coefffunc.s: libsrc/coefffunc.cpp.s
@@ -151,7 +151,7 @@ libsrc/coefffunc.s: libsrc/coefffunc.cpp.s
 
 # target to generate assembly for a file
 libsrc/coefffunc.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.s
 .PHONY : libsrc/coefffunc.cpp.s
 
 libsrc/constants.o: libsrc/constants.cpp.o
@@ -159,7 +159,7 @@ libsrc/constants.o: libsrc/constants.cpp.o
 
 # target to build an object file
 libsrc/constants.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o
 .PHONY : libsrc/constants.cpp.o
 
 libsrc/constants.i: libsrc/constants.cpp.i
@@ -167,7 +167,7 @@ libsrc/constants.i: libsrc/constants.cpp.i
 
 # target to preprocess a source file
 libsrc/constants.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.i
 .PHONY : libsrc/constants.cpp.i
 
 libsrc/constants.s: libsrc/constants.cpp.s
@@ -175,7 +175,7 @@ libsrc/constants.s: libsrc/constants.cpp.s
 
 # target to generate assembly for a file
 libsrc/constants.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.s
 .PHONY : libsrc/constants.cpp.s
 
 libsrc/flags.o: libsrc/flags.cpp.o
@@ -183,7 +183,7 @@ libsrc/flags.o: libsrc/flags.cpp.o
 
 # target to build an object file
 libsrc/flags.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o
 .PHONY : libsrc/flags.cpp.o
 
 libsrc/flags.i: libsrc/flags.cpp.i
@@ -191,7 +191,7 @@ libsrc/flags.i: libsrc/flags.cpp.i
 
 # target to preprocess a source file
 libsrc/flags.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.i
 .PHONY : libsrc/flags.cpp.i
 
 libsrc/flags.s: libsrc/flags.cpp.s
@@ -199,7 +199,7 @@ libsrc/flags.s: libsrc/flags.cpp.s
 
 # target to generate assembly for a file
 libsrc/flags.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s
 .PHONY : libsrc/flags.cpp.s
 
 libsrc/hqcoeff.o: libsrc/hqcoeff.cpp.o
@@ -207,7 +207,7 @@ libsrc/hqcoeff.o: libsrc/hqcoeff.cpp.o
 
 # target to build an object file
 libsrc/hqcoeff.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o
 .PHONY : libsrc/hqcoeff.cpp.o
 
 libsrc/hqcoeff.i: libsrc/hqcoeff.cpp.i
@@ -215,7 +215,7 @@ libsrc/hqcoeff.i: libsrc/hqcoeff.cpp.i
 
 # target to preprocess a source file
 libsrc/hqcoeff.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i
 .PHONY : libsrc/hqcoeff.cpp.i
 
 libsrc/hqcoeff.s: libsrc/hqcoeff.cpp.s
@@ -223,7 +223,7 @@ libsrc/hqcoeff.s: libsrc/hqcoeff.cpp.s
 
 # target to generate assembly for a file
 libsrc/hqcoeff.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s
 .PHONY : libsrc/hqcoeff.cpp.s
 
 libsrc/integrate.o: libsrc/integrate.cpp.o
@@ -231,7 +231,7 @@ libsrc/integrate.o: libsrc/integrate.cpp.o
 
 # target to build an object file
 libsrc/integrate.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o
 .PHONY : libsrc/integrate.cpp.o
 
 libsrc/integrate.i: libsrc/integrate.cpp.i
@@ -239,7 +239,7 @@ libsrc/integrate.i: libsrc/integrate.cpp.i
 
 # target to preprocess a source file
 libsrc/integrate.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.i
 .PHONY : libsrc/integrate.cpp.i
 
 libsrc/integrate.s: libsrc/integrate.cpp.s
@@ -247,7 +247,7 @@ libsrc/integrate.s: libsrc/integrate.cpp.s
 
 # target to generate assembly for a file
 libsrc/integrate.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.s
 .PHONY : libsrc/integrate.cpp.s
 
 libsrc/logger.o: libsrc/logger.cpp.o
@@ -255,7 +255,7 @@ libsrc/logger.o: libsrc/logger.cpp.o
 
 # target to build an object file
 libsrc/logger.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o
 .PHONY : libsrc/logger.cpp.o
 
 libsrc/logger.i: libsrc/logger.cpp.i
@@ -263,7 +263,7 @@ libsrc/logger.i: libsrc/logger.cpp.i
 
 # target to preprocess a source file
 libsrc/logger.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.i
 .PHONY : libsrc/logger.cpp.i
 
 libsrc/logger.s: libsrc/logger.cpp.s
@@ -271,7 +271,7 @@ libsrc/logger.s: libsrc/logger.cpp.s
 
 # target to generate assembly for a file
 libsrc/logger.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.s
 .PHONY : libsrc/logger.cpp.s
 
 libsrc/pdf.o: libsrc/pdf.cpp.o
@@ -279,7 +279,7 @@ libsrc/pdf.o: libsrc/pdf.cpp.o
 
 # target to build an object file
 libsrc/pdf.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o
 .PHONY : libsrc/pdf.cpp.o
 
 libsrc/pdf.i: libsrc/pdf.cpp.i
@@ -287,7 +287,7 @@ libsrc/pdf.i: libsrc/pdf.cpp.i
 
 # target to preprocess a source file
 libsrc/pdf.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.i
 .PHONY : libsrc/pdf.cpp.i
 
 libsrc/pdf.s: libsrc/pdf.cpp.s
@@ -295,7 +295,7 @@ libsrc/pdf.s: libsrc/pdf.cpp.s
 
 # target to generate assembly for a file
 libsrc/pdf.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.s
 .PHONY : libsrc/pdf.cpp.s
 
 libsrc/structfunc.o: libsrc/structfunc.cpp.o
@@ -303,7 +303,7 @@ libsrc/structfunc.o: libsrc/structfunc.cpp.o
 
 # target to build an object file
 libsrc/structfunc.cpp.o:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o
 .PHONY : libsrc/structfunc.cpp.o
 
 libsrc/structfunc.i: libsrc/structfunc.cpp.i
@@ -311,7 +311,7 @@ libsrc/structfunc.i: libsrc/structfunc.cpp.i
 
 # target to preprocess a source file
 libsrc/structfunc.cpp.i:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.i
 .PHONY : libsrc/structfunc.cpp.i
 
 libsrc/structfunc.s: libsrc/structfunc.cpp.s
@@ -319,7 +319,7 @@ libsrc/structfunc.s: libsrc/structfunc.cpp.s
 
 # target to generate assembly for a file
 libsrc/structfunc.cpp.s:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s
 .PHONY : libsrc/structfunc.cpp.s
 
 # Help Target
@@ -366,6 +366,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

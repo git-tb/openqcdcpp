@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

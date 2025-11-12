@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest
+CMAKE_SOURCE_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build
+CMAKE_BINARY_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/test.dir/progress.make
 include CMakeFiles/test.dir/flags.make
 
 CMakeFiles/test.dir/test.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test.cpp
+CMakeFiles/test.dir/test.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test.cpp
 CMakeFiles/test.dir/test.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test.cpp.o -MF CMakeFiles/test.dir/test.cpp.o.d -o CMakeFiles/test.dir/test.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test.cpp.o -MF CMakeFiles/test.dir/test.cpp.o.d -o CMakeFiles/test.dir/test.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test.cpp
 
 CMakeFiles/test.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test.cpp > CMakeFiles/test.dir/test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test.cpp > CMakeFiles/test.dir/test.cpp.i
 
 CMakeFiles/test.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test.cpp -o CMakeFiles/test.dir/test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test.cpp -o CMakeFiles/test.dir/test.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -90,18 +90,18 @@ test_OBJECTS = \
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: CMakeFiles/test.dir/test.cpp.o
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: CMakeFiles/test.dir/build.make
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: _deps/openqcdpplib-build/libopenQCDpplib.a
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: /home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib/libmyqcdlib.a
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: /home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib/libchaplin.so
-/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test"
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: CMakeFiles/test.dir/test.cpp.o
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: CMakeFiles/test.dir/build.make
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: _deps/openqcdpplib-build/libopenQCDpplib.a
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: /home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/lib/libLHAPDF.so
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: /home/tobiasb/OneDrive/projects/PDFcode/openqcdrad-2.1/mycode/lib/libmyqcdlib.a
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: /home/tobiasb/OneDrive/projects/PDFcode/chaplin-1.2/lib/libchaplin.so
+/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test: CMakeFiles/test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/test.dir/build: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test
+CMakeFiles/test.dir/build: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test
 .PHONY : CMakeFiles/test.dir/build
 
 CMakeFiles/test.dir/clean:
@@ -109,6 +109,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles/test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles/test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/test.dir/depend
 

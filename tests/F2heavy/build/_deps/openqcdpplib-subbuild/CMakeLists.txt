@@ -20,8 +20,8 @@ project(openqcdpplib-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(openqcdpplib-populate
                      "UPDATE_DISCONNECTED" "False" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR"
-                    SOURCE_DIR          "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/../.."
-                    BINARY_DIR          "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build"
+                    SOURCE_DIR          "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/../.."
+                    BINARY_DIR          "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

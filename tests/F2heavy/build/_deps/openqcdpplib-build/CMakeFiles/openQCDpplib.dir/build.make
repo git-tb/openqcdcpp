@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest
+CMAKE_SOURCE_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build
+CMAKE_BINARY_DIR = /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build
 
 # Include any dependencies generated for this target.
 include _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/depend.make
@@ -72,114 +72,114 @@ include _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp > CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp > CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/coefffunc.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/coefffunc.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp > CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp > CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/constants.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/constants.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp > CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp > CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/flags.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp > CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp > CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/integrate.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/integrate.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp > CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp > CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/logger.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/logger.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp > CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp > CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/pdf.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/pdf.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp > CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp > CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/structfunc.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/structfunc.cpp.s
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/flags.make
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o: /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o -MF CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o.d -o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o -c /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp > CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp > CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/libsrc/hqcoeff.cpp -o CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s
 
 # Object files for target openQCDpplib
 openQCDpplib_OBJECTS = \
@@ -205,19 +205,19 @@ _deps/openqcdpplib-build/libopenQCDpplib.a: _deps/openqcdpplib-build/CMakeFiles/
 _deps/openqcdpplib-build/libopenQCDpplib.a: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o
 _deps/openqcdpplib-build/libopenQCDpplib.a: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make
 _deps/openqcdpplib-build/libopenQCDpplib.a: _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libopenQCDpplib.a"
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && $(CMAKE_COMMAND) -P CMakeFiles/openQCDpplib.dir/cmake_clean_target.cmake
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/openQCDpplib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libopenQCDpplib.a"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && $(CMAKE_COMMAND) -P CMakeFiles/openQCDpplib.dir/cmake_clean_target.cmake
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/openQCDpplib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build: _deps/openqcdpplib-build/libopenQCDpplib.a
 .PHONY : _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/clean:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build && $(CMAKE_COMMAND) -P CMakeFiles/openQCDpplib.dir/cmake_clean.cmake
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build && $(CMAKE_COMMAND) -P CMakeFiles/openQCDpplib.dir/cmake_clean.cmake
 .PHONY : _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/clean
 
 _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/depend:
-	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest /home/tobiasb/OneDrive/projects/PDFcode/openqcd++ /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/build/_deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy /home/tobiasb/OneDrive/projects/PDFcode/openqcd++ /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/build/_deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/depend
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test"
-  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavytest/test.pdb"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test"
+  "/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2heavy/test.pdb"
   "CMakeFiles/test.dir/test.cpp.o"
   "CMakeFiles/test.dir/test.cpp.o.d"
 )
