@@ -41,24 +41,32 @@ int main()	{
 	qcdpar_.qsum[3]			= 10./9.;
 	qcdpar_.qsum[4]			= 12./9.;
 	qcdpar_.qsum[5]			= 16./9.;
+	forschemedef_.hqnons	= true;
+	forschemedef_.msbarm	= false;
 
 	double	Q2min	= 2,
-			Q2max	= 1e6,
+			Q2max	= 1e5,
 			xmin	= 1e-5,
 			xmax	= 0.99;
 
-	int	NQ2	=	3,
-		Nx	=	100;
+	double	smax	= Q2max * (1.0/xmin - 1.0);
+	double	etamax	= smax/(4*std::pow(QCD::QMASSES[nlight],2)) - 1.0;
+	double	chimax	= Q2max / std::pow(QCD::QMASSES[nlight],2);
+
+	/// output formatting
+	const int PREC = 7;
+	const int WIDTH = 23;
+	std::cout	<< std::setw(WIDTH)	<< "etamax" << etamax << std::endl
+				<< std::setw(WIDTH)	<< "chimax" << chimax << std::endl;
+
+	int	NQ2	=	5,
+		Nx	=	10,
+		Nz	=	10;
 
 	double	logQ2min	= std::log(Q2min),
 			logQ2max	= std::log(Q2max),
 			logxmin		= std::log(xmin),
 			logxmax		= std::log(xmax);
-
-
-	/// output formatting
-	const int PREC = 7;
-	const int WIDTH = 23;
 
 	std::ofstream fileout("output.dat");
 	fileout << std::scientific << std::setprecision(PREC);
@@ -97,9 +105,7 @@ int main()	{
 		forf2charm_.qqs		= QCD::QCHARGES[nlight];
 		forf2charm_.rmu2	= Q2*foralpsrenorm_.hqscale1 + 4.0*forf2charm_.rm2/Q2 * foralpsrenorm_.hqscale2;
 		forf2charm_.an		= Pdf::alphas(forf2charm_.rmu2);
-
 		
-		int Nz	= 100;
 		double 	a		= 1.0/(1+4*std::pow(QCD::QMASSES[nlight],2)/Q2),
 				logzmin	= logx,
 				logzmax = std::log(a);
@@ -107,12 +113,12 @@ int main()	{
 		for(int j = 0; j < Nz; j++)	{
 			double logz	= logzmin + (logzmax-logzmin)*(double)j/(double)Nz;
 			double z	= std::exp(logz);
-			
+	
 			QCDORDER::F2ORDER.set(1);
 			foralpsrenorm_.kordhq 	= 0;
 			double F2i_fortran_nlo	= f2charmi(logz);
 			double F2i_cpp_nlo		= F2heavyintegrand(z,Q2,x,nlight, forf2charm_.rmu2);
-			QCDORDER::F2ORDER.set(1);
+			QCDORDER::F2ORDER.set(2);
 			foralpsrenorm_.kordhq	= 1;
 			double F2i_fortran_nnlo	= f2charmi(logz);
 			double F2i_cpp_nnlo		= F2heavyintegrand(z,Q2,x,nlight, forf2charm_.rmu2);

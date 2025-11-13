@@ -131,7 +131,16 @@ extern "C"	{
 				nq0;
 	};
 	extern FORF2CHARM_COMMON forf2charm_;
-	
+
+	struct FORSCHEMEDEF_COMMON	{
+		double	ddnlohq;
+		int	msbarm,
+				hqnons;
+		double	bmsnfopt,
+				bmsnnlo,
+				vloop;
+	};
+	extern FORSCHEMEDEF_COMMON forschemedef_;	
 
 	void initgridconst_();
 	void mypdffillgrid_witharg_(const char* arg, int arg_len);
@@ -140,15 +149,27 @@ extern "C"	{
 	double f2charm_ffn_(double* xb, double* q2, int* nq);
 	double f2charmi_(double* t);
 	double clnlog_(double* eta, double* xi);
+	double clnloq_(double* eta, double* xi);
+	double dlnloq_(double* eta, double* xi);
 	double ctnlog_(double* eta, double* xi);
+	double ctnloq_(double* eta, double* xi);
+	double dtnloq_(double* eta, double* xi);
 	double clnlobarg_(double* eta, double* xi);
+	double clnlobarq_(double* eta, double* xi);
 	double ctnlobarg_(double* eta, double* xi);
+	double ctnlobarq_(double* eta, double* xi);
 	void sclca_(double* eta, double* xi, double* xsclca);
 	void sctca_(double* eta, double* xi, double* xsclca);
 	void sclcf_(double* eta, double* xi, double* xsclcf);
 	void sctcf_(double* eta, double* xi, double* xsclcf);
+	void schql_(double* eta, double* xi, double* xschql);
+	void schqt_(double* eta, double* xi, double* xschqt);
+	void sclql_(double* eta, double* xi, double* xsclql);
+	void sclqt_(double* eta, double* xi, double* xsclqt);
+	void sclbar_(double* eta, double* xi, double* xsclcbar);
 	void sctbar_(double* eta, double* xi, double* xsclcbar);
-	void sctbar_(double* eta, double* xi, double* xsclcbar);
+	void sqlbar_(double* eta, double* xi, double* xsqlcbar);
+	void sqtbar_(double* eta, double* xi, double* xsqlcbar);
 	double asymp_l_(double* xi);
 	double asymp_t_(double* xi);
 	double asympbar_l_(double* xi);

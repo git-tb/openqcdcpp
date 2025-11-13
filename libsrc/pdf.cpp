@@ -74,6 +74,22 @@ double Pdf::xf(int pID, double x, double Q2)	{
 	return -1e10;
 }
 
+double Pdf::xfiQi2sum(double x, double Q2)	{
+	double result(0.0);
+	result += 	4.0/9.0 * ( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
+			+	1.0/9.0 * ( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
+			+	1.0/9.0 * ( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
+	return result;
+}
+
+double Pdf::xfiSingletSum(double x, double Q2)	{
+	double result(0.0);
+	result +=	( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
+			+	( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
+			+	( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
+	return result;
+}
+
 void Pdf::printLHAPDFinfo()	{
 	std::cout << "@@@ LHAPDF paths: ";
 	for (const std::string& p : LHAPDF::paths())
@@ -94,21 +110,4 @@ void Pdf::printLHAPDFinfo()	{
 
 void Pdf::setSampling(SAMPLINGMETHOD method)	{
 	samplingmethod = method;
-}
-
-
-double xfiQi2sum(double x, double Q2)	{
-	double result(0.0);
-	result += 	4.0/9.0 * ( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
-			+	1.0/9.0 * ( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
-			+	1.0/9.0 * ( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
-	return result;
-}
-
-double xfiSingletSum(double x, double Q2)	{
-	double result(0.0);
-	result +=	( Pdf::xf(U, x, Q2) + Pdf::xf(UB, x, Q2) ) + \
-			+	( Pdf::xf(D, x, Q2) + Pdf::xf(DB, x, Q2) ) + \
-			+	( Pdf::xf(S, x, Q2) + Pdf::xf(SB, x, Q2) );
-	return result;
 }

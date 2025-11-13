@@ -8,8 +8,8 @@ import plotly.express as px
 
 df = pd.read_csv("output.dat",sep=";")
 df_new = df[["x","Q2","z"]].copy()
-df_new[f'{df.columns[3]}/{df.columns[4]}']=df[df.columns[3]]/df[df.columns[4]]
-# df_new[f'{df.columns[5]}/{df.columns[6]}']=df[df.columns[5]]/df[df.columns[6]]
+# df_new[f'{df.columns[3]}/{df.columns[4]}']=df[df.columns[3]]/df[df.columns[4]]
+df_new[f'{df.columns[5]}/{df.columns[6]}']=df[df.columns[5]]/df[df.columns[6]]
 df_melted = df_new.melt(id_vars=["x", "Q2", "z"], var_name="function", value_name="value")
 
 fig = px.line(

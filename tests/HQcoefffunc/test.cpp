@@ -15,6 +15,8 @@ int main()	{
 	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 	Pdf::printLHAPDFinfo();
 
+	qcdpar_.cf			= 4./3.;
+
 	double	logetamin	= -6.0,
 			logetamax	= 6.0,
 			logchimin	= -3.0,
@@ -62,6 +64,7 @@ int main()	{
 		double eta		= std::pow(10, logeta);
 		double chi		= std::pow(10, logchi);
 
+		////// gluon, longitudinal
 		// double sclca;
 		// double sclcf;
 		// double sclbar;
@@ -97,45 +100,94 @@ int main()	{
 		// 			<< chL_g_2_1_A_asympE(eta,chi)	<< ";"	/// 20
 		// 			<< chL_g_2_1_interp(eta,chi)	<< std::endl;	/// 21
 
-		double sctca;
-		double sctcf;
-		double sctbar;
+		////// gluon, transversal
+		// double sctca;
+		// double sctcf;
+		// double sctbar;
 
-		sctca_(&eta, &chi, &sctca);
-		sctcf_(&eta, &chi, &sctcf);
-		sctbar_(&eta, &chi, &sctbar);
+		// sctca_(&eta, &chi, &sctca);
+		// sctcf_(&eta, &chi, &sctcf);
+		// sctbar_(&eta, &chi, &sctbar);
+
+		// fileout		<< eta							<< ";" 	/// 0
+		// 			<< chi							<< ";"	/// 1
+		// 			///
+		// 			<< ctnlog_(&eta,&chi)			<< ";"	/// 2
+		// 			<< asymp_t_(&chi)				<< ";"	/// 3
+		// 			<< thresha_t_(&eta, &chi)		<< ";"	/// 4
+		// 			<< threshf_t_(&eta, &chi)		<< ";"	/// 5
+		// 			<< sctca						<< ";"	/// 6
+		// 			<< sctcf						<< ";"	/// 7
+		// 			///
+		// 			<< ctnlobarg_(&eta,&chi)		<< ";"	/// 8
+		// 			<< asympbar_t_(&chi)			<< ";"	/// 9
+		// 			<< threshbar_t_(&eta, &chi)		<< ";"	/// 10
+		// 			<< sctbar						<< ";"	/// 11
+		// 			///
+		// 			<< chT_g_2_0(eta,chi)			<< ";"	/// 12
+		// 			<< chT_g_2_0_asympG(eta,chi)	<< ";"	/// 13
+		// 			<< chT_g_2_0_A_asympE(eta,chi)	<< ";"	/// 14
+		// 			<< chT_g_2_0_F_asympE(eta,chi)	<< ";"	/// 15
+		// 			<< chT_g_2_0_A_interp(eta,chi)	<< ";"	/// 16
+		// 			<< chT_g_2_0_F_interp(eta,chi)	<< ";"	/// 17
+		// 			///
+		// 			<< chT_g_2_1(eta,chi)			<< ";"	/// 18
+		// 			<< chT_g_2_1_asympG(eta,chi)	<< ";"	/// 19
+		// 			<< chT_g_2_1_A_asympE(eta,chi)	<< ";"	/// 20
+		// 			<< chT_g_2_1_interp(eta,chi)	<< std::endl;	/// 21
+
+		//// quark
+		double schql;
+		double schqt;
+		double sclql;
+		double sclqt;
+		double sqlbar;
+		double sqtbar;
+
+		schql_(&eta, &chi, &schql);
+		schqt_(&eta, &chi, &schqt);
+		sclql_(&eta, &chi, &sclql);
+		sclqt_(&eta, &chi, &sclqt);
+		sqlbar_(&eta, &chi, &sqlbar);
+		sqtbar_(&eta, &chi, &sqtbar);
 
 		fileout		<< eta							<< ";" 	/// 0
 					<< chi							<< ";"	/// 1
 					///
-					<< ctnlog_(&eta,&chi)			<< ";"	/// 2
-					<< asymp_t_(&chi)				<< ";"	/// 3
-					<< thresha_t_(&eta, &chi)		<< ";"	/// 4
-					<< threshf_t_(&eta, &chi)		<< ";"	/// 5
-					<< sctca						<< ";"	/// 6
-					<< sctcf						<< ";"	/// 7
+					<< clnloq_(&eta,&chi)			<< ";"	/// 2
+					<< schql						<< ";"	/// 3
+					<< ctnloq_(&eta,&chi)			<< ";"	/// 4
+					<< schqt						<< ";"	/// 5
+					<< dlnloq_(&eta,&chi)			<< ";"	/// 6
+					<< sclql						<< ";"	/// 7
+					<< dtnloq_(&eta,&chi)			<< ";"	/// 8
+					<< sclqt						<< ";"	/// 9
 					///
-					<< ctnlobarg_(&eta,&chi)		<< ";"	/// 8
-					<< asympbar_t_(&chi)			<< ";"	/// 9
-					<< threshbar_t_(&eta, &chi)		<< ";"	/// 10
-					<< sctbar						<< ";"	/// 11
+					<< clnlobarq_(&eta,&chi)		<< ";"	/// 10
+					<< sqlbar						<< ";"	/// 11
+					<< ctnlobarq_(&eta,&chi)		<< ";"	/// 12
+					<< sqtbar						<< ";"	/// 13
 					///
-					<< chT_g_2_0(eta,chi)			<< ";"	/// 12
-					<< chT_g_2_0_asympG(eta,chi)	<< ";"	/// 13
-					<< chT_g_2_0_A_asympE(eta,chi)	<< ";"	/// 14
-					<< chT_g_2_0_F_asympE(eta,chi)	<< ";"	/// 15
-					<< chT_g_2_0_A_interp(eta,chi)	<< ";"	/// 16
-					<< chT_g_2_0_F_interp(eta,chi)	<< ";"	/// 17
+					<< chL_q_2_0_Hcoupl(eta,chi)		<< ";"	/// 14
+					<< chL_q_2_0_Hcoupl_interp(eta,chi)	<< ";"	/// 15
+					<< chT_q_2_0_Hcoupl(eta,chi)		<< ";"	/// 16
+					<< chT_q_2_0_Hcoupl_interp(eta,chi)	<< ";"	/// 17
+					<< chL_q_2_0_Lcoupl(eta,chi)		<< ";"	/// 18
+					<< chL_q_2_0_Lcoupl_interp(eta,chi)	<< ";"	/// 19
+					<< chT_q_2_0_Lcoupl(eta,chi)		<< ";"	/// 20
+					<< chT_q_2_0_Lcoupl_interp(eta,chi)	<< ";"	/// 21
 					///
-					<< chT_g_2_1(eta,chi)			<< ";"	/// 18
-					<< chT_g_2_1_asympG(eta,chi)	<< ";"	/// 19
-					<< chT_g_2_1_A_asympE(eta,chi)	<< ";"	/// 20
-					<< chT_g_2_1_interp(eta,chi)	<< std::endl;	/// 21
+					<< chL_q_2_1_Hcoupl(eta,chi)		<< ";"	/// 22
+					<< chL_q_2_1_Hcoupl_interp(eta,chi)	<< ";"	/// 23
+					<< chT_q_2_1_Hcoupl(eta,chi)		<< ";"	/// 24
+					<< chT_q_2_1_Hcoupl_interp(eta,chi)	<< std::endl; /// 25
 	}
 	std::cout << std::endl;
 	fileout.close();
 	Pdf::destroy();
 
+
+	///// check interpolation and tabulation for 1 specific grid knot
 	// int ieta = 1,
 	// 	ichi = 1;
 	// double	logeta = ch_g_2_logetalist[ieta],

@@ -15,7 +15,7 @@ double F2(double x, double Q2)	{
 	double result_int(0.);	///< non-local contributions (-> integration required)
 
 	/// lo
-	result_loc += xfiQi2sum(x, Q2);
+	result_loc += Pdf::xfiQi2sum(x, Q2);
 
 	/// @todo running coupling, DONE
 	/**
@@ -122,32 +122,32 @@ double F2(double x, double Q2)	{
 
 	/// higher orders, local parts
 	if(QCDORDER::F2ORDER >= 1)	{
-		result_loc += a4pi * runcorr_ci_1 * c2q_ns_1_0_local() * xfiQi2sum(x, Q2);
-		result_loc += a4pi * runcorr_ci_1 * c2q_ns_1_0_localplus(x) * xfiQi2sum(x, Q2);
+		result_loc += a4pi * runcorr_ci_1 * c2q_ns_1_0_local() * Pdf::xfiQi2sum(x, Q2);
+		result_loc += a4pi * runcorr_ci_1 * c2q_ns_1_0_localplus(x) * Pdf::xfiQi2sum(x, Q2);
 		if(QCDORDER::F2ORDER >= 2)	{
 			switch (APPROX::LEVEL)
 			{
 			case APPROX::APPR1:
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx() * xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx() * xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx() * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx() * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
 
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx(x) * xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx(x) * xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx(x) * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx(x) * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
 
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
 				break;
 			case APPROX::APPR2:
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx2() * xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx2() * xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx2() * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx2() * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
 
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx2(x) * xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx2(x) * xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx2(x) * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx2(x) * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
 
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx2() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
 				break;
 			case APPROX::EXACT:
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_local_exact() * xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_localplus_exact(x) * xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_local_exact() * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_localplus_exact(x) * Pdf::xfiQi2sum(x, Q2);
 
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_exact() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
 				break;
@@ -199,10 +199,10 @@ double F2integrand(double z, double Q2, double x)	{
 	}
 
 	/// reduce number of calls to PDF sampling
-	double xfiQi2sumxzQ2		= xfiQi2sum(x/z, Q2);
-	double xfiQi2sumxQ2			= xfiQi2sum(x,Q2);
+	double xfiQi2sumxzQ2		= Pdf::xfiQi2sum(x/z, Q2);
+	double xfiQi2sumxQ2			= Pdf::xfiQi2sum(x,Q2);
 	double xfGxzQ2				= Pdf::xf(G, x/z, Q2);
-	double xfiSingletSumxzQ2	= xfiSingletSum(x/z, Q2);
+	double xfiSingletSumxzQ2	= Pdf::xfiSingletSum(x/z, Q2);
 
 	/// nlo
 	if(QCDORDER::F2ORDER >= 1)	{
@@ -297,22 +297,22 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 	double alps = Pdf::alphas(muR2);
 	double runcorr_ci_1(1.0);							///< correction to powers of alphasR(mu) associated to O(alphas) coefficient function ci_1(...)
 	double runcorr_ci_2(1.0);							///< correction to powers of alphasR(mu) associated to O(alphas^2) coefficient function ci_2(...)
-	if(QCDORDER::F2ORDER >= 2)	{
-		double	logQ2muR2 	= 	std::log(Q2/muR2);
-		double 	b0 			= 	QCD::beta0();
+	// if(QCDORDER::F2ORDER >= 2)	{
+	// 	double	logQ2muR2 	= 	std::log(Q2/muR2);
+	// 	double 	b0 			= 	QCD::beta0();
 		
-		runcorr_ci_1 		+= 	- alps / (4.0*M_PI) * b0 * logQ2muR2;
+	// 	runcorr_ci_1 		+= 	- alps / (4.0*M_PI) * b0 * logQ2muR2;
 
-		if(QCDORDER::F2ORDER >= 3)	{
-			double b1 		= 	QCD::beta1();
+	// 	if(QCDORDER::F2ORDER >= 3)	{
+	// 		double b1 		= 	QCD::beta1();
 
-			runcorr_ci_2 	+=	- 2.0*alps/(4.0*M_PI) * b0 * logQ2muR2;;
-			runcorr_ci_1 	+=	alps/(4.0*M_PI) * alps/(4.0*M_PI) * (
-								- b1 * logQ2muR2
-								+ std::pow(b0 * logQ2muR2,2)
-			);
-		}
-	}
+	// 		runcorr_ci_2 	+=	- 2.0*alps/(4.0*M_PI) * b0 * logQ2muR2;;
+	// 		runcorr_ci_1 	+=	alps/(4.0*M_PI) * alps/(4.0*M_PI) * (
+	// 							- b1 * logQ2muR2
+	// 							+ std::pow(b0 * logQ2muR2,2)
+	// 		);
+	// 	}
+	// }
 
 	double s	= Q2*(1.0/z-1.0);
 	double eta	= s/(4.0*std::pow(QCD::QMASSES[nlight],2))-1.0;
@@ -327,13 +327,25 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 		if(QCDORDER::F2ORDER >= 2)	{
 			double L	= std::log(muR2/std::pow(QCD::QMASSES[nlight],2));
 
+			/// gluon
 			result	+=  Q2 * std::pow(alps,2) / (M_PI * std::pow(QCD::QMASSES[nlight], 2)) * (
 				std::pow(QCD::QCHARGES[nlight],2) * Pdf::xf(G,x/z,muR2) * (
 					ch2_g_2_0(eta,chi) + L * ch2_g_2_1(eta,chi)
 				)
 			);
 
-			/// @todo finish this
+			/// quark
+			result	+=  Q2 * std::pow(alps,2) / (M_PI * std::pow(QCD::QMASSES[nlight], 2)) * (
+				std::pow(QCD::QCHARGES[nlight],2) * Pdf::xfiSingletSum(x/z,muR2) * (
+					ch2_q_2_0_Hcoupl(eta,chi) + L * ch2_q_2_1_Hcoupl(eta,chi)
+				)
+			);
+
+			result	+=  Q2 * std::pow(alps,2) / (M_PI * std::pow(QCD::QMASSES[nlight], 2)) * (
+				Pdf::xfiQi2sum(x/z,muR2) * (
+					ch2_q_2_0_Lcoupl(eta,chi) + L * ch2_q_2_1_Lcoupl(eta,chi)
+				)
+			);
 		}
 	}
 

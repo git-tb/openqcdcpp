@@ -62,6 +62,29 @@ class Pdf {
 
 		static double xf(int pID, double x, double Q2);
 
+		/**
+		 * @brief $\sum_i Q_i^2 x f(x,Q^2)$
+		 * 
+		 * @param x 
+		 * @param Q2 
+		 * @return double 
+		 * 
+		 * @todo check whether a requested flavor pid is actually available in the pdf set
+		 * @todo variable flavor number
+		 */
+		static double xfiQi2sum(double x, double Q2);
+
+		/**
+		 * @brief x times singlet combination of quark PDFs
+		 * 
+		 * @param x 
+		 * @param Q2 
+		 * @return double 
+		 * 
+		 * @todo variable flavor number
+		 */
+		static double xfiSingletSum(double x, double Q2);
+
 		static void printLHAPDFinfo();
 
 		static void setSampling(SAMPLINGMETHOD method);
@@ -80,29 +103,6 @@ class Pdf {
 		inline static int pdfmem;
 		inline static SAMPLINGMETHOD samplingmethod{fromLHAPDF};
 };
-
-/**
- * @brief $\sum_i Q_i^2 x f(x,Q^2)$
- * 
- * @param x 
- * @param Q2 
- * @return double 
- * 
- * @todo check whether a requested flavor pid is actually available in the pdf set
- * @todo variable flavor number
- */
-double xfiQi2sum(double x, double Q2);
-
-/**
- * @brief x times singlet combination of quark PDFs
- * 
- * @param x 
- * @param Q2 
- * @return double 
- * 
- * @todo variable flavor number
- */
-double xfiSingletSum(double x, double Q2);
 
 
 #endif
