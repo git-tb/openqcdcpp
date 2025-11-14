@@ -267,20 +267,19 @@ double F2integrand_logtrafo2_par(double t, void* par)	{
 
 
 
+/// @todo fix all issues with factorization scale, basically in all functions
 double F2heavy(double x, double Q2, int nlight)	{
 	double result(0.0);
-	double a = 1/(1+4*std::pow(QCD::QMASSES[nlight],2)/Q2);
+	double a = 1./(1.+4.*std::pow(QCD::QMASSES[nlight],2)/Q2);
+	double muR2 = Q2 + 4*std::pow(QCD::QMASSES[nlight],2);
 
-	result += integrate([x,Q2,nlight](double t){ return F2heavyintegrand_logtrafo(t, Q2, x, nlight);},
+	if(x >= a) return 0.;
+
+	result += integrate([x,Q2,nlight,muR2](double logz){ return F2heavyintegrand(std::exp(logz), Q2, x, nlight, muR2);},
 		std::log(x), std::log(a), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL
 	);
 
 	return result;
-}
-
-double F2heavyintegrand_logtrafo(double t, double Q2, double x, int nlight)	{
-	double z = std::exp(t);
-	return F2heavyintegrand(z, Q2, x, nlight);
 }
 
 double F2heavyintegrand(double z, double Q2, double x, int nlight)	{

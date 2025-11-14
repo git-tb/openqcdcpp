@@ -45,9 +45,9 @@ int main()	{
 	forschemedef_.msbarm	= false;
 
 	double	Q2min	= 2,
-			Q2max	= 1e5,
+			Q2max	= 1e6,
 			xmin	= 1e-5,
-			xmax	= 0.99;
+			xmax	= 0.999;
 
 	double	smax	= Q2max * (1.0/xmin - 1.0);
 	double	etamax	= smax/(4*std::pow(QCD::QMASSES[nlight],2)) - 1.0;
@@ -60,8 +60,8 @@ int main()	{
 				<< std::setw(WIDTH)	<< "chimax" << chimax << std::endl;
 
 	int	NQ2	=	5,
-		Nx	=	10,
-		Nz	=	10;
+		Nx	=	50,
+		Nz	=	50;
 
 	double	logQ2min	= std::log(Q2min),
 			logQ2max	= std::log(Q2max),

@@ -3,6 +3,23 @@
 
 #include <libInterpolate/Interpolate.hpp>
 
+/// @brief returns index of gridpoint in xarr[Nx] to the left or equal to x
+uint findIdx(const double& x, const double* xarr, const std::size_t& Nx);
+
+/// @brief 1 dimensional quadratic interpolation (3pt Lagrange)
+double myInterp1D_3pt(	const double& x, 
+						const double x1, const double x2, const double x3,
+						const double f1, const double f2, const double f3
+					);
+/**
+ * @brief Find the interpolated value of a function f(x,y), where f is given
+ * as a 2D grid farr[Nx][Ny] with respect to the 1D discretized coordinates xarr[Nx]
+ * yarr[Ny];
+ * 
+ * NOTE: farr should be passed as &farr[0][0]
+ */
+double myInterp2D(const double& x, const double& y, const double* xarr, const std::size_t& Nx, const double* yarr, const std::size_t& Ny, const double* farr);
+
 /**
  * @brief The naming of the heavy quark coefficient functions follows the scheme
  * 		chkf_ps/ns_j_l_desc
@@ -53,10 +70,12 @@ double chL_g_2_0_A_interp(double eta, double chi);
 double chL_g_2_0_F_interp(double eta, double chi);
 ////// tables and methods for interpolation
 /// @todo maybe in all interpolations it would be smart to interpolate the log of the values, if they span several order of magnitude
-extern double chL_g_2_0_A_table[49][73];
-extern double chL_g_2_0_F_table[49][73];
-extern double ch_g_2_logetalist[73]; /// reuse those
-extern double ch_g_2_logchilist[49]; /// reuse those
+const int Neta = 73;
+const int Nchi = 49;
+extern double chL_g_2_0_A_table[Nchi][Neta];
+extern double chL_g_2_0_F_table[Nchi][Neta];
+extern double ch_g_2_logetalist[Neta]; /// reuse those
+extern double ch_g_2_logchilist[Nchi]; /// reuse those
 extern bool chL_g_2_0_A_interper_initialized;
 extern bool chL_g_2_0_F_interper_initialized;
 extern _2D::BicubicInterpolator<double> chL_g_2_0_A_interper;

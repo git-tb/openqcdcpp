@@ -6,9 +6,12 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 #%%
+### NOTE: for the gluon case, use this evaluation cell. For the quark case, use the next
+
+
 
 df = pd.read_csv("output.dat",sep=";",header=None)
-i0 = 7
+i0 = 12
 
 df_new = df[[0,1]].copy()
 
@@ -47,7 +50,7 @@ fig.show()
 #%%
 
 df = pd.read_csv("output.dat",sep=";",header=None)
-i0 = 12
+i0 = 2
 
 df_new = df[[0,1]].copy()
 

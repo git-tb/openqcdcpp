@@ -8,9 +8,14 @@ import plotly.express as px
 
 df = pd.read_csv("output.dat",sep=";")
 df_new = df[["x","Q2","z"]].copy()
+df_new["chi"] = df_new["Q2"]/(1.5**2)
+df_new["eta"] = df_new["Q2"]*(1/df_new["z"]-1)
+df_new["eta in range"] = (df_new["eta"] <= 1e6) * (df_new["eta"] >= 1e-6)
+df_new["chi in range"] = (df_new["chi"] <= 1e5) * (df_new["chi"] >= 1e-3)
+
 # df_new[f'{df.columns[3]}/{df.columns[4]}']=df[df.columns[3]]/df[df.columns[4]]
 df_new[f'{df.columns[5]}/{df.columns[6]}']=df[df.columns[5]]/df[df.columns[6]]
-df_melted = df_new.melt(id_vars=["x", "Q2", "z"], var_name="function", value_name="value")
+df_melted = df_new.melt(id_vars=["x", "Q2", "z","eta","chi","eta in range","chi in range"], var_name="function", value_name="value")
 
 fig = px.line(
     df_melted,
@@ -19,13 +24,17 @@ fig = px.line(
     line_dash="function",
     animation_frame="x",
 	color="Q2",
+    hover_data=["chi","chi in range","eta","eta in range"],
 	log_x=True,
 	markers=True
 )
 
 fig.update_layout(
     xaxis_title="z",
-    legend_title="Function"
+    legend_title="Function",
+    hoverlabel=dict(
+    	bgcolor="white"  # 70% opacity
+	)
 )
 
 # sizes = [12,10,8,6]

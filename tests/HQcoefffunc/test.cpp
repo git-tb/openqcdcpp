@@ -15,6 +15,46 @@ int main()	{
 	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 	Pdf::printLHAPDFinfo();
 
+	///// check interpolation and tabulation for 1 specific grid knot
+	// int ieta = 0,
+	// 	ichi = 1;
+	// double	logeta = ch_g_2_logetalist[ieta],
+	// 		logchi	= ch_g_2_logchilist[ichi];
+	// double	eta = std::pow(10,logeta),
+	// 		chi = std::pow(10,logchi);
+	// double sclca;
+	// sclca_(&eta, &chi, &sclca);
+	// std::cout << logeta << std::endl;
+	// std::cout << logchi << std::endl;
+	// std::cout << chL_g_2_0_A_table[ichi][ieta] << std::endl;
+	// std::cout << sclca << std::endl;
+	// std::cout << chL_g_2_0_A_interp(eta,chi) << std::endl;
+	// std::cout << chL_g_2_0_A_interper(logeta,logchi) << std::endl;
+	// std::cout << myInterp2D(
+	// 	logchi,
+	// 	logeta,
+	// 	ch_g_2_logchilist,Nchi,
+	// 	ch_g_2_logetalist,Neta,
+	// 	chL_g_2_0_A_table[0]
+	// ) << std::endl;
+
+	// logeta = 2.523;
+	// logchi = 2.523;
+	// eta = std::pow(10,logeta);
+	// chi = std::pow(10,logchi);
+	// sclca_(&eta, &chi, &sclca);
+	// std::cout << sclca << std::endl;
+	// std::cout << chL_g_2_0_A_interp(eta,chi) << std::endl;
+	// std::cout << chL_g_2_0_A_interper(logeta,logchi) << std::endl;
+	// std::cout << myInterp2D(
+	// 	logchi,
+	// 	logeta,
+	// 	ch_g_2_logchilist,Nchi,
+	// 	ch_g_2_logetalist,Neta,
+	// 	chL_g_2_0_A_table[0]
+	// ) << std::endl;
+	// return 0;
+
 	qcdpar_.cf			= 4./3.;
 
 	double	logetamin	= -6.0,
@@ -136,7 +176,7 @@ int main()	{
 		// 			<< chT_g_2_1_A_asympE(eta,chi)	<< ";"	/// 20
 		// 			<< chT_g_2_1_interp(eta,chi)	<< std::endl;	/// 21
 
-		//// quark
+		//// QUARK
 		double schql;
 		double schqt;
 		double sclql;

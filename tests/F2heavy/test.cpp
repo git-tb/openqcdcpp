@@ -15,7 +15,14 @@ double f2charm_ffn(double xb, double q2, int nq)	{
 	return f2charm_ffn_(&xb, &q2, &nq); ///< as defined in fortransymbols.h
 }
 
-int main()	{
+int main(int argc, char** argv)	{
+	// double xarr[10] = {0.,1.,2.,3.,4.,5.,6.,7.,8.,9.};
+	// std::cout << findIdx(std::stod(argv[1]),xarr,10) << std::endl;
+	// return 0;
+
+
+
+
 	Pdf::initialize("ABMP16_3_nnlo", 0);
 	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 	Pdf::printLHAPDFinfo();
@@ -28,6 +35,8 @@ int main()	{
 	
 	QCDORDER::F2ORDER.set(1);
 	foralpsrenorm_.kordhq 	= 1;
+	forschemedef_.hqnons	= true;
+	forschemedef_.msbarm	= false;
 	qcdpar_.nfc 			= 3;
 	qcdpar_.cf				= 4./3.;
 	qcdpar_.qsum[0]			= 1./9.;
@@ -86,13 +95,13 @@ int main()	{
 		double x		= std::exp(logx);
 
 		QCDORDER::F2ORDER.set(1);
-		foralpsrenorm_.kordhq 	= 1;
+		foralpsrenorm_.kordhq 	= 0;
 		double F2_fortran_nlo	= f2charm_ffn(x,Q2,8/*=charm*/);	///< in openQCDrad parton flavors are
 																	///		{1,2,3,4,5,6,7,8,...} -> 
 																	///		{g,d,db,u,ub,s,sb,c,...}
-		double F2_cpp_nlo		= F2heavy(x,Q2,3);
+		double F2_cpp_nlo		= F2heavy(x,Q2,/*nlight=*/3);
 		QCDORDER::F2ORDER.set(2);
-		foralpsrenorm_.kordhq	= 2;
+		foralpsrenorm_.kordhq	= 1;
 		double F2_fortran_nnlo	= f2charm_ffn(x,Q2,8/*=charm*/);
 		double F2_cpp_nnlo		= F2heavy(x,Q2,3);
 
