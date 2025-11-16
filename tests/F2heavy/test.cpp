@@ -27,14 +27,12 @@ int main(int argc, char** argv)	{
 	Pdf::setSampling(SAMPLINGMETHOD::fromOPENQCDRAD);
 	Pdf::printLHAPDFinfo();
 
-	PRECISION::EPSABS.set(1e-5);
-	PRECISION::EPSREL.set(1e-5);
-	PRECISION::ITER.set(1000);
-	forpreccontrol_.nf2qcd1	= 5;
-	forpreccontrol_.nf2qcd2	= 5;
+	PRECISION::EPSABS.set(1e-8);
+	PRECISION::EPSREL.set(1e-8);
+	PRECISION::ITER.set(100000);
+	forpreccontrol_.nf2hq	= 100;
 	
-	QCDORDER::F2ORDER.set(1);
-	foralpsrenorm_.kordhq 	= 1;
+
 	forschemedef_.hqnons	= true;
 	forschemedef_.msbarm	= false;
 	qcdpar_.nfc 			= 3;
@@ -68,10 +66,10 @@ int main(int argc, char** argv)	{
 	fileout << std::scientific << std::setprecision(PREC);
 	fileout << "Q2"	<< ";"
 			<< "x"	<< ";"
+			<< "F2heavy@LO(Fortran)"	<< ";"
+			<< "F2heavy@LO(C++)"		<< ";"
 			<< "F2heavy@NLO(Fortran)"	<< ";"
-			<< "F2heavy@NLO(C++)"		<< ";"
-			<< "F2heavy@NNLO(Fortran)"	<< ";"
-			<< "F2heavy@NNLO(C++)"		<< std::endl;
+			<< "F2heavy@NLO(C++)"		<< std::endl;
 
 	for(int i = 0; i < Nx * NQ2; i++)	{
 		int ix	= i%Nx;
@@ -96,21 +94,21 @@ int main(int argc, char** argv)	{
 
 		QCDORDER::F2ORDER.set(1);
 		foralpsrenorm_.kordhq 	= 0;
-		double F2_fortran_nlo	= f2charm_ffn(x,Q2,8/*=charm*/);	///< in openQCDrad parton flavors are
+		double F2_fortran_lo	= f2charm_ffn(x,Q2,8/*=charm*/);	///< in openQCDrad parton flavors are
 																	///		{1,2,3,4,5,6,7,8,...} -> 
 																	///		{g,d,db,u,ub,s,sb,c,...}
-		double F2_cpp_nlo		= F2heavy(x,Q2,/*nlight=*/3);
+		double F2_cpp_lo		= F2heavy(x,Q2,/*nlight=*/3);
 		QCDORDER::F2ORDER.set(2);
 		foralpsrenorm_.kordhq	= 1;
-		double F2_fortran_nnlo	= f2charm_ffn(x,Q2,8/*=charm*/);
-		double F2_cpp_nnlo		= F2heavy(x,Q2,3);
+		double F2_fortran_nlo	= f2charm_ffn(x,Q2,8/*=charm*/);
+		double F2_cpp_nlo		= F2heavy(x,Q2,3);
 
 		fileout		<< Q2				<< ";"
 					<< x				<< ";"
+					<< F2_fortran_lo	<< ";"
+					<< F2_cpp_lo		<< ";"
 					<< F2_fortran_nlo	<< ";"
-					<< F2_cpp_nlo		<< ";"
-					<< F2_fortran_nnlo	<< ";"
-					<< F2_cpp_nnlo		<< std::endl;
+					<< F2_cpp_nlo		<< std::endl;
 	}
 	std::cout << std::endl;
 	fileout.close();

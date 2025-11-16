@@ -5,13 +5,16 @@
 #include <algorithm>
 #include <cmath>
 
+#define USEMYINTERP
+
+/// @todo Find a better way to handle the domain error
 uint findIdx(const double& x, const double* xarr, const std::size_t& Nx)	{
 	if(x < xarr[0])	{
-		std::cerr << "[WARNING] requested  value is smaller then grid minimum" << std::endl;
+		// std::cerr << "[WARNING] requested  value is smaller then grid minimum" << std::endl;
 		return 0;
 	}
 	if(x >+ xarr[Nx-1])	{
-		std::cerr << "[WARNING] requested  value is larger then grid maximum" << std::endl;
+		// std::cerr << "[WARNING] requested  value is larger then grid maximum" << std::endl;
 		return Nx-1;
 	}
 	const double* pos = std::upper_bound(xarr,xarr+Nx,x); /// returns i such that xarr[i-1] <= x < xarr[i]
@@ -32,6 +35,11 @@ double myInterp1D_3pt(	const double& x,
 double myInterp2D(const double& x, const double& y, const double* xarr, const std::size_t& Nx, const double* yarr, const std::size_t& Ny, const double* farr)	{
 	uint	ix	= findIdx(x, xarr, Nx),
 			iy	= findIdx(y, yarr, Ny);
+	double x0(x), y0(y);
+	if(x < xarr[0])		x0 = xarr[0];
+	if(x > xarr[Nx-1])	x0 = xarr[Nx-1];
+	if(y < yarr[0])		y0 = yarr[0];
+	if(y > yarr[Ny-1])	y0 = yarr[Ny-1];
 
 	if(ix == 0)		ix++;
 	if(ix == Nx-1)	ix--;
@@ -40,17 +48,17 @@ double myInterp2D(const double& x, const double& y, const double* xarr, const st
 
 	/// if farr is stored as farr[Nx][Ny] in memory,
 	///	then farr[ix][iy] == farr[ix*Ny+iy]
-	double	f1	= myInterp1D_3pt(	x,
+	double	f1	= myInterp1D_3pt(	x0,
 									xarr[ix-1],				xarr[ix],			xarr[ix+1],
 									farr[(ix-1)*Ny+iy-1],	farr[ix*Ny+iy-1],	farr[(ix+1)*Ny+iy-1]);
-	double	f2	= myInterp1D_3pt(	x,
+	double	f2	= myInterp1D_3pt(	x0,
 									xarr[ix-1],				xarr[ix],			xarr[ix+1],
 									farr[(ix-1)*Ny+iy],		farr[ix*Ny+iy],		farr[(ix+1)*Ny+iy]);
-	double	f3	= myInterp1D_3pt(	x,
+	double	f3	= myInterp1D_3pt(	x0,
 									xarr[ix-1],				xarr[ix],			xarr[ix+1],
 									farr[(ix-1)*Ny+iy+1],	farr[ix*Ny+iy+1],	farr[(ix+1)*Ny+iy+1]);
 
-	return myInterp1D_3pt(	y, 
+	return myInterp1D_3pt(	y0, 
 							yarr[iy-1],	yarr[iy],	yarr[iy+1],
 							f1,			f2,			f3);
 }
@@ -186,11 +194,13 @@ double chL_g_2_0_F_asympE(double eta, double chi)	{
 }
 
 double chL_g_2_0_A_interp(double eta, double chi)	{
-	return myInterp2D(	std::log10(chi), std::log10(eta), 
-						ch_g_2_logchilist, Nchi,
-						ch_g_2_logetalist, Neta,
-						&chL_g_2_0_A_table[0][0]
-					);
+	#ifdef USEMYINTERP
+		return myInterp2D(	std::log10(chi), std::log10(eta), 
+		ch_g_2_logchilist, Nchi,
+		ch_g_2_logetalist, Neta,
+		&chL_g_2_0_A_table[0][0]
+	);
+	#endif
 
 	if(not chL_g_2_0_A_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -209,11 +219,13 @@ double chL_g_2_0_A_interp(double eta, double chi)	{
 }
 
 double chL_g_2_0_F_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chL_g_2_0_F_table[0][0]
 					);
+	#endif
 
 	if(not chL_g_2_0_F_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -400,11 +412,13 @@ double chT_g_2_0_F_asympE(double eta, double chi)	{
 }
 
 double chT_g_2_0_A_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_g_2_0_A_table[0][0]
 					);
+	#endif
 
 	if(not chT_g_2_0_A_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -422,11 +436,13 @@ double chT_g_2_0_A_interp(double eta, double chi)	{
 }
 
 double chT_g_2_0_F_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_g_2_0_F_table[0][0]
 					);
+	#endif
 
 	if(not chT_g_2_0_F_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -596,11 +612,13 @@ double chL_g_2_1_A_asympE(double eta, double chi)	{
 }
 
 double chL_g_2_1_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chL_g_2_1_table[0][0]
 					);
+	#endif
 
 	if(not chL_g_2_1_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -707,11 +725,13 @@ double chT_g_2_1_A_asympE(double eta, double chi)	{
 }
 
 double chT_g_2_1_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_g_2_1_table[0][0]
 					);
+	#endif
 
 	if(not chT_g_2_1_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -840,11 +860,13 @@ double chL_q_2_0_Hcoupl(double eta, double chi)	{
 };
 
 double chL_q_2_0_Hcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chL_q_2_0_Hcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chL_q_2_0_Hcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -931,11 +953,13 @@ double chT_q_2_0_Hcoupl(double eta, double chi)	{
 };
 
 double chT_q_2_0_Hcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_q_2_0_Hcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chT_q_2_0_Hcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -1027,11 +1051,13 @@ double chL_q_2_0_Lcoupl(double eta, double chi)	{
 };
 
 double chL_q_2_0_Lcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chL_q_2_0_Lcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chL_q_2_0_Lcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -1116,11 +1142,13 @@ double chT_q_2_0_Lcoupl(double eta, double chi)	{
 };
 
 double chT_q_2_0_Lcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_q_2_0_Lcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chT_q_2_0_Lcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -1217,11 +1245,13 @@ double chL_q_2_1_Hcoupl(double eta, double chi)	{
 };
 
 double chL_q_2_1_Hcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chL_q_2_1_Hcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chL_q_2_1_Hcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -1308,11 +1338,13 @@ double chT_q_2_1_Hcoupl(double eta, double chi)	{
 };
 
 double chT_q_2_1_Hcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_q_2_1_Hcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chT_q_2_1_Hcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -1404,11 +1436,13 @@ double chL_q_2_1_Lcoupl(double eta, double chi)	{
 };
 
 double chL_q_2_1_Lcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chL_q_2_1_Lcoupl_table[0][0]
 					);
+	#endif
 
 	if(not chL_q_2_1_Lcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;
@@ -1494,11 +1528,13 @@ double chT_q_2_1_Lcoupl(double eta, double chi)	{
 };
 
 double chT_q_2_1_Lcoupl_interp(double eta, double chi)	{
+	#ifdef USEMYINTERP
 	return myInterp2D(	std::log10(chi), std::log10(eta), 
 						ch_g_2_logchilist, Nchi,
 						ch_g_2_logetalist, Neta,
 						&chT_q_2_1_Lcoupl_table[0][0]
 					);
+	#endif
 	
 	if(not chT_q_2_1_Lcoupl_interper_initialized)	{
 		std::vector<double> x, y, z;

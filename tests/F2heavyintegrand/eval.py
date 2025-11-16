@@ -12,19 +12,20 @@ df_new["chi"] = df_new["Q2"]/(1.5**2)
 df_new["eta"] = df_new["Q2"]*(1/df_new["z"]-1)
 df_new["eta in range"] = (df_new["eta"] <= 1e6) * (df_new["eta"] >= 1e-6)
 df_new["chi in range"] = (df_new["chi"] <= 1e5) * (df_new["chi"] >= 1e-3)
+df_new["valid"] = df_new["chi in range"] * df_new["eta in range"]
 
 # df_new[f'{df.columns[3]}/{df.columns[4]}']=df[df.columns[3]]/df[df.columns[4]]
 df_new[f'{df.columns[5]}/{df.columns[6]}']=df[df.columns[5]]/df[df.columns[6]]
-df_melted = df_new.melt(id_vars=["x", "Q2", "z","eta","chi","eta in range","chi in range"], var_name="function", value_name="value")
+df_melted = df_new.melt(id_vars=["x", "Q2", "z","eta","chi","eta in range","chi in range","valid"], var_name="function", value_name="value")
 
 fig = px.line(
-    df_melted,
+    df_melted[df_melted["valid"] == True],
     x="z",
     y="value",
     line_dash="function",
     animation_frame="x",
 	color="Q2",
-    hover_data=["chi","chi in range","eta","eta in range"],
+    hover_data=["chi","chi in range","eta","eta in range","valid"],
 	log_x=True,
 	markers=True
 )
