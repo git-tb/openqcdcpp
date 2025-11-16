@@ -226,4 +226,45 @@ extern _2D::BicubicInterpolator<double> chT_q_2_1_Lcoupl_interper;
 /// 2 part
 double ch2_q_2_1_Lcoupl(double eta, double chi);
 
+
+
+
+
+
+
+///
+///
+/// O(alphas^2)
+
+///
+/// O(ln(muR2/m2)^0)
+double ch2_g_3_0(double eta, double chi);
+double ch2_g_3_0_interp(double eta, double chi);
+////// tables and methods for interpolation
+extern double ch2_g_3_0_table[49][73];
+extern bool ch2_g_3_0_interper_initialized;
+extern _2D::BicubicInterpolator<double> ch2_g_3_0_interper;
+
+///
+/// O(ln(muR2/m2)^1)
+double ch2_g_3_1(double eta, double chi);
+double ch2_g_3_1_interp(double eta, double chi);
+////// tables and methods for interpolation
+extern double ch2_g_3_1_table[49][73];
+extern bool ch2_g_3_1_interper_initialized;
+extern _2D::BicubicInterpolator<double> ch2_g_3_1_interper;
+
+///
+/// O(ln(muR2/m2)^2)
+double ch2_g_3_2(double eta, double chi);
+double ch2_g_3_2_interp(double eta, double chi);
+////// tables and methods for interpolation
+extern double ch2_g_3_2_table[49][73];
+extern bool ch2_g_3_2_interper_initialized;
+extern _2D::BicubicInterpolator<double> ch2_g_3_2_interper;
+
+
+
+
+
 #endif

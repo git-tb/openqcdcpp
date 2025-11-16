@@ -345,6 +345,14 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 					ch2_q_2_0_Lcoupl(eta,chi) + L * ch2_q_2_1_Lcoupl(eta,chi)
 				)
 			);
+
+			if(QCDORDER::F2ORDER >= 3)	{
+				result += Q2 * std::pow(alps,3) * 4 / std::pow(QCD::QMASSES[nlight], 2) * (
+					std::pow(QCD::QCHARGES[nlight],2) * Pdf::xf(G,x/z,muR2) * (
+						ch2_g_3_0(eta,chi) + L * ch2_g_3_1(eta,chi) + L * L * ch2_g_3_2(eta,chi)
+					)
+				);
+			}
 		}
 	}
 

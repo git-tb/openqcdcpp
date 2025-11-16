@@ -11,6 +11,7 @@ df_new = df[["x","Q2"]].copy()
 cols=df.columns
 df_new[f"{cols[2]}/{cols[3]}"]=df[cols[2]]/df[cols[3]]
 df_new[f"{cols[4]}/{cols[5]}"]=df[cols[4]]/df[cols[5]]
+df_new[f"{cols[6]}/{cols[7]}"]=df[cols[6]]/df[cols[7]]
 
 df_melted = df_new.melt(id_vars=["x", "Q2"], var_name="function", value_name="value")
 # df_melted = df.melt(id_vars=["x", "Q2"], var_name="function", value_name="value")

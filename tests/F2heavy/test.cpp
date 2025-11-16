@@ -29,7 +29,7 @@ int main(int argc, char** argv)	{
 
 	PRECISION::EPSABS.set(1e-8);
 	PRECISION::EPSREL.set(1e-8);
-	PRECISION::ITER.set(100000);
+	PRECISION::ITER.set(10000);
 	forpreccontrol_.nf2hq	= 100;
 	
 
@@ -69,7 +69,9 @@ int main(int argc, char** argv)	{
 			<< "F2heavy@LO(Fortran)"	<< ";"
 			<< "F2heavy@LO(C++)"		<< ";"
 			<< "F2heavy@NLO(Fortran)"	<< ";"
-			<< "F2heavy@NLO(C++)"		<< std::endl;
+			<< "F2heavy@NLO(C++)"		<< ";"
+			<< "F2heavy@NNLO(Fortran)"	<< ";"
+			<< "F2heavy@NNLO(C++)"		<< std::endl;
 
 	for(int i = 0; i < Nx * NQ2; i++)	{
 		int ix	= i%Nx;
@@ -102,13 +104,19 @@ int main(int argc, char** argv)	{
 		foralpsrenorm_.kordhq	= 1;
 		double F2_fortran_nlo	= f2charm_ffn(x,Q2,8/*=charm*/);
 		double F2_cpp_nlo		= F2heavy(x,Q2,3);
+		QCDORDER::F2ORDER.set(3);
+		foralpsrenorm_.kordhq	= 2;
+		double F2_fortran_nnlo	= f2charm_ffn(x,Q2,8/*=charm*/);
+		double F2_cpp_nnlo		= F2heavy(x,Q2,3);
 
 		fileout		<< Q2				<< ";"
 					<< x				<< ";"
 					<< F2_fortran_lo	<< ";"
 					<< F2_cpp_lo		<< ";"
 					<< F2_fortran_nlo	<< ";"
-					<< F2_cpp_nlo		<< std::endl;
+					<< F2_cpp_nlo		<< ";"
+					<< F2_fortran_nnlo	<< ";"
+					<< F2_cpp_nnlo		<< std::endl;
 	}
 	std::cout << std::endl;
 	fileout.close();
