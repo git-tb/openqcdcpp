@@ -286,6 +286,8 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight)	{
 	return F2heavyintegrand(z,Q2,x,nlight,Q2);
 }
 
+/// @brief implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993]
+/// equations (6.2) @ LO, (6.4) & (6.5) @ NLO
 double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	{
 	double result(0.0);
 

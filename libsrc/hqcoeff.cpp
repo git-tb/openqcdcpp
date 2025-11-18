@@ -1427,7 +1427,11 @@ double ch2_q_2_1_Hcoupl(double eta, double chi)	{
 
 /// Longitudinal part
 /// @brief from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1-2), 143, 1995] eq. (29)
+/// @todo This function is exactly 0, see comment in [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993]
+/// directly after eq. (5.10)
 double chL_q_2_1_Lcoupl(double eta, double chi)	{
+	return 0.;
+
 	double result(0.0);
 	result			+=	QCD::CF * QCD::TR *	(
 		chL_q_2_1_Lcoupl_interp(eta,chi)
@@ -1460,7 +1464,7 @@ double chL_q_2_1_Lcoupl_interp(double eta, double chi)	{
 	return chL_q_2_1_Lcoupl_interper(std::log10(eta), std::log10(chi));
 }
 
-/// ?????
+/// just to stick to the general structure....
 double chL_q_2_1_Lcoupl_table[Nchi][Neta] = {
 	{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 	{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
@@ -1552,7 +1556,8 @@ double chT_q_2_1_Lcoupl_interp(double eta, double chi)	{
 	return chT_q_2_1_Lcoupl_interper(std::log10(eta), std::log10(chi));
 };
 
-/// ???
+/// @todo [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993], comment after eq. (5.10)
+/// This contribution is apparently only relevant for really small chi, but still have at least some contribution...
 double chT_q_2_1_Lcoupl_table[Nchi][Neta] = {
 	{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 	{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
