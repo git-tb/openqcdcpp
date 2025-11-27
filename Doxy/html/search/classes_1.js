@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['freezeoutdata_0',['freezeoutData',['../structfreezeoutData.html',1,'']]],
-  ['freezeoutfunctions_1',['freezeoutFunctions',['../structfreezeoutFunctions.html',1,'']]]
+  ['gridset_5fcommon_0',['GRIDSET_COMMON',['../structGRIDSET__COMMON.html',1,'']]]
 ];

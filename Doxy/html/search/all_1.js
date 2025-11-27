@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['addpoint_0',['addPoint',['../extrapolate_8h.html#af91af02103c1423d05c577e7b8c0919b',1,'extrapolate.h']]],
-  ['anti_1',['anti',['../structintargs.html#aea96ae3027750fab9318a81dcc771a85',1,'intargs']]]
+  ['b_0',['B',['../pdf_8h.html#a453cc9b5b5f6c5dac71ad37f33d16d61',1,'pdf.h']]],
+  ['bb_1',['BB',['../pdf_8h.html#a2180ff8dcc3a6a1f21534bfeee669554',1,'pdf.h']]],
+  ['beta0_2',['beta0',['../namespaceQCD.html#af1651960c95d27b97735238ea3124ccd',1,'QCD']]],
+  ['beta1_3',['beta1',['../namespaceQCD.html#aa44221a2a4373295de7d5e72ba5a52bb',1,'QCD']]],
+  ['bmsnfopt_4',['bmsnfopt',['../structFORSCHEMEDEF__COMMON.html#abfd86b54732bc46af8da6ce22476a404',1,'FORSCHEMEDEF_COMMON']]],
+  ['bmsnnlo_5',['bmsnnlo',['../structFORSCHEMEDEF__COMMON.html#a6df82a2dc2c4dee9e2f139947b946cf7',1,'FORSCHEMEDEF_COMMON']]]
 ];

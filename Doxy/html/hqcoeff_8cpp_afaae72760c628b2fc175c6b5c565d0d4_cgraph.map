@@ -1,0 +1,11 @@
+<map id="chL_q_2_0_Lcoupl" name="chL_q_2_0_Lcoupl">
+<area shape="rect" id="Node000001" title="Lcoupl – photon couples to light quark." alt="" coords="5,31,144,56"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a55edc5977a359b0c28b34f32e36b4951" title=" " alt="" coords="192,31,375,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,41,178,41,178,46,144,46"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="423,31,521,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,41,409,41,409,46,375,46"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="599,5,666,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="521,33,586,23,586,28,522,38"/>
+<area shape="rect" id="Node000005" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="569,55,696,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="522,48,556,53,555,58,521,53"/>
+</map>

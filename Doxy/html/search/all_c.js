@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['layer_0',['layer',['../classLogger.html#abb68904d12f0d3fc75cfd76b9e2e1b22',1,'Logger']]],
-  ['lhapdfobject_1',['lhapdfobject',['../classPdf.html#aeac85db4522d6a4b70824f64e398c5ca',1,'Pdf']]],
-  ['lhapdftest_2ecpp_2',['lhapdftest.cpp',['../lhapdftest_8cpp.html',1,'']]],
-  ['linearextrapolate_3',['linearExtrapolate',['../extrapolate_8h.html#a9934822b458cce1bab6b6511a168692c',1,'extrapolate.h']]],
-  ['list_4',['Todo List',['../todo.html',1,'']]],
-  ['log_5',['log',['../classLogger.html#a149e6ee151f376a7ef0c60007ebb0f2d',1,'Logger']]],
-  ['logfile_6',['logfile',['../classLogger.html#a84bc8324395944ed084242a7755cf05c',1,'Logger']]],
-  ['logfilepath_7',['logfilepath',['../classLogger.html#a48157f0e528e63058501aba2624974f6',1,'Logger']]],
-  ['logger_8',['logger',['../classLogger.html',1,'Logger'],['../classLogger.html#add0f34d4c753c86af8074840a72366b3',1,'Logger::Logger(const Logger &amp;)=delete'],['../classLogger.html#abc41bfb031d896170c7675fa96a6b30c',1,'Logger::Logger()']]],
-  ['logger_2ecpp_9',['logger.cpp',['../logger_8cpp.html',1,'']]],
-  ['logger_2eh_10',['logger.h',['../logger_8h.html',1,'']]],
-  ['logtype_11',['LOGTYPE',['../logger_8h.html#a9ca6006a59fa53a5cd728fa1efcd4b61',1,'logger.h']]]
+  ['main_0',['main',['../hoppettest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;hoppettest.cpp'],['../lhapdftest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;lhapdftest.cpp'],['../plusdist_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;plusdist.cpp'],['../testF2heavyintegrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testF2heavyintegrand.cpp'],['../testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;testF2integrand.cpp'],['../teststructfunc_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;teststructfunc.cpp']]],
+  ['math_1',['MATH',['../namespaceMATH.html',1,'']]],
+  ['msbarm_2',['msbarm',['../structFORSCHEMEDEF__COMMON.html#af6301eb8d48bb5dcaf02b65f347f6dc1',1,'FORSCHEMEDEF_COMMON']]],
+  ['mycomplex_3',['mycomplex',['../structmycomplex.html',1,'']]],
+  ['myinterp1d_5f3pt_4',['myinterp1d_3pt',['../hqcoeff_8h.html#ab42c78400cc617afc6dd48f6b9804a94',1,'myInterp1D_3pt(const double &amp;x, const double x1, const double x2, const double x3, const double f1, const double f2, const double f3):&#160;hqcoeff.cpp'],['../hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94',1,'myInterp1D_3pt(const double &amp;x, const double x1, const double x2, const double x3, const double f1, const double f2, const double f3):&#160;hqcoeff.cpp']]],
+  ['myinterp2d_5',['myinterp2d',['../hqcoeff_8h.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4',1,'myInterp2D(const double &amp;x, const double &amp;y, const double *xarr, const std::size_t &amp;Nx, const double *yarr, const std::size_t &amp;Ny, const double *farr):&#160;hqcoeff.cpp'],['../hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4',1,'myInterp2D(const double &amp;x, const double &amp;y, const double *xarr, const std::size_t &amp;Nx, const double *yarr, const std::size_t &amp;Ny, const double *farr):&#160;hqcoeff.cpp']]],
+  ['mypdffillgrid_5fwitharg_5f_6',['mypdffillgrid_witharg_',['../fortransymbols_8h.html#a2b82e7556cb56914d8a96e866344bdbc',1,'fortransymbols.h']]]
 ];

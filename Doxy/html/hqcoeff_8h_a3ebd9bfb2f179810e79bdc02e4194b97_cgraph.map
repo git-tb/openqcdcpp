@@ -1,0 +1,17 @@
+<map id="chT_g_2_1" name="chT_g_2_1">
+<area shape="rect" id="Node000001" title="Transversal part." alt="" coords="5,55,96,80"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#ae5ac7d5f20e965a311c272142151dc3a" title=" " alt="" coords="144,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,52,167,32,168,37,97,57"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#ad41caec5018f3b44dfa1f4d6938b9e59" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (22)" alt="" coords="151,55,302,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="96,65,138,65,138,70,96,70"/>
+<area shape="rect" id="Node000005" href="$hqcoeff_8cpp.html#afd76b10b8164210df5cc1d9d5b062b5f" title=" " alt="" coords="159,104,294,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="97,77,168,98,167,103,95,82"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#afbf32e618df6e4929c5e941c15cc4cab" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (23)" alt="" coords="361,55,452,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="302,65,348,65,348,70,302,70"/>
+<area shape="rect" id="Node000006" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="357,104,456,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="294,114,343,114,343,119,294,119"/>
+<area shape="rect" id="Node000007" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="534,79,601,104"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="456,106,520,96,521,101,457,112"/>
+<area shape="rect" id="Node000008" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="504,128,631,153"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="457,121,490,126,490,132,456,127"/>
+</map>

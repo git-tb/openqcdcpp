@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['debugmsg_2eh_0',['debugmsg.h',['../debugmsg_8h.html',1,'']]]
+  ['hoppettest_2ecpp_0',['hoppettest.cpp',['../hoppettest_8cpp.html',1,'']]],
+  ['hqcoeff_2ecpp_1',['hqcoeff.cpp',['../hqcoeff_8cpp.html',1,'']]],
+  ['hqcoeff_2eh_2',['hqcoeff.h',['../hqcoeff_8h.html',1,'']]]
 ];

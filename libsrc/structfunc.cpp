@@ -10,7 +10,8 @@
 /// @brief electromagnetic structure function F2 from photon interaction
 /// @param x hadronic scaling variable x=Q2/(2*P*q) with proton momentum P
 /// @param Q2 minus photon momentum squared
-double F2(double x, double Q2)	{
+///	@param orderAlps highest included power of alpha_s
+double F2(double x, double Q2, int orderAlps, int nf)	{
 	double result_loc(0.);	///< local contributions (coefficient functions \propto \delta(1-z))
 	double result_int(0.);	///< non-local contributions (-> integration required)
 
@@ -36,14 +37,14 @@ double F2(double x, double Q2)	{
 	double a4pi = Pdf::alphas(muR2)/(4.*M_PI);			///< alphas/4Pi at some reference scale muR
 	double runcorr_ci_1(1.0);							///< correction to powers of alphasR(mu) associated to N^1LO coefficient function ci_1(...)
 	double runcorr_ci_2(1.0);							///< correction to powers of alphasR(mu) associated to N^2LO coefficient function ci_2(...)
-	if(QCDORDER::F2ORDER >= 2)	{
+	if(orderAlps >= 2)	{
 		double	logQ2muR2 	= 	std::log(Q2/muR2);
-		double 	b0 			= 	QCD::beta0();
+		double 	b0 			= 	QCD::beta0(nf);
 		
 		runcorr_ci_1 		+= 	- a4pi * b0 * logQ2muR2;
 
-		if(QCDORDER::F2ORDER >= 3)	{
-			double b1 		= 	QCD::beta1();
+		if(orderAlps >= 3)	{
+			double b1 		= 	QCD::beta1(nf);
 
 			runcorr_ci_2 	+=	- 2*a4pi * b0 * logQ2muR2;;
 			runcorr_ci_1 	+=	a4pi * a4pi * (
@@ -54,102 +55,56 @@ double F2(double x, double Q2)	{
 	}
 
 	/// higher orders, non-local parts
-	if(QCDORDER::F2ORDER >= 1)	{
+	if(orderAlps >= 1)	{
 		//// naive way, samples uniformly across integration domain
 		// result_int += integrate(
 		// 	[x,Q2](double z){return F2integrand(z,Q2,x);},
 		// 	x, 1, PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 
-
-		//// also works, but creates some std::function objects
 		if(x >= PRECISION::XTHRESH)	{
 			result_int += integrate(
-				[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
+				[x,Q2,orderAlps,nf](double t){return F2integrand_logtrafo2(t,Q2,x,orderAlps, nf);},
 				std::log(PRECISION::DELTA), std::log(1-x), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 		} else {
 			result_int += integrate(
-				[x,Q2](double t){return F2integrand_logtrafo1(t,Q2,x);},
+				[x,Q2,orderAlps,nf](double t){return F2integrand_logtrafo1(t,Q2,x,orderAlps, nf);},
 				std::log(x), std::log(PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 			result_int += integrate(
-				[x,Q2](double t){return F2integrand_logtrafo2(t,Q2,x);},
+				[x,Q2,orderAlps,nf](double t){return F2integrand_logtrafo2(t,Q2,x,orderAlps, nf);},
 				std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL);
 		}
-
-
-		//// I think this should be fastest.
-		//// Somehow it doesnt make a difference.
-		// int KEY	= 1;
-		// gsl_set_error_handler_off();
-		// gsl_integration_workspace *WORKSPACE = gsl_integration_workspace_alloc(PRECISION::ITER); 
-		// gsl_function F;
-		// double RESULT, ERR;
-
-		// F.params = new par_Q2x({Q2,x});
-		// if(x >= PRECISION::XTHRESH)	{
-		// 	F.function = F2integrand_logtrafo2_par;
-		// 	gsl_integration_qag(
-		// 		&F,
-		// 		std::log(PRECISION::DELTA), std::log(1-x),
-		// 		PRECISION::EPSABS, PRECISION::EPSREL, PRECISION::ITER,
-		// 		KEY, WORKSPACE,
-		// 		&RESULT, &ERR
-		// 	);
-		// 	result_int += RESULT;
-		// } else {
-		// 	F.function = F2integrand_logtrafo1_par;
-		// 	gsl_integration_qag(
-		// 		&F,
-		// 		std::log(x), std::log(PRECISION::XTHRESH),
-		// 		PRECISION::EPSABS, PRECISION::EPSREL, PRECISION::ITER,
-		// 		KEY, WORKSPACE,
-		// 		&RESULT, &ERR
-		// 	);
-		// 	result_int += RESULT;
-
-		// 	F.function = F2integrand_logtrafo2_par;
-		// 	gsl_integration_qag(
-		// 		&F,
-		// 		std::log(PRECISION::DELTA), std::log(1-PRECISION::XTHRESH),
-		// 		PRECISION::EPSABS, PRECISION::EPSREL, PRECISION::ITER,
-		// 		KEY, WORKSPACE,
-		// 		&RESULT, &ERR
-		// 	);
-		// 	result_int += RESULT;
-		// }
-
-		// gsl_integration_workspace_free(WORKSPACE);
 	}
 
 	/// higher orders, local parts
-	if(QCDORDER::F2ORDER >= 1)	{
+	if(orderAlps >= 1)	{
 		result_loc += a4pi * runcorr_ci_1 * c2q_ns_1_0_local() * Pdf::xfiQi2sum(x, Q2);
 		result_loc += a4pi * runcorr_ci_1 * c2q_ns_1_0_localplus(x) * Pdf::xfiQi2sum(x, Q2);
-		if(QCDORDER::F2ORDER >= 2)	{
+		if(orderAlps >= 2)	{
 			switch (APPROX::LEVEL)
 			{
 			case APPROX::APPR1:
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx() * Pdf::xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx() * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx() * Pdf::xfiQi2sum(x, Q2) *  nf;
 
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx(x) * Pdf::xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx(x) * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx(x) * Pdf::xfiQi2sum(x, Q2) *  nf;
 
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx() * QCD::sumQi2(nf) * Pdf::xf(G, x, Q2);
 				break;
 			case APPROX::APPR2:
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_local_approx2() * Pdf::xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx2() * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_local_approx2() * Pdf::xfiQi2sum(x, Q2) *  nf;
 
 				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_0_localplus_approx2(x) * Pdf::xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx2(x) * Pdf::xfiQi2sum(x, Q2) *  QCD::NF;
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_1_localplus_approx2(x) * Pdf::xfiQi2sum(x, Q2) *  nf;
 
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx2() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_approx2() * QCD::sumQi2(nf) * Pdf::xf(G, x, Q2);
 				break;
 			case APPROX::EXACT:
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_local_exact() * Pdf::xfiQi2sum(x, Q2);
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_localplus_exact(x) * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_local_exact(nf) * Pdf::xfiQi2sum(x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_localplus_exact(x,nf) * Pdf::xfiQi2sum(x, Q2);
 
-				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_exact() * QCD::sumQi2() * Pdf::xf(G, x, Q2);
+				result_loc += a4pi * a4pi * runcorr_ci_2 * c2g_2_0_local_exact() * QCD::sumQi2(nf) * Pdf::xf(G, x, Q2);
 				break;
 			default:
 				std::cout << "ERROR in determining approximation level of coefficient functions" << std::endl;
@@ -163,12 +118,8 @@ double F2(double x, double Q2)	{
 };
 
 
-/// @brief Computes all contributions to F2 that need to be numerically integrated over, i.e.
-///	all contributions from coefficient functions that are not proportional to delta(1-z).
-/// @param z partonic scaling variable
-/// @param Q2 minus photon momentum squared
-/// @param x hadronic/Bjorken scaling variable
-double F2integrand(double z, double Q2, double x)	{
+
+double F2integrand(double z, double Q2, double x, int orderAlps, int nf)	{
 	double result_ns_reg(0.0);
 	double result_ns_plus(0.0);
 	double result_ps(0.0);
@@ -176,19 +127,19 @@ double F2integrand(double z, double Q2, double x)	{
 	
 	///	@todo make the running coupling a parameter of this function such that we do not
 	///	recalculate logarithms of the renormalization scale
-	/// @todo running coupling, DONE
+	/// @todo DONE running coupling
 	const double muR2 = Q2;
 	double a4pi = Pdf::alphas(muR2)/(4.*M_PI);	///< alphas/4Pi at some reference scale muR
-	double runcorr_ci_1(1.0);							///< correction to powers of alphasR(mu) associated to N^1LO coefficient function ci_1(...)
-	double runcorr_ci_2(1.0);							///< correction to powers of alphasR(mu) associated to N^2LO coefficient function ci_2(...)
-	if(QCDORDER::F2ORDER >= 2)	{
+	double runcorr_ci_1(1.0);					///< correction to powers of alphasR(mu) associated to N^1LO coefficient function ci_1(...)
+	double runcorr_ci_2(1.0);					///< correction to powers of alphasR(mu) associated to N^2LO coefficient function ci_2(...)
+	if(orderAlps >= 2)	{
 		double	logQ2muR2 	= 	std::log(Q2/muR2);
-		double 	b0 			= 	QCD::beta0();
+		double 	b0 			= 	QCD::beta0(nf);
 		
 		runcorr_ci_1 		+= 	- a4pi * b0 * logQ2muR2;
 
-		if(QCDORDER::F2ORDER >= 3)	{
-			double b1 		= 	QCD::beta1();
+		if(orderAlps >= 3)	{
+			double b1 		= 	QCD::beta1(nf);
 
 			runcorr_ci_2 	+=	- 2*a4pi * b0 * logQ2muR2;;
 			runcorr_ci_1 	+=	a4pi * a4pi * (
@@ -205,31 +156,31 @@ double F2integrand(double z, double Q2, double x)	{
 	double xfiSingletSumxzQ2	= Pdf::xfiSingletSum(x/z, Q2);
 
 	/// nlo
-	if(QCDORDER::F2ORDER >= 1)	{
+	if(orderAlps >= 1)	{
 		result_ns_reg 	+= a4pi * runcorr_ci_1 * c2q_ns_1_0_reg(z) * xfiQi2sumxzQ2;
 		result_ns_plus 	+= a4pi * runcorr_ci_1 * c2q_ns_1_0_plus(z) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 );
-		result_g 		+= a4pi * runcorr_ci_1 * c2g_1_0(z) * QCD::sumQi2() * xfGxzQ2;
+		result_g 		+= a4pi * runcorr_ci_1 * c2g_1_0(z) * QCD::sumQi2(nf) * xfGxzQ2;
 		/// nnlo
-		if(QCDORDER::F2ORDER >= 2)	{
+		if(orderAlps >= 2)	{
 			switch (APPROX::LEVEL)
 			{
 			case APPROX::APPR1:
-				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_reg_approx(z) + QCD::NF * c2q_ns_2_1_reg_approx(z) )* xfiQi2sumxzQ2;
-				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_plus_approx(z) + QCD::NF * c2q_ns_2_1_plus_approx(z) ) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 ) ;
-				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx(z) * QCD::sumQi2() * xfGxzQ2;
-				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx(z) * QCD::sumQi2() * xfiSingletSumxzQ2;
+				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_reg_approx(z) + nf * c2q_ns_2_1_reg_approx(z) )* xfiQi2sumxzQ2;
+				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_plus_approx(z) + nf * c2q_ns_2_1_plus_approx(z) ) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 ) ;
+				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx(z) * QCD::sumQi2(nf) * xfGxzQ2;
+				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx(z) * QCD::sumQi2(nf) * xfiSingletSumxzQ2;
 				break;
 			case APPROX::APPR2:
-				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_reg_approx2(z) + QCD::NF * c2q_ns_2_1_reg_approx2(z) )* xfiQi2sumxzQ2;
-				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_plus_approx2(z) + QCD::NF * c2q_ns_2_1_plus_approx2(z) ) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 ) ;
-				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx2(z) * QCD::sumQi2() * xfGxzQ2;
-				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx2(z) * QCD::sumQi2() * xfiSingletSumxzQ2;
+				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_reg_approx2(z) + nf * c2q_ns_2_1_reg_approx2(z) )* xfiQi2sumxzQ2;
+				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * ( c2q_ns_2_0_plus_approx2(z) + nf * c2q_ns_2_1_plus_approx2(z) ) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 ) ;
+				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_approx2(z) * QCD::sumQi2(nf) * xfGxzQ2;
+				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_approx2(z) * QCD::sumQi2(nf) * xfiSingletSumxzQ2;
 				break;
 			case APPROX::EXACT:
-				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_reg_exact(z) * xfiQi2sumxzQ2;
-				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_plus_exact(z) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 ) ;
-				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_exact(z) * QCD::sumQi2() * xfGxzQ2;
-				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_exact(z) * QCD::sumQi2() * xfiSingletSumxzQ2;
+				result_ns_reg 	+= a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_reg_exact(z, nf) * xfiQi2sumxzQ2;
+				result_ns_plus 	+= a4pi * a4pi * runcorr_ci_2 * c2q_ns_2_01_plus_exact(z, nf) * ( xfiQi2sumxzQ2 - xfiQi2sumxQ2 ) ;
+				result_g 		+= a4pi * a4pi * runcorr_ci_2 * c2g_2_0_reg_exact(z) * QCD::sumQi2(nf) * xfGxzQ2;
+				result_ps 		+= a4pi * a4pi * runcorr_ci_2 * c2q_ps_2_0_reg_exact(z) * QCD::sumQi2(nf) * xfiSingletSumxzQ2;
 				break;
 			default:
 				std::cout << "ERROR in determining approximation level of coefficient functions" << std::endl;
@@ -243,52 +194,41 @@ double F2integrand(double z, double Q2, double x)	{
 }
 
 /// @brief transformation of F2integrand that samples closer to small z
-double F2integrand_logtrafo1(double t, double Q2, double x)	{
+double F2integrand_logtrafo1(double t, double Q2, double x, int orderAlps, int nf)	{
 	double z = std::exp(t);
-	return F2integrand(z,Q2,x)*z;
-}
-double F2integrand_logtrafo1_par(double t, void* par)	{
-	par_Q2x* p = (struct par_Q2x *)par;
-	double z = std::exp(t);
-	return F2integrand(z,p->Q2,p->x)*z;
+	return F2integrand(z,Q2,x,orderAlps,nf)*z;
 }
 
 /// @brief transformation of F2integrand that samples closer to large z
-double F2integrand_logtrafo2(double t, double Q2, double x)	{
+double F2integrand_logtrafo2(double t, double Q2, double x, int orderAlps, int nf)	{
 	double z = 1.-std::exp(t);
-	return F2integrand(z,Q2,x)*(1-z);
+	return F2integrand(z,Q2,x,orderAlps,nf)*(1-z);
 }
-double F2integrand_logtrafo2_par(double t, void* par)	{
-	double z = 1.-std::exp(t);
-	par_Q2x* p = (struct par_Q2x *)par;
-	return F2integrand(z,p->Q2,p->x)*(1-z);
-}
-
 
 
 
 /// @todo fix all issues with factorization scale, basically in all functions
-double F2heavy(double x, double Q2, int nlight)	{
+double F2heavy(double x, double Q2, int orderAlps, int nlight)	{
 	double result(0.0);
 	double a = 1./(1.+4.*std::pow(QCD::QMASSES[nlight],2)/Q2);
 	double muR2 = Q2 + 4*std::pow(QCD::QMASSES[nlight],2);
 
 	if(x >= a) return 0.;
 
-	result += integrate([x,Q2,nlight,muR2](double logz){ return F2heavyintegrand(std::exp(logz), Q2, x, nlight, muR2);},
+	result += integrate([x,Q2,nlight,orderAlps, muR2](double logz){ return F2heavyintegrand(std::exp(logz), Q2, x, orderAlps, nlight, muR2);},
 		std::log(x), std::log(a), PRECISION::ITER, PRECISION::EPSABS, PRECISION::EPSREL
 	);
 
 	return result;
 }
 
-double F2heavyintegrand(double z, double Q2, double x, int nlight)	{
-	return F2heavyintegrand(z,Q2,x,nlight,Q2);
+double F2heavyintegrand(double z, double Q2, double x, int orderAlps, int nlight)	{
+	return F2heavyintegrand(z,Q2,x,orderAlps, nlight,Q2);
 }
 
 /// @brief implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993]
 /// equations (6.2) @ LO, (6.4) & (6.5) @ NLO
-double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	{
+double F2heavyintegrand(double z, double Q2, double x, int orderAlps, int nlight, double muR2)	{
 	double result(0.0);
 
 	/// @todo move multiplicative prefactors out of this function
@@ -320,12 +260,12 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 	double chi	= Q2/std::pow(QCD::QMASSES[nlight],2);
 
 	// LO is O(alphas)	
-	if(QCDORDER::F2ORDER >= 1)	{
+	if(orderAlps >= 1)	{
 		result += Q2 * alps * runcorr_ci_1 / (4 * M_PI*M_PI) * std::pow(QCD::QCHARGES[nlight]/QCD::QMASSES[nlight],2) * (
 			Pdf::xf(G,x/z,muR2) * ch2g_1_0(eta,chi)
 		);
 
-		if(QCDORDER::F2ORDER >= 2)	{
+		if(orderAlps >= 2)	{
 			double L	= std::log(muR2/std::pow(QCD::QMASSES[nlight],2));
 
 			/// gluon
@@ -348,7 +288,7 @@ double F2heavyintegrand(double z, double Q2, double x, int nlight, double muR2)	
 				)
 			);
 
-			if(QCDORDER::F2ORDER >= 3)	{
+			if(orderAlps >= 3)	{
 				result += Q2 * std::pow(alps,3) * 4 / std::pow(QCD::QMASSES[nlight], 2) * (
 					std::pow(QCD::QCHARGES[nlight],2) * Pdf::xf(G,x/z,muR2) * (
 						ch2_g_3_0(eta,chi) + L * ch2_g_3_1(eta,chi) + L * L * ch2_g_3_2(eta,chi)

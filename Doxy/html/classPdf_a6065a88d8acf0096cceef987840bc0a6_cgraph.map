@@ -1,0 +1,23 @@
+<map id="Pdf::xfiQi2sum" name="Pdf::xfiQi2sum">
+<area shape="rect" id="Node000001" title="$\sum_i Q_i^2 x f(x,Q^2)$" alt="" coords="5,153,121,179"/>
+<area shape="rect" id="Node000002" href="$pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e" title="down" alt="" coords="181,5,220,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,151,112,101,167,40,170,38,173,42,171,44,116,104,76,155"/>
+<area shape="rect" id="Node000003" href="$pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857" title="anti down" alt="" coords="180,55,221,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="81,151,169,86,172,90,84,155"/>
+<area shape="rect" id="Node000004" href="$pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996" title="strange" alt="" coords="181,104,220,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="98,151,167,126,169,131,100,156"/>
+<area shape="rect" id="Node000005" href="$pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149" title="anti strange" alt="" coords="181,153,220,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,163,167,163,167,169,121,169"/>
+<area shape="rect" id="Node000006" href="$pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac" title="up" alt="" coords="181,203,220,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="100,176,169,201,167,206,98,181"/>
+<area shape="rect" id="Node000007" href="$pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8" title="anti up" alt="" coords="180,252,221,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="84,177,172,242,169,246,81,181"/>
+<area shape="rect" id="Node000008" href="$classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b" title=" " alt="" coords="169,301,232,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="77,177,116,227,171,287,174,290,171,294,167,291,112,230,72,180"/>
+<area shape="rect" id="Node000009" href="$pdf_8h.html#ac19fd006bb19d7628960884906ae33c5" title=" " alt="" coords="284,276,323,301"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="231,304,270,294,271,299,233,309"/>
+<area shape="rect" id="Node000010" href="$pdf_8cpp.html#a14bf67cdb9f9b37c6c440904ed983e78" title="add here the PDF sampling functionality from openQCDrad such that we can compare predicitions" alt="" coords="280,325,327,351"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="233,319,267,327,266,332,231,324"/>
+<area shape="rect" id="Node000011" href="$fortransymbols_8h.html#acb54bff484c2dd77796eafee4e46516d" title=" " alt="" coords="375,325,428,351"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="327,335,361,335,361,341,327,341"/>
+</map>

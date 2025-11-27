@@ -1,0 +1,8 @@
+<map id="F2heavyintegrand" name="F2heavyintegrand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="132,31,272,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="229,20,221,12,202,9,186,11,177,16,175,22,180,29,175,32,170,22,173,13,184,6,202,4,224,7,233,16"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#a39831f93a9124ee6f6402604d0ef19fe" title="structure function F2 for heavy quark production for nlight light quark flavors + 1 heavy quark flavo..." alt="" coords="5,5,84,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,33,84,27,84,22,119,27"/>
+<area shape="rect" id="Node000003" href="$testF2heavyintegrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="17,55,72,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="119,59,73,66,72,61,118,53"/>
+</map>

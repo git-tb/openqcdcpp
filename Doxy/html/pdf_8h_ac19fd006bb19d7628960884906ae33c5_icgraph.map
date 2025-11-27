@@ -1,0 +1,38 @@
+<map id="G" name="G">
+<area shape="rect" id="Node000001" title=" " alt="" coords="821,338,860,364"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="5,262,44,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="831,326,806,247,786,198,760,149,728,103,690,65,668,50,645,39,621,32,594,30,403,30,354,27,311,21,236,10,201,9,167,14,132,29,94,54,72,77,56,104,44,133,36,164,28,221,28,262,23,262,23,221,31,163,39,131,51,101,68,74,90,50,129,24,166,9,201,3,236,4,312,16,355,22,403,24,594,24,622,27,647,34,671,46,693,61,732,99,764,146,790,196,811,245,836,324"/>
+<area shape="rect" id="Node000003" href="$structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92" title="implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162,..." alt="" coords="335,364,475,389"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="824,377,797,409,760,447,715,481,664,506,624,517,592,522,560,519,522,505,483,481,451,449,427,417,411,391,415,388,431,414,455,446,486,477,524,501,561,514,592,517,623,512,662,501,712,477,757,443,793,406,820,373"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="355,213,455,238"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="817,330,789,302,753,271,709,241,662,219,608,207,553,205,500,209,455,217,454,211,499,204,552,200,609,202,664,214,712,236,756,266,793,298,821,326"/>
+<area shape="rect" id="Node000010" href="$testF2heavyintegrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="565,465,620,490"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="810,370,664,448,621,468,619,464,661,443,808,366"/>
+<area shape="rect" id="Node000011" href="$classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b" title=" " alt="" coords="711,338,773,364"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="808,354,773,354,773,348,808,348"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#a4c319327b228b6185e2cd88bf2c4b4f2" title="transformation of F2integrand that samples closer to small z" alt="" coords="106,213,273,238"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="341,228,273,228,273,223,341,223"/>
+<area shape="rect" id="Node000006" href="$structfunc_8cpp.html#ab11cf77595fed93c0944a1e81dd5ab25" title=" " alt="" coords="92,164,287,189"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="341,214,245,192,246,187,342,209"/>
+<area shape="rect" id="Node000007" href="$structfunc_8cpp.html#a64eeaa69975afd512f27d80d18b0d02f" title="transformation of F2integrand that samples closer to large z" alt="" coords="106,262,273,288"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="342,243,246,265,245,260,341,238"/>
+<area shape="rect" id="Node000008" href="$structfunc_8cpp.html#a0aa52c0449b6c8886d2942097ab71bf9" title=" " alt="" coords="92,65,287,90"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="385,203,344,152,316,126,285,104,261,93,263,88,288,99,320,122,348,149,389,200"/>
+<area shape="rect" id="Node000009" href="$testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="162,114,217,140"/>
+<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="375,207,334,179,286,154,250,141,216,134,217,129,251,136,288,149,337,175,378,203"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="120,244,93,252,45,270,43,265,91,247,118,239"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="92,278,44,278,44,272,92,272"/>
+<area shape="poly" id="edge13_Node000011_Node000002" title=" " alt="" coords="698,367,663,376,572,396,500,409,427,412,334,403,263,393,208,381,155,363,91,332,60,312,37,290,40,286,64,307,93,327,157,358,210,376,264,387,335,398,427,407,499,404,571,391,662,371,697,362"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="697,357,475,374,475,369,697,352"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="726,328,700,288,682,269,661,253,610,233,554,223,501,220,455,222,455,217,501,215,555,218,611,228,664,249,686,265,704,284,731,325"/>
+<area shape="poly" id="edge16_Node000011_Node000010" title=" " alt="" coords="727,378,700,413,664,448,622,471,619,466,661,444,696,410,723,374"/>
+<area shape="rect" id="Node000012" href="$classPdf.html#a6065a88d8acf0096cceef987840bc0a6" title="$\sum_i Q_i^2 x f(x,Q^2)$" alt="" coords="535,313,651,338"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="697,346,650,338,651,333,698,341"/>
+<area shape="rect" id="Node000013" href="$classPdf.html#a16b7d71ae024d46fff26cabedfe73da8" title="x times singlet combination of quark PDFs" alt="" coords="523,264,663,289"/>
+<area shape="poly" id="edge21_Node000011_Node000013" title=" " alt="" coords="711,333,661,303,635,292,637,287,664,298,714,328"/>
+<area shape="poly" id="edge18_Node000012_Node000002" title=" " alt="" coords="521,331,434,332,326,329,208,320,91,302,43,286,45,281,93,297,209,314,326,323,434,327,521,326"/>
+<area shape="poly" id="edge19_Node000012_Node000003" title=" " alt="" coords="532,345,453,366,452,361,531,340"/>
+<area shape="poly" id="edge20_Node000012_Node000004" title=" " alt="" coords="539,310,521,303,466,271,422,241,425,236,469,266,524,298,541,306"/>
+<area shape="poly" id="edge22_Node000013_Node000003" title=" " alt="" coords="538,297,524,303,468,335,424,366,421,362,465,331,521,298,536,292"/>
+<area shape="poly" id="edge23_Node000013_Node000004" title=" " alt="" coords="531,263,452,241,453,236,532,258"/>
+</map>

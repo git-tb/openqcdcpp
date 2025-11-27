@@ -75,21 +75,23 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">pdf.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;LHAPDF/LHAPDF.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="fortransymbols_8h_source.html">fortransymbols.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pdf.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h__incl.svg" width="256" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h__incl.svg" width="414" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h__dep__incl.svg" width="174" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h__dep__incl.svg" width="790" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="pdf_8h_source.html">Go to the source code of this file.</a></p>
@@ -97,48 +99,92 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html">Pdf</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; anti bottom  <a href="classPdf.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtime. Once the pdf is initialized via calls to LHAPDF the use simply calls <a class="el" href="hoppettest_8cpp.html#af88a1313a7c034931695c9308b9db5e4">pdf(...)</a>. The advantage of having a singleton class for that is that there is no global variable shared across files that needs to be created somewhere, while still having a unique object that encapsulates all the pdf info.  <a href="classPdf.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ab4a4d2e094a46b9eeff0d205e42a2032" id="r_ab4a4d2e094a46b9eeff0d205e42a2032"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">SAMPLINGMETHOD</a> { <a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>
+, <a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a>
+ }</td></tr>
+<tr class="memdesc:ab4a4d2e094a46b9eeff0d205e42a2032"><td class="mdescLeft">&#160;</td><td class="mdescRight">determine how PDFs are sampled  <a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">More...</a><br /></td></tr>
+<tr class="separator:ab4a4d2e094a46b9eeff0d205e42a2032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a801c0535fe0155687c63166b2b518d7a" id="r_a801c0535fe0155687c63166b2b518d7a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a801c0535fe0155687c63166b2b518d7a">G</a> (1)</td></tr>
-<tr class="memdesc:a801c0535fe0155687c63166b2b518d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PDGID codes for enhanced redability.  <br /></td></tr>
-<tr class="separator:a801c0535fe0155687c63166b2b518d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bf67cdb9f9b37c6c440904ed983e78" id="r_a14bf67cdb9f9b37c6c440904ed983e78"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a> (int iq, double xx, double q2, int kp)</td></tr>
+<tr class="memdesc:a14bf67cdb9f9b37c6c440904ed983e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">add here the PDF sampling functionality from openQCDrad such that we can compare predicitions  <br /></td></tr>
+<tr class="separator:a14bf67cdb9f9b37c6c440904ed983e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac19fd006bb19d7628960884906ae33c5" id="r_ac19fd006bb19d7628960884906ae33c5"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G</a> (21)</td></tr>
+<tr class="separator:ac19fd006bb19d7628960884906ae33c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67a23f93417dbc43bb4f606cd9f4e33e" id="r_a67a23f93417dbc43bb4f606cd9f4e33e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D</a> (1)</td></tr>
-<tr class="memdesc:a67a23f93417dbc43bb4f606cd9f4e33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; gluon  <br /></td></tr>
+<tr class="memdesc:a67a23f93417dbc43bb4f606cd9f4e33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">down  <br /></td></tr>
 <tr class="separator:a67a23f93417dbc43bb4f606cd9f4e33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad53d91f9bcb1537b9d08d3f240b77857" id="r_ad53d91f9bcb1537b9d08d3f240b77857"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB</a> (-1)</td></tr>
-<tr class="memdesc:ad53d91f9bcb1537b9d08d3f240b77857"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; down  <br /></td></tr>
+<tr class="memdesc:ad53d91f9bcb1537b9d08d3f240b77857"><td class="mdescLeft">&#160;</td><td class="mdescRight">anti down  <br /></td></tr>
 <tr class="separator:ad53d91f9bcb1537b9d08d3f240b77857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62b42e36a523520ca8494d451d44c3ac" id="r_a62b42e36a523520ca8494d451d44c3ac"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U</a> (2)</td></tr>
-<tr class="memdesc:a62b42e36a523520ca8494d451d44c3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; anti down  <br /></td></tr>
+<tr class="memdesc:a62b42e36a523520ca8494d451d44c3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">up  <br /></td></tr>
 <tr class="separator:a62b42e36a523520ca8494d451d44c3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22cfa0441665fad14b723bd2b14ec5d8" id="r_a22cfa0441665fad14b723bd2b14ec5d8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB</a> (-2)</td></tr>
-<tr class="memdesc:a22cfa0441665fad14b723bd2b14ec5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; up  <br /></td></tr>
+<tr class="memdesc:a22cfa0441665fad14b723bd2b14ec5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">anti up  <br /></td></tr>
 <tr class="separator:a22cfa0441665fad14b723bd2b14ec5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40da31d93d3ca1e11efacfe87a364996" id="r_a40da31d93d3ca1e11efacfe87a364996"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S</a> (3)</td></tr>
-<tr class="memdesc:a40da31d93d3ca1e11efacfe87a364996"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; anti up  <br /></td></tr>
+<tr class="memdesc:a40da31d93d3ca1e11efacfe87a364996"><td class="mdescLeft">&#160;</td><td class="mdescRight">strange  <br /></td></tr>
 <tr class="separator:a40da31d93d3ca1e11efacfe87a364996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb4dfc7dfed3e505bab1f893062a149" id="r_a7fb4dfc7dfed3e505bab1f893062a149"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB</a> (-3)</td></tr>
-<tr class="memdesc:a7fb4dfc7dfed3e505bab1f893062a149"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; strange  <br /></td></tr>
+<tr class="memdesc:a7fb4dfc7dfed3e505bab1f893062a149"><td class="mdescLeft">&#160;</td><td class="mdescRight">anti strange  <br /></td></tr>
 <tr class="separator:a7fb4dfc7dfed3e505bab1f893062a149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a963bd616973aef33863a5f96efbcd26e" id="r_a963bd616973aef33863a5f96efbcd26e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a963bd616973aef33863a5f96efbcd26e">C</a> (4)</td></tr>
-<tr class="memdesc:a963bd616973aef33863a5f96efbcd26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; anti strange  <br /></td></tr>
+<tr class="memdesc:a963bd616973aef33863a5f96efbcd26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">charm  <br /></td></tr>
 <tr class="separator:a963bd616973aef33863a5f96efbcd26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e711e1f74cbcae59c7d2d57a353a541" id="r_a6e711e1f74cbcae59c7d2d57a353a541"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a6e711e1f74cbcae59c7d2d57a353a541">CB</a> (-4)</td></tr>
-<tr class="memdesc:a6e711e1f74cbcae59c7d2d57a353a541"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; charm  <br /></td></tr>
+<tr class="memdesc:a6e711e1f74cbcae59c7d2d57a353a541"><td class="mdescLeft">&#160;</td><td class="mdescRight">anti charm  <br /></td></tr>
 <tr class="separator:a6e711e1f74cbcae59c7d2d57a353a541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453cc9b5b5f6c5dac71ad37f33d16d61" id="r_a453cc9b5b5f6c5dac71ad37f33d16d61"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a453cc9b5b5f6c5dac71ad37f33d16d61">B</a> (5)</td></tr>
-<tr class="memdesc:a453cc9b5b5f6c5dac71ad37f33d16d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; anti charm  <br /></td></tr>
+<tr class="memdesc:a453cc9b5b5f6c5dac71ad37f33d16d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">bottom  <br /></td></tr>
 <tr class="separator:a453cc9b5b5f6c5dac71ad37f33d16d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2180ff8dcc3a6a1f21534bfeee669554" id="r_a2180ff8dcc3a6a1f21534bfeee669554"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a2180ff8dcc3a6a1f21534bfeee669554">BB</a> (-5)</td></tr>
-<tr class="memdesc:a2180ff8dcc3a6a1f21534bfeee669554"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; bottom  <br /></td></tr>
+<tr class="memdesc:a2180ff8dcc3a6a1f21534bfeee669554"><td class="mdescLeft">&#160;</td><td class="mdescRight">anti bottom  <br /></td></tr>
 <tr class="separator:a2180ff8dcc3a6a1f21534bfeee669554"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9baddbed7ad5f04071a998eb417a5b31" id="r_a9baddbed7ad5f04071a998eb417a5b31"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a9baddbed7ad5f04071a998eb417a5b31">xfiQi2sum</a> (double x, double Q2)</td></tr>
-<tr class="memdesc:a9baddbed7ad5f04071a998eb417a5b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes $\sum_i Q_i^2 x f(x,Q^2)$.  <br /></td></tr>
-<tr class="separator:a9baddbed7ad5f04071a998eb417a5b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f4007a05b777a0c961bafd4a44e31c" id="r_a87f4007a05b777a0c961bafd4a44e31c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a87f4007a05b777a0c961bafd4a44e31c">T</a> (6)</td></tr>
+<tr class="memdesc:a87f4007a05b777a0c961bafd4a44e31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">bottom  <br /></td></tr>
+<tr class="separator:a87f4007a05b777a0c961bafd4a44e31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245e5c5d4d2548fd0f85a6ac2ba5d825" id="r_a245e5c5d4d2548fd0f85a6ac2ba5d825"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pdf_8h.html#a245e5c5d4d2548fd0f85a6ac2ba5d825">TB</a> (-6)</td></tr>
+<tr class="memdesc:a245e5c5d4d2548fd0f85a6ac2ba5d825"><td class="mdescLeft">&#160;</td><td class="mdescRight">anti bottom  <br /></td></tr>
+<tr class="separator:a245e5c5d4d2548fd0f85a6ac2ba5d825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ab4a4d2e094a46b9eeff0d205e42a2032" name="ab4a4d2e094a46b9eeff0d205e42a2032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a4d2e094a46b9eeff0d205e42a2032">&#9670;&#160;</a></span>SAMPLINGMETHOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">SAMPLINGMETHOD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>determine how PDFs are sampled </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d" name="ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d"></a>fromLHAPDF&#160;</td><td class="fielddoc"><p>use LHAPDFs sampling method xfxQ2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b" name="ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b"></a>fromOPENQCDRAD&#160;</td><td class="fielddoc"><p>use openQCDrads sampling method xqg </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00041">41</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                    {</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>,         </div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a>      </div>
+<div class="line"><span class="lineno">   44</span>};</div>
+<div class="ttc" id="apdf_8h_html_ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d"><div class="ttname"><a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a></div><div class="ttdeci">@ fromLHAPDF</div><div class="ttdoc">use LHAPDFs sampling method xfxQ2</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00042">pdf.h:42</a></div></div>
+<div class="ttc" id="apdf_8h_html_ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b"><div class="ttname"><a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a></div><div class="ttdeci">@ fromOPENQCDRAD</div><div class="ttdoc">use openQCDrads sampling method xqg</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00044">pdf.h:43</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a453cc9b5b5f6c5dac71ad37f33d16d61" name="a453cc9b5b5f6c5dac71ad37f33d16d61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a453cc9b5b5f6c5dac71ad37f33d16d61">&#9670;&#160;</a></span>B()</h2>
@@ -156,7 +202,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; anti charm </p>
+<p>bottom </p>
 
 </div>
 </div>
@@ -176,7 +222,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; bottom </p>
+<p>anti bottom </p>
 
 </div>
 </div>
@@ -196,7 +242,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; anti strange </p>
+<p>charm </p>
 
 </div>
 </div>
@@ -216,7 +262,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; charm </p>
+<p>anti charm </p>
 
 </div>
 </div>
@@ -236,11 +282,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; gluon </p>
+<p>down </p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00077">Pdf::xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">Pdf::xfiSingletSum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a67a23f93417dbc43bb4f606cd9f4e33e_icgraph.svg" width="635" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a67a23f93417dbc43bb4f606cd9f4e33e_icgraph.svg" width="755" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -261,17 +309,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; down </p>
+<p>anti down </p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00077">Pdf::xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">Pdf::xfiSingletSum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_ad53d91f9bcb1537b9d08d3f240b77857_icgraph.svg" width="638" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_ad53d91f9bcb1537b9d08d3f240b77857_icgraph.svg" width="758" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a801c0535fe0155687c63166b2b518d7a" name="a801c0535fe0155687c63166b2b518d7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801c0535fe0155687c63166b2b518d7a">&#9670;&#160;</a></span>G()</h2>
+<a id="ac19fd006bb19d7628960884906ae33c5" name="ac19fd006bb19d7628960884906ae33c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19fd006bb19d7628960884906ae33c5">&#9670;&#160;</a></span>G()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,14 +329,20 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">const int G </td>
           <td>(</td>
-          <td class="paramtype">1&#160;</td>
+          <td class="paramtype">21&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>PDGID codes for enhanced redability gluon </p>
 
-<p>PDGID codes for enhanced redability. </p>
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>, <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>, <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">Pdf::xf()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_ac19fd006bb19d7628960884906ae33c5_icgraph.svg" width="866" height="526"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -306,11 +362,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; anti up </p>
+<p>strange </p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00077">Pdf::xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">Pdf::xfiSingletSum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a40da31d93d3ca1e11efacfe87a364996_icgraph.svg" width="635" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a40da31d93d3ca1e11efacfe87a364996_icgraph.svg" width="755" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -331,12 +389,54 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; strange </p>
+<p>anti strange </p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00077">Pdf::xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">Pdf::xfiSingletSum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a7fb4dfc7dfed3e505bab1f893062a149_icgraph.svg" width="635" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a7fb4dfc7dfed3e505bab1f893062a149_icgraph.svg" width="755" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="a87f4007a05b777a0c961bafd4a44e31c" name="a87f4007a05b777a0c961bafd4a44e31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f4007a05b777a0c961bafd4a44e31c">&#9670;&#160;</a></span>T()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int T </td>
+          <td>(</td>
+          <td class="paramtype">6&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bottom </p>
+
+</div>
+</div>
+<a id="a245e5c5d4d2548fd0f85a6ac2ba5d825" name="a245e5c5d4d2548fd0f85a6ac2ba5d825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245e5c5d4d2548fd0f85a6ac2ba5d825">&#9670;&#160;</a></span>TB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TB </td>
+          <td>(</td>
+          <td class="paramtype">-&#160;</td>
+          <td class="paramname"><em>6</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>anti bottom </p>
 
 </div>
 </div>
@@ -356,11 +456,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; anti down </p>
+<p>up </p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00077">Pdf::xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">Pdf::xfiSingletSum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a62b42e36a523520ca8494d451d44c3ac_icgraph.svg" width="635" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a62b42e36a523520ca8494d451d44c3ac_icgraph.svg" width="755" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -381,32 +483,46 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; up </p>
+<p>anti up </p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00077">Pdf::xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">Pdf::xfiSingletSum()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a22cfa0441665fad14b723bd2b14ec5d8_icgraph.svg" width="638" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a22cfa0441665fad14b723bd2b14ec5d8_icgraph.svg" width="758" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a9baddbed7ad5f04071a998eb417a5b31" name="a9baddbed7ad5f04071a998eb417a5b31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9baddbed7ad5f04071a998eb417a5b31">&#9670;&#160;</a></span>xfiQi2sum()</h2>
+<a id="a14bf67cdb9f9b37c6c440904ed983e78" name="a14bf67cdb9f9b37c6c440904ed983e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14bf67cdb9f9b37c6c440904ed983e78">&#9670;&#160;</a></span>xqg()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double xfiQi2sum </td>
+          <td class="memname">double xqg </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iq</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>Q2</em>&#160;</td>
+          <td class="paramname"><em>xx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>q2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -416,41 +532,26 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Computes $\sum_i Q_i^2 x f(x,Q^2)$. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">Q2</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>double</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Check whether a requested flavor pid is actually available in the pdf set </dd></dl>
+<p>add here the PDF sampling functionality from openQCDrad such that we can compare predicitions </p>
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00092">92</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                        {</div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordtype">double</span> result(0.0);</div>
-<div class="line"><span class="lineno">   94</span>    result +=   4.0/9.0 * ( <a class="code hl_function" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a>()-&gt;xfxQ2(<a class="code hl_function" href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a>()-&gt;xfxQ2(<a class="code hl_function" href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB</a>, x, Q2) ) + \</div>
-<div class="line"><span class="lineno">   95</span>            +   1.0/9.0 * ( <a class="code hl_function" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a>()-&gt;xfxQ2(<a class="code hl_function" href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a>()-&gt;xfxQ2(<a class="code hl_function" href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB</a>, x, Q2) ) + \</div>
-<div class="line"><span class="lineno">   96</span>            +   1.0/9.0 * ( <a class="code hl_function" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a>()-&gt;xfxQ2(<a class="code hl_function" href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a>()-&gt;xfxQ2(<a class="code hl_function" href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB</a>, x, Q2) );</div>
-<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   98</span>}</div>
-<div class="ttc" id="aclassPdf_html_a80fb579ab586ba61596bb084330d0ac6"><div class="ttname"><a href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">Pdf::get</a></div><div class="ttdeci">static LHAPDF::PDF * get()</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00037">pdf.h:37</a></div></div>
-<div class="ttc" id="apdf_8h_html_a22cfa0441665fad14b723bd2b14ec5d8"><div class="ttname"><a href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB</a></div><div class="ttdeci">const int UB(-2)</div><div class="ttdoc">&lt; up</div></div>
-<div class="ttc" id="apdf_8h_html_a40da31d93d3ca1e11efacfe87a364996"><div class="ttname"><a href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S</a></div><div class="ttdeci">const int S(3)</div><div class="ttdoc">&lt; anti up</div></div>
-<div class="ttc" id="apdf_8h_html_a62b42e36a523520ca8494d451d44c3ac"><div class="ttname"><a href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U</a></div><div class="ttdeci">const int U(2)</div><div class="ttdoc">&lt; anti down</div></div>
-<div class="ttc" id="apdf_8h_html_a67a23f93417dbc43bb4f606cd9f4e33e"><div class="ttname"><a href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D</a></div><div class="ttdeci">const int D(1)</div><div class="ttdoc">&lt; gluon</div></div>
-<div class="ttc" id="apdf_8h_html_a7fb4dfc7dfed3e505bab1f893062a149"><div class="ttname"><a href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB</a></div><div class="ttdeci">const int SB(-3)</div><div class="ttdoc">&lt; strange</div></div>
-<div class="ttc" id="apdf_8h_html_ad53d91f9bcb1537b9d08d3f240b77857"><div class="ttname"><a href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB</a></div><div class="ttdeci">const int DB(-1)</div><div class="ttdoc">&lt; down</div></div>
-</div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00006">6</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>                                                    {</div>
+<div class="line"><span class="lineno">    7</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="fortransymbols_8h.html#acb54bff484c2dd77796eafee4e46516d">xqg_</a>(&amp;iq, &amp;xx, &amp;q2, &amp;kp);</div>
+<div class="line"><span class="lineno">    8</span>}</div>
+<div class="ttc" id="afortransymbols_8h_html_acb54bff484c2dd77796eafee4e46516d"><div class="ttname"><a href="fortransymbols_8h.html#acb54bff484c2dd77796eafee4e46516d">xqg_</a></div><div class="ttdeci">double xqg_(int *iq, double *xx, double *q2, int *kp)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="fortransymbols_8h.html#acb54bff484c2dd77796eafee4e46516d">xqg_()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00041">Pdf::alphas()</a>, <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">Pdf::xf()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a9baddbed7ad5f04071a998eb417a5b31_cgraph.svg" width="218" height="332"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a14bf67cdb9f9b37c6c440904ed983e78_cgraph.svg" width="159" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a9baddbed7ad5f04071a998eb417a5b31_icgraph.svg" width="548" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pdf_8h_a14bf67cdb9f9b37c6c440904ed983e78_icgraph.svg" width="874" height="424"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

@@ -1,0 +1,11 @@
+<map id="ch2_g_3_1" name="ch2_g_3_1">
+<area shape="rect" id="Node000001" title="O(ln(muR2/m2)^1)" alt="" coords="5,31,96,56"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a45b91e3615fefc60373a165dd38fce9d" title=" " alt="" coords="144,31,279,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,41,130,41,130,46,96,46"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="327,31,425,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,41,313,41,313,46,279,46"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="503,5,570,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="425,33,490,23,490,28,426,38"/>
+<area shape="rect" id="Node000005" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="473,55,600,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="426,48,460,53,459,58,425,53"/>
+</map>

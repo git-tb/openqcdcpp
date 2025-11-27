@@ -202,6 +202,30 @@ libsrc/flags.cpp.s:
 	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/flags.cpp.s
 .PHONY : libsrc/flags.cpp.s
 
+libsrc/hqcoeff.o: libsrc/hqcoeff.cpp.o
+.PHONY : libsrc/hqcoeff.o
+
+# target to build an object file
+libsrc/hqcoeff.cpp.o:
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.o
+.PHONY : libsrc/hqcoeff.cpp.o
+
+libsrc/hqcoeff.i: libsrc/hqcoeff.cpp.i
+.PHONY : libsrc/hqcoeff.i
+
+# target to preprocess a source file
+libsrc/hqcoeff.cpp.i:
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.i
+.PHONY : libsrc/hqcoeff.cpp.i
+
+libsrc/hqcoeff.s: libsrc/hqcoeff.cpp.s
+.PHONY : libsrc/hqcoeff.s
+
+# target to generate assembly for a file
+libsrc/hqcoeff.cpp.s:
+	cd /home/tobiasb/OneDrive/projects/PDFcode/openqcd++/tests/F2perf/build && $(MAKE) $(MAKESILENT) -f _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/build.make _deps/openqcdpplib-build/CMakeFiles/openQCDpplib.dir/libsrc/hqcoeff.cpp.s
+.PHONY : libsrc/hqcoeff.cpp.s
+
 libsrc/integrate.o: libsrc/integrate.cpp.o
 .PHONY : libsrc/integrate.o
 
@@ -316,6 +340,9 @@ help:
 	@echo "... libsrc/flags.o"
 	@echo "... libsrc/flags.i"
 	@echo "... libsrc/flags.s"
+	@echo "... libsrc/hqcoeff.o"
+	@echo "... libsrc/hqcoeff.i"
+	@echo "... libsrc/hqcoeff.s"
 	@echo "... libsrc/integrate.o"
 	@echo "... libsrc/integrate.i"
 	@echo "... libsrc/integrate.s"

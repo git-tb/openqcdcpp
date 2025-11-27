@@ -1,14 +1,30 @@
 <map id="include/protectedobject.h" name="include/protectedobject.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="95,5,282,31"/>
-<area shape="rect" id="Node000002" href="$constants_8h.html" title=" " alt="" coords="115,79,263,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,44,191,79,186,79,186,44"/>
-<area shape="rect" id="Node000003" href="$coefffunc_8h.html" title=" " alt="" coords="5,152,151,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,114,98,154,95,150,158,109"/>
-<area shape="rect" id="Node000004" href="$structfunc_8h.html" title=" " alt="" coords="57,225,208,251"/>
-<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="185,118,166,178,142,226,137,224,161,176,180,117"/>
-<area shape="rect" id="Node000006" href="$specV2_8cpp.html" title=" " alt="" coords="227,152,345,177"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="217,110,272,150,269,154,214,114"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,187,126,224,122,227,93,190"/>
-<area shape="rect" id="Node000005" href="$structfunctest_8cpp.html" title=" " alt="" coords="51,299,214,324"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="135,264,135,299,130,299,130,264"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="465,5,651,31"/>
+<area shape="rect" id="Node000002" href="$constants_8h.html" title=" " alt="" coords="428,79,576,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="542,43,513,80,509,77,538,40"/>
+<area shape="rect" id="Node000010" href="$constants_8cpp.html" title=" " alt="" coords="641,152,792,177"/>
+<area shape="poly" id="edge17_Node000001_Node000010" title=" " alt="" coords="583,38,706,150,702,154,579,42"/>
+<area shape="rect" id="Node000003" href="$coefffunc_8h.html" title=" " alt="" coords="159,152,304,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="446,110,276,154,274,149,445,105"/>
+<area shape="rect" id="Node000004" href="$structfunc_8h.html" title=" " alt="" coords="333,225,484,251"/>
+<area shape="poly" id="edge10_Node000002_Node000004" title=" " alt="" coords="501,118,493,148,479,179,455,207,428,227,425,223,451,203,474,176,488,146,496,117"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html" title=" " alt="" coords="5,299,159,324"/>
+<area shape="poly" id="edge14_Node000002_Node000005" title=" " alt="" coords="414,103,256,122,183,137,132,154,108,169,91,183,79,201,67,226,64,245,66,264,78,297,73,299,61,265,58,245,62,225,74,198,87,179,105,164,130,150,182,132,255,117,414,97"/>
+<area shape="rect" id="Node000006" href="$testF2heavyintegrand_8cpp.html" title=" " alt="" coords="371,299,585,324"/>
+<area shape="poly" id="edge15_Node000002_Node000006" title=" " alt="" coords="506,118,506,179,498,251,485,299,480,298,493,250,500,179,501,118"/>
+<area shape="rect" id="Node000007" href="$testF2integrand_8cpp.html" title=" " alt="" coords="609,299,784,324"/>
+<area shape="poly" id="edge16_Node000002_Node000007" title=" " alt="" coords="524,113,688,296,684,300,520,116"/>
+<area shape="rect" id="Node000009" href="$coefffunc_8cpp.html" title=" " alt="" coords="77,225,225,251"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="415,97,338,103,258,113,190,129,165,141,148,154,140,170,139,189,149,225,144,226,134,190,135,169,144,150,162,136,188,124,257,107,337,97,414,92"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="550,106,683,149,681,154,549,111"/>
+<area shape="rect" id="Node000011" href="$hqcoeff_8cpp.html" title=" " alt="" coords="329,152,465,177"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="475,114,415,154,412,150,472,110"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="274,180,381,223,379,228,272,185"/>
+<area shape="poly" id="edge9_Node000003_Node000005" title=" " alt="" coords="243,190,248,221,246,237,239,252,223,270,203,284,160,302,158,297,201,279,219,266,234,249,240,236,242,221,238,191"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="210,188,166,227,163,223,207,184"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="343,256,135,301,134,296,342,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="431,259,469,297,465,300,428,263"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="469,251,651,296,649,301,467,257"/>
+<area shape="rect" id="Node000008" href="$teststructfunc_8cpp.html" title=" " alt="" coords="183,299,346,324"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="375,259,289,301,287,296,372,254"/>
 </map>

@@ -1,0 +1,20 @@
+<map id="Pdf::xfiSingletSum" name="Pdf::xfiSingletSum">
+<area shape="rect" id="Node000001" title="x times singlet combination of quark PDFs" alt="" coords="523,80,663,105"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92" title="implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162,..." alt="" coords="335,55,475,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="508,84,475,79,475,74,509,79"/>
+<area shape="rect" id="Node000003" href="$structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="355,104,455,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="509,106,455,113,454,108,509,101"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#a4c319327b228b6185e2cd88bf2c4b4f2" title="transformation of F2integrand that samples closer to small z" alt="" coords="106,5,273,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="346,101,333,94,318,81,309,68,300,56,285,44,260,33,262,28,288,40,304,52,313,65,322,77,336,89,349,96"/>
+<area shape="rect" id="Node000006" href="$structfunc_8cpp.html#ab11cf77595fed93c0944a1e81dd5ab25" title=" " alt="" coords="92,55,287,80"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="341,105,245,83,246,77,342,100"/>
+<area shape="rect" id="Node000007" href="$structfunc_8cpp.html#a64eeaa69975afd512f27d80d18b0d02f" title="transformation of F2integrand that samples closer to large z" alt="" coords="106,104,273,129"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="341,119,273,119,273,114,341,114"/>
+<area shape="rect" id="Node000008" href="$structfunc_8cpp.html#a0aa52c0449b6c8886d2942097ab71bf9" title=" " alt="" coords="92,153,287,179"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="342,134,246,156,245,151,341,128"/>
+<area shape="rect" id="Node000009" href="$testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="162,203,217,228"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="377,140,336,167,288,192,252,205,218,213,216,208,250,200,286,188,333,162,374,135"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="5,55,44,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="120,37,93,45,45,62,43,57,91,39,118,32"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="123,103,91,94,43,77,45,72,93,89,124,98"/>
+</map>

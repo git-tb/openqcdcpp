@@ -73,12 +73,60 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="structfunc_8h.html#acf0236700b00bcb374259219e1fedc05">F2</a>  (double x, double Q2)</dt>
-<dd><a class="anchor" id="_todo000002"></a>running coupling  </dd>
-<dt>Member <a class="el" href="structfunc_8h.html#aa4dc5cbd2ddc07970850d275ce8b8a44">F2integrand</a>  (double z, double Q2, double x)</dt>
-<dd><a class="anchor" id="_todo000003"></a>running coupling  </dd>
-<dt>Member <a class="el" href="pdf_8h.html#a9baddbed7ad5f04071a998eb417a5b31">xfiQi2sum</a>  (double x, double Q2)</dt>
-<dd><a class="anchor" id="_todo000001"></a>Check whether a requested flavor pid is actually available in the pdf set </dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#a1a77eb0a791f23627e05a20fbb46fd32">chL_g_2_0_asympG</a>  (double eta, double chi)</dt>
+<dd><a class="anchor" id="_todo000002"></a>Rename the G and E functions, it seems they dont depend on the label "g" and are used for the quark contribution as well  </dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#aecf716e28846262d503538e5f5295ca2">chL_g_2_1_asympG</a>  (double eta, double chi)</dt>
+<dd><a class="anchor" id="_todo000005"></a>Rename the G and E functions, it seems they dont depend on the label "g" and are used for the quark contribution as well  </dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#aa80c94cc2f8dfdf6f5d8db113986acf9">chL_q_2_1_Lcoupl</a>  (double eta, double chi)</dt>
+<dd><a class="anchor" id="_todo000013"></a>This function is exactly 0, see comment in [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993] directly after eq. (5.10)  </dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#a125f14b4de4e555efaed0afa9a9f4547">chT_g_2_0_asympG</a>  (double eta, double chi)</dt>
+<dd><a class="anchor" id="_todo000004"></a>Rename the G and E functions, it seems they dont depend on the label "g" and are used for the quark contribution as well  </dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#ad41caec5018f3b44dfa1f4d6938b9e59">chT_g_2_1_asympG</a>  (double eta, double chi)</dt>
+<dd><a class="anchor" id="_todo000006"></a>Rename the G and E functions, it seems they dont depend on the label "g" and are used for the quark contribution as well  </dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#a41419755098bd93b6e794a7d909b90a0">chT_q_2_1_Lcoupl_table</a>  [Nchi][Neta]</dt>
+<dd><a class="anchor" id="_todo000014"></a>[Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993], comment after eq. (5.10) This contribution is apparently only relevant for really small chi, but still have at least some contribution...  </dd>
+<dt>Member <a class="el" href="structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626">F2</a>  (double x, double Q2, int orderAlps)</dt>
+<dd><a class="anchor" id="_todo000017"></a>running coupling, DONE  </dd>
+<dt>Member <a class="el" href="structfunc_8cpp.html#a39831f93a9124ee6f6402604d0ef19fe">F2heavy</a>  (double x, double Q2, int nlight)</dt>
+<dd><a class="anchor" id="_todo000021"></a>fix all issues with factorization scale, basically in all functions  </dd>
+<dt>Member <a class="el" href="structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92">F2heavyintegrand</a>  (double z, double Q2, double x, int nlight, double muR2)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000026"></a>make the running coupling a parameter of this function such that we do not recalculate logarithms of the renormalization scale </p>
+<p class="interdd"><a class="anchor" id="_todo000025"></a></p>
+<p class="interdd"><a class="anchor" id="_todo000024"></a>call PDFs only once </p>
+<p class="interdd"><a class="anchor" id="_todo000023"></a></p>
+<p class="enddd"><a class="anchor" id="_todo000022"></a>move multiplicative prefactors out of this function  </p>
+</dd>
+<dt>Member <a class="el" href="structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44">F2integrand</a>  (double z, double Q2, double x)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000018"></a>make the running coupling a parameter of this function such that we do not recalculate logarithms of the renormalization scale </p>
+<p class="interdd"><a class="anchor" id="_todo000019"></a></p>
+<p class="enddd"><a class="anchor" id="_todo000020"></a>running coupling, DONE  </p>
+</dd>
+<dt>Member <a class="el" href="hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d">findIdx</a>  (const double &amp;x, const double *xarr, const std::size_t &amp;Nx)</dt>
+<dd><a class="anchor" id="_todo000012"></a>Find a better way to handle the domain error  </dd>
+<dt>Member <a class="el" href="integrate_8cpp.html#aec2a5d8d72ba0a98082c8b3ee8005d81">integrate</a>  (std::function&lt; double(double)&gt; func, double a, double b, int ITER, double EPSABS, double EPSREL)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000007"></a>reduce overhead from copying the function object -&gt; switch to function pointer? -&gt; at the moment this is difficult because we have to pass parameters [x,Q2] to our functions which require a complete std::function&lt;...&gt; object. We could switch to a call signature given by &gt;&gt; integrate(double(*func)(double,double,double), double par1, double par2,...) making this wrapper less useful. </p>
+<p class="interdd"></p>
+<p class="enddd">(YIELDS NO SPEEDUP) reduce overhead from recreating the gsl_integration_workspace every time <a class="el" href="integrate_8h.html#aec2a5d8d72ba0a98082c8b3ee8005d81" title="light weight interface to gsl_integration that integrates a function func from a to b.">integrate()</a> is called  </p>
+</dd>
+<dt>Struct <a class="el" href="structmycomplex.html">mycomplex</a>  </dt>
+<dd><a class="anchor" id="_todo000001"></a>Decide on how to handle complex numbers  </dd>
+<dt>Member <a class="el" href="hqcoeff_8h.html#a2a1f52efc845279e37292bfcdd042f27">Neta</a>  </dt>
+<dd><a class="anchor" id="_todo000003"></a>maybe in all interpolations it would be smart to interpolate the log of the values, if they span several order of magnitude  </dd>
+<dt>Member <a class="el" href="classPdf.html#aad64e5be407fbdc2f0aa8d03236ef4b2">Pdf::alphas</a>  (double Q2)</dt>
+<dd><a class="anchor" id="_todo000015"></a>This always samples the three flavor <a class="el" href="classPdf.html" title="The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtim...">Pdf</a> from openQCDrad  </dd>
+<dt>Member <a class="el" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>  (int pID, double x, double Q2)</dt>
+<dd><a class="anchor" id="_todo000016"></a>This always samples the three flavor <a class="el" href="classPdf.html" title="The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtim...">Pdf</a> from openQCDrad  </dd>
+<dt>Member <a class="el" href="classPdf.html#a6065a88d8acf0096cceef987840bc0a6">Pdf::xfiQi2sum</a>  (double x, double Q2)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000008"></a>check whether a requested flavor pid is actually available in the pdf set </p>
+<p class="interdd"></p>
+<p class="enddd">variable flavor number  </p>
+</dd>
+<dt>Member <a class="el" href="classPdf.html#a16b7d71ae024d46fff26cabedfe73da8">Pdf::xfiSingletSum</a>  (double x, double Q2)</dt>
+<dd><a class="anchor" id="_todo000009"></a>variable flavor number  </dd>
+<dt>Member <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>  </dt>
+<dd><a class="anchor" id="_todo000010"></a>Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call!  </dd>
+<dt>Member <a class="el" href="namespaceQCD.html#a57229a5cc6fa00f40d4e04db392368b3">QCD::sumQi2</a>  ()</dt>
+<dd><a class="anchor" id="_todo000011"></a>formulate this in terms of QCHARGES </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

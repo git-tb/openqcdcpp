@@ -1,0 +1,9 @@
+<map id="chT_g_2_0_A_asympE" name="chT_g_2_0_A_asympE">
+<area shape="rect" id="Node000001" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (16)" alt="" coords="471,5,636,31"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#ace7857dc0c0eaf4489710364347d5db2" title="Transversal part." alt="" coords="332,5,423,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="457,21,423,21,423,15,457,15"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a3dc48c2fbe787981cfd65df741765e2d" title="2 part" alt="" coords="193,5,284,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,21,284,21,284,15,318,15"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92" title="implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162,..." alt="" coords="5,5,145,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,21,146,21,146,15,179,15"/>
+</map>

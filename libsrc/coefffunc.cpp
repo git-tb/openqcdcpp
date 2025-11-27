@@ -78,7 +78,7 @@ double c2q_ns_2_1_local_approx2()	{
 
 /// @brief eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1-2), 3, 2005]
 /// This expression was obtained after some rewriting and reordering with Mathematica.
-double c2q_ns_2_01_local_exact()	{
+double c2q_ns_2_01_local_exact(int nf)	{
 	double result(0.0);
 	result += 	std::pow(
 QCD::CF,2)*(331./8. + 69*MATH::ZETA2 + 6*std::pow(MATH::ZETA2,2) - \
@@ -87,7 +87,7 @@ QCD::CA*
 QCD::CF*(-5465./72. + -251./3.*MATH::ZETA2 + \
 71./5.*std::pow(MATH::ZETA2,2) + 140./3.*MATH::ZETA3) + 
 QCD::CF*
-QCD::NF*(457./36. + 38./3.*MATH::ZETA2 + 4./3.*MATH::ZETA3);
+nf*(457./36. + 38./3.*MATH::ZETA2 + 4./3.*MATH::ZETA3);
 	return result;
 }
 
@@ -135,7 +135,7 @@ double c2q_ns_2_1_localplus_approx2(double z)	{
 
 /// @brief eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1-2), 3, 2005]
 /// This expression was obtained after some rewriting and reordering with Mathematica.
-double c2q_ns_2_01_localplus_exact(double x)	{
+double c2q_ns_2_01_localplus_exact(double x, int nf)	{
 	double result(0.0);
 	double L1x	=	std::log(1-x);
 	result 		+= 	QCD::CA*
@@ -143,7 +143,7 @@ QCD::CF*((-3155./54. + 44./3.*MATH::ZETA2 + 40*MATH::ZETA3)*L1x + \
 (367./18. - 4*MATH::ZETA2)*std::pow(L1x,2) + -22./9.*std::pow(L1x,3)) \
 + 
 QCD::CF*
-QCD::NF*((247./27. + -8./3.*MATH::ZETA2)*L1x + -29./9.*std::pow(L1x,2) \
+nf*((247./27. + -8./3.*MATH::ZETA2)*L1x + -29./9.*std::pow(L1x,2) \
 + 4./9.*std::pow(L1x,3)) + std::pow(
 QCD::CF,2)*((51./2. + 36*MATH::ZETA2 - 8*MATH::ZETA3)*L1x + (-27./2. - \
 16*MATH::ZETA2)*std::pow(L1x,2) - 6*std::pow(L1x,3) + \
@@ -196,7 +196,7 @@ double c2q_ns_2_1_plus_approx2(double z)	{
 
 /// @brief eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1-2), 3, 2005]
 /// This expression was obtained after some rewriting and reordering with Mathematica.
-double c2q_ns_2_01_plus_exact(double z)	{
+double c2q_ns_2_01_plus_exact(double z, int nf)	{
 	double result(0.0);
 	double L1z	= std::log(1-z);
 	result += (
@@ -204,7 +204,7 @@ QCD::CA*
 QCD::CF*(3155./54. + -44./3.*MATH::ZETA2 - 40*MATH::ZETA3 + (-367./9. \
 + 8*MATH::ZETA2)*L1z + 22./3.*std::pow(L1z,2)) + 
 QCD::CF*
-QCD::NF*(-247./27. + 8./3.*MATH::ZETA2 + 58./9.*L1z + \
+nf*(-247./27. + 8./3.*MATH::ZETA2 + 58./9.*L1z + \
 -4./3.*std::pow(L1z,2)) + std::pow(
 QCD::CF,2)*(-51./2. - 36*MATH::ZETA2 + 8*MATH::ZETA3 + (27 + \
 32*MATH::ZETA2)*L1z + 18*std::pow(L1z,2) - 8*std::pow(L1z,3)))/(-1 + \
@@ -281,7 +281,7 @@ double c2q_ns_2_1_reg_approx2(double z)	{
 
 /// @brief eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1-2), 3, 2005]
 /// This expression was obtained after some rewriting and reordering with Mathematica.
-double c2q_ns_2_01_reg_exact(double z)	{
+double c2q_ns_2_01_reg_exact(double z, int nf)	{
 	double result(0.0);
 	double L1z		= std::log(1-z);
 	double HPL1_m1z	= HPL1(-1,z);
@@ -332,7 +332,7 @@ std::pow(z,2)) + (799./15.*std::pow(z,2)*HPL1_0z)/(-1 + std::pow(z,2)) \
 24*HPL1_1z - 8*L1z) + 367./9.*L1z + -22./3.*std::pow(L1z,2))/(-1 + z)) \
 + 
 QCD::CF*
-QCD::NF*(-158./27. + -488./27.*z + (8./3. + 8./3.*z)*MATH::ZETA2 - \
+nf*(-158./27. + -488./27.*z + (8./3. + 8./3.*z)*MATH::ZETA2 - \
 (4*HPL1_0z)/(-1 + std::pow(z,2)) + \
 (-26./3.*std::pow(z,2)*HPL1_0z)/(-1 + std::pow(z,2)) + \
 (-38./3.*std::pow(z,3)*HPL1_0z)/(-1 + std::pow(z,2)) + \

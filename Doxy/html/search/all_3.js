@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['c_0',['C',['../pdf_8h.html#a963bd616973aef33863a5f96efbcd26e',1,'pdf.h']]],
-  ['c2g_5f1_5f0_1',['c2g_1_0',['../coefffunc_8h.html#a1b0894f47104c2c4b84bd61ecb2890f8',1,'coefffunc.h']]],
-  ['c2q_5f1_5f0_5flocal_2',['c2q_1_0_local',['../coefffunc_8h.html#a084f37cd16e0c30e8001dbd66338350b',1,'coefffunc.h']]],
-  ['c2q_5f1_5f0_5flocalplus_3',['c2q_1_0_localplus',['../coefffunc_8h.html#a894395aa259170e5142ce132238309e6',1,'coefffunc.h']]],
-  ['c2q_5f1_5f0_5fplus_4',['c2q_1_0_plus',['../coefffunc_8h.html#aca4f6958287a3352a0f516ed379ee749',1,'coefffunc.h']]],
-  ['c2q_5f1_5f0_5freg_5',['c2q_1_0_reg',['../coefffunc_8h.html#ae4256e1ef32ca3e99ee5ce8a18f407b1',1,'coefffunc.h']]],
-  ['cb_6',['CB',['../pdf_8h.html#a6e711e1f74cbcae59c7d2d57a353a541',1,'pdf.h']]],
-  ['cf_7',['CF',['../namespaceQCD.html#aecdcc0faebbe111e454586249acf28d0',1,'QCD']]],
-  ['cg_8',['CG',['../namespaceQCD.html#a2e849b0332155a8be0b0674dc01b5b4d',1,'QCD']]],
-  ['clearlogfile_9',['clearLogfile',['../classLogger.html#a61e150e22d1c99d1e18b0c427187eb3f',1,'Logger']]],
-  ['coefffunc_2eh_10',['coefffunc.h',['../coefffunc_8h.html',1,'']]],
-  ['complex_11',['Complex',['../conceptComplex.html',1,'']]],
-  ['constants_2eh_12',['constants.h',['../constants_8h.html',1,'']]],
-  ['csvdata_13',['csvdata',['../structcsvdata.html',1,'']]]
+  ['d_0',['D',['../pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e',1,'pdf.h']]],
+  ['db_1',['DB',['../pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857',1,'pdf.h']]],
+  ['ddnlohq_2',['ddnlohq',['../structFORSCHEMEDEF__COMMON.html#af72effe9b4b192d02c1b93130a6453a4',1,'FORSCHEMEDEF_COMMON']]],
+  ['debug_3',['DEBUG',['../logger_8h.html#a9ca6006a59fa53a5cd728fa1efcd4b61adc30ec20708ef7b0f641ef78b7880a15',1,'logger.h']]],
+  ['delder_4',['delder',['../structFORPRECCONTROL__COMMON.html#ae8fe4f01a01242a7ba5955c756a80ba6',1,'FORPRECCONTROL_COMMON']]],
+  ['dels1_5',['dels1',['../structGRIDSET__COMMON.html#ab99df5485a268b1ecfdc1f356c5004e2',1,'GRIDSET_COMMON']]],
+  ['dels2_6',['dels2',['../structGRIDSET__COMMON.html#aa7e1c457944063070cb610c165757007',1,'GRIDSET_COMMON']]],
+  ['delta_7',['DELTA',['../namespacePRECISION.html#a4ddd23e880fb702c5143e9683143b777',1,'PRECISION']]],
+  ['delx1_8',['delx1',['../structGRIDSET__COMMON.html#ad3f50e2f41f0a15528822e67187c43ca',1,'GRIDSET_COMMON']]],
+  ['delx2_9',['delx2',['../structGRIDSET__COMMON.html#a72803a3aeb2300d731b7471b0796b496',1,'GRIDSET_COMMON']]],
+  ['delxp_10',['delxp',['../structGRIDSET__COMMON.html#ae47e65282756e67d92571c28ba3d6c02',1,'GRIDSET_COMMON']]],
+  ['destroy_11',['destroy',['../classPdf.html#a335a54119cfecc6abc92b87b83f2e0dc',1,'Pdf']]],
+  ['dlnloq_5f_12',['dlnloq_',['../fortransymbols_8h.html#a6c635d08cbed0d29abc722473ef58c61',1,'fortransymbols.h']]],
+  ['dtnloq_5f_13',['dtnloq_',['../fortransymbols_8h.html#a80b27fad06b203997cc370fa7b3c40f0',1,'fortransymbols.h']]]
 ];

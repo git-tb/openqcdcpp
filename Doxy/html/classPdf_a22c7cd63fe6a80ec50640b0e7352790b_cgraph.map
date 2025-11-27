@@ -1,0 +1,9 @@
+<map id="Pdf::xf" name="Pdf::xf">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,68,56"/>
+<area shape="rect" id="Node000002" href="$pdf_8h.html#ac19fd006bb19d7628960884906ae33c5" title=" " alt="" coords="120,5,159,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,33,106,23,107,29,69,38"/>
+<area shape="rect" id="Node000003" href="$pdf_8cpp.html#a14bf67cdb9f9b37c6c440904ed983e78" title="add here the PDF sampling functionality from openQCDrad such that we can compare predicitions" alt="" coords="116,55,163,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="69,48,103,56,102,61,67,53"/>
+<area shape="rect" id="Node000004" href="$fortransymbols_8h.html#acb54bff484c2dd77796eafee4e46516d" title=" " alt="" coords="211,55,264,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,65,197,65,197,70,163,70"/>
+</map>

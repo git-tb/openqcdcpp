@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logtype_0',['LOGTYPE',['../logger_8h.html#a9ca6006a59fa53a5cd728fa1efcd4b61',1,'logger.h']]]
+  ['approxtype_0',['APPROXTYPE',['../namespaceAPPROX.html#acc8d9d4fb060a4d0a3f736e8c788bcee',1,'APPROX']]]
 ];

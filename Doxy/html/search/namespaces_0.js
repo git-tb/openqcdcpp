@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['precision_0',['PRECISION',['../namespacePRECISION.html',1,'']]]
+  ['approx_0',['APPROX',['../namespaceAPPROX.html',1,'']]]
 ];

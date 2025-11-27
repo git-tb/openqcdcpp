@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['one_0',['ONE',['../logger_8h.html#ab16e0dc2a4f7533119f355cdb8b42a84abc21e6484530fc9d0313cb816b733396',1,'logger.h']]]
+  ['exact_0',['EXACT',['../namespaceAPPROX.html#acc8d9d4fb060a4d0a3f736e8c788bceeaf08dfcf9550b0d9d8457fc93c8cbd14a',1,'APPROX']]]
 ];

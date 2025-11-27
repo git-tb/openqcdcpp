@@ -25,9 +25,9 @@ int main()	{
 	PRECISION::ITER.set(1000);
 	forpreccontrol_.nf2qcd1	= 5;
 	forpreccontrol_.nf2qcd2	= 5;
-	
-	QCDORDER::F2ORDER.set(1);
-	foralpsrenorm_.kordf2_ 	= 1;
+	int NF					= 3;
+	int ORDERALPS			= 1;
+
 	qcdpar_.nfc 			= 3;
 	qcdpar_.cf				= 4./3.;
 	qcdpar_.qsum[0]			= 1./9.;
@@ -81,19 +81,19 @@ int main()	{
 		double logx	= logxmin + (double)ix/(double)(Nx-1) * (logxmax - logxmin);
 		double x	= std::exp(logx);
 
-		QCDORDER::F2ORDER.set(1);
-		foralpsrenorm_.kordf2_ 	= 1;
+		ORDERALPS				= 2;
+		foralpsrenorm_.kordf2 	= 1;
 		double F2_fortran_nlo	= f2qcd_(3,1,22,x,Q2);
-		double F2_cpp_nlo		= F2(x,Q2);
-		QCDORDER::F2ORDER.set(2);
-		foralpsrenorm_.kordf2_ 	= 2;
+		double F2_cpp_nlo		= F2(x,Q2,ORDERALPS, NF);
+		ORDERALPS				= 2;
+		foralpsrenorm_.kordf2 	= 2;
 		double F2_fortran_nnlo	= f2qcd_(3,1,22,x,Q2);
 		APPROX::LEVEL.set(APPROX::APPR1);
-		double F2_cpp_nnlo_apr1	= F2(x,Q2);
+		double F2_cpp_nnlo_apr1	= F2(x,Q2,ORDERALPS, NF);
 		APPROX::LEVEL.set(APPROX::APPR2);
-		double F2_cpp_nnlo_apr2	= F2(x,Q2);
+		double F2_cpp_nnlo_apr2	= F2(x,Q2,ORDERALPS, NF);
 		APPROX::LEVEL.set(APPROX::EXACT);
-		double F2_cpp_nnlo_ex	= F2(x,Q2);
+		double F2_cpp_nnlo_ex	= F2(x,Q2,ORDERALPS, NF);
 
 		fileout		<< Q2				<< ";"
 					<< x				<< ";"
@@ -121,8 +121,8 @@ int main()	{
 
 	///
 	std::cout << "Performance test@NLO" << std::endl;
-	QCDORDER::F2ORDER.set(1);
-	foralpsrenorm_.kordf2_ 	= 1;
+	ORDERALPS				= 1;
+	foralpsrenorm_.kordf2 	= 1;
 	for(int i = 0; i < NRUN; i++)	{
 		{
 			std::cout << "\33[2K\r" << std::flush;
@@ -142,7 +142,7 @@ int main()	{
 
 		APPROX::LEVEL.set(APPROX::EXACT);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,Q2);
+		F2(x,Q2, ORDERALPS, NF);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppex 	+= (double)duration.count()/(double)NRUN;
@@ -161,8 +161,8 @@ int main()	{
 	///
 	std::cout << "Performance test@NNLO" << std::endl;
 	APPROX::LEVEL.set(APPROX::APPR1);
-	QCDORDER::F2ORDER.set(2);
-	foralpsrenorm_.kordf2_ 	= 2;
+	ORDERALPS				= 2;
+	foralpsrenorm_.kordf2 	= 2;
 	time_for	= 0.0, ///< fortran timing
 	time_cppa1	= 0.0, ///< C++ timing, approximation 1
 	time_cppa2	= 0.0, ///< C++ timing, approximation 2
@@ -186,21 +186,21 @@ int main()	{
 
 		APPROX::LEVEL.set(APPROX::APPR1);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,Q2);
+		F2(x,Q2, ORDERALPS, NF);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppa1 	+= (double)duration.count()/(double)NRUN;
 
 		APPROX::LEVEL.set(APPROX::APPR2);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,Q2);
+		F2(x,Q2, ORDERALPS, NF);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppa2 	+= (double)duration.count()/(double)NRUN;
 
 		APPROX::LEVEL.set(APPROX::EXACT);
 		start 		= std::chrono::high_resolution_clock::now();
-		F2(x,Q2);
+		F2(x,Q2, ORDERALPS, NF);
 		stop 		= std::chrono::high_resolution_clock::now();
 		duration 	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 		time_cppex 	+= (double)duration.count()/(double)NRUN;
@@ -226,72 +226,3 @@ int main()	{
 
 	Pdf::destroy();
 }
-
-
-// /**
-//  * @brief test performance of openQCDrad F2 vs my own F2 @ NNLO
-//  */
-// int main(int argc, char** argv)	{
-// 	/// output formatting
-// 	const int PREC = 15;
-// 	const int WIDTH = 22;
-
-// 	///
-// 	std::string pdfset = "ABMP16_3_nnlo";
-// 	Pdf::initialize(pdfset, 0);
-
-// 	/// initialization of openQCDrad grid variables
-// 	initgridconst_();
-// 	mypdffillgrid_witharg_(pdfset.c_str(), pdfset.length());
-
-// 	const double 	xmin	= 5e-6,
-// 					xmax	= 0.9999;
-// 	const double 	q2min	= 1.0,
-// 					q2max	= 1e6;
-
-// 	/// Performance
-// 	std::srand(std::time(NULL));
-// 	const int NRUN 		= 1e4;
-// 	double	time_for	= 0.0, ///< fortran timing
-// 			time_cpp	= 0.0; ///< C++ timing
-// 	auto start 			= std::chrono::high_resolution_clock::now();
-// 	auto stop 			= std::chrono::high_resolution_clock::now();
-// 	auto duration 		= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-
-// 	QCDORDER::F2ORDER.set(2);
-// 	foralpsrenorm_.kordf2_ = 2;
-
-// 	for(int i = 0; i < NRUN; i++)	{
-// 		{
-// 			std::cout << "\33[2K\r" << std::flush;
-// 			std::cout << (int)(100*(double)(i+1)/(double)NRUN) << "% done" << std::flush;
-// 		}
-// 		double r1	= (double)std::rand()/(double)RAND_MAX;
-// 		double r2	= (double)std::rand()/(double)RAND_MAX;
-
-// 		double x	= xmin + (xmax-xmin)*r1;
-// 		double q2	= q2min + (q2max-q2min)*r2;
-
-// 		start 			= std::chrono::high_resolution_clock::now();
-// 		F2(x, q2);
-// 		stop 			= std::chrono::high_resolution_clock::now();
-// 		duration		= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-// 		time_cpp		+= (double)duration.count();
-
-// 		start 		= std::chrono::high_resolution_clock::now();
-// 		f2qcd_(3,1,22,x,q2);
-// 		stop 		= std::chrono::high_resolution_clock::now();
-// 		duration	= std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-// 		time_for	+= (double)duration.count();
-// 	}
-
-// 	std::cout	<< std::endl
-// 				<< std::setw(WIDTH) << "cpp:"	
-// 				<< std::setw(WIDTH) << time_cpp/(double)NRUN << " ns"
-// 				<< std::endl
-// 				<< std::setw(WIDTH) << "fortran:"	
-// 				<< std::setw(WIDTH) << time_for/(double)NRUN << " ns"
-// 				<< std::endl;
-
-// 	return 0;
-// }

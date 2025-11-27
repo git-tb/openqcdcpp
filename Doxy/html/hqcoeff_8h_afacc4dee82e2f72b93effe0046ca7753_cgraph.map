@@ -1,0 +1,32 @@
+<map id="ch2_q_2_0_Hcoupl" name="ch2_q_2_0_Hcoupl">
+<area shape="rect" id="Node000001" title="2 part" alt="" coords="5,80,148,105"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#aed8304e7e3c70f3cdbcc781c15c3cfde" title="O(ln(muR2/m2)^0)" alt="" coords="197,55,338,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,81,183,76,183,81,148,86"/>
+<area shape="rect" id="Node000012" href="$hqcoeff_8cpp.html#af70a378910e84f8bd4bf08c0d372287e" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (26)" alt="" coords="196,104,339,129"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="148,99,183,103,182,109,148,104"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a1a77eb0a791f23627e05a20fbb46fd32" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (19)" alt="" coords="405,5,555,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,52,411,31,412,36,323,57"/>
+<area shape="rect" id="Node000008" href="$hqcoeff_8cpp.html#a8c12207b2b8adc17253ab4571134a9d4" title=" " alt="" coords="387,104,573,129"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="323,77,412,98,411,103,322,83"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#aefcfbc062d44707454fb2f83709d46c4" title="O(ln(muR2/m2)^0)" alt="" coords="625,55,716,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="531,28,574,39,613,50,611,55,573,45,529,33"/>
+<area shape="rect" id="Node000007" href="$hqcoeff_8cpp.html#afbf32e618df6e4929c5e941c15cc4cab" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (23)" alt="" coords="625,5,716,31"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="556,15,611,15,611,21,556,21"/>
+<area shape="rect" id="Node000005" href="$chaplin_8h.html#ab5340425c31d2f2ab20f8b281db2c3f1" title="generic interface for C++ to the Fortran routine" alt="" coords="804,55,859,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="716,65,790,65,790,70,716,70"/>
+<area shape="rect" id="Node000006" href="$chaplin_8h.html#a3ba3e7e3cf17242e56dc59d885bcac68" title=" " alt="" coords="943,55,1000,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="859,65,929,65,929,70,859,70"/>
+<area shape="rect" id="Node000009" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="621,141,720,167"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="546,127,608,139,607,144,545,132"/>
+<area shape="rect" id="Node000010" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="798,165,865,191"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="721,159,785,168,784,174,720,164"/>
+<area shape="rect" id="Node000011" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="768,116,895,141"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="720,144,754,138,754,143,721,149"/>
+<area shape="rect" id="Node000013" href="$hqcoeff_8cpp.html#a125f14b4de4e555efaed0afa9a9f4547" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (20)" alt="" coords="405,55,555,80"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="322,101,411,81,412,86,323,107"/>
+<area shape="rect" id="Node000014" href="$hqcoeff_8cpp.html#ab34ffae4608c063e1b4e77f84153eaa4" title=" " alt="" coords="387,153,573,179"/>
+<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="323,127,412,148,411,153,322,132"/>
+<area shape="poly" id="edge13_Node000013_Node000004" title=" " alt="" coords="556,65,611,65,611,70,556,70"/>
+<area shape="poly" id="edge14_Node000013_Node000007" title=" " alt="" coords="529,52,611,31,612,36,530,57"/>
+<area shape="poly" id="edge16_Node000014_Node000009" title=" " alt="" coords="574,157,607,155,608,161,574,163"/>
+</map>

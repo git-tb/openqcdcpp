@@ -1,0 +1,24 @@
+<map id="I_hqhelper" name="I_hqhelper">
+<area shape="rect" id="Node000001" title="O(ln(muR2/m2)^0)" alt="" coords="773,80,864,105"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a1a77eb0a791f23627e05a20fbb46fd32" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (19)" alt="" coords="575,55,725,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="759,87,725,81,726,76,760,81"/>
+<area shape="rect" id="Node000008" href="$hqcoeff_8cpp.html#a125f14b4de4e555efaed0afa9a9f4547" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (20)" alt="" coords="575,104,725,129"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="760,104,726,109,725,103,759,98"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#aa59fd4910fe7d35619155c1b89045d48" title="Longitudinal part." alt="" coords="411,5,500,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="586,54,499,32,501,27,587,49"/>
+<area shape="rect" id="Node000006" href="$hqcoeff_8cpp.html#aed8304e7e3c70f3cdbcc781c15c3cfde" title="O(ln(muR2/m2)^0)" alt="" coords="385,55,526,80"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="561,70,526,70,526,65,561,65"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#a3dc48c2fbe787981cfd65df741765e2d" title="2 part" alt="" coords="219,55,310,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,35,311,58,309,53,396,30"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92" title="implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162,..." alt="" coords="5,80,145,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="206,78,146,86,145,81,205,73"/>
+<area shape="rect" id="Node000007" href="$hqcoeff_8cpp.html#afacc4dee82e2f72b93effe0046ca7753" title="2 part" alt="" coords="193,104,336,129"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="393,86,316,106,314,101,392,81"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="180,109,146,104,146,99,180,103"/>
+<area shape="rect" id="Node000009" href="$hqcoeff_8cpp.html#ace7857dc0c0eaf4489710364347d5db2" title="Transversal part." alt="" coords="410,104,501,129"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="561,119,501,119,501,114,561,114"/>
+<area shape="rect" id="Node000010" href="$hqcoeff_8cpp.html#af70a378910e84f8bd4bf08c0d372287e" title="Transversal part." alt="" coords="384,153,527,179"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="587,135,507,156,506,151,585,130"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="396,104,310,82,311,76,397,99"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="392,152,314,132,316,127,393,147"/>
+</map>

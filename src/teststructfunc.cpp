@@ -11,7 +11,8 @@ int main()	{
 	PRECISION::EPSABS.set(1e-5);
 	PRECISION::EPSREL.set(1e-5);
 	PRECISION::ITER.set(1000);
-	QCDORDER::F2ORDER.set(1);
+	int ORDERALPS	= 1;
+	int NF			= 3;
 
 	double Q2_arr[9] = {
 		3e2, 5e2, 1e3, 1.5e3, 2e3, 3e3, 5e3, 8e3, 1.5e4
@@ -34,9 +35,6 @@ int main()	{
 				<< std::setw(WIDTH) << "F2@nnlo"
 				<< std::endl;
 
-	QCDORDER::F2ORDER.set(1);
-	double nothing = F2(0.99,2.0);
-
 	for(int i = 0; i < 9; i++)	{
 		double Q2 = Q2_arr[i];
 
@@ -45,10 +43,10 @@ int main()	{
 		for(int j = 0; j < NX; j++)	{
 			double x = XMIN_arr[i] * std::exp(DLNX * j);
 			
-			QCDORDER::F2ORDER.set(1);
-			double F2nlo	= F2(x,Q2);
-			QCDORDER::F2ORDER.set(2);
-			double F2nnlo	= F2(x,Q2);
+			ORDERALPS		= 1;
+			double F2nlo	= F2(x,Q2, ORDERALPS, NF);
+			ORDERALPS		= 2;
+			double F2nnlo	= F2(x,Q2, ORDERALPS, NF);
 
 			std::cout	<< std::setw(WIDTH) << Q2
 						<< std::setw(WIDTH) << x

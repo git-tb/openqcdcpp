@@ -1,0 +1,15 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000002" href="$structfunc_8h.html#acf0236700b00bcb374259219e1fedc05" title="electromagnetic structure function F2 from photon interaction" alt="" coords="167,5,205,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,78,75,58,107,40,152,23,154,28,109,44,78,63,51,82"/>
+<area shape="rect" id="Node000003" href="$classPdf.html#a130dbc5eba0ed46bfaf26c905ab054d8" title=" " alt="" coords="133,55,239,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,86,119,76,120,81,61,91"/>
+<area shape="rect" id="Node000006" href="$classPdf.html#ae52a54aa198d93db09ca52e5842804e5" title=" " alt="" coords="108,104,264,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="61,94,94,100,94,105,60,99"/>
+<area shape="rect" id="Node000007" href="$classPdf.html#aa1f939474b81f9be514bd126867d3807" title=" " alt="" coords="121,153,251,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="52,103,109,138,128,146,126,151,107,143,50,108"/>
+<area shape="rect" id="Node000004" href="$fortransymbols_8h.html#a939c71da6a3c3c3177430b2e4a1a0303" title=" " alt="" coords="341,31,451,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="239,59,327,49,327,54,240,64"/>
+<area shape="rect" id="Node000005" href="$fortransymbols_8h.html#a2b82e7556cb56914d8a96e866344bdbc" title=" " alt="" coords="312,80,480,105"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="240,71,298,78,298,83,239,76"/>
+</map>

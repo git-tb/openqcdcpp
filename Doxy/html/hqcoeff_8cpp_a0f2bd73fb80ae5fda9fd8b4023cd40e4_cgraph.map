@@ -1,0 +1,7 @@
+<map id="myInterp2D" name="myInterp2D">
+<area shape="rect" id="Node000001" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="5,31,104,56"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="182,5,249,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,33,168,23,169,28,105,38"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="152,55,279,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,48,138,53,138,58,104,53"/>
+</map>

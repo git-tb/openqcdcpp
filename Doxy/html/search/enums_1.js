@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verbosity_0',['VERBOSITY',['../logger_8h.html#ab16e0dc2a4f7533119f355cdb8b42a84',1,'logger.h']]]
+  ['logtype_0',['LOGTYPE',['../logger_8h.html#a9ca6006a59fa53a5cd728fa1efcd4b61',1,'logger.h']]]
 ];

@@ -1,0 +1,15 @@
+<map id="include/flags.h" name="include/flags.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="420,5,536,31"/>
+<area shape="rect" id="Node000002" href="$structfunc_8h.html" title=" " alt="" coords="324,79,475,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="457,42,414,80,410,76,453,38"/>
+<area shape="rect" id="Node000007" href="$flags_8cpp.html" title=" " alt="" coords="499,79,617,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="503,38,547,76,543,80,499,42"/>
+<area shape="rect" id="Node000003" href="$structfunc_8cpp.html" title=" " alt="" coords="5,152,159,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,110,134,154,133,149,334,104"/>
+<area shape="rect" id="Node000004" href="$testF2heavyintegrand_8cpp.html" title=" " alt="" coords="183,152,397,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="372,114,309,154,306,150,369,109"/>
+<area shape="rect" id="Node000005" href="$testF2integrand_8cpp.html" title=" " alt="" coords="421,152,596,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="430,109,492,150,489,154,427,114"/>
+<area shape="rect" id="Node000006" href="$teststructfunc_8cpp.html" title=" " alt="" coords="621,152,783,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="462,104,654,149,652,154,460,110"/>
+</map>

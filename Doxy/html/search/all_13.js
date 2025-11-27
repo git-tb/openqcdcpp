@@ -1,13 +1,18 @@
 var searchData=
 [
-  ['s_0',['S',['../pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996',1,'pdf.h']]],
-  ['savedata_2eh_1',['savedata.h',['../savedata_8h.html',1,'']]],
-  ['sb_2',['SB',['../pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149',1,'pdf.h']]],
-  ['set_3',['set',['../classProtectedObject.html#a29c73c4956b393784a1d02ad4bb84519',1,'ProtectedObject']]],
-  ['setlogfilepath_4',['setLogfilepath',['../classLogger.html#a78d47b8087c21ffcbe869a33db50d3e2',1,'Logger']]],
-  ['spectr_5fjp_5',['spectr_Jp',['../specV2_8cpp.html#a092dd53eb4ec3ed0d3179efe9e304ab8',1,'specV2.cpp']]],
-  ['specv2_2ecpp_6',['specV2.cpp',['../specV2_8cpp.html',1,'']]],
-  ['structfunc_2eh_7',['structfunc.h',['../structfunc_8h.html',1,'']]],
-  ['structfunctest_2ecpp_8',['structfunctest.cpp',['../structfunctest_8cpp.html',1,'']]],
-  ['sumqquark_9',['sumQquark',['../namespaceQCD.html#a9b6128e4e32d2d9f1d7a50ab992fb63e',1,'QCD']]]
+  ['t_0',['T',['../pdf_8h.html#a87f4007a05b777a0c961bafd4a44e31c',1,'pdf.h']]],
+  ['tb_1',['TB',['../pdf_8h.html#a245e5c5d4d2548fd0f85a6ac2ba5d825',1,'pdf.h']]],
+  ['testf2heavyintegrand_2ecpp_2',['testF2heavyintegrand.cpp',['../testF2heavyintegrand_8cpp.html',1,'']]],
+  ['testf2integrand_2ecpp_3',['testF2integrand.cpp',['../testF2integrand_8cpp.html',1,'']]],
+  ['teststructfunc_2ecpp_4',['teststructfunc.cpp',['../teststructfunc_8cpp.html',1,'']]],
+  ['thresha_5fl_5f_5',['thresha_l_',['../fortransymbols_8h.html#ad444ae36f1d4c64d35076a4dbd70c1cf',1,'fortransymbols.h']]],
+  ['thresha_5ft_5f_6',['thresha_t_',['../fortransymbols_8h.html#aff652d44f2d0c915d7e8e5b9bfeeec0b',1,'fortransymbols.h']]],
+  ['threshbar_5fl_5f_7',['threshbar_l_',['../fortransymbols_8h.html#a7dd05929cda5e61cf6f6601f1e4b4d73',1,'fortransymbols.h']]],
+  ['threshbar_5ft_5f_8',['threshbar_t_',['../fortransymbols_8h.html#ac09ba943202aadfef60a1416defa3812',1,'fortransymbols.h']]],
+  ['threshf_5fl_5f_9',['threshf_l_',['../fortransymbols_8h.html#ab4ad2d5773a2743186c97a5b9232dc66',1,'fortransymbols.h']]],
+  ['threshf_5ft_5f_10',['threshf_t_',['../fortransymbols_8h.html#a4423cfd886f395c9aaf47e698d534756',1,'fortransymbols.h']]],
+  ['todo_20list_11',['Todo List',['../todo.html',1,'']]],
+  ['tr_12',['tr',['../structQCDPAR__COMMON.html#a375903e8fe52731c99ded2991ed82d05',1,'QCDPAR_COMMON::tr'],['../namespaceQCD.html#a8f0857c810db097834370830a4d14da6',1,'QCD::TR']]],
+  ['tscale_13',['tscale',['../structFORALPSRENORM__COMMON.html#ae30cbe29bcdb0bd9fc9c7a8485d42434',1,'FORALPSRENORM_COMMON']]],
+  ['two_14',['TWO',['../logger_8h.html#ab16e0dc2a4f7533119f355cdb8b42a84a0f82d86afa0f5dc965c5c15aca58dcfb',1,'logger.h']]]
 ];

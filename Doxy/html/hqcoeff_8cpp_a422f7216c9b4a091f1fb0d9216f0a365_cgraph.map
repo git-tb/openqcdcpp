@@ -1,0 +1,15 @@
+<map id="chT_q_2_1_Hcoupl" name="chT_q_2_1_Hcoupl">
+<area shape="rect" id="Node000001" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (27)" alt="" coords="5,31,148,56"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#ad41caec5018f3b44dfa1f4d6938b9e59" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (22)" alt="" coords="214,5,365,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,32,200,26,200,31,149,37"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#a3c04d1ad79326b72eff975826ee330c1" title=" " alt="" coords="196,55,383,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="149,49,183,53,182,58,148,54"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#afbf32e618df6e4929c5e941c15cc4cab" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (23)" alt="" coords="435,5,525,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,15,421,15,421,21,365,21"/>
+<area shape="rect" id="Node000005" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="431,55,529,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="383,65,417,65,417,70,383,70"/>
+<area shape="rect" id="Node000006" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="607,29,674,55"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="529,57,594,47,594,52,530,62"/>
+<area shape="rect" id="Node000007" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="577,79,704,104"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="530,72,564,77,563,82,529,77"/>
+</map>

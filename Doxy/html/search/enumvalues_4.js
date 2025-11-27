@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warning_0',['WARNING',['../logger_8h.html#a9ca6006a59fa53a5cd728fa1efcd4b61a059e9861e0400dfbe05c98a841f3f96b',1,'logger.h']]]
+  ['info_0',['INFO',['../logger_8h.html#a9ca6006a59fa53a5cd728fa1efcd4b61a551b723eafd6a31d444fcb2f5920fbd3',1,'logger.h']]]
 ];

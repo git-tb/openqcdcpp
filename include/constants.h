@@ -4,11 +4,6 @@
 #include <assert.h>
 #include "protectedobject.h"
 
-namespace QCDORDER	{
-	extern ProtectedObject<int>	NFLOOPS;
-	extern ProtectedObject<int>	F2ORDER;
-};
-
 namespace MATH	{
 	extern const double ZETA2;
 	extern const double ZETA3;
@@ -20,20 +15,17 @@ namespace QCD	{
 	extern const double 	CF;
 	extern const double		CA;
 	extern const double		TR;
-	extern ProtectedObject<int>	NF;
 	extern ProtectedObject<double[6]> QMASSES;
 	extern ProtectedObject<double[6]> QCHARGES;
 
-	/// @brief computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF
-	double sumQi2();
+	/// @brief the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges over nf light flavors
+	double sumQi2(int nf);
 
-	/// @brief computes beta0 depending on the value of QCD::NF
-	/// taken from (Schwartz QFT, eq. 26.97)
-	double beta0();
+	/// @brief QCD beta function, O(alpha_s^2) taken from (Schwartz QFT, eq. 26.97)
+	double beta0(int nf);
 
-	/// @brief computes beta1 depending on the value of QCD::NF
-	/// taken from (Schwartz QFT, eq. 26.98)
-	double beta1();
+	/// @brief QCD beta function, O(alpha_s^3) taken from (Schwartz QFT, eq. 26.98)
+	double beta1(int nf);
 }
 
 namespace PRECISION {

@@ -1,0 +1,18 @@
+<map id="c2q_ns_2_01_plus_exact" name="c2q_ns_2_01_plus_exact">
+<area shape="rect" id="Node000001" title="eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ..." alt="" coords="483,104,665,129"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="335,104,435,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,119,435,119,435,114,469,114"/>
+<area shape="rect" id="Node000003" href="$structfunc_8cpp.html#a4c319327b228b6185e2cd88bf2c4b4f2" title="transformation of F2integrand that samples closer to small z" alt="" coords="106,5,273,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="359,97,325,69,285,44,256,33,258,28,288,40,329,65,362,92"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#ab11cf77595fed93c0944a1e81dd5ab25" title=" " alt="" coords="92,55,287,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="321,103,286,94,241,83,243,77,287,89,323,98"/>
+<area shape="rect" id="Node000006" href="$structfunc_8cpp.html#a64eeaa69975afd512f27d80d18b0d02f" title="transformation of F2integrand that samples closer to large z" alt="" coords="106,104,273,129"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="321,119,273,119,273,114,321,114"/>
+<area shape="rect" id="Node000007" href="$structfunc_8cpp.html#a0aa52c0449b6c8886d2942097ab71bf9" title=" " alt="" coords="92,153,287,179"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="322,135,241,156,240,151,320,130"/>
+<area shape="rect" id="Node000008" href="$testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="162,203,217,228"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="361,141,328,168,288,192,252,206,218,214,216,209,250,201,285,188,325,163,358,137"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="5,55,44,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,37,93,45,45,62,43,57,91,39,118,32"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="123,103,91,94,43,77,45,72,93,89,124,98"/>
+</map>

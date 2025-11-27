@@ -4,12 +4,6 @@
 #include <assert.h>
 #include <cmath>
 
-namespace QCDORDER	{
-	ProtectedObject<int>	NFLOOPS{2};
-	ProtectedObject<int>	F2ORDER{2};
-	#define kordf2 QCDORDER::F2ORDER
-};
-
 namespace MATH	{
 	const double ZETA2	=	M_PI*M_PI/6.;
 	const double ZETA3	=	1.2020569031595942853997381615114499907649862923405;
@@ -22,8 +16,7 @@ namespace QCD	{
 	const double	CA	= 3.0;
 	const double	TR	= 0.5;
 
-	/// @todo Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call!
-	ProtectedObject<int>	NF{3};
+	/// @todo DONE Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call!
 	ProtectedObject<double[6]>	QMASSES{{
 		0,
 		0,
@@ -44,34 +37,28 @@ namespace QCD	{
 
 	/// @brief computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF
 	/// @todo formulate this in terms of QCHARGES
-	double sumQi2()	{
-		assert(3 <= QCD::NF);
-		assert(QCD::NF <= 5);
+	double sumQi2(int nf)	{
+		assert(1 <= nf);
+		assert(nf <= 6);
 
 		double result(0.0);
-
-		if(QCD::NF == 3)
-			result += 4./9. + 1./9. + 1./9.;
-		else if(QCD::NF == 4)
-			result += 4./9. + 1./9. + 1./9. + 4./9.;
-		else if(QCD::NF == 5)
-			result += 4./9. + 1./9. + 1./9. + 4./9. + 1./9.;
+		for(int i = 0; i < nf; i++) result += std::pow(QCD::QCHARGES[i],2);
 		
 		return result;
 	}
 
-	double beta0()	{
-		assert(3 <= QCD::NF);
-		assert(QCD::NF <= 5);
+	double beta0(int nf)	{
+		assert(1 <= nf);
+		assert(nf <= 6);
 		
-		return 11./3. * QCD::CA - 4./3. * QCD::TR * QCD::NF;
+		return 11./3. * QCD::CA - 4./3. * QCD::TR * nf;
 	}
 
-	double beta1()	{
-		assert(3 <= QCD::NF);
-		assert(QCD::NF <= 5);
+	double beta1(int nf)	{
+		assert(1 <= nf);
+		assert(nf <= 6);
 		
-		return 34./3. * QCD::CA * QCD::CA - 20./3. * QCD::CA * QCD::TR * QCD::NF - 4. * QCD::CF * QCD::TR * QCD::NF;
+		return 34./3. * QCD::CA * QCD::CA - 20./3. * QCD::CA * QCD::TR * nf - 4. * QCD::CF * QCD::TR * nf;
 	}
 }
 

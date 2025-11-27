@@ -1,0 +1,9 @@
+<map id="chL_q_2_0_Hcoupl_interp" name="chL_q_2_0_Hcoupl_interp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,192,56"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="240,31,339,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,41,226,41,226,46,192,46"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="417,5,483,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,33,403,23,404,28,339,38"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="387,55,513,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="339,48,373,53,372,58,339,53"/>
+</map>

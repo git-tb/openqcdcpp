@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../classPdf.html#a7b67a151926162e87e7248c1db99b580',1,'Pdf']]],
-  ['intargs_1',['intargs',['../structintargs.html#af761e5b7b7935ff131f473ee9d08fc4c',1,'intargs::intargs()=delete'],['../structintargs.html#ac8632ff312ff6576fb2bf1a2af824ef9',1,'intargs::intargs(const std::function&lt; double(double)&gt; &amp;func_)'],['../structintargs.html#af761e5b7b7935ff131f473ee9d08fc4c',1,'intargs::intargs()=delete'],['../structintargs.html#a8b5d47af3c4d8458f36f97dce3d9692b',1,'intargs::intargs(std::function&lt; double(double)&gt; &amp;func_, double &amp;func1_)'],['../structintargs.html#af761e5b7b7935ff131f473ee9d08fc4c',1,'intargs::intargs()=delete'],['../structintargs.html#ae28fe7f87ae7c26148445058703c406f',1,'intargs::intargs(double pT_, double m_, std::function&lt; std::complex&lt; double &gt;(double)&gt; func_, std::function&lt; std::complex&lt; double &gt;(double)&gt; Dfunc_, freezeoutFunctions fo_, bool anti_)']]],
-  ['integrate_2',['integrate',['../integrate_8h.html#acb6e82bad718ff0e07895569bad0af6f',1,'integrate.h']]],
-  ['integrateplus_3',['integratePlus',['../plusdist_8cpp.html#a40ea5f70678c5e6fc670097be6408472',1,'plusdist.cpp']]]
+  ['hpl1_0',['HPL1',['../chaplin_8h.html#aace5b8fb8a21c9f2091043a34ccb783d',1,'chaplin.h']]],
+  ['hpl1_5f_1',['hpl1_',['../chaplin_8h.html#a30e2df057ab766e2838b8762957eb0a5',1,'chaplin.h']]],
+  ['hpl2_2',['HPL2',['../chaplin_8h.html#ab5340425c31d2f2ab20f8b281db2c3f1',1,'chaplin.h']]],
+  ['hpl2_5f_3',['hpl2_',['../chaplin_8h.html#a3ba3e7e3cf17242e56dc59d885bcac68',1,'chaplin.h']]],
+  ['hpl3_4',['HPL3',['../chaplin_8h.html#aac5f579574c1c43d98622e0244adf526',1,'chaplin.h']]],
+  ['hpl3_5f_5',['hpl3_',['../chaplin_8h.html#a6b82006de58e1f42bf4dd1fa5762d2af',1,'chaplin.h']]],
+  ['hpl4_6',['HPL4',['../chaplin_8h.html#a5ebc3d9d3cb827d62f747d8661d3b253',1,'chaplin.h']]],
+  ['hpl4_5f_7',['hpl4_',['../chaplin_8h.html#ad2b190c91221c6832d8628adef100f15',1,'chaplin.h']]]
 ];

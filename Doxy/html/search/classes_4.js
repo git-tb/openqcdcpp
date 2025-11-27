@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pdf_0',['Pdf',['../classPdf.html',1,'']]],
-  ['protectedobject_1',['ProtectedObject',['../classProtectedObject.html',1,'']]]
+  ['mycomplex_0',['mycomplex',['../structmycomplex.html',1,'']]]
 ];

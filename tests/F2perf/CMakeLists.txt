@@ -13,6 +13,7 @@ FetchContent_MakeAvailable(openQCDpplib)
 include_directories(
 	/home/tobiasb/OneDrive/projects/PDFcode/openqcd++/include
 	/home/tobiasb/OneDrive/projects/PDFcode/LHAPDF-6.5.5/build/include
+	/usr/include/eigen3
 )
 
 add_executable(test)

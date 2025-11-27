@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['r_0',['r',['../structfreezeoutFunctions.html#a180e1ed9fb6c6e7bef81db72a73caefa',1,'freezeoutFunctions']]]
+  ['nb0_0',['nb0',['../structFORF2CHARM__COMMON.html#ae360992089e59104dc50a5395a849c4b',1,'FORF2CHARM_COMMON']]],
+  ['nc_1',['nc',['../structQCDPAR__COMMON.html#ae357f706bc94d506803b0b09acbabba7',1,'QCDPAR_COMMON']]],
+  ['nchi_2',['Nchi',['../hqcoeff_8h.html#ac6544a6a95fed4e9d14de9d1a4517784',1,'hqcoeff.h']]],
+  ['neta_3',['Neta',['../hqcoeff_8h.html#a2a1f52efc845279e37292bfcdd042f27',1,'hqcoeff.h']]],
+  ['nf_4',['nf',['../structQCDPAR__COMMON.html#add99e826d3636b28e7e61696285371f1',1,'QCDPAR_COMMON::nf'],['../namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4',1,'QCD::NF']]],
+  ['nf2hq_5',['nf2hq',['../structFORPRECCONTROL__COMMON.html#a4f22aef7089969928fc05713945dadbb',1,'FORPRECCONTROL_COMMON']]],
+  ['nf2qcd1_6',['nf2qcd1',['../structFORPRECCONTROL__COMMON.html#a8faf13de0ef30e6223130522be2e8cb4',1,'FORPRECCONTROL_COMMON']]],
+  ['nf2qcd2_7',['nf2qcd2',['../structFORPRECCONTROL__COMMON.html#a50512ee8904567acfa5ff798fa771afb',1,'FORPRECCONTROL_COMMON']]],
+  ['nf3hq_8',['nf3hq',['../structFORPRECCONTROL__COMMON.html#ad8c99a662b6c0fb31aa82bc758141c6d',1,'FORPRECCONTROL_COMMON']]],
+  ['nf3qcd_9',['nf3qcd',['../structFORPRECCONTROL__COMMON.html#aa80f0d20cc853c43c2709a7b1b0d005f',1,'FORPRECCONTROL_COMMON']]],
+  ['nfc_10',['nfc',['../structQCDPAR__COMMON.html#abb133398aabff61aeb05dd594b0d2bca',1,'QCDPAR_COMMON']]],
+  ['nfe_11',['nfe',['../structQCDPAR__COMMON.html#aebeeffc9778516aeb2b848a12f63704b',1,'QCDPAR_COMMON']]],
+  ['nfeff_12',['nfeff',['../structFORALPSRENORM__COMMON.html#ad95de61388bbbed420df80cc028f612f',1,'FORALPSRENORM_COMMON']]],
+  ['nflhq_13',['nflhq',['../structFORPRECCONTROL__COMMON.html#a9b410d98d2e3ea2bc8d9bbcaabe0d42b',1,'FORPRECCONTROL_COMMON']]],
+  ['nfloops_14',['NFLOOPS',['../namespaceQCDORDER.html#a13848b2cf8d410bcb1d3a71b9d30ffbd',1,'QCDORDER']]],
+  ['nflqcd_15',['nflqcd',['../structFORPRECCONTROL__COMMON.html#afe1cb01cf490be9195cfba9a4b093e19',1,'FORPRECCONTROL_COMMON']]],
+  ['ni0_16',['ni0',['../structFORF2CHARM__COMMON.html#a84bde1673d08d589c173284c2fd883b3',1,'FORF2CHARM_COMMON']]],
+  ['nmthq_17',['nmthq',['../structFORPRECCONTROL__COMMON.html#ade21b52eabef20edcaa1ec0c4c2b21e9',1,'FORPRECCONTROL_COMMON']]],
+  ['nq0_18',['nq0',['../structFORF2CHARM__COMMON.html#a48294fad7dfdc52d0b1206594608d866',1,'FORF2CHARM_COMMON']]],
+  ['nsmgrid_19',['nsmgrid',['../structGRIDSET__COMMON.html#ad6bb4dad40de288b5c51a1f067b929c1',1,'GRIDSET_COMMON']]],
+  ['nspgrid_20',['nspgrid',['../structGRIDSET__COMMON.html#a4ebdf7b75ae48afc76790265c60ed39f',1,'GRIDSET_COMMON']]],
+  ['nt0_21',['nt0',['../structFORF2CHARM__COMMON.html#a9f781ada62efaa60235e2b797f0fb6fc',1,'FORF2CHARM_COMMON']]],
+  ['nxmgrid_22',['nxmgrid',['../structGRIDSET__COMMON.html#a2ecb9bbec60114a0cf923fff639138a2',1,'GRIDSET_COMMON']]],
+  ['nxpgrid_23',['nxpgrid',['../structGRIDSET__COMMON.html#ad777eb412a334c6c6cabbe8fe5129f2f',1,'GRIDSET_COMMON']]]
 ];

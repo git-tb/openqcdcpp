@@ -22,7 +22,8 @@ int main()	{
 	int WIDTH(22);
 	int PREC(10);
 
-	QCDORDER::F2ORDER.set(1);
+	int ORDERALPS	= 1;
+	int NLIGHT		= 3;
 
 	std::cout << std::scientific << std::setprecision(PREC);
 	for(int iq2 = 0; iq2 < NQ2; iq2++)	{
@@ -44,10 +45,8 @@ int main()	{
 				double logz	= LOGZMIN + iz * DLOGZ;
 				double z = std::pow(10, logz);
 
-				QCDORDER::F2ORDER.set(1);
-				double F2heavyintegrand_nlo	= F2heavyintegrand(z, Q2, x, 3, Q2+4*std::pow(QCD::QMASSES[3],2));
-				QCDORDER::F2ORDER.set(1);
-				double F2heavyintegrand_nnlo	= F2heavyintegrand(z, Q2, x, 3, Q2+4*std::pow(QCD::QMASSES[3],2));
+				double F2heavyintegrand_nlo	= F2heavyintegrand(z, Q2, x, ORDERALPS, NLIGHT, Q2+4*std::pow(QCD::QMASSES[3],2));
+				double F2heavyintegrand_nnlo	= F2heavyintegrand(z, Q2, x, ORDERALPS, NLIGHT, Q2+4*std::pow(QCD::QMASSES[3],2));
 
 				std::cout	<< std::setw(WIDTH) << x
 							<< std::setw(WIDTH) << z

@@ -78,19 +78,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>&lt; anti bottom  
+<p>The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtime. Once the pdf is initialized via calls to LHAPDF the use simply calls <a class="el" href="hoppettest_8cpp.html#af88a1313a7c034931695c9308b9db5e4">pdf(...)</a>. The advantage of having a singleton class for that is that there is no global variable shared across files that needs to be created somewhere, while still having a unique object that encapsulates all the pdf info.  
  <a href="classPdf.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="pdf_8h_source.html">pdf.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b67a151926162e87e7248c1db99b580" id="r_a7b67a151926162e87e7248c1db99b580"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a7b67a151926162e87e7248c1db99b580">initialize</a> (const std::string <a class="el" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>, const int <a class="el" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>)</td></tr>
-<tr class="separator:a7b67a151926162e87e7248c1db99b580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80fb579ab586ba61596bb084330d0ac6" id="r_a80fb579ab586ba61596bb084330d0ac6"><td class="memItemLeft" align="right" valign="top">static LHAPDF::PDF *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a80fb579ab586ba61596bb084330d0ac6">get</a> ()</td></tr>
-<tr class="separator:a80fb579ab586ba61596bb084330d0ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40a29328f79a7b6e776afa322205bd9f" id="r_a40a29328f79a7b6e776afa322205bd9f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a40a29328f79a7b6e776afa322205bd9f">printLHAPDFinfo</a> ()</td></tr>
-<tr class="separator:a40a29328f79a7b6e776afa322205bd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130dbc5eba0ed46bfaf26c905ab054d8" id="r_a130dbc5eba0ed46bfaf26c905ab054d8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a130dbc5eba0ed46bfaf26c905ab054d8">initialize</a> (const std::string <a class="el" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>, const int <a class="el" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>)</td></tr>
+<tr class="separator:a130dbc5eba0ed46bfaf26c905ab054d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335a54119cfecc6abc92b87b83f2e0dc" id="r_a335a54119cfecc6abc92b87b83f2e0dc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a335a54119cfecc6abc92b87b83f2e0dc">destroy</a> ()</td></tr>
+<tr class="separator:a335a54119cfecc6abc92b87b83f2e0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4d43644d4511663d9e07e50180b163" id="r_a4b4d43644d4511663d9e07e50180b163"><td class="memItemLeft" align="right" valign="top">static LHAPDF::PDF *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a4b4d43644d4511663d9e07e50180b163">get</a> ()</td></tr>
+<tr class="separator:a4b4d43644d4511663d9e07e50180b163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad64e5be407fbdc2f0aa8d03236ef4b2" id="r_aad64e5be407fbdc2f0aa8d03236ef4b2"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#aad64e5be407fbdc2f0aa8d03236ef4b2">alphas</a> (double Q2)</td></tr>
+<tr class="separator:aad64e5be407fbdc2f0aa8d03236ef4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c7cd63fe6a80ec50640b0e7352790b" id="r_a22c7cd63fe6a80ec50640b0e7352790b"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">xf</a> (int pID, double x, double Q2)</td></tr>
+<tr class="separator:a22c7cd63fe6a80ec50640b0e7352790b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6065a88d8acf0096cceef987840bc0a6" id="r_a6065a88d8acf0096cceef987840bc0a6"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a6065a88d8acf0096cceef987840bc0a6">xfiQi2sum</a> (double x, double Q2)</td></tr>
+<tr class="memdesc:a6065a88d8acf0096cceef987840bc0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">$\sum_i Q_i^2 x f(x,Q^2)$  <br /></td></tr>
+<tr class="separator:a6065a88d8acf0096cceef987840bc0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b7d71ae024d46fff26cabedfe73da8" id="r_a16b7d71ae024d46fff26cabedfe73da8"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a16b7d71ae024d46fff26cabedfe73da8">xfiSingletSum</a> (double x, double Q2)</td></tr>
+<tr class="memdesc:a16b7d71ae024d46fff26cabedfe73da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">x times singlet combination of quark PDFs  <br /></td></tr>
+<tr class="separator:a16b7d71ae024d46fff26cabedfe73da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52a54aa198d93db09ca52e5842804e5" id="r_ae52a54aa198d93db09ca52e5842804e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#ae52a54aa198d93db09ca52e5842804e5">printLHAPDFinfo</a> ()</td></tr>
+<tr class="separator:ae52a54aa198d93db09ca52e5842804e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f939474b81f9be514bd126867d3807" id="r_aa1f939474b81f9be514bd126867d3807"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#aa1f939474b81f9be514bd126867d3807">setSampling</a> (<a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">SAMPLINGMETHOD</a> method)</td></tr>
+<tr class="separator:aa1f939474b81f9be514bd126867d3807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -113,12 +127,13 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:a3055851faf0d02ae8644d2cce91d2324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a746b372142b82e5a6a2bcf49662b3104" id="r_a746b372142b82e5a6a2bcf49662b3104"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a></td></tr>
 <tr class="separator:a746b372142b82e5a6a2bcf49662b3104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c48b07b7ca704d4dd1af06b6a9cdad0" id="r_a6c48b07b7ca704d4dd1af06b6a9cdad0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">SAMPLINGMETHOD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">samplingmethod</a> {<a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>}</td></tr>
+<tr class="separator:a6c48b07b7ca704d4dd1af06b6a9cdad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt; anti bottom </p>
-<p>The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtime. Once the pdf is initialized via calls to LHAPDF the use simply calls pdf(...). The advantage of having a singleton class for that is that there is no global variable shared across files that needs to be created somewhere, while still having a unique object that encapsulates all the pdf info. </p>
+<div class="textblock"><p>The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtime. Once the pdf is initialized via calls to LHAPDF the use simply calls <a class="el" href="hoppettest_8cpp.html#af88a1313a7c034931695c9308b9db5e4">pdf(...)</a>. The advantage of having a singleton class for that is that there is no global variable shared across files that needs to be created somewhere, while still having a unique object that encapsulates all the pdf info. </p>
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00028">28</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00053">53</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad69063e10582546ed7fec57ba5bf2bc5" name="ad69063e10582546ed7fec57ba5bf2bc5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad69063e10582546ed7fec57ba5bf2bc5">&#9670;&#160;</a></span>Pdf() <span class="overload">[1/2]</span></h2>
@@ -199,8 +214,8 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a80fb579ab586ba61596bb084330d0ac6" name="a80fb579ab586ba61596bb084330d0ac6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80fb579ab586ba61596bb084330d0ac6">&#9670;&#160;</a></span>get()</h2>
+<a id="aad64e5be407fbdc2f0aa8d03236ef4b2" name="aad64e5be407fbdc2f0aa8d03236ef4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad64e5be407fbdc2f0aa8d03236ef4b2">&#9670;&#160;</a></span>alphas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +224,70 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LHAPDF::PDF * Pdf::get </td>
+          <td class="memname">double Pdf::alphas </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Q2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>This always samples the three flavor <a class="el" href="classPdf.html" title="The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtim...">Pdf</a> from openQCDrad </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00041">41</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                            {</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>) {</div>
+<div class="line"><span class="lineno">   43</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Initialize PDF object before using it!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   44</span>        abort();</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">samplingmethod</a> == <a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>)    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>-&gt;alphasQ2(Q2);</div>
+<div class="line"><span class="lineno">   49</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">samplingmethod</a> == <a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a>) {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a>(0, 0.1, Q2, <span class="comment">/*kschemepdf=*/</span>0);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;WARNING: alphas sampling method is undefined!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> -1e10;</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aclassPdf_html_a6c48b07b7ca704d4dd1af06b6a9cdad0"><div class="ttname"><a href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">Pdf::samplingmethod</a></div><div class="ttdeci">static SAMPLINGMETHOD samplingmethod</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00104">pdf.h:104</a></div></div>
+<div class="ttc" id="aclassPdf_html_aeac85db4522d6a4b70824f64e398c5ca"><div class="ttname"><a href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">Pdf::lhapdfobject</a></div><div class="ttdeci">static LHAPDF::PDF * lhapdfobject</div><div class="ttdoc">With &quot;inline&quot; we dont need to define the members elsewhere (in some .cpp file).</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00101">pdf.h:101</a></div></div>
+<div class="ttc" id="apdf_8h_html_a14bf67cdb9f9b37c6c440904ed983e78"><div class="ttname"><a href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a></div><div class="ttdeci">double xqg(int iq, double xx, double q2, int kp)</div><div class="ttdoc">add here the PDF sampling functionality from openQCDrad such that we can compare predicitions</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00006">pdf.cpp:6</a></div></div>
+<div class="ttc" id="apdf_8h_html_ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d"><div class="ttname"><a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a></div><div class="ttdeci">@ fromLHAPDF</div><div class="ttdoc">use LHAPDFs sampling method xfxQ2</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00042">pdf.h:42</a></div></div>
+<div class="ttc" id="apdf_8h_html_ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b"><div class="ttname"><a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a></div><div class="ttdeci">@ fromOPENQCDRAD</div><div class="ttdoc">use openQCDrads sampling method xqg</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00044">pdf.h:43</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h_source.html#l00042">fromLHAPDF</a>, <a class="el" href="pdf_8h_source.html#l00043">fromOPENQCDRAD</a>, <a class="el" href="pdf_8h_source.html#l00101">lhapdfobject</a>, <a class="el" href="pdf_8h_source.html#l00104">samplingmethod</a>, and <a class="el" href="pdf_8cpp_source.html#l00006">xqg()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_aad64e5be407fbdc2f0aa8d03236ef4b2_cgraph.svg" width="300" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_aad64e5be407fbdc2f0aa8d03236ef4b2_icgraph.svg" width="622" height="264"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a335a54119cfecc6abc92b87b83f2e0dc" name="a335a54119cfecc6abc92b87b83f2e0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a335a54119cfecc6abc92b87b83f2e0dc">&#9670;&#160;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pdf::destroy </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -217,31 +295,23 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00037">37</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                       {</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span>(not <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>) {</div>
-<div class="line"><span class="lineno">   39</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Initialize PDF object before using it!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   40</span>                abort();</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>;</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="ttc" id="aclassPdf_html_aeac85db4522d6a4b70824f64e398c5ca"><div class="ttname"><a href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">Pdf::lhapdfobject</a></div><div class="ttdeci">static LHAPDF::PDF * lhapdfobject</div><div class="ttdoc">With &quot;inline&quot; we dont need to define the members elsewhere (in some .cpp file).</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00078">pdf.h:78</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a80fb579ab586ba61596bb084330d0ac6_icgraph.svg" width="667" height="160"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00027">27</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                    {</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>;</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a> = NULL;</div>
+<div class="line"><span class="lineno">   30</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h_source.html#l00101">lhapdfobject</a>.</p>
 
 </div>
 </div>
-<a id="a7b67a151926162e87e7248c1db99b580" name="a7b67a151926162e87e7248c1db99b580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b67a151926162e87e7248c1db99b580">&#9670;&#160;</a></span>initialize()</h2>
+<a id="a4b4d43644d4511663d9e07e50180b163" name="a4b4d43644d4511663d9e07e50180b163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4d43644d4511663d9e07e50180b163">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +320,43 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Pdf::initialize </td>
+          <td class="memname">LHAPDF::PDF * Pdf::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00033">33</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                    {</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>) {</div>
+<div class="line"><span class="lineno">   35</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Initialize PDF object before using it!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   36</span>        abort();</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h_source.html#l00101">lhapdfobject</a>.</p>
+
+</div>
+</div>
+<a id="a130dbc5eba0ed46bfaf26c905ab054d8" name="a130dbc5eba0ed46bfaf26c905ab054d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130dbc5eba0ed46bfaf26c905ab054d8">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pdf::initialize </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>pdfname</em>, </td>
@@ -269,24 +375,41 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>...in case openQCDrad code should be used...</p>
+<p>I think there is some funny business going on in openQCDrads "initgridconst" function and that the sampling is strongly affected by some artificial threshold in the q2 grid. Let's check this: In openQCDrad this threshold is at Q2=9. Change it so some other value and see if the benchmarks become worse at this value.</p>
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00030">30</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                            {</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keyword">delete</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>;</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a> = LHAPDF::mkPDF(<a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>, <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>);</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">Pdf::pdfname</a> = <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>;</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">Pdf::pdfmem</a> = <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="ttc" id="aclassPdf_html_a3055851faf0d02ae8644d2cce91d2324"><div class="ttname"><a href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">Pdf::pdfname</a></div><div class="ttdeci">static std::string pdfname</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00079">pdf.h:79</a></div></div>
-<div class="ttc" id="aclassPdf_html_a746b372142b82e5a6a2bcf49662b3104"><div class="ttname"><a href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">Pdf::pdfmem</a></div><div class="ttdeci">static int pdfmem</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00080">pdf.h:80</a></div></div>
-</div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00010">10</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                                {</div>
+<div class="line"><span class="lineno">   11</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>;</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a> = LHAPDF::mkPDF(<a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>, <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>);</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">Pdf::pdfname</a> = <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>;</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">Pdf::pdfmem</a> = <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>;</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_function" href="fortransymbols_8h.html#a939c71da6a3c3c3177430b2e4a1a0303">initgridconst_</a>();</div>
+<div class="line"><span class="lineno">   23</span>    <span class="comment">// for(auto&amp; v: gridset_.q2ini) v=12;</span></div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_function" href="fortransymbols_8h.html#a2b82e7556cb56914d8a96e866344bdbc">mypdffillgrid_witharg_</a>(<a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>.c_str(), <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a>.length());</div>
+<div class="line"><span class="lineno">   25</span>}</div>
+<div class="ttc" id="aclassPdf_html_a3055851faf0d02ae8644d2cce91d2324"><div class="ttname"><a href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">Pdf::pdfname</a></div><div class="ttdeci">static std::string pdfname</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00102">pdf.h:102</a></div></div>
+<div class="ttc" id="aclassPdf_html_a746b372142b82e5a6a2bcf49662b3104"><div class="ttname"><a href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">Pdf::pdfmem</a></div><div class="ttdeci">static int pdfmem</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00103">pdf.h:103</a></div></div>
+<div class="ttc" id="afortransymbols_8h_html_a2b82e7556cb56914d8a96e866344bdbc"><div class="ttname"><a href="fortransymbols_8h.html#a2b82e7556cb56914d8a96e866344bdbc">mypdffillgrid_witharg_</a></div><div class="ttdeci">void mypdffillgrid_witharg_(const char *arg, int arg_len)</div></div>
+<div class="ttc" id="afortransymbols_8h_html_a939c71da6a3c3c3177430b2e4a1a0303"><div class="ttname"><a href="fortransymbols_8h.html#a939c71da6a3c3c3177430b2e4a1a0303">initgridconst_</a></div><div class="ttdeci">void initgridconst_()</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="fortransymbols_8h.html#a939c71da6a3c3c3177430b2e4a1a0303">initgridconst_()</a>, <a class="el" href="pdf_8h_source.html#l00101">lhapdfobject</a>, <a class="el" href="fortransymbols_8h.html#a2b82e7556cb56914d8a96e866344bdbc">mypdffillgrid_witharg_()</a>, <a class="el" href="pdf_8h_source.html#l00103">pdfmem</a>, and <a class="el" href="pdf_8h_source.html#l00102">pdfname</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a130dbc5eba0ed46bfaf26c905ab054d8_cgraph.svg" width="334" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a7b67a151926162e87e7248c1db99b580_icgraph.svg" width="220" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a130dbc5eba0ed46bfaf26c905ab054d8_icgraph.svg" width="220" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -317,8 +440,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a40a29328f79a7b6e776afa322205bd9f" name="a40a29328f79a7b6e776afa322205bd9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40a29328f79a7b6e776afa322205bd9f">&#9670;&#160;</a></span>printLHAPDFinfo()</h2>
+<a id="ae52a54aa198d93db09ca52e5842804e5" name="ae52a54aa198d93db09ca52e5842804e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52a54aa198d93db09ca52e5842804e5">&#9670;&#160;</a></span>printLHAPDFinfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +450,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Pdf::printLHAPDFinfo </td>
+          <td class="memname">void Pdf::printLHAPDFinfo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -335,38 +458,303 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00046">46</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                        {</div>
-<div class="line"><span class="lineno">   47</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ LHAPDF paths: &quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; p : LHAPDF::paths())</div>
-<div class="line"><span class="lineno">   49</span>                std::cout &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">   50</span>            std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   51</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ available PDFs: &quot;</span>;</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; s : LHAPDF::availablePDFSets())</div>
-<div class="line"><span class="lineno">   53</span>                std::cout &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">   54</span>            std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   55</span>            </div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>)    {</div>
-<div class="line"><span class="lineno">   57</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ currently loaded PDFset:\n&quot;</span> &lt;&lt; <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a> &lt;&lt; <span class="stringliteral">&quot; (mem: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   58</span>                <span class="comment">// for(const auto key: lhapdfobject-&gt;info().keys()) std::cout &lt;&lt; &quot;@@@\t&quot; &lt;&lt; key &lt;&lt; &quot;\t\t&quot; &lt;&lt; lhapdfobject-&gt;info().get_entry(key) &lt;&lt; std::endl;</span></div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>                <span class="comment">// std::cout &lt;&lt; &quot;@@@ available flavors in current pdf: &quot;;</span></div>
-<div class="line"><span class="lineno">   61</span>                <span class="comment">// for(int pid : lhapdfobject-&gt;flavors())   </span></div>
-<div class="line"><span class="lineno">   62</span>                <span class="comment">//  std::cout &lt;&lt; pid &lt;&lt; &quot;(&quot; &lt;&lt; LHAPDF::to_str(pid) &lt;&lt; &quot;), &quot;;</span></div>
-<div class="line"><span class="lineno">   63</span>                <span class="comment">// std::cout &lt;&lt; std::endl;</span></div>
-<div class="line"><span class="lineno">   64</span>            } <span class="keywordflow">else</span>  {</div>
-<div class="line"><span class="lineno">   65</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ currently no PDFset is loaded!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-</div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00093">93</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                            {</div>
+<div class="line"><span class="lineno">   94</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ LHAPDF paths: &quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; p : LHAPDF::paths())</div>
+<div class="line"><span class="lineno">   96</span>        std::cout &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   98</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ available PDFs: &quot;</span>;</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; s : LHAPDF::availablePDFSets())</div>
+<div class="line"><span class="lineno">  100</span>        std::cout &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno">  101</span>    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  102</span>    </div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>)    {</div>
+<div class="line"><span class="lineno">  104</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ currently loaded PDFset:\n&quot;</span> &lt;&lt; <a class="code hl_variable" href="classPdf.html#a3055851faf0d02ae8644d2cce91d2324">pdfname</a> &lt;&lt; <span class="stringliteral">&quot; (mem: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;key: <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>-&gt;info().keys()) std::cout &lt;&lt; <span class="stringliteral">&quot;@@@\t&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span> &lt;&lt; <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>-&gt;info().get_entry(key) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  106</span>    } <span class="keywordflow">else</span>  {</div>
+<div class="line"><span class="lineno">  107</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;@@@ currently no PDFset is loaded!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h_source.html#l00101">lhapdfobject</a>, <a class="el" href="pdf_8h_source.html#l00103">pdfmem</a>, and <a class="el" href="pdf_8h_source.html#l00102">pdfname</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a40a29328f79a7b6e776afa322205bd9f_icgraph.svg" width="270" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_ae52a54aa198d93db09ca52e5842804e5_icgraph.svg" width="270" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa1f939474b81f9be514bd126867d3807" name="aa1f939474b81f9be514bd126867d3807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f939474b81f9be514bd126867d3807">&#9670;&#160;</a></span>setSampling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pdf::setSampling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">SAMPLINGMETHOD</a>&#160;</td>
+          <td class="paramname"><em>method</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00111">111</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                            {</div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_variable" href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">samplingmethod</a> = method;</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h_source.html#l00104">samplingmethod</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_aa1f939474b81f9be514bd126867d3807_icgraph.svg" width="244" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a22c7cd63fe6a80ec50640b0e7352790b" name="a22c7cd63fe6a80ec50640b0e7352790b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c7cd63fe6a80ec50640b0e7352790b">&#9670;&#160;</a></span>xf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pdf::xf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Q2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>This always samples the three flavor <a class="el" href="classPdf.html" title="The idea of this class is to create a singleton, i.e. a class that can only have 1 instance at runtim...">Pdf</a> from openQCDrad </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00058">58</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>                                            {</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(not <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>) {</div>
+<div class="line"><span class="lineno">   60</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Initialize PDF object before using it!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   61</span>        abort();</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">samplingmethod</a> == <a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>)    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classPdf.html#aeac85db4522d6a4b70824f64e398c5ca">lhapdfobject</a>-&gt;xfxQ2(pID, x, Q2);</div>
+<div class="line"><span class="lineno">   66</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPdf.html#a6c48b07b7ca704d4dd1af06b6a9cdad0">samplingmethod</a> == <a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a>) {</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span>(pID == <a class="code hl_function" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G</a> || pID == 0) <span class="keywordflow">return</span> <a class="code hl_function" href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a>(1,x,Q2,<a class="code hl_variable" href="classPdf.html#a746b372142b82e5a6a2bcf49662b3104">pdfmem</a>);</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">int</span> idx = 2 * std::abs(pID) + (pID &lt; 0 ? 1 : 0);</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a>(idx, x, Q2, <span class="comment">/*kschemepdf=*/</span>0);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;WARNING: pdf sampling method is undefined!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">return</span> -1e10;</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+<div class="ttc" id="apdf_8h_html_ac19fd006bb19d7628960884906ae33c5"><div class="ttname"><a href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G</a></div><div class="ttdeci">const int G(21)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h_source.html#l00042">fromLHAPDF</a>, <a class="el" href="pdf_8h_source.html#l00043">fromOPENQCDRAD</a>, <a class="el" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G()</a>, <a class="el" href="pdf_8h_source.html#l00101">lhapdfobject</a>, <a class="el" href="pdf_8h_source.html#l00103">pdfmem</a>, <a class="el" href="pdf_8h_source.html#l00104">samplingmethod</a>, and <a class="el" href="pdf_8cpp_source.html#l00006">xqg()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>, <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>, <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>, <a class="el" href="pdf_8cpp_source.html#l00077">xfiQi2sum()</a>, and <a class="el" href="pdf_8cpp_source.html#l00085">xfiSingletSum()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a22c7cd63fe6a80ec50640b0e7352790b_cgraph.svg" width="270" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a22c7cd63fe6a80ec50640b0e7352790b_icgraph.svg" width="779" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6065a88d8acf0096cceef987840bc0a6" name="a6065a88d8acf0096cceef987840bc0a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6065a88d8acf0096cceef987840bc0a6">&#9670;&#160;</a></span>xfiQi2sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pdf::xfiQi2sum </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Q2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>$\sum_i Q_i^2 x f(x,Q^2)$ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">Q2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">check whether a requested flavor pid is actually available in the pdf set </p>
+<p class="enddd">variable flavor number </p>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00077">77</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>                                            {</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordtype">double</span> result(0.0);</div>
+<div class="line"><span class="lineno">   79</span>    result +=   4.0/9.0 * ( <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB</a>, x, Q2) ) + \</div>
+<div class="line"><span class="lineno">   80</span>            +   1.0/9.0 * ( <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB</a>, x, Q2) ) + \</div>
+<div class="line"><span class="lineno">   81</span>            +   1.0/9.0 * ( <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB</a>, x, Q2) );</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+<div class="ttc" id="aclassPdf_html_a22c7cd63fe6a80ec50640b0e7352790b"><div class="ttname"><a href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a></div><div class="ttdeci">static double xf(int pID, double x, double Q2)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00058">pdf.cpp:58</a></div></div>
+<div class="ttc" id="apdf_8h_html_a22cfa0441665fad14b723bd2b14ec5d8"><div class="ttname"><a href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB</a></div><div class="ttdeci">const int UB(-2)</div><div class="ttdoc">anti up</div></div>
+<div class="ttc" id="apdf_8h_html_a40da31d93d3ca1e11efacfe87a364996"><div class="ttname"><a href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S</a></div><div class="ttdeci">const int S(3)</div><div class="ttdoc">strange</div></div>
+<div class="ttc" id="apdf_8h_html_a62b42e36a523520ca8494d451d44c3ac"><div class="ttname"><a href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U</a></div><div class="ttdeci">const int U(2)</div><div class="ttdoc">up</div></div>
+<div class="ttc" id="apdf_8h_html_a67a23f93417dbc43bb4f606cd9f4e33e"><div class="ttname"><a href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D</a></div><div class="ttdeci">const int D(1)</div><div class="ttdoc">down</div></div>
+<div class="ttc" id="apdf_8h_html_a7fb4dfc7dfed3e505bab1f893062a149"><div class="ttname"><a href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB</a></div><div class="ttdeci">const int SB(-3)</div><div class="ttdoc">anti strange</div></div>
+<div class="ttc" id="apdf_8h_html_ad53d91f9bcb1537b9d08d3f240b77857"><div class="ttname"><a href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB</a></div><div class="ttdeci">const int DB(-1)</div><div class="ttdoc">anti down</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D()</a>, <a class="el" href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB()</a>, <a class="el" href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S()</a>, <a class="el" href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB()</a>, <a class="el" href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U()</a>, <a class="el" href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">xf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a6065a88d8acf0096cceef987840bc0a6_cgraph.svg" width="434" height="356"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a6065a88d8acf0096cceef987840bc0a6_icgraph.svg" width="644" height="263"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a16b7d71ae024d46fff26cabedfe73da8" name="a16b7d71ae024d46fff26cabedfe73da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b7d71ae024d46fff26cabedfe73da8">&#9670;&#160;</a></span>xfiSingletSum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Pdf::xfiSingletSum </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Q2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>x times singlet combination of quark PDFs </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">Q2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>variable flavor number </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pdf_8cpp_source.html#l00085">85</a> of file <a class="el" href="pdf_8cpp_source.html">pdf.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                {</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordtype">double</span> result(0.0);</div>
+<div class="line"><span class="lineno">   87</span>    result +=   ( <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB</a>, x, Q2) ) + \</div>
+<div class="line"><span class="lineno">   88</span>            +   ( <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB</a>, x, Q2) ) + \</div>
+<div class="line"><span class="lineno">   89</span>            +   ( <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S</a>, x, Q2) + <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB</a>, x, Q2) );</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e">D()</a>, <a class="el" href="pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857">DB()</a>, <a class="el" href="pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996">S()</a>, <a class="el" href="pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149">SB()</a>, <a class="el" href="pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac">U()</a>, <a class="el" href="pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8">UB()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">xf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a16b7d71ae024d46fff26cabedfe73da8_cgraph.svg" width="458" height="356"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPdf_a16b7d71ae024d46fff26cabedfe73da8_icgraph.svg" width="668" height="234"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -394,9 +782,11 @@ Here is the caller graph for this function:</div>
 
 <p>With "inline" we dont need to define the members elsewhere (in some .cpp file). </p>
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00078">78</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>{<span class="keyword">nullptr</span>};</div>
+<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00101">101</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>{<span class="keyword">nullptr</span>};</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00041">alphas()</a>, <a class="el" href="pdf_8cpp_source.html#l00027">destroy()</a>, <a class="el" href="pdf_8cpp_source.html#l00033">get()</a>, <a class="el" href="pdf_8cpp_source.html#l00010">initialize()</a>, <a class="el" href="pdf_8cpp_source.html#l00093">printLHAPDFinfo()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">xf()</a>.</p>
+
 </div>
 </div>
 <a id="a746b372142b82e5a6a2bcf49662b3104" name="a746b372142b82e5a6a2bcf49662b3104"></a>
@@ -419,7 +809,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00080">80</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00103">103</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00010">initialize()</a>, <a class="el" href="pdf_8cpp_source.html#l00093">printLHAPDFinfo()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">xf()</a>.</p>
 
 </div>
 </div>
@@ -443,12 +835,42 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00079">79</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00102">102</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00010">initialize()</a>, and <a class="el" href="pdf_8cpp_source.html#l00093">printLHAPDFinfo()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a6c48b07b7ca704d4dd1af06b6a9cdad0" name="a6c48b07b7ca704d4dd1af06b6a9cdad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c48b07b7ca704d4dd1af06b6a9cdad0">&#9670;&#160;</a></span>samplingmethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032">SAMPLINGMETHOD</a> Pdf::samplingmethod {<a class="el" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pdf_8h_source.html#l00104">104</a> of file <a class="el" href="pdf_8h_source.html">pdf.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{<a class="code hl_enumvalue" href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a>};</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="pdf_8cpp_source.html#l00041">alphas()</a>, <a class="el" href="pdf_8cpp_source.html#l00111">setSampling()</a>, and <a class="el" href="pdf_8cpp_source.html#l00058">xf()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="pdf_8h_source.html">pdf.h</a></li>
+<li>libsrc/<a class="el" href="pdf_8cpp_source.html">pdf.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

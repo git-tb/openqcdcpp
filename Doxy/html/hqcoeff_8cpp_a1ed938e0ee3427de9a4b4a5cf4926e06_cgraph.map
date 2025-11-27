@@ -1,0 +1,29 @@
+<map id="ch2_g_2_1" name="ch2_g_2_1">
+<area shape="rect" id="Node000001" title="2 part" alt="" coords="5,141,96,167"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a6eb022fae76373fd6be83168d4179d66" title="O(ln(muR2/m2)^2)" alt="" coords="145,92,234,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,139,139,120,141,125,88,144"/>
+<area shape="rect" id="Node000010" href="$hqcoeff_8cpp.html#a3ebd9bfb2f179810e79bdc02e4194b97" title="Transversal part." alt="" coords="144,165,235,191"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="97,159,131,165,130,170,96,164"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a6c5aebf2c86a46cb6606a727d99511c2" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (17)" alt="" coords="283,5,447,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,90,239,65,281,40,298,33,300,38,284,44,242,69,208,94"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#aecf716e28846262d503538e5f5295ca2" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (21)" alt="" coords="290,104,441,129"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="235,105,277,108,276,113,234,110"/>
+<area shape="rect" id="Node000006" href="$hqcoeff_8cpp.html#aa6a75e0366b34c7349975e26da86552e" title=" " alt="" coords="298,55,433,80"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="234,93,291,80,292,86,235,98"/>
+<area shape="rect" id="Node000005" href="$hqcoeff_8cpp.html#afbf32e618df6e4929c5e941c15cc4cab" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (23)" alt="" coords="500,203,591,228"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="421,127,449,138,489,164,522,191,519,195,486,168,447,143,419,132"/>
+<area shape="rect" id="Node000007" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="496,104,595,129"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="413,77,485,98,484,103,412,83"/>
+<area shape="rect" id="Node000008" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="673,80,739,105"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="595,107,659,97,660,102,595,112"/>
+<area shape="rect" id="Node000009" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="643,129,769,155"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="595,122,629,127,628,132,595,127"/>
+<area shape="rect" id="Node000011" href="$hqcoeff_8cpp.html#ae5ac7d5f20e965a311c272142151dc3a" title=" " alt="" coords="283,252,448,277"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="208,189,242,214,284,238,300,245,298,250,281,243,239,218,204,193"/>
+<area shape="rect" id="Node000012" href="$hqcoeff_8cpp.html#ad41caec5018f3b44dfa1f4d6938b9e59" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (22)" alt="" coords="290,203,441,228"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="235,185,292,197,291,202,234,190"/>
+<area shape="rect" id="Node000013" href="$hqcoeff_8cpp.html#afd76b10b8164210df5cc1d9d5b062b5f" title=" " alt="" coords="298,153,433,179"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="235,172,284,169,284,174,235,178"/>
+<area shape="poly" id="edge12_Node000012_Node000005" title=" " alt="" coords="441,213,486,213,486,218,441,218"/>
+<area shape="poly" id="edge14_Node000013_Node000007" title=" " alt="" coords="412,151,484,131,485,136,413,156"/>
+</map>

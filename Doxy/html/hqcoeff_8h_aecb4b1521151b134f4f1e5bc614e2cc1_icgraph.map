@@ -1,0 +1,7 @@
+<map id="chLg_1_0" name="chLg_1_0">
+<area shape="rect" id="Node000001" title="The naming of the heavy quark coefficient functions follows the scheme chkf_ps/ns_j_l_desc with ch &#45; ..." alt="" coords="324,5,407,31"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#a382b9e507d8c6c966a168ecb48e74564" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] paragraph after eq...." alt="" coords="193,5,276,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,21,276,21,276,15,310,15"/>
+<area shape="rect" id="Node000003" href="$structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92" title="implementation of [Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162,..." alt="" coords="5,5,145,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,21,145,21,145,15,180,15"/>
+</map>

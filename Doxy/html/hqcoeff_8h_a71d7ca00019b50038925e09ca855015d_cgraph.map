@@ -1,0 +1,18 @@
+<map id="ch2_q_2_1_Lcoupl" name="ch2_q_2_1_Lcoupl">
+<area shape="rect" id="Node000001" title="2 part" alt="" coords="5,31,144,56"/>
+<area shape="rect" id="Node000002" href="$hqcoeff_8cpp.html#aa80c94cc2f8dfdf6f5d8db113986acf9" title="Lcoupl – photon couples to light quark." alt="" coords="192,5,331,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,31,178,27,178,32,145,37"/>
+<area shape="rect" id="Node000007" href="$hqcoeff_8cpp.html#a8c504ab6cbbd3fc55db6e9400cdd7990" title="from [Riemersma, Smith, van Neerven; Phys. Let. B, 347 (1&#45;2), 143, 1995] eq. (29)" alt="" coords="192,55,331,80"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="145,50,178,54,178,59,144,55"/>
+<area shape="rect" id="Node000003" href="$hqcoeff_8cpp.html#a2fd036fe0de9bf2fbd5672476229f1e7" title=" " alt="" coords="379,5,562,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="331,15,365,15,365,21,331,21"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#a0f2bd73fb80ae5fda9fd8b4023cd40e4" title="Find the interpolated value of a function f(x,y), where f is given as a 2D grid farr[Nx][Ny] with res..." alt="" coords="611,31,709,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="562,28,598,32,597,38,562,33"/>
+<area shape="rect" id="Node000005" href="$hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d" title="returns index of gridpoint in xarr[Nx] to the left or equal to x" alt="" coords="787,5,854,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="709,33,774,23,774,28,710,38"/>
+<area shape="rect" id="Node000006" href="$hqcoeff_8cpp.html#ab42c78400cc617afc6dd48f6b9804a94" title="1 dimensional quadratic interpolation (3pt Lagrange)" alt="" coords="757,55,884,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="710,48,744,53,743,58,709,53"/>
+<area shape="rect" id="Node000008" href="$hqcoeff_8cpp.html#a0381dd25259361e33da69e2e235be238" title=" " alt="" coords="379,55,563,80"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="331,65,365,65,365,70,331,70"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="563,53,597,49,597,54,563,58"/>
+</map>

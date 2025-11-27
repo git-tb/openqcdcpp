@@ -1,5 +1,11 @@
 <map id="include/constants.h" name="include/constants.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,153,31"/>
-<area shape="rect" id="Node000002" href="$protectedobject_8h.html" title=" " alt="" coords="11,79,147,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,31,82,65,77,65,77,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="33,5,181,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,33,64,70,60,67,94,29"/>
+<area shape="rect" id="Node000003" href="$protectedobject_8h.html" title=" " alt="" coords="104,79,240,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,29,154,67,150,70,115,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="89,152,154,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="166,106,140,142,135,139,161,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="179,152,264,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="182,103,208,139,203,142,178,106"/>
 </map>
