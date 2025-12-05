@@ -1,5 +1,5 @@
 <map id="c2q_ps_2_0_reg_exact" name="c2q_ps_2_0_reg_exact">
-<area shape="rect" id="Node000001" title="eq. (B.7) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ..." alt="" coords="5,55,173,80"/>
+<area shape="rect" id="Node000001" title="eq. (B.7) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="5,55,173,80"/>
 <area shape="rect" id="Node000002" href="$chaplin_8h.html#aace5b8fb8a21c9f2091043a34ccb783d" title="generic interface for C++ to the Fortran routine" alt="" coords="221,5,276,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,52,207,28,209,33,132,57"/>
 <area shape="rect" id="Node000004" href="$chaplin_8h.html#ab5340425c31d2f2ab20f8b281db2c3f1" title="generic interface for C++ to the Fortran routine" alt="" coords="221,55,276,80"/>

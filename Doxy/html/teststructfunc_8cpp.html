@@ -84,7 +84,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for teststructfunc.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="teststructfunc_8cpp__incl.svg" width="1288" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="teststructfunc_8cpp__incl.svg" width="1411" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="teststructfunc_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -120,68 +120,65 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   11</span>    <a class="code hl_variable" href="namespacePRECISION.html#adefaed52220abbfe37b72b53e0f1b200">PRECISION::EPSABS</a>.set(1e-5);</div>
 <div class="line"><span class="lineno">   12</span>    <a class="code hl_variable" href="namespacePRECISION.html#a88a4cada6b105a601b0361c23de90c4d">PRECISION::EPSREL</a>.set(1e-5);</div>
 <div class="line"><span class="lineno">   13</span>    <a class="code hl_variable" href="namespacePRECISION.html#a292e6d44589c6f73df2cb4e38fc62697">PRECISION::ITER</a>.set(1000);</div>
-<div class="line"><span class="lineno">   14</span>    <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(1);</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">double</span> Q2_arr[9] = {</div>
-<div class="line"><span class="lineno">   17</span>        3e2, 5e2, 1e3, 1.5e3, 2e3, 3e3, 5e3, 8e3, 1.5e4</div>
-<div class="line"><span class="lineno">   18</span>    };</div>
-<div class="line"><span class="lineno">   19</span>    <span class="keywordtype">double</span> XMIN_arr[9] = {</div>
-<div class="line"><span class="lineno">   20</span>        8e-3, 1.3e-2, 1.3e-2, 3.2e-2, 3.2e-2, 8e-2, 8e-2, 0.13e0, 0.32e0</div>
-<div class="line"><span class="lineno">   21</span>    };</div>
-<div class="line"><span class="lineno">   22</span>    <span class="keywordtype">double</span> XMAX_arr[9] = {</div>
-<div class="line"><span class="lineno">   23</span>        8e-2, 0.13e0, 0.25e0, 0.25e0, 0.25e0, 0.4e0, 0.4e0, 0.4e0, 0.4e0</div>
-<div class="line"><span class="lineno">   24</span>    };</div>
-<div class="line"><span class="lineno">   25</span> </div>
-<div class="line"><span class="lineno">   27</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> PREC = 6;</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> WIDTH = 15;</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    std::cout   &lt;&lt; std::scientific &lt;&lt; std::setprecision(PREC);</div>
-<div class="line"><span class="lineno">   31</span>    std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;Q2&quot;</span></div>
-<div class="line"><span class="lineno">   32</span>                &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;x&quot;</span></div>
-<div class="line"><span class="lineno">   33</span>                &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2@nlo&quot;</span></div>
-<div class="line"><span class="lineno">   34</span>                &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2@nnlo&quot;</span></div>
-<div class="line"><span class="lineno">   35</span>                &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>    <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(1);</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordtype">double</span> nothing = <a class="code hl_function" href="structfunc_8h.html#acf0236700b00bcb374259219e1fedc05">F2</a>(0.99,2.0);</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 9; i++)  {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">double</span> Q2 = Q2_arr[i];</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">int</span> NX = 10;</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">double</span> DLNX = (std::log(XMAX_arr[i])-std::log(XMIN_arr[i]))/(NX-1);</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; NX; j++) {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordtype">double</span> x = XMIN_arr[i] * std::exp(DLNX * j);</div>
-<div class="line"><span class="lineno">   47</span>            </div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(1);</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">double</span> F2nlo    = <a class="code hl_function" href="structfunc_8h.html#acf0236700b00bcb374259219e1fedc05">F2</a>(x,Q2);</div>
-<div class="line"><span class="lineno">   50</span>            <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(2);</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">double</span> F2nnlo   = <a class="code hl_function" href="structfunc_8h.html#acf0236700b00bcb374259219e1fedc05">F2</a>(x,Q2);</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>            std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; Q2</div>
-<div class="line"><span class="lineno">   54</span>                        &lt;&lt; std::setw(WIDTH) &lt;&lt; x</div>
-<div class="line"><span class="lineno">   55</span>                        &lt;&lt; std::setw(WIDTH) &lt;&lt; F2nlo</div>
-<div class="line"><span class="lineno">   56</span>                        &lt;&lt; std::setw(WIDTH) &lt;&lt; F2nnlo</div>
-<div class="line"><span class="lineno">   57</span>                        &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>        std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="line"><span class="lineno">   61</span>}</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordtype">int</span> ORDERALPS   = 1;</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">int</span> NF          = 3;</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordtype">double</span> Q2_arr[9] = {</div>
+<div class="line"><span class="lineno">   18</span>        3e2, 5e2, 1e3, 1.5e3, 2e3, 3e3, 5e3, 8e3, 1.5e4</div>
+<div class="line"><span class="lineno">   19</span>    };</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordtype">double</span> XMIN_arr[9] = {</div>
+<div class="line"><span class="lineno">   21</span>        8e-3, 1.3e-2, 1.3e-2, 3.2e-2, 3.2e-2, 8e-2, 8e-2, 0.13e0, 0.32e0</div>
+<div class="line"><span class="lineno">   22</span>    };</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordtype">double</span> XMAX_arr[9] = {</div>
+<div class="line"><span class="lineno">   24</span>        8e-2, 0.13e0, 0.25e0, 0.25e0, 0.25e0, 0.4e0, 0.4e0, 0.4e0, 0.4e0</div>
+<div class="line"><span class="lineno">   25</span>    };</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   28</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> PREC = 6;</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> WIDTH = 15;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    std::cout   &lt;&lt; std::scientific &lt;&lt; std::setprecision(PREC);</div>
+<div class="line"><span class="lineno">   32</span>    std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;Q2&quot;</span></div>
+<div class="line"><span class="lineno">   33</span>                &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;x&quot;</span></div>
+<div class="line"><span class="lineno">   34</span>                &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2@nlo&quot;</span></div>
+<div class="line"><span class="lineno">   35</span>                &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2@nnlo&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>                &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 9; i++)  {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">double</span> Q2 = Q2_arr[i];</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">int</span> NX = 10;</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">double</span> DLNX = (std::log(XMAX_arr[i])-std::log(XMIN_arr[i]))/(NX-1);</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; NX; j++) {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordtype">double</span> x = XMIN_arr[i] * std::exp(DLNX * j);</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            ORDERALPS       = 1;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordtype">double</span> F2nlo    = <a class="code hl_function" href="structfunc_8h.html#ae41cf5482bf531dd2f6525474e6a67b1">F2</a>(x,Q2, ORDERALPS, NF);</div>
+<div class="line"><span class="lineno">   48</span>            ORDERALPS       = 2;</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">double</span> F2nnlo   = <a class="code hl_function" href="structfunc_8h.html#ae41cf5482bf531dd2f6525474e6a67b1">F2</a>(x,Q2, ORDERALPS, NF);</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>            std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; Q2</div>
+<div class="line"><span class="lineno">   52</span>                        &lt;&lt; std::setw(WIDTH) &lt;&lt; x</div>
+<div class="line"><span class="lineno">   53</span>                        &lt;&lt; std::setw(WIDTH) &lt;&lt; F2nlo</div>
+<div class="line"><span class="lineno">   54</span>                        &lt;&lt; std::setw(WIDTH) &lt;&lt; F2nnlo</div>
+<div class="line"><span class="lineno">   55</span>                        &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span>}</div>
 <div class="ttc" id="aclassPdf_html_a130dbc5eba0ed46bfaf26c905ab054d8"><div class="ttname"><a href="classPdf.html#a130dbc5eba0ed46bfaf26c905ab054d8">Pdf::initialize</a></div><div class="ttdeci">static void initialize(const std::string pdfname, const int pdfmem)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00010">pdf.cpp:10</a></div></div>
 <div class="ttc" id="aclassPdf_html_aa1f939474b81f9be514bd126867d3807"><div class="ttname"><a href="classPdf.html#aa1f939474b81f9be514bd126867d3807">Pdf::setSampling</a></div><div class="ttdeci">static void setSampling(SAMPLINGMETHOD method)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00111">pdf.cpp:111</a></div></div>
 <div class="ttc" id="aclassPdf_html_ae52a54aa198d93db09ca52e5842804e5"><div class="ttname"><a href="classPdf.html#ae52a54aa198d93db09ca52e5842804e5">Pdf::printLHAPDFinfo</a></div><div class="ttdeci">static void printLHAPDFinfo()</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00093">pdf.cpp:93</a></div></div>
-<div class="ttc" id="anamespacePRECISION_html_a292e6d44589c6f73df2cb4e38fc62697"><div class="ttname"><a href="namespacePRECISION.html#a292e6d44589c6f73df2cb4e38fc62697">PRECISION::ITER</a></div><div class="ttdeci">ProtectedObject&lt; int &gt; ITER</div><div class="ttdoc">Maximum number of subdivisions.</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00098">constants.cpp:98</a></div></div>
-<div class="ttc" id="anamespacePRECISION_html_a88a4cada6b105a601b0361c23de90c4d"><div class="ttname"><a href="namespacePRECISION.html#a88a4cada6b105a601b0361c23de90c4d">PRECISION::EPSREL</a></div><div class="ttdeci">ProtectedObject&lt; double &gt; EPSREL</div><div class="ttdoc">Relative integration error goal.</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00084">constants.cpp:84</a></div></div>
-<div class="ttc" id="anamespacePRECISION_html_adefaed52220abbfe37b72b53e0f1b200"><div class="ttname"><a href="namespacePRECISION.html#adefaed52220abbfe37b72b53e0f1b200">PRECISION::EPSABS</a></div><div class="ttdeci">ProtectedObject&lt; double &gt; EPSABS</div><div class="ttdoc">Absolute integration error goal.</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00081">constants.cpp:81</a></div></div>
-<div class="ttc" id="anamespaceQCDORDER_html_ade9505c54d9e68086dd138314d5e4ad3"><div class="ttname"><a href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a></div><div class="ttdeci">ProtectedObject&lt; int &gt; F2ORDER</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00009">constants.cpp:9</a></div></div>
+<div class="ttc" id="anamespacePRECISION_html_a292e6d44589c6f73df2cb4e38fc62697"><div class="ttname"><a href="namespacePRECISION.html#a292e6d44589c6f73df2cb4e38fc62697">PRECISION::ITER</a></div><div class="ttdeci">ProtectedObject&lt; int &gt; ITER</div><div class="ttdoc">Maximum number of subdivisions.</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00085">constants.cpp:85</a></div></div>
+<div class="ttc" id="anamespacePRECISION_html_a88a4cada6b105a601b0361c23de90c4d"><div class="ttname"><a href="namespacePRECISION.html#a88a4cada6b105a601b0361c23de90c4d">PRECISION::EPSREL</a></div><div class="ttdeci">ProtectedObject&lt; double &gt; EPSREL</div><div class="ttdoc">Relative integration error goal.</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00071">constants.cpp:71</a></div></div>
+<div class="ttc" id="anamespacePRECISION_html_adefaed52220abbfe37b72b53e0f1b200"><div class="ttname"><a href="namespacePRECISION.html#adefaed52220abbfe37b72b53e0f1b200">PRECISION::EPSABS</a></div><div class="ttdeci">ProtectedObject&lt; double &gt; EPSABS</div><div class="ttdoc">Absolute integration error goal.</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00068">constants.cpp:68</a></div></div>
 <div class="ttc" id="apdf_8h_html_ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d"><div class="ttname"><a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032a515571050266015e28621e7e6ef40c5d">fromLHAPDF</a></div><div class="ttdeci">@ fromLHAPDF</div><div class="ttdoc">use LHAPDFs sampling method xfxQ2</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00042">pdf.h:42</a></div></div>
-<div class="ttc" id="astructfunc_8h_html_acf0236700b00bcb374259219e1fedc05"><div class="ttname"><a href="structfunc_8h.html#acf0236700b00bcb374259219e1fedc05">F2</a></div><div class="ttdeci">double F2(double x, double Q2)</div><div class="ttdoc">electromagnetic structure function F2 from photon interaction</div></div>
+<div class="ttc" id="astructfunc_8h_html_ae41cf5482bf531dd2f6525474e6a67b1"><div class="ttname"><a href="structfunc_8h.html#ae41cf5482bf531dd2f6525474e6a67b1">F2</a></div><div class="ttdeci">double F2(double x, double Q2, int orderAlps, int nf)</div><div class="ttdoc">massless electromagnetic structure functions F2 from photon interaction</div><div class="ttdef"><b>Definition</b> <a href="structfunc_8cpp_source.html#l00014">structfunc.cpp:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00081">PRECISION::EPSABS</a>, <a class="el" href="constants_8cpp_source.html#l00084">PRECISION::EPSREL</a>, <a class="el" href="structfunc_8h.html#acf0236700b00bcb374259219e1fedc05">F2()</a>, <a class="el" href="constants_8cpp_source.html#l00009">QCDORDER::F2ORDER</a>, <a class="el" href="pdf_8h_source.html#l00042">fromLHAPDF</a>, <a class="el" href="pdf_8cpp_source.html#l00010">Pdf::initialize()</a>, <a class="el" href="constants_8cpp_source.html#l00098">PRECISION::ITER</a>, <a class="el" href="pdf_8cpp_source.html#l00093">Pdf::printLHAPDFinfo()</a>, and <a class="el" href="pdf_8cpp_source.html#l00111">Pdf::setSampling()</a>.</p>
+<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00068">PRECISION::EPSABS</a>, <a class="el" href="constants_8cpp_source.html#l00071">PRECISION::EPSREL</a>, <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, <a class="el" href="pdf_8h_source.html#l00042">fromLHAPDF</a>, <a class="el" href="pdf_8cpp_source.html#l00010">Pdf::initialize()</a>, <a class="el" href="constants_8cpp_source.html#l00085">PRECISION::ITER</a>, <a class="el" href="pdf_8cpp_source.html#l00093">Pdf::printLHAPDFinfo()</a>, and <a class="el" href="pdf_8cpp_source.html#l00111">Pdf::setSampling()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="teststructfunc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="486" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="teststructfunc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="1198" height="1514"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

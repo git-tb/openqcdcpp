@@ -20,5 +20,5 @@ var searchData=
   ['sqtbar_5f_17',['sqtbar_',['../fortransymbols_8h.html#ae82b7b246e5bc3a6bf92ec252b154709',1,'fortransymbols.h']]],
   ['structfunc_2ecpp_18',['structfunc.cpp',['../structfunc_8cpp.html',1,'']]],
   ['structfunc_2eh_19',['structfunc.h',['../structfunc_8h.html',1,'']]],
-  ['sumqi2_20',['sumQi2',['../namespaceQCD.html#a57229a5cc6fa00f40d4e04db392368b3',1,'QCD']]]
+  ['sumqi2_20',['sumQi2',['../namespaceQCD.html#a47b05fa776ddc752642c963d69365dfb',1,'QCD']]]
 ];

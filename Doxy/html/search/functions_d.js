@@ -17,5 +17,5 @@ var searchData=
   ['setsampling_14',['setSampling',['../classPdf.html#aa1f939474b81f9be514bd126867d3807',1,'Pdf']]],
   ['sqlbar_5f_15',['sqlbar_',['../fortransymbols_8h.html#a2fe20f6bd6cb00f1e30cc5a9b51f984a',1,'fortransymbols.h']]],
   ['sqtbar_5f_16',['sqtbar_',['../fortransymbols_8h.html#ae82b7b246e5bc3a6bf92ec252b154709',1,'fortransymbols.h']]],
-  ['sumqi2_17',['sumQi2',['../namespaceQCD.html#a57229a5cc6fa00f40d4e04db392368b3',1,'QCD']]]
+  ['sumqi2_17',['sumQi2',['../namespaceQCD.html#a47b05fa776ddc752642c963d69365dfb',1,'QCD']]]
 ];

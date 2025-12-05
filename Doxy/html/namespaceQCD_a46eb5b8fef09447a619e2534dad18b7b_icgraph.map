@@ -1,0 +1,17 @@
+<map id="QCD::beta1" name="QCD::beta1">
+<area shape="rect" id="Node000001" title="QCD beta function, O(alpha_s^3) taken from (Schwartz QFT, eq. 26.98)" alt="" coords="557,28,653,53"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#ae41cf5482bf531dd2f6525474e6a67b1" title="massless electromagnetic structure functions F2 from photon interaction" alt="" coords="108,29,147,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="543,30,472,19,385,11,290,9,195,19,148,35,146,30,194,14,289,4,385,5,473,14,544,25"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#a044b52046382624819e333543ca5a2a6" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="409,53,509,78"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="544,54,510,60,509,54,543,48"/>
+<area shape="rect" id="Node000003" href="$teststructfunc_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,60,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,44,60,44,60,39,94,39"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#a44cedd32ed45579222c28d0552bfb79c" title="transformation of F2integrand that samples closer to small z" alt="" coords="195,29,361,54"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="396,60,361,55,362,50,396,55"/>
+<area shape="rect" id="Node000006" href="$structfunc_8cpp.html#a4e44bade023d83c7dc1b833a90262798" title="transformation of F2integrand that samples closer to large z" alt="" coords="195,78,361,104"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="396,77,362,82,361,77,396,72"/>
+<area shape="rect" id="Node000007" href="$testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="251,128,305,153"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="425,87,362,117,306,136,305,131,360,112,423,82"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="181,44,147,44,147,39,181,39"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="220,77,194,68,146,51,148,46,196,63,222,72"/>
+</map>

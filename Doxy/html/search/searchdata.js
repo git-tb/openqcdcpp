@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "f",
   7: "alsv",
   8: "adefiotwz",
-  9: "knu",
+  9: "nu",
   10: "lt"
 };
 

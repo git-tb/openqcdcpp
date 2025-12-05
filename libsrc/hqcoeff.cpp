@@ -1,6 +1,7 @@
 #include "hqcoeff.h"
 #include "constants.h"
 #include "chaplin.h"
+#include "coefffunc.h"
 
 #include <algorithm>
 #include <cmath>
@@ -1898,3 +1899,58 @@ double ch2_g_3_2_table[Nchi][Neta]	=	{
 	{0.1602e-06,0.1880e-06,0.2206e-06,0.2587e-06,0.3032e-06,0.3551e-06,0.4158e-06,0.4864e-06,0.5688e-06,0.6646e-06,0.7761e-06,0.9057e-06,0.1056e-05,0.1231e-05,0.1433e-05,0.1667e-05,0.1938e-05,0.2251e-05,0.2612e-05,0.3028e-05,0.3506e-05,0.4057e-05,0.4689e-05,0.5415e-05,0.6246e-05,0.7198e-05,0.8286e-05,0.9530e-05,0.1095e-04,0.1258e-04,0.1444e-04,0.1658e-04,0.1902e-04,0.2180e-04,0.2493e-04,0.2841e-04,0.3214e-04,0.3599e-04,0.3976e-04,0.4323e-04,0.4620e-04,0.4851e-04,0.5005e-04,0.5076e-04,0.5066e-04,0.4978e-04,0.4815e-04,0.4585e-04,0.4295e-04,0.3952e-04,0.3565e-04,0.3142e-04,0.2692e-04,0.2226e-04,0.1757e-04,0.1302e-04,0.8810e-05,0.5162e-05,0.2279e-05,0.2648e-06,-0.9434e-06,-0.1575e-05,-0.1927e-05,-0.2224e-05,-0.2545e-05,-0.2860e-05,-0.3104e-05,-0.3226e-05,-0.3208e-05,-0.3052e-05,-0.2772e-05,-0.2386e-05,-0.1912e-05 },
 	{0.1126e-06,0.1322e-06,0.1552e-06,0.1821e-06,0.2135e-06,0.2503e-06,0.2931e-06,0.3432e-06,0.4015e-06,0.4695e-06,0.5486e-06,0.6406e-06,0.7476e-06,0.8718e-06,0.1016e-05,0.1183e-05,0.1376e-05,0.1600e-05,0.1858e-05,0.2156e-05,0.2499e-05,0.2895e-05,0.3350e-05,0.3872e-05,0.4472e-05,0.5160e-05,0.5948e-05,0.6851e-05,0.7886e-05,0.9071e-05,0.1043e-04,0.1199e-04,0.1379e-04,0.1583e-04,0.1815e-04,0.2072e-04,0.2350e-04,0.2639e-04,0.2924e-04,0.3190e-04,0.3422e-04,0.3608e-04,0.3739e-04,0.3812e-04,0.3827e-04,0.3784e-04,0.3688e-04,0.3542e-04,0.3352e-04,0.3123e-04,0.2860e-04,0.2568e-04,0.2254e-04,0.1923e-04,0.1583e-04,0.1244e-04,0.9174e-05,0.6164e-05,0.3572e-05,0.1537e-05,0.1272e-06,-0.7078e-06,-0.1136e-05,-0.1372e-05,-0.1573e-05,-0.1796e-05,-0.2016e-05,-0.2187e-05,-0.2272e-05,-0.2258e-05,-0.2147e-05,-0.1949e-05,-0.1676e-05 }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+double L2q_ns_2_plus(double x, double Q2, double mu2, double m2, double as, int nf)	{
+	double result(0.0);
+	double LM	=	std::log(m2/mu2);
+	result		+=	std::pow(as,2) * (
+		ome_AqqQNSEven_plus_coeff_as(2, LM, nf, x)
+		+ c2q_ns_2_1_plus_approx2(x)
+	);
+	return result;
+}
+
+double L2q_ns_2_reg(double x, double Q2, double mu2, double m2, double as, int nf)	{
+	double result(0.0);
+	double LM	=	std::log(m2/mu2);
+	result		+=	std::pow(as,2) * (
+		ome_AqqQNSEven_reg_coeff_as(2, LM, nf, x)
+		+ c2q_ns_2_1_reg_approx2(x)
+	);
+	return result;
+}
+
+double L2q_ns_2_local(double Q2, double mu2, double m2, double as, int nf)	{
+	double result(0.0);
+	double LM	=	std::log(m2/mu2);
+	result		+=	std::pow(as,2) * (
+		ome_AqqQNSEven_delta_coeff_as(2, LM, nf)
+		+ c2q_ns_2_1_local_approx2()
+	);
+	return result;
+}
+
+// double L2q_ns_2_reg(double x, double Q2, double mu2, double m2, double as, int nf)	{
+// 	double result(0.0);
+// 	double LM	=	std::log(m2/mu2);
+// 	result		+=	std::pow(as,2) * (
+// 		ome_AqqQNSEven_
+// 		+ c2q_ns_2_1_reg_approx2(x)
+// 	);
+// 	return result;
+// }

@@ -1,7 +1,9 @@
 <map id="integrate" name="integrate">
-<area shape="rect" id="Node000001" title="light weight interface to gsl_integration that integrates a function func from a to b." alt="" coords="132,31,213,56"/>
-<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="25,5,64,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,35,64,24,65,19,119,30"/>
-<area shape="rect" id="Node000003" href="$structfunc_8cpp.html#a39831f93a9124ee6f6402604d0ef19fe" title="structure function F2 for heavy quark production for nlight light quark flavors + 1 heavy quark flavo..." alt="" coords="5,55,84,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,56,85,63,84,57,118,51"/>
+<area shape="rect" id="Node000001" title="light weight interface to gsl_integration that integrates a function func from a to b." alt="" coords="235,31,316,56"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#ae41cf5482bf531dd2f6525474e6a67b1" title="massless electromagnetic structure functions F2 from photon interaction" alt="" coords="128,5,167,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,35,166,24,167,19,222,30"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#a624de8945a1bb31e0b63e2c8060a2d51" title="structure function F2 for heavy quark production for nlight light quark flavors + 1 heavy quark flavo..." alt="" coords="108,55,187,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="222,56,187,63,186,57,221,51"/>
+<area shape="rect" id="Node000003" href="$teststructfunc_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,21,60,21,60,15,114,15"/>
 </map>

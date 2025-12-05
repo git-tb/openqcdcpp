@@ -85,21 +85,21 @@ $(function() {
 <dd><a class="anchor" id="_todo000006"></a>Rename the G and E functions, it seems they dont depend on the label "g" and are used for the quark contribution as well  </dd>
 <dt>Member <a class="el" href="hqcoeff_8cpp.html#a41419755098bd93b6e794a7d909b90a0">chT_q_2_1_Lcoupl_table</a>  [Nchi][Neta]</dt>
 <dd><a class="anchor" id="_todo000014"></a>[Laenen, Riemersma, Smith, v. Neerven; Nucl. Phys. B, 392 (1), 162, 1993], comment after eq. (5.10) This contribution is apparently only relevant for really small chi, but still have at least some contribution...  </dd>
-<dt>Member <a class="el" href="structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626">F2</a>  (double x, double Q2, int orderAlps)</dt>
+<dt>Member <a class="el" href="structfunc_8cpp.html#ae41cf5482bf531dd2f6525474e6a67b1">F2</a>  (double x, double Q2, int orderAlps, int nf)</dt>
 <dd><a class="anchor" id="_todo000017"></a>running coupling, DONE  </dd>
-<dt>Member <a class="el" href="structfunc_8cpp.html#a39831f93a9124ee6f6402604d0ef19fe">F2heavy</a>  (double x, double Q2, int nlight)</dt>
+<dt>Member <a class="el" href="structfunc_8cpp.html#a624de8945a1bb31e0b63e2c8060a2d51">F2heavy</a>  (double x, double Q2, int orderAlps, int nlight)</dt>
 <dd><a class="anchor" id="_todo000021"></a>fix all issues with factorization scale, basically in all functions  </dd>
-<dt>Member <a class="el" href="structfunc_8cpp.html#af0603b77d3ca61bbf50c4b6579f41f92">F2heavyintegrand</a>  (double z, double Q2, double x, int nlight, double muR2)</dt>
+<dt>Member <a class="el" href="structfunc_8cpp.html#ae97306c88ea1474d650300c3d8e0546f">F2heavyintegrand</a>  (double z, double Q2, double x, int orderAlps, int nlight, double muR2)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000026"></a>make the running coupling a parameter of this function such that we do not recalculate logarithms of the renormalization scale </p>
 <p class="interdd"><a class="anchor" id="_todo000025"></a></p>
 <p class="interdd"><a class="anchor" id="_todo000024"></a>call PDFs only once </p>
 <p class="interdd"><a class="anchor" id="_todo000023"></a></p>
 <p class="enddd"><a class="anchor" id="_todo000022"></a>move multiplicative prefactors out of this function  </p>
 </dd>
-<dt>Member <a class="el" href="structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44">F2integrand</a>  (double z, double Q2, double x)</dt>
+<dt>Member <a class="el" href="structfunc_8cpp.html#a044b52046382624819e333543ca5a2a6">F2integrand</a>  (double z, double Q2, double x, int orderAlps, int nf)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000018"></a>make the running coupling a parameter of this function such that we do not recalculate logarithms of the renormalization scale </p>
 <p class="interdd"><a class="anchor" id="_todo000019"></a></p>
-<p class="enddd"><a class="anchor" id="_todo000020"></a>running coupling, DONE  </p>
+<p class="enddd"><a class="anchor" id="_todo000020"></a>DONE running coupling  </p>
 </dd>
 <dt>Member <a class="el" href="hqcoeff_8cpp.html#a9a59dacb0dd3b28d6e70c02b379f613d">findIdx</a>  (const double &amp;x, const double *xarr, const std::size_t &amp;Nx)</dt>
 <dd><a class="anchor" id="_todo000012"></a>Find a better way to handle the domain error  </dd>
@@ -123,9 +123,9 @@ $(function() {
 </dd>
 <dt>Member <a class="el" href="classPdf.html#a16b7d71ae024d46fff26cabedfe73da8">Pdf::xfiSingletSum</a>  (double x, double Q2)</dt>
 <dd><a class="anchor" id="_todo000009"></a>variable flavor number  </dd>
-<dt>Member <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>  </dt>
-<dd><a class="anchor" id="_todo000010"></a>Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call!  </dd>
-<dt>Member <a class="el" href="namespaceQCD.html#a57229a5cc6fa00f40d4e04db392368b3">QCD::sumQi2</a>  ()</dt>
+<dt>Member <a class="el" href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a>  </dt>
+<dd><a class="anchor" id="_todo000010"></a>DONE Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call!  </dd>
+<dt>Member <a class="el" href="namespaceQCD.html#a47b05fa776ddc752642c963d69365dfb">QCD::sumQi2</a>  (int nf)</dt>
 <dd><a class="anchor" id="_todo000011"></a>formulate this in terms of QCHARGES </dd>
 </dl>
 </div></div><!-- contents -->

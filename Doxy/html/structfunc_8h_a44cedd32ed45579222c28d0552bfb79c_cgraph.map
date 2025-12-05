@@ -1,0 +1,103 @@
+<map id="F2integrand_logtrafo1" name="F2integrand_logtrafo1">
+<area shape="rect" id="Node000001" title="transformation of F2integrand that samples closer to small z" alt="" coords="5,704,172,729"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#a044b52046382624819e333543ca5a2a6" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="220,704,320,729"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,714,206,714,206,719,172,719"/>
+<area shape="rect" id="Node000003" href="$classPdf.html#aad64e5be407fbdc2f0aa8d03236ef4b2" title=" " alt="" coords="607,11,700,36"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,704,270,580,280,383,292,279,309,184,333,106,349,76,366,54,391,34,418,21,448,11,478,6,539,3,593,9,593,14,539,9,479,11,449,16,420,26,393,39,370,57,353,79,338,108,314,185,297,280,286,384,275,581,274,704"/>
+<area shape="rect" id="Node000006" href="$namespaceQCD.html#a84973ab69d862cd8ce5548c7767b8f43" title="QCD beta function, O(alpha_s^2) taken from (Schwartz QFT, eq. 26.97)" alt="" coords="415,309,511,335"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="270,704,281,630,301,522,329,415,347,373,366,344,382,332,401,325,403,330,385,337,370,348,351,376,334,417,306,523,286,631,276,705"/>
+<area shape="rect" id="Node000007" href="$namespaceQCD.html#a46eb5b8fef09447a619e2534dad18b7b" title="QCD beta function, O(alpha_s^3) taken from (Schwartz QFT, eq. 26.98)" alt="" coords="415,359,511,384"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="268,703,270,647,282,564,294,518,312,473,335,430,366,394,383,382,401,375,403,380,385,387,370,397,340,433,317,475,299,519,288,565,276,647,274,704"/>
+<area shape="rect" id="Node000008" href="$coefffunc_8cpp.html#a1b0894f47104c2c4b84bd61ecb2890f8" title="from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.6" alt="" coords="426,408,501,433"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="269,703,274,655,288,584,301,546,317,508,339,473,366,443,388,429,411,422,413,427,390,434,370,447,343,477,322,511,306,548,294,586,279,655,275,704"/>
+<area shape="rect" id="Node000009" href="$coefffunc_8cpp.html#a468957f2570c3a277f6a0f48cdfedc16" title="from [van Neerven, Vogt; Nucl. Phys. B. 588 (1), 345, 2000] eq. 3.6" alt="" coords="386,457,541,483"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="270,703,278,662,295,605,323,545,343,516,366,492,372,488,375,492,370,496,347,520,328,547,300,607,283,664,276,704"/>
+<area shape="rect" id="Node000010" href="$coefffunc_8cpp.html#ad912bcd6e4e6927c3a18781cf22b113d" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.10" alt="" coords="382,507,545,532"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="272,703,283,670,301,627,329,581,346,560,366,541,374,536,377,541,370,546,350,563,333,584,306,629,288,672,277,705"/>
+<area shape="rect" id="Node000011" href="$coefffunc_8cpp.html#a7ece00b95f55884cf6f7ab54f0bfc193" title="eq. (B.6) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="390,605,537,631"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="283,702,319,672,367,641,387,633,389,637,369,646,322,676,286,706"/>
+<area shape="rect" id="Node000018" href="$coefffunc_8cpp.html#a92632ebf5039b699bdc6a0be7eef5205" title="from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2" alt="" coords="398,704,529,729"/>
+<area shape="poly" id="edge17_Node000002_Node000018" title=" " alt="" coords="320,714,384,714,384,719,320,719"/>
+<area shape="rect" id="Node000019" href="$coefffunc_8cpp.html#a5033f0cafd6c6f17a9c33ba96c2065ab" title="The naming of the coefficient functions follows the scheme ckf_ps/ns_j_n_desc with c &#45; &quot;coefficient f..." alt="" coords="401,753,526,779"/>
+<area shape="poly" id="edge18_Node000002_Node000019" title=" " alt="" coords="320,727,369,740,399,747,398,753,367,745,319,732"/>
+<area shape="rect" id="Node000020" href="$coefffunc_8cpp.html#adbe9f576c0f90341d4cee5c7177623fa" title="eq. (B.5) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="372,803,555,828"/>
+<area shape="poly" id="edge19_Node000002_Node000020" title=" " alt="" coords="286,728,322,759,369,789,386,796,384,801,367,794,319,763,283,732"/>
+<area shape="rect" id="Node000021" href="$coefffunc_8cpp.html#abb9c274bc2808466e11aabe7a6cea51f" title="eq. (B.5) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="375,655,551,680"/>
+<area shape="poly" id="edge20_Node000002_Node000021" title=" " alt="" coords="320,702,399,681,400,686,321,707"/>
+<area shape="rect" id="Node000022" href="$coefffunc_8cpp.html#a23ce87cd52a1200f78f1b8aa09a671b0" title="from [van Neerven, Vogt; Nucl. Phys. B. 568 (1&#45;2), 263, 2000] eq. 3.2" alt="" coords="372,852,555,877"/>
+<area shape="poly" id="edge24_Node000002_Node000022" title=" " alt="" coords="280,728,313,782,339,813,370,839,380,844,377,849,366,843,335,817,309,785,275,731"/>
+<area shape="rect" id="Node000023" href="$coefffunc_8cpp.html#a596ec106a6a218dd725da0ea81a631c2" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8" alt="" coords="368,901,559,927"/>
+<area shape="poly" id="edge25_Node000002_Node000023" title=" " alt="" coords="277,729,288,761,306,805,333,850,350,870,370,888,377,893,374,897,366,892,346,874,329,853,301,807,283,763,272,730"/>
+<area shape="rect" id="Node000024" href="$coefffunc_8cpp.html#a2cb1fd7589e9fdc855befd4b1d943737" title="from [van Neerven, Vogt; Nucl. Phys. B. 568 (1&#45;2), 263, 2000] eq. 3.2" alt="" coords="375,951,552,976"/>
+<area shape="poly" id="edge26_Node000002_Node000024" title=" " alt="" coords="276,729,283,770,300,826,328,886,347,914,370,937,375,942,372,946,366,941,343,917,323,889,295,828,278,771,270,730"/>
+<area shape="rect" id="Node000025" href="$coefffunc_8cpp.html#a36d57a70c09e8bbf0ad1ab39c6afa1a4" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8" alt="" coords="371,1000,556,1025"/>
+<area shape="poly" id="edge27_Node000002_Node000025" title=" " alt="" coords="275,730,279,778,294,848,306,886,322,923,343,957,370,987,375,991,371,995,366,991,339,960,317,925,301,887,288,849,274,779,269,730"/>
+<area shape="rect" id="Node000026" href="$coefffunc_8cpp.html#a591744da73428862476a193a683cd6f4" title="from [van Neerven, Vogt; Nucl. Phys. B. 568 (1&#45;2), 263, 2000] eq. 3.2" alt="" coords="372,1049,555,1075"/>
+<area shape="poly" id="edge28_Node000002_Node000026" title=" " alt="" coords="274,730,276,786,288,869,299,914,317,959,340,1000,370,1036,374,1040,371,1044,366,1040,335,1003,312,961,294,916,282,870,270,787,268,730"/>
+<area shape="rect" id="Node000027" href="$coefffunc_8cpp.html#ac8d3a3bff781e4794fddd21c4a848406" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8" alt="" coords="368,1099,559,1124"/>
+<area shape="poly" id="edge29_Node000002_Node000027" title=" " alt="" coords="276,729,286,802,306,910,334,1017,351,1058,370,1086,374,1089,370,1093,366,1089,347,1061,329,1018,301,911,281,803,270,730"/>
+<area shape="rect" id="Node000028" href="$coefffunc_8cpp.html#a84ef61f698b1064742ef6449fa4d25e2" title="from [van Neerven, Vogt; Nucl. Phys. B. 568 (1&#45;2), 263, 2000] eq. 3.2" alt="" coords="375,1148,552,1173"/>
+<area shape="poly" id="edge30_Node000002_Node000028" title=" " alt="" coords="275,730,284,812,303,934,316,998,332,1056,350,1103,370,1135,374,1138,370,1142,366,1139,345,1106,326,1057,311,999,298,935,279,812,270,730"/>
+<area shape="rect" id="Node000029" href="$coefffunc_8cpp.html#a9299b97a7b5af88c1a1ef113012c8343" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8" alt="" coords="371,1197,556,1223"/>
+<area shape="poly" id="edge31_Node000002_Node000029" title=" " alt="" coords="275,729,283,820,300,957,313,1029,329,1095,348,1148,370,1184,374,1188,370,1192,366,1188,343,1151,323,1096,307,1030,295,958,277,820,270,730"/>
+<area shape="rect" id="Node000030" href="$coefffunc_8cpp.html#a68d3ab1cd04ab36336082614d8492c0d" title="from [van Neerven, Vogt; Nucl. Phys. B. 588 (1), 345, 2000] eq. 3.6" alt="" coords="375,1247,552,1272"/>
+<area shape="poly" id="edge32_Node000002_Node000030" title=" " alt="" coords="275,730,281,829,297,981,310,1060,326,1134,346,1194,357,1217,370,1234,373,1237,369,1241,366,1237,353,1219,341,1196,321,1135,304,1061,292,982,276,829,269,730"/>
+<area shape="rect" id="Node000031" href="$coefffunc_8cpp.html#aa5d247c93758186609d951be45bdb7cc" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.9" alt="" coords="371,1296,556,1321"/>
+<area shape="poly" id="edge33_Node000002_Node000031" title=" " alt="" coords="274,729,279,836,294,1004,306,1091,323,1172,344,1239,356,1264,370,1283,373,1286,369,1290,366,1287,352,1267,339,1241,318,1174,301,1092,289,1004,274,837,269,730"/>
+<area shape="rect" id="Node000032" href="$coefffunc_8cpp.html#a7c695fe49b1078f555ebea2fcf0937e7" title="eq. (B.7) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="379,556,547,581"/>
+<area shape="poly" id="edge34_Node000002_Node000032" title=" " alt="" coords="275,703,309,648,335,617,366,591,377,585,380,589,370,595,339,621,313,651,280,705"/>
+<area shape="rect" id="Node000033" href="$pdf_8h.html#ac19fd006bb19d7628960884906ae33c5" title=" " alt="" coords="757,99,796,124"/>
+<area shape="poly" id="edge38_Node000002_Node000033" title=" " alt="" coords="269,704,273,595,287,426,299,336,316,255,338,187,351,161,366,142,409,109,458,88,511,77,565,74,618,76,667,83,744,99,743,105,666,88,617,81,565,79,511,82,459,93,411,114,370,145,356,164,343,189,321,256,305,337,292,426,279,595,274,704"/>
+<area shape="rect" id="Node000034" href="$namespaceQCD.html#a47b05fa776ddc752642c963d69365dfb" title="the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges over nf light flavors" alt="" coords="409,1345,518,1371"/>
+<area shape="poly" id="edge39_Node000002_Node000034" title=" " alt="" coords="274,730,278,845,291,1027,303,1123,320,1211,342,1284,355,1312,370,1332,382,1342,397,1349,394,1354,379,1347,366,1336,351,1314,337,1286,315,1212,298,1123,286,1027,273,845,269,730"/>
+<area shape="rect" id="Node000035" href="$classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b" title=" " alt="" coords="622,112,685,137"/>
+<area shape="poly" id="edge40_Node000002_Node000035" title=" " alt="" coords="269,704,276,605,292,452,304,372,321,299,341,238,353,214,366,196,392,173,422,156,454,142,487,132,553,122,608,120,608,125,553,127,489,138,456,147,424,160,395,178,370,200,357,217,346,240,326,300,310,373,297,453,281,605,275,704"/>
+<area shape="rect" id="Node000036" href="$classPdf.html#a6065a88d8acf0096cceef987840bc0a6" title="$\sum_i Q_i^2 x f(x,Q^2)$" alt="" coords="405,211,521,236"/>
+<area shape="poly" id="edge43_Node000002_Node000036" title=" " alt="" coords="270,704,277,613,295,476,307,404,323,338,343,283,366,246,391,229,394,234,370,249,348,285,329,339,313,405,300,476,283,614,275,704"/>
+<area shape="rect" id="Node000043" href="$classPdf.html#a16b7d71ae024d46fff26cabedfe73da8" title="x times singlet combination of quark PDFs" alt="" coords="393,260,533,285"/>
+<area shape="poly" id="edge51_Node000002_Node000043" title=" " alt="" coords="270,703,279,621,298,498,311,435,326,376,345,328,366,295,379,285,382,289,370,299,350,330,332,378,316,436,303,499,284,622,275,704"/>
+<area shape="rect" id="Node000004" href="$pdf_8cpp.html#a14bf67cdb9f9b37c6c440904ed983e78" title="add here the PDF sampling functionality from openQCDrad such that we can compare predicitions" alt="" coords="753,24,800,49"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="701,26,740,30,739,36,700,31"/>
+<area shape="rect" id="Node000005" href="$fortransymbols_8h.html#acb54bff484c2dd77796eafee4e46516d" title=" " alt="" coords="853,24,907,49"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="800,34,840,34,840,39,800,39"/>
+<area shape="rect" id="Node000012" href="$chaplin_8h.html#aace5b8fb8a21c9f2091043a34ccb783d" title="generic interface for C++ to the Fortran routine" alt="" coords="626,556,681,581"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="512,603,612,577,614,582,514,608"/>
+<area shape="rect" id="Node000014" href="$chaplin_8h.html#ab5340425c31d2f2ab20f8b281db2c3f1" title="generic interface for C++ to the Fortran routine" alt="" coords="626,605,681,631"/>
+<area shape="poly" id="edge13_Node000011_Node000014" title=" " alt="" coords="537,615,612,615,612,621,537,621"/>
+<area shape="rect" id="Node000016" href="$chaplin_8h.html#aac5f579574c1c43d98622e0244adf526" title="generic interface for C++ to the Fortran routine" alt="" coords="626,655,681,680"/>
+<area shape="poly" id="edge15_Node000011_Node000016" title=" " alt="" coords="514,628,614,655,612,660,512,633"/>
+<area shape="rect" id="Node000013" href="$chaplin_8h.html#a30e2df057ab766e2838b8762957eb0a5" title="functions hpli_ are defined in libchaplin.a" alt="" coords="748,556,805,581"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="681,566,734,566,734,571,681,571"/>
+<area shape="rect" id="Node000015" href="$chaplin_8h.html#a3ba3e7e3cf17242e56dc59d885bcac68" title=" " alt="" coords="748,605,805,631"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="681,615,734,615,734,621,681,621"/>
+<area shape="rect" id="Node000017" href="$chaplin_8h.html#a6b82006de58e1f42bf4dd1fa5762d2af" title=" " alt="" coords="748,655,805,680"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="681,665,734,665,734,670,681,670"/>
+<area shape="poly" id="edge21_Node000021_Node000012" title=" " alt="" coords="533,652,557,641,572,630,581,618,590,605,605,591,613,585,616,590,608,595,595,608,586,621,576,633,560,646,535,657"/>
+<area shape="poly" id="edge22_Node000021_Node000014" title=" " alt="" coords="514,652,558,641,612,626,613,632,559,646,516,657"/>
+<area shape="poly" id="edge23_Node000021_Node000016" title=" " alt="" coords="552,665,612,665,612,670,552,670"/>
+<area shape="poly" id="edge35_Node000032_Node000012" title=" " alt="" coords="547,566,612,566,612,571,547,571"/>
+<area shape="poly" id="edge36_Node000032_Node000014" title=" " alt="" coords="516,579,559,590,613,605,612,610,558,595,514,584"/>
+<area shape="poly" id="edge37_Node000032_Node000016" title=" " alt="" coords="535,579,560,591,576,603,586,615,595,628,608,641,616,646,613,651,605,646,590,632,581,619,572,607,557,595,533,584"/>
+<area shape="poly" id="edge42_Node000035_Node000004" title=" " alt="" coords="671,110,745,56,748,60,674,114"/>
+<area shape="poly" id="edge41_Node000035_Node000033" title=" " alt="" coords="685,119,744,112,744,118,685,124"/>
+<area shape="poly" id="edge50_Node000036_Node000035" title=" " alt="" coords="488,208,614,142,617,146,490,213"/>
+<area shape="rect" id="Node000037" href="$pdf_8h.html#a67a23f93417dbc43bb4f606cd9f4e33e" title="down" alt="" coords="634,211,673,236"/>
+<area shape="poly" id="edge44_Node000036_Node000037" title=" " alt="" coords="521,221,620,221,620,226,521,226"/>
+<area shape="rect" id="Node000038" href="$pdf_8h.html#ad53d91f9bcb1537b9d08d3f240b77857" title="anti down" alt="" coords="633,260,674,285"/>
+<area shape="poly" id="edge45_Node000036_Node000038" title=" " alt="" coords="516,234,559,245,620,261,618,266,558,250,514,239"/>
+<area shape="rect" id="Node000039" href="$pdf_8h.html#a40da31d93d3ca1e11efacfe87a364996" title="strange" alt="" coords="634,309,673,335"/>
+<area shape="poly" id="edge46_Node000036_Node000039" title=" " alt="" coords="523,230,560,245,576,257,586,269,595,282,608,295,623,305,620,309,605,299,591,285,581,273,572,261,557,250,521,235"/>
+<area shape="rect" id="Node000040" href="$pdf_8h.html#a7fb4dfc7dfed3e505bab1f893062a149" title="anti strange" alt="" coords="634,359,673,384"/>
+<area shape="poly" id="edge47_Node000036_Node000040" title=" " alt="" coords="522,227,542,234,560,245,580,270,587,294,593,319,609,344,624,356,620,360,605,348,588,321,582,296,575,272,557,249,540,239,521,232"/>
+<area shape="rect" id="Node000041" href="$pdf_8h.html#a62b42e36a523520ca8494d451d44c3ac" title="up" alt="" coords="634,408,673,433"/>
+<area shape="poly" id="edge48_Node000036_Node000041" title=" " alt="" coords="522,226,543,233,560,245,576,264,584,282,588,319,590,356,596,375,609,394,623,406,620,410,605,397,592,377,585,357,582,319,579,284,571,267,557,249,540,238,521,231"/>
+<area shape="rect" id="Node000042" href="$pdf_8h.html#a22cfa0441665fad14b723bd2b14ec5d8" title="anti up" alt="" coords="633,161,674,187"/>
+<area shape="poly" id="edge49_Node000036_Node000042" title=" " alt="" coords="512,208,618,180,620,185,514,213"/>
+<area shape="poly" id="edge58_Node000043_Node000035" title=" " alt="" coords="532,259,557,245,575,223,581,199,588,174,605,147,609,143,612,147,609,151,593,176,587,200,580,225,560,249,535,264"/>
+<area shape="poly" id="edge52_Node000043_Node000037" title=" " alt="" coords="512,258,620,229,621,234,514,263"/>
+<area shape="poly" id="edge53_Node000043_Node000038" title=" " alt="" coords="533,270,619,270,619,275,533,275"/>
+<area shape="poly" id="edge54_Node000043_Node000039" title=" " alt="" coords="516,283,559,294,621,311,620,316,558,299,514,288"/>
+<area shape="poly" id="edge55_Node000043_Node000040" title=" " alt="" coords="534,283,560,294,576,306,586,319,595,331,608,344,623,354,620,358,605,348,591,334,581,322,572,310,557,299,532,288"/>
+<area shape="poly" id="edge56_Node000043_Node000041" title=" " alt="" coords="535,281,560,295,580,319,587,344,593,368,609,394,624,405,620,410,605,397,588,370,582,345,575,321,557,299,532,285"/>
+<area shape="poly" id="edge57_Node000043_Node000042" title=" " alt="" coords="529,258,557,245,572,234,581,222,591,210,605,196,619,187,622,192,608,200,595,213,585,225,576,238,560,250,531,262"/>
+</map>

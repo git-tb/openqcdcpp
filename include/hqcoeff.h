@@ -2,6 +2,7 @@
 #define HQCOEFF_H
 
 #include <libInterpolate/Interpolate.hpp>
+#include <ome/ome.h>
 
 /// @brief returns index of gridpoint in xarr[Nx] to the left or equal to x
 uint findIdx(const double& x, const double* xarr, const std::size_t& Nx);
@@ -19,6 +20,11 @@ double myInterp1D_3pt(	const double& x,
  * NOTE: farr should be passed as &farr[0][0]
  */
 double myInterp2D(const double& x, const double& y, const double* xarr, const std::size_t& Nx, const double* yarr, const std::size_t& Ny, const double* farr);
+
+
+
+
+
 
 /**
  * @brief The naming of the heavy quark coefficient functions follows the scheme
@@ -262,6 +268,26 @@ double ch2_g_3_2_interp(double eta, double chi);
 extern double ch2_g_3_2_table[49][73];
 extern bool ch2_g_3_2_interper_initialized;
 extern _2D::BicubicInterpolator<double> ch2_g_3_2_interper;
+
+
+
+
+
+
+/**
+ * Now the NNLO/O(alpha_s^3) of the heavy quark coefficient functions is only known in the
+ * Q2\to\infty limit in which the operator product expansion (OPE) is valid. In that case they
+ * can be obtained from the operator matrix elements (OMEs) of heavy quark fields w.r.t. light
+ * quark external states. We follow here [Bierenbaum, Blümlein, Klein; Nucl. Phys. B, 820 (1-2), 417, 2009]
+ * and reimplement all coefficient functions in this formalism. For the LO and NLO they should
+ * agree for large Q2 with what is implemented above in terms of tabulations. For the NNLO the 
+ * OME approach is at the moment our only option. 
+ * 
+ * The OMEs themselves we take from libome.
+ */
+
+
+
 
 
 

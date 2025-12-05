@@ -78,15 +78,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a57229a5cc6fa00f40d4e04db392368b3" id="r_a57229a5cc6fa00f40d4e04db392368b3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a57229a5cc6fa00f40d4e04db392368b3">sumQi2</a> ()</td></tr>
-<tr class="memdesc:a57229a5cc6fa00f40d4e04db392368b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>  <br /></td></tr>
-<tr class="separator:a57229a5cc6fa00f40d4e04db392368b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1651960c95d27b97735238ea3124ccd" id="r_af1651960c95d27b97735238ea3124ccd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#af1651960c95d27b97735238ea3124ccd">beta0</a> ()</td></tr>
-<tr class="memdesc:af1651960c95d27b97735238ea3124ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes beta0 depending on the value of <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> taken from (Schwartz QFT, eq. 26.97)  <br /></td></tr>
-<tr class="separator:af1651960c95d27b97735238ea3124ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa44221a2a4373295de7d5e72ba5a52bb" id="r_aa44221a2a4373295de7d5e72ba5a52bb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#aa44221a2a4373295de7d5e72ba5a52bb">beta1</a> ()</td></tr>
-<tr class="memdesc:aa44221a2a4373295de7d5e72ba5a52bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes beta1 depending on the value of <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> taken from (Schwartz QFT, eq. 26.98)  <br /></td></tr>
-<tr class="separator:aa44221a2a4373295de7d5e72ba5a52bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b05fa776ddc752642c963d69365dfb" id="r_a47b05fa776ddc752642c963d69365dfb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a47b05fa776ddc752642c963d69365dfb">sumQi2</a> (int nf)</td></tr>
+<tr class="memdesc:a47b05fa776ddc752642c963d69365dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges over nf light flavors  <br /></td></tr>
+<tr class="separator:a47b05fa776ddc752642c963d69365dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84973ab69d862cd8ce5548c7767b8f43" id="r_a84973ab69d862cd8ce5548c7767b8f43"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a84973ab69d862cd8ce5548c7767b8f43">beta0</a> (int nf)</td></tr>
+<tr class="memdesc:a84973ab69d862cd8ce5548c7767b8f43"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceQCD.html">QCD</a> beta function, O(alpha_s^2) taken from (Schwartz QFT, eq. 26.97)  <br /></td></tr>
+<tr class="separator:a84973ab69d862cd8ce5548c7767b8f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46eb5b8fef09447a619e2534dad18b7b" id="r_a46eb5b8fef09447a619e2534dad18b7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a46eb5b8fef09447a619e2534dad18b7b">beta1</a> (int nf)</td></tr>
+<tr class="memdesc:a46eb5b8fef09447a619e2534dad18b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceQCD.html">QCD</a> beta function, O(alpha_s^3) taken from (Schwartz QFT, eq. 26.98)  <br /></td></tr>
+<tr class="separator:a46eb5b8fef09447a619e2534dad18b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -96,16 +96,14 @@ Variables</h2></td></tr>
 <tr class="separator:a81f5850df3c7155b6145a77b1483b174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f0857c810db097834370830a4d14da6" id="r_a8f0857c810db097834370830a4d14da6"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">TR</a> = 0.5</td></tr>
 <tr class="separator:a8f0857c810db097834370830a4d14da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c21999a4a14f7148199bf2bb26b89a4" id="r_a0c21999a4a14f7148199bf2bb26b89a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classProtectedObject.html">ProtectedObject</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">NF</a> {3}</td></tr>
-<tr class="separator:a0c21999a4a14f7148199bf2bb26b89a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada92011a97ad2f2a087576e84f79e04e" id="r_ada92011a97ad2f2a087576e84f79e04e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classProtectedObject.html">ProtectedObject</a>&lt; double[6]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QMASSES</a></td></tr>
 <tr class="separator:ada92011a97ad2f2a087576e84f79e04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86defe0447b46c72dbf3f051e9b8f3f3" id="r_a86defe0447b46c72dbf3f051e9b8f3f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classProtectedObject.html">ProtectedObject</a>&lt; double[6]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceQCD.html#a86defe0447b46c72dbf3f051e9b8f3f3">QCHARGES</a></td></tr>
 <tr class="separator:a86defe0447b46c72dbf3f051e9b8f3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af1651960c95d27b97735238ea3124ccd" name="af1651960c95d27b97735238ea3124ccd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1651960c95d27b97735238ea3124ccd">&#9670;&#160;</a></span>beta0()</h2>
+<a id="a84973ab69d862cd8ce5548c7767b8f43" name="a84973ab69d862cd8ce5548c7767b8f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84973ab69d862cd8ce5548c7767b8f43">&#9670;&#160;</a></span>beta0()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,38 +111,38 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">double QCD::beta0 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>computes beta0 depending on the value of <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> taken from (Schwartz QFT, eq. 26.97) </p>
+<p><a class="el" href="namespaceQCD.html">QCD</a> beta function, O(alpha_s^2) taken from (Schwartz QFT, eq. 26.97) </p>
 
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00063">63</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                    {</div>
-<div class="line"><span class="lineno">   64</span>        assert(3 &lt;= <a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>);</div>
-<div class="line"><span class="lineno">   65</span>        assert(<a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> &lt;= 5);</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> 11./3. * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> - 4./3. * <a class="code hl_variable" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a> * <a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="anamespaceQCD_html_a0c21999a4a14f7148199bf2bb26b89a4"><div class="ttname"><a href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a></div><div class="ttdeci">ProtectedObject&lt; int &gt; NF</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00026">constants.cpp:26</a></div></div>
-<div class="ttc" id="anamespaceQCD_html_a81f5850df3c7155b6145a77b1483b174"><div class="ttname"><a href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a></div><div class="ttdeci">const double CA</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00022">constants.cpp:22</a></div></div>
-<div class="ttc" id="anamespaceQCD_html_a8f0857c810db097834370830a4d14da6"><div class="ttname"><a href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a></div><div class="ttdeci">const double TR</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00023">constants.cpp:23</a></div></div>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00050">50</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                            {</div>
+<div class="line"><span class="lineno">   51</span>        assert(1 &lt;= nf);</div>
+<div class="line"><span class="lineno">   52</span>        assert(nf &lt;= 6);</div>
+<div class="line"><span class="lineno">   53</span>        </div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> 11./3. * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> - 4./3. * <a class="code hl_variable" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a> * nf;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="anamespaceQCD_html_a81f5850df3c7155b6145a77b1483b174"><div class="ttname"><a href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a></div><div class="ttdeci">const double CA</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00016">constants.cpp:16</a></div></div>
+<div class="ttc" id="anamespaceQCD_html_a8f0857c810db097834370830a4d14da6"><div class="ttname"><a href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a></div><div class="ttdeci">const double TR</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00017">constants.cpp:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00022">CA</a>, <a class="el" href="constants_8cpp_source.html#l00026">NF</a>, and <a class="el" href="constants_8cpp_source.html#l00023">TR</a>.</p>
+<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00016">CA</a>, and <a class="el" href="constants_8cpp_source.html#l00017">TR</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00122">F2integrand()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceQCD_af1651960c95d27b97735238ea3124ccd_icgraph.svg" width="584" height="255"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceQCD_a84973ab69d862cd8ce5548c7767b8f43_icgraph.svg" width="659" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="aa44221a2a4373295de7d5e72ba5a52bb" name="aa44221a2a4373295de7d5e72ba5a52bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa44221a2a4373295de7d5e72ba5a52bb">&#9670;&#160;</a></span>beta1()</h2>
+<a id="a46eb5b8fef09447a619e2534dad18b7b" name="a46eb5b8fef09447a619e2534dad18b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46eb5b8fef09447a619e2534dad18b7b">&#9670;&#160;</a></span>beta1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,36 +150,37 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">double QCD::beta1 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>computes beta1 depending on the value of <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> taken from (Schwartz QFT, eq. 26.98) </p>
+<p><a class="el" href="namespaceQCD.html">QCD</a> beta function, O(alpha_s^3) taken from (Schwartz QFT, eq. 26.98) </p>
 
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00070">70</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                    {</div>
-<div class="line"><span class="lineno">   71</span>        assert(3 &lt;= <a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>);</div>
-<div class="line"><span class="lineno">   72</span>        assert(<a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> &lt;= 5);</div>
-<div class="line"><span class="lineno">   73</span>        </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> 34./3. * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> - 20./3. * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> * <a class="code hl_variable" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a> * <a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> - 4. * <a class="code hl_variable" href="namespaceQCD.html#aecdcc0faebbe111e454586249acf28d0">QCD::CF</a> * <a class="code hl_variable" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a> * <a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="anamespaceQCD_html_aecdcc0faebbe111e454586249acf28d0"><div class="ttname"><a href="namespaceQCD.html#aecdcc0faebbe111e454586249acf28d0">QCD::CF</a></div><div class="ttdeci">const double CF</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00021">constants.cpp:21</a></div></div>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00057">57</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                            {</div>
+<div class="line"><span class="lineno">   58</span>        assert(1 &lt;= nf);</div>
+<div class="line"><span class="lineno">   59</span>        assert(nf &lt;= 6);</div>
+<div class="line"><span class="lineno">   60</span>        </div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> 34./3. * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> - 20./3. * <a class="code hl_variable" href="namespaceQCD.html#a81f5850df3c7155b6145a77b1483b174">QCD::CA</a> * <a class="code hl_variable" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a> * nf - 4. * <a class="code hl_variable" href="namespaceQCD.html#aecdcc0faebbe111e454586249acf28d0">QCD::CF</a> * <a class="code hl_variable" href="namespaceQCD.html#a8f0857c810db097834370830a4d14da6">QCD::TR</a> * nf;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="anamespaceQCD_html_aecdcc0faebbe111e454586249acf28d0"><div class="ttname"><a href="namespaceQCD.html#aecdcc0faebbe111e454586249acf28d0">QCD::CF</a></div><div class="ttdeci">const double CF</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00015">constants.cpp:15</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00022">CA</a>, <a class="el" href="constants_8cpp_source.html#l00021">CF</a>, <a class="el" href="constants_8cpp_source.html#l00026">NF</a>, and <a class="el" href="constants_8cpp_source.html#l00023">TR</a>.</p>
+<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00016">CA</a>, <a class="el" href="constants_8cpp_source.html#l00015">CF</a>, and <a class="el" href="constants_8cpp_source.html#l00017">TR</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00122">F2integrand()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceQCD_aa44221a2a4373295de7d5e72ba5a52bb_icgraph.svg" width="584" height="255"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceQCD_a46eb5b8fef09447a619e2534dad18b7b_icgraph.svg" width="659" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a57229a5cc6fa00f40d4e04db392368b3" name="a57229a5cc6fa00f40d4e04db392368b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57229a5cc6fa00f40d4e04db392368b3">&#9670;&#160;</a></span>sumQi2()</h2>
+<a id="a47b05fa776ddc752642c963d69365dfb" name="a47b05fa776ddc752642c963d69365dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b05fa776ddc752642c963d69365dfb">&#9670;&#160;</a></span>sumQi2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,39 +188,36 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">double QCD::sumQi2 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of <a class="el" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> </p>
+<p>the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges over nf light flavors </p>
+<p>computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD::NF</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>formulate this in terms of QCHARGES </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00047">47</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                    {</div>
-<div class="line"><span class="lineno">   48</span>        assert(3 &lt;= <a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a>);</div>
-<div class="line"><span class="lineno">   49</span>        assert(<a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> &lt;= 5);</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordtype">double</span> result(0.0);</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> == 3)</div>
-<div class="line"><span class="lineno">   54</span>            result += 4./9. + 1./9. + 1./9.;</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> == 4)</div>
-<div class="line"><span class="lineno">   56</span>            result += 4./9. + 1./9. + 1./9. + 4./9.;</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespaceQCD.html#a0c21999a4a14f7148199bf2bb26b89a4">QCD::NF</a> == 5)</div>
-<div class="line"><span class="lineno">   58</span>            result += 4./9. + 1./9. + 1./9. + 4./9. + 1./9.;</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00040">40</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                            {</div>
+<div class="line"><span class="lineno">   41</span>        assert(1 &lt;= nf);</div>
+<div class="line"><span class="lineno">   42</span>        assert(nf &lt;= 6);</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">double</span> result(0.0);</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nf; i++) result += std::pow(<a class="code hl_variable" href="namespaceQCD.html#a86defe0447b46c72dbf3f051e9b8f3f3">QCD::QCHARGES</a>[i],2);</div>
+<div class="line"><span class="lineno">   46</span>        </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="anamespaceQCD_html_a86defe0447b46c72dbf3f051e9b8f3f3"><div class="ttname"><a href="namespaceQCD.html#a86defe0447b46c72dbf3f051e9b8f3f3">QCD::QCHARGES</a></div><div class="ttdeci">ProtectedObject&lt; double[6]&gt; QCHARGES</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00029">constants.cpp:29</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00026">NF</a>.</p>
+<p class="reference">References <a class="el" href="constants_8cpp_source.html#l00029">QCHARGES</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, and <a class="el" href="structfunc_8cpp_source.html#l00122">F2integrand()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceQCD_a57229a5cc6fa00f40d4e04db392368b3_icgraph.svg" width="598" height="255"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceQCD_a47b05fa776ddc752642c963d69365dfb_icgraph.svg" width="672" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -239,9 +235,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00022">22</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00016">16</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00063">beta0()</a>, <a class="el" href="constants_8cpp_source.html#l00070">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00416">c2g_2_0_reg_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00081">c2q_ns_2_01_local_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00138">c2q_ns_2_01_localplus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00199">c2q_ns_2_01_plus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00284">c2q_ns_2_01_reg_exact()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00149">chL_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00584">chL_g_2_1()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00368">chT_g_2_0()</a>, and <a class="el" href="hqcoeff_8cpp_source.html#l00698">chT_g_2_1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00050">beta0()</a>, <a class="el" href="constants_8cpp_source.html#l00057">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00416">c2g_2_0_reg_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00081">c2q_ns_2_01_local_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00138">c2q_ns_2_01_localplus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00199">c2q_ns_2_01_plus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00284">c2q_ns_2_01_reg_exact()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00150">chL_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00585">chL_g_2_1()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00369">chT_g_2_0()</a>, and <a class="el" href="hqcoeff_8cpp_source.html#l00699">chT_g_2_1()</a>.</p>
 
 </div>
 </div>
@@ -257,29 +253,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00021">21</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00015">15</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00070">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00416">c2g_2_0_reg_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00029">c2q_ns_1_0_local()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00038">c2q_ns_1_0_localplus()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00022">c2q_ns_1_0_plus()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00012">c2q_ns_1_0_reg()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00081">c2q_ns_2_01_local_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00138">c2q_ns_2_01_localplus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00199">c2q_ns_2_01_plus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00284">c2q_ns_2_01_reg_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00541">c2q_ps_2_0_reg_exact()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00149">chL_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00852">chL_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01045">chL_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01237">chL_q_2_1_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01432">chL_q_2_1_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00368">chT_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00945">chT_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01136">chT_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01330">chT_q_2_1_Hcoupl()</a>, and <a class="el" href="hqcoeff_8cpp_source.html#l01526">chT_q_2_1_Lcoupl()</a>.</p>
-
-</div>
-</div>
-<a id="a0c21999a4a14f7148199bf2bb26b89a4" name="a0c21999a4a14f7148199bf2bb26b89a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c21999a4a14f7148199bf2bb26b89a4">&#9670;&#160;</a></span>NF</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classProtectedObject.html">ProtectedObject</a>&lt; int &gt; QCD::NF {3}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call! </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00026">26</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>{3};</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00063">beta0()</a>, <a class="el" href="constants_8cpp_source.html#l00070">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00081">c2q_ns_2_01_local_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00138">c2q_ns_2_01_localplus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00199">c2q_ns_2_01_plus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00284">c2q_ns_2_01_reg_exact()</a>, <a class="el" href="structfunc_8cpp_source.html#l00014">F2()</a>, <a class="el" href="structfunc_8cpp_source.html#l00129">F2integrand()</a>, and <a class="el" href="constants_8cpp_source.html#l00047">sumQi2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00057">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00416">c2g_2_0_reg_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00029">c2q_ns_1_0_local()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00038">c2q_ns_1_0_localplus()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00022">c2q_ns_1_0_plus()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00012">c2q_ns_1_0_reg()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00081">c2q_ns_2_01_local_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00138">c2q_ns_2_01_localplus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00199">c2q_ns_2_01_plus_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00284">c2q_ns_2_01_reg_exact()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00541">c2q_ps_2_0_reg_exact()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00150">chL_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00853">chL_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01046">chL_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01238">chL_q_2_1_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01433">chL_q_2_1_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00369">chT_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00946">chT_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01137">chT_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01331">chT_q_2_1_Hcoupl()</a>, and <a class="el" href="hqcoeff_8cpp_source.html#l01527">chT_q_2_1_Lcoupl()</a>.</p>
 
 </div>
 </div>
@@ -303,17 +279,17 @@ Here is the caller graph for this function:</div>
 <div class="line">         2./3.</div>
 <div class="line">    }}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00036">36</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                        {{</div>
-<div class="line"><span class="lineno">   37</span>        -1./3.,</div>
-<div class="line"><span class="lineno">   38</span>         2./3.,</div>
-<div class="line"><span class="lineno">   39</span>        -1./3.,</div>
-<div class="line"><span class="lineno">   40</span>         2./3.,</div>
-<div class="line"><span class="lineno">   41</span>        -1./3.,</div>
-<div class="line"><span class="lineno">   42</span>         2./3.</div>
-<div class="line"><span class="lineno">   43</span>    }};</div>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00029">29</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                        {{</div>
+<div class="line"><span class="lineno">   30</span>        -1./3.,</div>
+<div class="line"><span class="lineno">   31</span>         2./3.,</div>
+<div class="line"><span class="lineno">   32</span>        -1./3.,</div>
+<div class="line"><span class="lineno">   33</span>         2./3.,</div>
+<div class="line"><span class="lineno">   34</span>        -1./3.,</div>
+<div class="line"><span class="lineno">   35</span>         2./3.</div>
+<div class="line"><span class="lineno">   36</span>    }};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00231">F2heavyintegrand()</a>, and <a class="el" href="constants_8cpp_source.html#l00040">sumQi2()</a>.</p>
 
 </div>
 </div>
@@ -336,18 +312,19 @@ Here is the caller graph for this function:</div>
 <div class="line">        4.5,</div>
 <div class="line">        172</div>
 <div class="line">    }}</div>
+</div><!-- fragment --><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>DONE Get rid of NF as a global variable! it should be passed as a parameter to each relevant function call! </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00020">20</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                                       {{</div>
+<div class="line"><span class="lineno">   21</span>        0,</div>
+<div class="line"><span class="lineno">   22</span>        0,</div>
+<div class="line"><span class="lineno">   23</span>        0,</div>
+<div class="line"><span class="lineno">   24</span>        1.5,</div>
+<div class="line"><span class="lineno">   25</span>        4.5,</div>
+<div class="line"><span class="lineno">   26</span>        172</div>
+<div class="line"><span class="lineno">   27</span>    }};</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00027">27</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                       {{</div>
-<div class="line"><span class="lineno">   28</span>        0,</div>
-<div class="line"><span class="lineno">   29</span>        0,</div>
-<div class="line"><span class="lineno">   30</span>        0,</div>
-<div class="line"><span class="lineno">   31</span>        1.5,</div>
-<div class="line"><span class="lineno">   32</span>        4.5,</div>
-<div class="line"><span class="lineno">   33</span>        172</div>
-<div class="line"><span class="lineno">   34</span>    }};</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00229">F2heavy()</a>, <a class="el" href="structfunc_8cpp_source.html#l00249">F2heavyintegrand()</a>, and <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="structfunc_8cpp_source.html#l00211">F2heavy()</a>, <a class="el" href="structfunc_8cpp_source.html#l00231">F2heavyintegrand()</a>, and <a class="el" href="testF2heavyintegrand_8cpp_source.html#l00007">main()</a>.</p>
 
 </div>
 </div>
@@ -363,9 +340,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00023">23</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="constants_8cpp_source.html#l00017">17</a> of file <a class="el" href="constants_8cpp_source.html">constants.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00063">beta0()</a>, <a class="el" href="constants_8cpp_source.html#l00070">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00046">c2g_1_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00149">chL_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00584">chL_g_2_1()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00852">chL_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01045">chL_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01237">chL_q_2_1_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01432">chL_q_2_1_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00075">chLg_1_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00368">chT_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00698">chT_g_2_1()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00945">chT_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01136">chT_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01330">chT_q_2_1_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01526">chT_q_2_1_Lcoupl()</a>, and <a class="el" href="hqcoeff_8cpp_source.html#l00087">chTg_1_0()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="constants_8cpp_source.html#l00050">beta0()</a>, <a class="el" href="constants_8cpp_source.html#l00057">beta1()</a>, <a class="el" href="coefffunc_8cpp_source.html#l00046">c2g_1_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00150">chL_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00585">chL_g_2_1()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00853">chL_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01046">chL_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01238">chL_q_2_1_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01433">chL_q_2_1_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00076">chLg_1_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00369">chT_g_2_0()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00699">chT_g_2_1()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l00946">chT_q_2_0_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01137">chT_q_2_0_Lcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01331">chT_q_2_1_Hcoupl()</a>, <a class="el" href="hqcoeff_8cpp_source.html#l01527">chT_q_2_1_Lcoupl()</a>, and <a class="el" href="hqcoeff_8cpp_source.html#l00088">chTg_1_0()</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,8 @@
+<map id="F2heavy" name="F2heavy">
+<area shape="rect" id="Node000001" title="structure function F2 for heavy quark production for nlight light quark flavors + 1 heavy quark flavo..." alt="" coords="5,55,84,80"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#ac406bfc5f0484e3102808797c334dd22" title=" " alt="" coords="132,29,272,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,58,118,53,119,58,85,64"/>
+<area shape="rect" id="Node000003" href="$integrate_8cpp.html#aec2a5d8d72ba0a98082c8b3ee8005d81" title="light weight interface to gsl_integration that integrates a function func from a to b." alt="" coords="161,79,243,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="85,71,148,81,148,86,84,76"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="175,31,170,21,173,11,184,5,202,3,224,6,233,15,229,19,221,11,202,8,186,10,177,15,175,20,180,28"/>
+</map>

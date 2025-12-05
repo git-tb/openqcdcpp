@@ -85,7 +85,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for testF2heavyintegrand.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="testF2heavyintegrand_8cpp__incl.svg" width="1378" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="testF2heavyintegrand_8cpp__incl.svg" width="1412" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="testF2heavyintegrand_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -130,60 +130,58 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   22</span>    <span class="keywordtype">int</span> WIDTH(22);</div>
 <div class="line"><span class="lineno">   23</span>    <span class="keywordtype">int</span> PREC(10);</div>
 <div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>    <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(1);</div>
-<div class="line"><span class="lineno">   26</span> </div>
-<div class="line"><span class="lineno">   27</span>    std::cout &lt;&lt; std::scientific &lt;&lt; std::setprecision(PREC);</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iq2 = 0; iq2 &lt; NQ2; iq2++)  {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">double</span> logQ2    = LOGQ2MIN + iq2 * DLOGQ2;</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">double</span> Q2       = std::pow(10,logQ2);</div>
-<div class="line"><span class="lineno">   31</span>        std::cout   &lt;&lt; <span class="stringliteral">&quot;Q2=&quot;</span> &lt;&lt; Q2 &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   32</span>        std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;x&quot;</span> </div>
-<div class="line"><span class="lineno">   33</span>                    &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;z&quot;</span></div>
-<div class="line"><span class="lineno">   34</span>                    &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2heavyintegrand@nlo&quot;</span></div>
-<div class="line"><span class="lineno">   35</span>                    &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2heavyintegrand@nnlo&quot;</span></div>
-<div class="line"><span class="lineno">   36</span>                    &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ix = 0; ix &lt; NX; ix++)  {</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordtype">double</span> logx = LOGXMIN + ix * DLOGX;</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">double</span> x    = std::pow(10,logx);</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordtype">double</span> LOGZMIN(logx+1e-8), LOGZMAX(LOGXMAX+1e-7);</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordtype">double</span> DLOGZ = (LOGZMAX-LOGZMIN)/(NZ-1);</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iz = 0; iz &lt; NZ; iz++)  {</div>
-<div class="line"><span class="lineno">   44</span>                <span class="keywordtype">double</span> logz = LOGZMIN + iz * DLOGZ;</div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordtype">double</span> z = std::pow(10, logz);</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>                <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(1);</div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordtype">double</span> F2heavyintegrand_nlo = <a class="code hl_function" href="structfunc_8h.html#af03b52f63dcbd44cae242dd32c172bfb">F2heavyintegrand</a>(z, Q2, x, 3, Q2+4*std::pow(<a class="code hl_variable" href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a>[3],2));</div>
-<div class="line"><span class="lineno">   49</span>                <a class="code hl_variable" href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a>.set(1);</div>
-<div class="line"><span class="lineno">   50</span>                <span class="keywordtype">double</span> F2heavyintegrand_nnlo    = <a class="code hl_function" href="structfunc_8h.html#af03b52f63dcbd44cae242dd32c172bfb">F2heavyintegrand</a>(z, Q2, x, 3, Q2+4*std::pow(<a class="code hl_variable" href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a>[3],2));</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>                std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; x</div>
-<div class="line"><span class="lineno">   53</span>                            &lt;&lt; std::setw(WIDTH) &lt;&lt; z</div>
-<div class="line"><span class="lineno">   54</span>                            &lt;&lt; std::setw(WIDTH) &lt;&lt; F2heavyintegrand_nlo</div>
-<div class="line"><span class="lineno">   55</span>                            &lt;&lt; std::setw(WIDTH) &lt;&lt; F2heavyintegrand_nnlo</div>
-<div class="line"><span class="lineno">   56</span>                            &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   57</span>            }</div>
-<div class="line"><span class="lineno">   58</span>            std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordtype">int</span> ORDERALPS   = 1;</div>
+<div class="line"><span class="lineno">   26</span>    <span class="keywordtype">int</span> NLIGHT      = 3;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    std::cout &lt;&lt; std::scientific &lt;&lt; std::setprecision(PREC);</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iq2 = 0; iq2 &lt; NQ2; iq2++)  {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">double</span> logQ2    = LOGQ2MIN + iq2 * DLOGQ2;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">double</span> Q2       = std::pow(10,logQ2);</div>
+<div class="line"><span class="lineno">   32</span>        std::cout   &lt;&lt; <span class="stringliteral">&quot;Q2=&quot;</span> &lt;&lt; Q2 &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   33</span>        std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;x&quot;</span> </div>
+<div class="line"><span class="lineno">   34</span>                    &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;z&quot;</span></div>
+<div class="line"><span class="lineno">   35</span>                    &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2heavyintegrand@nlo&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>                    &lt;&lt; std::setw(WIDTH) &lt;&lt; <span class="stringliteral">&quot;F2heavyintegrand@nnlo&quot;</span></div>
+<div class="line"><span class="lineno">   37</span>                    &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ix = 0; ix &lt; NX; ix++)  {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">double</span> logx = LOGXMIN + ix * DLOGX;</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordtype">double</span> x    = std::pow(10,logx);</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordtype">double</span> LOGZMIN(logx+1e-8), LOGZMAX(LOGXMAX+1e-7);</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordtype">double</span> DLOGZ = (LOGZMAX-LOGZMIN)/(NZ-1);</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iz = 0; iz &lt; NZ; iz++)  {</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordtype">double</span> logz = LOGZMIN + iz * DLOGZ;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordtype">double</span> z = std::pow(10, logz);</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordtype">double</span> F2heavyintegrand_nlo = <a class="code hl_function" href="structfunc_8h.html#ac406bfc5f0484e3102808797c334dd22">F2heavyintegrand</a>(z, Q2, x, ORDERALPS, NLIGHT, Q2+4*std::pow(<a class="code hl_variable" href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a>[3],2));</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordtype">double</span> F2heavyintegrand_nnlo    = <a class="code hl_function" href="structfunc_8h.html#ac406bfc5f0484e3102808797c334dd22">F2heavyintegrand</a>(z, Q2, x, ORDERALPS, NLIGHT, Q2+4*std::pow(<a class="code hl_variable" href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a>[3],2));</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>                std::cout   &lt;&lt; std::setw(WIDTH) &lt;&lt; x</div>
+<div class="line"><span class="lineno">   52</span>                            &lt;&lt; std::setw(WIDTH) &lt;&lt; z</div>
+<div class="line"><span class="lineno">   53</span>                            &lt;&lt; std::setw(WIDTH) &lt;&lt; F2heavyintegrand_nlo</div>
+<div class="line"><span class="lineno">   54</span>                            &lt;&lt; std::setw(WIDTH) &lt;&lt; F2heavyintegrand_nnlo</div>
+<div class="line"><span class="lineno">   55</span>                            &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>            std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        std::cout &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">   60</span>        std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   61</span>        std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>    std::cout &lt;&lt; <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G</a>,0.5,10) &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   65</span>    std::cout &lt;&lt; <a class="code hl_function" href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a>(1,0.5,10,0) &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   66</span>}</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    std::cout &lt;&lt; <a class="code hl_function" href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a>(<a class="code hl_function" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G</a>,0.5,10) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   64</span>    std::cout &lt;&lt; <a class="code hl_function" href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a>(1,0.5,10,0) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   65</span>}</div>
 <div class="ttc" id="aclassPdf_html_a130dbc5eba0ed46bfaf26c905ab054d8"><div class="ttname"><a href="classPdf.html#a130dbc5eba0ed46bfaf26c905ab054d8">Pdf::initialize</a></div><div class="ttdeci">static void initialize(const std::string pdfname, const int pdfmem)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00010">pdf.cpp:10</a></div></div>
 <div class="ttc" id="aclassPdf_html_a22c7cd63fe6a80ec50640b0e7352790b"><div class="ttname"><a href="classPdf.html#a22c7cd63fe6a80ec50640b0e7352790b">Pdf::xf</a></div><div class="ttdeci">static double xf(int pID, double x, double Q2)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00058">pdf.cpp:58</a></div></div>
 <div class="ttc" id="aclassPdf_html_aa1f939474b81f9be514bd126867d3807"><div class="ttname"><a href="classPdf.html#aa1f939474b81f9be514bd126867d3807">Pdf::setSampling</a></div><div class="ttdeci">static void setSampling(SAMPLINGMETHOD method)</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00111">pdf.cpp:111</a></div></div>
 <div class="ttc" id="aclassPdf_html_ae52a54aa198d93db09ca52e5842804e5"><div class="ttname"><a href="classPdf.html#ae52a54aa198d93db09ca52e5842804e5">Pdf::printLHAPDFinfo</a></div><div class="ttdeci">static void printLHAPDFinfo()</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00093">pdf.cpp:93</a></div></div>
-<div class="ttc" id="anamespaceQCDORDER_html_ade9505c54d9e68086dd138314d5e4ad3"><div class="ttname"><a href="namespaceQCDORDER.html#ade9505c54d9e68086dd138314d5e4ad3">QCDORDER::F2ORDER</a></div><div class="ttdeci">ProtectedObject&lt; int &gt; F2ORDER</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00009">constants.cpp:9</a></div></div>
-<div class="ttc" id="anamespaceQCD_html_ada92011a97ad2f2a087576e84f79e04e"><div class="ttname"><a href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a></div><div class="ttdeci">ProtectedObject&lt; double[6]&gt; QMASSES</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00027">constants.cpp:27</a></div></div>
+<div class="ttc" id="anamespaceQCD_html_ada92011a97ad2f2a087576e84f79e04e"><div class="ttname"><a href="namespaceQCD.html#ada92011a97ad2f2a087576e84f79e04e">QCD::QMASSES</a></div><div class="ttdeci">ProtectedObject&lt; double[6]&gt; QMASSES</div><div class="ttdef"><b>Definition</b> <a href="constants_8cpp_source.html#l00020">constants.cpp:20</a></div></div>
 <div class="ttc" id="apdf_8h_html_a14bf67cdb9f9b37c6c440904ed983e78"><div class="ttname"><a href="pdf_8h.html#a14bf67cdb9f9b37c6c440904ed983e78">xqg</a></div><div class="ttdeci">double xqg(int iq, double xx, double q2, int kp)</div><div class="ttdoc">add here the PDF sampling functionality from openQCDrad such that we can compare predicitions</div><div class="ttdef"><b>Definition</b> <a href="pdf_8cpp_source.html#l00006">pdf.cpp:6</a></div></div>
 <div class="ttc" id="apdf_8h_html_ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b"><div class="ttname"><a href="pdf_8h.html#ab4a4d2e094a46b9eeff0d205e42a2032ad14042833af8390d40ccc8815651af4b">fromOPENQCDRAD</a></div><div class="ttdeci">@ fromOPENQCDRAD</div><div class="ttdoc">use openQCDrads sampling method xqg</div><div class="ttdef"><b>Definition</b> <a href="pdf_8h_source.html#l00044">pdf.h:43</a></div></div>
 <div class="ttc" id="apdf_8h_html_ac19fd006bb19d7628960884906ae33c5"><div class="ttname"><a href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G</a></div><div class="ttdeci">const int G(21)</div></div>
-<div class="ttc" id="astructfunc_8h_html_af03b52f63dcbd44cae242dd32c172bfb"><div class="ttname"><a href="structfunc_8h.html#af03b52f63dcbd44cae242dd32c172bfb">F2heavyintegrand</a></div><div class="ttdeci">double F2heavyintegrand(double z, double Q2, double x, int nlight)</div><div class="ttdef"><b>Definition</b> <a href="structfunc_8cpp_source.html#l00243">structfunc.cpp:243</a></div></div>
+<div class="ttc" id="astructfunc_8h_html_ac406bfc5f0484e3102808797c334dd22"><div class="ttname"><a href="structfunc_8h.html#ac406bfc5f0484e3102808797c334dd22">F2heavyintegrand</a></div><div class="ttdeci">double F2heavyintegrand(double z, double Q2, double x, int orderAlps, int nlight)</div><div class="ttdef"><b>Definition</b> <a href="structfunc_8cpp_source.html#l00225">structfunc.cpp:225</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="structfunc_8cpp_source.html#l00243">F2heavyintegrand()</a>, <a class="el" href="constants_8cpp_source.html#l00009">QCDORDER::F2ORDER</a>, <a class="el" href="pdf_8h_source.html#l00043">fromOPENQCDRAD</a>, <a class="el" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G()</a>, <a class="el" href="pdf_8cpp_source.html#l00010">Pdf::initialize()</a>, <a class="el" href="pdf_8cpp_source.html#l00093">Pdf::printLHAPDFinfo()</a>, <a class="el" href="constants_8cpp_source.html#l00027">QCD::QMASSES</a>, <a class="el" href="pdf_8cpp_source.html#l00111">Pdf::setSampling()</a>, <a class="el" href="pdf_8cpp_source.html#l00058">Pdf::xf()</a>, and <a class="el" href="pdf_8cpp_source.html#l00006">xqg()</a>.</p>
+<p class="reference">References <a class="el" href="structfunc_8cpp_source.html#l00225">F2heavyintegrand()</a>, <a class="el" href="pdf_8h_source.html#l00043">fromOPENQCDRAD</a>, <a class="el" href="pdf_8h.html#ac19fd006bb19d7628960884906ae33c5">G()</a>, <a class="el" href="pdf_8cpp_source.html#l00010">Pdf::initialize()</a>, <a class="el" href="pdf_8cpp_source.html#l00093">Pdf::printLHAPDFinfo()</a>, <a class="el" href="constants_8cpp_source.html#l00020">QCD::QMASSES</a>, <a class="el" href="pdf_8cpp_source.html#l00111">Pdf::setSampling()</a>, <a class="el" href="pdf_8cpp_source.html#l00058">Pdf::xf()</a>, and <a class="el" href="pdf_8cpp_source.html#l00006">xqg()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -1,5 +1,7 @@
 <map id="c2q_ns_1_0_localplus" name="c2q_ns_1_0_localplus">
-<area shape="rect" id="Node000001" title="from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2 contains the local contributi..." alt="" coords="92,5,255,31"/>
-<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="5,5,44,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,21,44,21,44,15,78,15"/>
+<area shape="rect" id="Node000001" title="from [Zijlstra, van Neerven; Nucl. Phys. B. 383 (3), 525, 1992] eq. B.2 contains the local contributi..." alt="" coords="195,5,357,31"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#ae41cf5482bf531dd2f6525474e6a67b1" title="massless electromagnetic structure functions F2 from photon interaction" alt="" coords="108,5,147,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,21,147,21,147,15,181,15"/>
+<area shape="rect" id="Node000003" href="$teststructfunc_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>

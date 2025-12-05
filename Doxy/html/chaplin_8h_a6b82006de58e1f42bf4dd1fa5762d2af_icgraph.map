@@ -1,28 +1,26 @@
 <map id="hpl3_" name="hpl3_">
-<area shape="rect" id="Node000001" title=" " alt="" coords="809,104,867,129"/>
-<area shape="rect" id="Node000002" href="$chaplin_8h.html#aac5f579574c1c43d98622e0244adf526" title="generic interface for C++ to the Fortran routine" alt="" coords="707,104,761,129"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="796,119,762,119,762,114,796,114"/>
-<area shape="rect" id="Node000003" href="$coefffunc_8cpp.html#a7ece00b95f55884cf6f7ab54f0bfc193" title="eq. (B.6) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ..." alt="" coords="497,55,644,80"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="693,106,658,95,616,83,617,78,659,90,694,101"/>
-<area shape="rect" id="Node000011" href="$coefffunc_8cpp.html#a58267764a35aed9e32e4c85f4a5398e4" title="eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ..." alt="" coords="483,104,659,129"/>
-<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="693,119,659,119,659,114,693,114"/>
-<area shape="rect" id="Node000012" href="$coefffunc_8cpp.html#a7c695fe49b1078f555ebea2fcf0937e7" title="eq. (B.7) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ..." alt="" coords="487,153,655,179"/>
-<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="695,133,659,145,621,156,619,151,658,139,693,128"/>
-<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="335,104,435,129"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="510,86,434,106,433,101,508,81"/>
-<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#a4c319327b228b6185e2cd88bf2c4b4f2" title="transformation of F2integrand that samples closer to small z" alt="" coords="106,5,273,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="359,97,325,69,285,44,256,33,258,28,288,40,329,65,362,92"/>
-<area shape="rect" id="Node000007" href="$structfunc_8cpp.html#ab11cf77595fed93c0944a1e81dd5ab25" title=" " alt="" coords="92,55,287,80"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="320,103,240,83,241,77,322,98"/>
-<area shape="rect" id="Node000008" href="$structfunc_8cpp.html#a64eeaa69975afd512f27d80d18b0d02f" title="transformation of F2integrand that samples closer to large z" alt="" coords="106,104,273,129"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="321,119,273,119,273,114,321,114"/>
-<area shape="rect" id="Node000009" href="$structfunc_8cpp.html#a0aa52c0449b6c8886d2942097ab71bf9" title=" " alt="" coords="92,153,287,179"/>
-<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="323,135,287,145,243,156,241,151,286,139,321,130"/>
-<area shape="rect" id="Node000010" href="$testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="162,203,217,228"/>
-<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="362,141,329,169,288,194,252,207,218,214,216,209,250,202,286,189,325,164,359,137"/>
-<area shape="rect" id="Node000006" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="5,55,44,80"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="120,37,93,45,45,62,43,57,91,39,118,32"/>
-<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="118,103,91,95,43,78,45,73,93,90,120,98"/>
-<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="469,119,435,119,435,114,469,114"/>
-<area shape="poly" id="edge14_Node000012_Node000004" title=" " alt="" coords="508,152,433,132,434,127,510,147"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="884,55,941,80"/>
+<area shape="rect" id="Node000002" href="$chaplin_8h.html#aac5f579574c1c43d98622e0244adf526" title="generic interface for C++ to the Fortran routine" alt="" coords="781,55,836,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="870,70,836,70,836,65,870,65"/>
+<area shape="rect" id="Node000003" href="$coefffunc_8cpp.html#a7ece00b95f55884cf6f7ab54f0bfc193" title="eq. (B.6) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="572,5,719,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="768,56,733,45,694,33,695,28,734,39,769,51"/>
+<area shape="rect" id="Node000010" href="$coefffunc_8cpp.html#abb9c274bc2808466e11aabe7a6cea51f" title="eq. (B.5) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="557,55,733,80"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="768,70,734,70,734,65,768,65"/>
+<area shape="rect" id="Node000011" href="$coefffunc_8cpp.html#a7c695fe49b1078f555ebea2fcf0937e7" title="eq. (B.7) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained..." alt="" coords="561,104,729,129"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="769,84,734,95,695,107,694,101,733,90,768,79"/>
+<area shape="rect" id="Node000004" href="$structfunc_8cpp.html#a044b52046382624819e333543ca5a2a6" title="Computes all contributions to F2 that need to be numerically integrated over, i.e...." alt="" coords="409,55,509,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="584,37,509,57,508,52,583,32"/>
+<area shape="rect" id="Node000005" href="$structfunc_8cpp.html#a44cedd32ed45579222c28d0552bfb79c" title="transformation of F2integrand that samples closer to small z" alt="" coords="195,5,361,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="398,53,325,33,327,28,399,48"/>
+<area shape="rect" id="Node000008" href="$structfunc_8cpp.html#a4e44bade023d83c7dc1b833a90262798" title="transformation of F2integrand that samples closer to large z" alt="" coords="195,55,361,80"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="396,70,361,70,361,65,396,65"/>
+<area shape="rect" id="Node000009" href="$testF2integrand_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="251,104,305,129"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="400,86,306,112,305,107,398,81"/>
+<area shape="rect" id="Node000006" href="$structfunc_8cpp.html#ae41cf5482bf531dd2f6525474e6a67b1" title="massless electromagnetic structure functions F2 from photon interaction" alt="" coords="108,31,147,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="189,36,147,43,146,38,188,30"/>
+<area shape="rect" id="Node000007" href="$teststructfunc_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="94,46,60,46,60,41,94,41"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="185,55,147,49,148,44,185,50"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="544,70,510,70,510,65,544,65"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="583,103,508,83,509,78,584,98"/>
 </map>

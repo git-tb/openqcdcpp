@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="structfunc_8cpp.html#aa4dc5cbd2ddc07970850d275ce8b8a44" target="_top" xlink:title="Computes all contributions to F2 that need to be numerically integrated over, i.e....">
+<g id="a_Node000002"><a xlink:href="structfunc_8cpp.html#a044b52046382624819e333543ca5a2a6" target="_top" xlink:title="Computes all contributions to F2 that need to be numerically integrated over, i.e....">
 <polygon fill="white" stroke="#666666" points="173,-592 98,-592 98,-573 173,-573 173,-592"/>
 <text text-anchor="middle" x="135.5" y="-580" font-family="Helvetica,sans-Serif" font-size="10.00">F2integrand</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="namespaceQCD.html#af1651960c95d27b97735238ea3124ccd" target="_top" xlink:title="computes beta0 depending on the value of QCD::NF taken from (Schwartz QFT, eq. 26....">
+<g id="a_Node000006"><a xlink:href="namespaceQCD.html#a84973ab69d862cd8ce5548c7767b8f43" target="_top" xlink:title="QCD beta function, O(alpha_s^2) taken from (Schwartz QFT, eq. 26.97)">
 <polygon fill="white" stroke="#666666" points="337.5,-685 265.5,-685 265.5,-666 337.5,-666 337.5,-685"/>
 <text text-anchor="middle" x="301.5" y="-673" font-family="Helvetica,sans-Serif" font-size="10.00">QCD::beta0</text>
 </a>
@@ -128,7 +128,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="namespaceQCD.html#aa44221a2a4373295de7d5e72ba5a52bb" target="_top" xlink:title="computes beta1 depending on the value of QCD::NF taken from (Schwartz QFT, eq. 26....">
+<g id="a_Node000007"><a xlink:href="namespaceQCD.html#a46eb5b8fef09447a619e2534dad18b7b" target="_top" xlink:title="QCD beta function, O(alpha_s^3) taken from (Schwartz QFT, eq. 26.98)">
 <polygon fill="white" stroke="#666666" points="337.5,-648 265.5,-648 265.5,-629 337.5,-629 337.5,-648"/>
 <text text-anchor="middle" x="301.5" y="-636" font-family="Helvetica,sans-Serif" font-size="10.00">QCD::beta1</text>
 </a>
@@ -182,7 +182,7 @@
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="coefffunc_8cpp.html#ad912bcd6e4e6927c3a18781cf22b113d" target="_top" xlink:title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.10">
+<g id="a_Node000010"><a xlink:href="coefffunc_8cpp.html#ad912bcd6e4e6927c3a18781cf22b113d" target="_top" xlink:title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.10">
 <polygon fill="white" stroke="#666666" points="362.5,-537 240.5,-537 240.5,-518 362.5,-518 362.5,-537"/>
 <text text-anchor="middle" x="301.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">c2g_2_0_reg_approx2</text>
 </a>
@@ -200,7 +200,7 @@
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="coefffunc_8cpp.html#a7ece00b95f55884cf6f7ab54f0bfc193" target="_top" xlink:title="eq. (B.6) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ...">
+<g id="a_Node000011"><a xlink:href="coefffunc_8cpp.html#a7ece00b95f55884cf6f7ab54f0bfc193" target="_top" xlink:title="eq. (B.6) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained...">
 <polygon fill="white" stroke="#666666" points="356.5,-463 246.5,-463 246.5,-444 356.5,-444 356.5,-463"/>
 <text text-anchor="middle" x="301.5" y="-451" font-family="Helvetica,sans-Serif" font-size="10.00">c2g_2_0_reg_exact</text>
 </a>
@@ -254,7 +254,7 @@
 <!-- Node20 -->
 <g id="Node000020" class="node">
 <title>Node20</title>
-<g id="a_Node000020"><a xlink:href="coefffunc_8cpp.html#a6e628e8b667e8de35d8f04e8951abcdc" target="_top" xlink:title="eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ...">
+<g id="a_Node000020"><a xlink:href="coefffunc_8cpp.html#adbe9f576c0f90341d4cee5c7177623fa" target="_top" xlink:title="eq. (B.5) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained...">
 <polygon fill="white" stroke="#666666" points="370,-315 233,-315 233,-296 370,-296 370,-315"/>
 <text text-anchor="middle" x="301.5" y="-303" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ns_2_01_plus_exact</text>
 </a>
@@ -272,7 +272,7 @@
 <!-- Node21 -->
 <g id="Node000021" class="node">
 <title>Node21</title>
-<g id="a_Node000021"><a xlink:href="coefffunc_8cpp.html#a58267764a35aed9e32e4c85f4a5398e4" target="_top" xlink:title="eq. (B.5) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ...">
+<g id="a_Node000021"><a xlink:href="coefffunc_8cpp.html#abb9c274bc2808466e11aabe7a6cea51f" target="_top" xlink:title="eq. (B.5) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained...">
 <polygon fill="white" stroke="#666666" points="367.5,-426 235.5,-426 235.5,-407 367.5,-407 367.5,-426"/>
 <text text-anchor="middle" x="301.5" y="-414" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ns_2_01_reg_exact</text>
 </a>
@@ -308,7 +308,7 @@
 <!-- Node23 -->
 <g id="Node000023" class="node">
 <title>Node23</title>
-<g id="a_Node000023"><a xlink:href="coefffunc_8cpp.html#a596ec106a6a218dd725da0ea81a631c2" target="_top" xlink:title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
+<g id="a_Node000023"><a xlink:href="coefffunc_8cpp.html#a596ec106a6a218dd725da0ea81a631c2" target="_top" xlink:title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
 <polygon fill="white" stroke="#666666" points="373,-241 230,-241 230,-222 373,-222 373,-241"/>
 <text text-anchor="middle" x="301.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ns_2_0_plus_approx2</text>
 </a>
@@ -344,7 +344,7 @@
 <!-- Node25 -->
 <g id="Node000025" class="node">
 <title>Node25</title>
-<g id="a_Node000025"><a xlink:href="coefffunc_8cpp.html#a36d57a70c09e8bbf0ad1ab39c6afa1a4" target="_top" xlink:title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
+<g id="a_Node000025"><a xlink:href="coefffunc_8cpp.html#a36d57a70c09e8bbf0ad1ab39c6afa1a4" target="_top" xlink:title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
 <polygon fill="white" stroke="#666666" points="371,-167 232,-167 232,-148 371,-148 371,-167"/>
 <text text-anchor="middle" x="301.5" y="-155" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ns_2_0_reg_approx2</text>
 </a>
@@ -380,7 +380,7 @@
 <!-- Node27 -->
 <g id="Node000027" class="node">
 <title>Node27</title>
-<g id="a_Node000027"><a xlink:href="coefffunc_8cpp.html#ac8d3a3bff781e4794fddd21c4a848406" target="_top" xlink:title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
+<g id="a_Node000027"><a xlink:href="coefffunc_8cpp.html#ac8d3a3bff781e4794fddd21c4a848406" target="_top" xlink:title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
 <polygon fill="white" stroke="#666666" points="373,-1096 230,-1096 230,-1077 373,-1077 373,-1096"/>
 <text text-anchor="middle" x="301.5" y="-1084" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ns_2_1_plus_approx2</text>
 </a>
@@ -416,7 +416,7 @@
 <!-- Node29 -->
 <g id="Node000029" class="node">
 <title>Node29</title>
-<g id="a_Node000029"><a xlink:href="coefffunc_8cpp.html#a9299b97a7b5af88c1a1ef113012c8343" target="_top" xlink:title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
+<g id="a_Node000029"><a xlink:href="coefffunc_8cpp.html#a9299b97a7b5af88c1a1ef113012c8343" target="_top" xlink:title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8">
 <polygon fill="white" stroke="#666666" points="371,-1022 232,-1022 232,-1003 371,-1003 371,-1022"/>
 <text text-anchor="middle" x="301.5" y="-1010" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ns_2_1_reg_approx2</text>
 </a>
@@ -452,7 +452,7 @@
 <!-- Node31 -->
 <g id="Node000031" class="node">
 <title>Node31</title>
-<g id="a_Node000031"><a xlink:href="coefffunc_8cpp.html#aa5d247c93758186609d951be45bdb7cc" target="_top" xlink:title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.9">
+<g id="a_Node000031"><a xlink:href="coefffunc_8cpp.html#aa5d247c93758186609d951be45bdb7cc" target="_top" xlink:title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.9">
 <polygon fill="white" stroke="#666666" points="371,-948 232,-948 232,-929 371,-929 371,-948"/>
 <text text-anchor="middle" x="301.5" y="-936" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ps_2_0_reg_approx2</text>
 </a>
@@ -470,7 +470,7 @@
 <!-- Node32 -->
 <g id="Node000032" class="node">
 <title>Node32</title>
-<g id="a_Node000032"><a xlink:href="coefffunc_8cpp.html#a7c695fe49b1078f555ebea2fcf0937e7" target="_top" xlink:title="eq. (B.7) in [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained after some ...">
+<g id="a_Node000032"><a xlink:href="coefffunc_8cpp.html#a7c695fe49b1078f555ebea2fcf0937e7" target="_top" xlink:title="eq. (B.7) in [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] This expression was obtained...">
 <polygon fill="white" stroke="#666666" points="364.5,-500 238.5,-500 238.5,-481 364.5,-481 364.5,-500"/>
 <text text-anchor="middle" x="301.5" y="-488" font-family="Helvetica,sans-Serif" font-size="10.00">c2q_ps_2_0_reg_exact</text>
 </a>
@@ -506,7 +506,7 @@
 <!-- Node34 -->
 <g id="Node000034" class="node">
 <title>Node34</title>
-<g id="a_Node000034"><a xlink:href="namespaceQCD.html#a57229a5cc6fa00f40d4e04db392368b3" target="_top" xlink:title="computes the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges depending on the value of QCD:...">
+<g id="a_Node000034"><a xlink:href="namespaceQCD.html#a47b05fa776ddc752642c963d69365dfb" target="_top" xlink:title="the sum $\sum_{q_i}Q_i^2$ of squared fractional quark charges over nf light flavors">
 <polygon fill="white" stroke="#666666" points="342.5,-911 260.5,-911 260.5,-892 342.5,-892 342.5,-911"/>
 <text text-anchor="middle" x="301.5" y="-899" font-family="Helvetica,sans-Serif" font-size="10.00">QCD::sumQi2</text>
 </a>

@@ -1,5 +1,9 @@
 <map id="c2q_ns_2_1_local_approx2" name="c2q_ns_2_1_local_approx2">
-<area shape="rect" id="Node000001" title="from [Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8" alt="" coords="92,5,287,31"/>
-<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#a3ae6414607e5f42d0a4c34df3a0d7626" title="electromagnetic structure function F2 from photon interaction" alt="" coords="5,5,44,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,21,44,21,44,15,78,15"/>
+<area shape="rect" id="Node000001" title="from [Vermaseren, Vogt, Moch; Nucl. Phys. B, 724 (1&#45;2), 3, 2005] eq. 4.8" alt="" coords="276,31,471,56"/>
+<area shape="rect" id="Node000002" href="$structfunc_8cpp.html#ae41cf5482bf531dd2f6525474e6a67b1" title="massless electromagnetic structure functions F2 from photon interaction" alt="" coords="149,5,187,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,32,187,23,188,18,262,27"/>
+<area shape="rect" id="Node000004" href="$hqcoeff_8cpp.html#a4f5d7996c955834e09137ba3ff02e5d1" title=" " alt="" coords="108,55,228,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="262,59,229,63,228,58,262,54"/>
+<area shape="rect" id="Node000003" href="$teststructfunc_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="134,21,60,21,60,15,134,15"/>
 </map>

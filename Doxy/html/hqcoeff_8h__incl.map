@@ -1,5 +1,7 @@
 <map id="include/hqcoeff.h" name="include/hqcoeff.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,178,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="134,5,267,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,217,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,31,114,65,109,65,109,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,33,138,72,135,68,185,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="242,79,338,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,29,266,68,263,72,213,33"/>
 </map>
